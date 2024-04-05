@@ -304,7 +304,7 @@ function remakeRune(rune as IItemStack, ingrList as IIngredient[], mana as int) 
 /* Spring */  remakeRune(<botania:rune:4>,     [<ore:runeWaterB>, <ore:runeFireB>, <astralsorcery:blockinfusedwood>, <ore:flower>, <ore:nitor>], 10000);
 /* Summer */  remakeRune(<botania:rune:5>,     [<ore:runeEarthB>, <ore:runeAirB>, <ore:treeSapling>, <ore:nuggetBrass>, <ore:livingwood>], 10000);
 /* Autumn */  remakeRune(<botania:rune:6>,     [<ore:runeFireB>, <ore:runeAirB>, <ore:quicksilver>, <minecraft:deadbush>, <ore:stoneMetamorphic>], 10000);
-/* Winter */  remakeRune(<botania:rune:7>,     [<ore:runeWaterB>, <ore:runeEarthB>, <mctsmelteryio:iceball>, <astralsorcery:itemusabledust>, <ore:blockSalt>], 10000);
+/* Winter */  remakeRune(<botania:rune:7>,     [<ore:runeWaterB>, <ore:runeEarthB>, utils.tryCatch('mctsmelteryio:iceball', <iceandfire:dragon_ice>), <astralsorcery:itemusabledust>, <ore:blockSalt>], 10000);
 /* Mana */    remakeRune(<botania:rune:8>,     [<ore:manaPearl>, <ore:powderMana>, <ore:quartzMana>, <ore:manaDiamond>, <ore:clothManaweave>], 20000);
 /* Lust */    remakeRune(<botania:rune:9>,     [<ore:manaDiamond>, <ore:manaDiamond>, <botania:rune:5>, <botania:rune:5>, <botania:rune:3>, <botania:rune:3>], 25000);
 /* Gluttony */remakeRune(<botania:rune:10>,    [<ore:manaDiamond>, <ore:manaDiamond>, <botania:rune:7>, <botania:rune:7>, <botania:rune:1>, <botania:rune:1>], 25000);
@@ -373,16 +373,6 @@ mods.qmd.target_chamber.addRecipe(
   null, null, null, null,
   200000000, 1.0, 0
 );
-
-// Make Crafty Crate tables free
-mods.botania.ElvenTrade.removeRecipe(<botania_tweaks:basic_extended_crafty_crate>);
-mods.botania.ElvenTrade.removeRecipe(<botania_tweaks:advanced_extended_crafty_crate>);
-mods.botania.ElvenTrade.removeRecipe(<botania_tweaks:elite_extended_crafty_crate>);
-mods.botania.ElvenTrade.removeRecipe(<botania_tweaks:ultimate_extended_crafty_crate>);
-mods.botania.ElvenTrade.addRecipe([<botania_tweaks:basic_extended_crafty_crate>, <extendedcrafting:table_basic>], [<botania:opencrate:1>, <extendedcrafting:table_basic>]);
-mods.botania.ElvenTrade.addRecipe([<botania_tweaks:advanced_extended_crafty_crate>, <extendedcrafting:table_advanced>], [<botania:opencrate:1>, <extendedcrafting:table_advanced>]);
-mods.botania.ElvenTrade.addRecipe([<botania_tweaks:elite_extended_crafty_crate>, <extendedcrafting:table_elite>], [<botania:opencrate:1>, <extendedcrafting:table_elite>]);
-mods.botania.ElvenTrade.addRecipe([<botania_tweaks:ultimate_extended_crafty_crate>, <extendedcrafting:table_ultimate>], [<botania:opencrate:1>, <extendedcrafting:table_ultimate>]);
 
 // [Faint Amaranth] from [Goldenrod]
 mods.botania.ManaInfusion.addInfusion(<astralsorcery:blockcustomflower>, <biomesoplenty:flower_1:1>, 10000);
