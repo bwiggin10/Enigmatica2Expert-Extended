@@ -152,9 +152,11 @@ recipes.addShaped(<extendedcrafting:interface>, [
   [<extendedcrafting:material:17>, <extendedcrafting:frame>, <extendedcrafting:material:17>],
   [<ore:ingotBlackIron>, <extendedcrafting:material:2>, <ore:ingotBlackIron>]]);
 
-// Pack 9->1 recipe for ender ingot (somehow its missed)
-val e = <extendedcrafting:material:37>;
-recipes.addShapeless('9->1 Ender Ingot', <extendedcrafting:material:36>, [e,e,e,e,e,e,e,e,e]);
+// Remake ender ingot recipe
+recipes.removeByRecipeName('extendedcrafting:ender_ingot');
+scripts.process.alloy([<ore:ingotPlatinum>, <ore:dustEnder> * 2], <extendedcrafting:material:36>, "only: kiln ArcFurnace");
+scripts.process.alloy([<ore:blockPlatinum>, <ore:dustEnder> * 9], <extendedcrafting:storage:5>, "only: AdvRockArc");
+mods.mekanism.infuser.addRecipe('ENDER', 20, <ore:ingotPlatinum>, <extendedcrafting:material:36> * 2);
 
 // See the Draconic Evolution configs for DE compat
 // *======= Empowerer Extended Crafting Combination recipes =======*

@@ -545,19 +545,11 @@ craft.make(<immersiveengineering:stone_decoration:8>, ['pretty',
 });
 
 // [Insulating Glass*4] from [Cactus Green][+1]
-scripts.mods.forestry.ThermionicFabricator.addCast(<immersiveengineering:stone_decoration:8> * 6, Grid([
+scripts.mods.forestry.ThermionicFabricator.addCast(<immersiveengineering:stone_decoration:8> * 8, Grid([
   '▲d▲'], {
   '▲': <ore:dustIron>, // Pulverized Iron
   'd': <ore:dyeGreen>, // Cactus Green
 }).shaped(), <liquid:glass> * 1000, <forestry:wax_cast:*>);
-
-// [Insulating Glass] from [Cactus Green][+1]
-mods.forestry.ThermionicFabricator.addCast(<immersiveengineering:stone_decoration:8> * 2, Grid([
-  '▲d▲'], {
-  '▲': <ore:dustIron>, // Pulverized Iron
-  'd': <ore:dyeGreen>, // Cactus Green
-}).shaped(), <liquid:glass> * 1000);
-
 // ---------------------------------------------------------
 
 // [Concrete Trapdoor] from [Concrete]
@@ -643,3 +635,6 @@ craft.remake(<immersiveengineering:wooden_device0:2>, ['pretty',
 mods.immersiveengineering.Refinery.addRecipe(<fluid:biodiesel> * 24, <fluid:biomass> * 8, <fluid:ethanol> * 16, 400);
 mods.immersiveengineering.Refinery.addRecipe(<fluid:biodiesel> * 20, <fluid:ic2biomass> * 12, <fluid:ethanol> * 8, 200);
 mods.immersiveengineering.Refinery.addRecipe(<fluid:biodiesel> * 88, <fluid:biocrude> * 8, <fluid:ethanol> * 80, 1600);
+
+// Add missed Insolator recipe
+scripts.process.grow(<immersiveengineering:seed>, <immersiveengineering:material:4>, null, <immersiveengineering:seed>, 1);
