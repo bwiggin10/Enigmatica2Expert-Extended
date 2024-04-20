@@ -39,8 +39,8 @@ for item in [
   <botania:diviningrod>,
   <botania:exchangerod>,
   <botania:firerod>,
-  <botania:flugeleye>
-  <botania:gravityrod>,,
+  <botania:flugeleye>,
+  <botania:gravityrod>,
   <botania:infinitefruit>,
   <botania:kingkey>,
   <botania:lokiring>,
