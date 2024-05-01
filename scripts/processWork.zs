@@ -484,8 +484,8 @@ function workEx(machineNameAnyCase as string, exceptionsAnyCase as string,
       return machineName;
     }
 
-    if (machineName == 'arcfurnance') {
-      // mods.immersiveengineering.ArcFurnace.addRecipe(IItemStack output, IIngredient input, IItemStack slag, int time, int energyPerTick, @Optional IIngredient[] additives, @Optional String specialRecipeType);
+    if (machineName == 'arcfurnace') {
+      if (strict) { mods.immersiveengineering.ArcFurnace.removeRecipe(outputItem0); }
       if (inputItems.length > 1) {
         // Reduce all ingredients to additives
         var additives = [] as IIngredient[];

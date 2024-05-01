@@ -9,6 +9,7 @@ import scripts.jei.mod.ic2.addCrop;
 
 <ic2:treetap>.maxDamage = 400; // Buff from 16
 <ic2:wrench>.maxDamage = 5000; // Buff from 100
+<ic2:cf_pack>.maxDamage = 4000; // Buff from 27
 <ic2:dynamite>.maxStackSize = 64;
 <ic2:dynamite_sticky>.maxStackSize = 64;
 
@@ -502,7 +503,7 @@ mods.nuclearcraft.Melter.addRecipe(<ore:dustSulfur>, <liquid:sulfur> * 100);
 <ic2:crop_res:6>.setAspects(<aspect:aqua> * 20,<aspect:alkimia> * 40); // Milk Wart
 <ic2:crop_res>.setAspects(<aspect:cognitio> * 60); // Coffee Beans
 <ic2:crop_res:7>.setAspects(<aspect:motus> * 100); // Oil Berry
-<ic2:crop_res:8>.setAspects(<aspect:visum> * 20); // Bobs-Yer-Uncle-Ranks Berry
+<ic2:crop_res:8>.setAspects(Aspect.visum * 20); // Bobs-Yer-Uncle-Ranks Berry
 <ic2:crop_res:1>.setAspects(<aspect:cognitio> * 50); // Coffee Powder
 
 // [Biogas Bucket] from [Hops]

@@ -38,7 +38,6 @@ recipes.removeByRecipeName('astralsorcery:shapeless/infused_wood_planks');
 
 // Magical wood special
 scripts.process.sawWood(<extrautils2:decorativesolidwood:1>, <extrautils2:decorativesolidwood>, 'only: TESawmill');
-scripts.process.sawWood(<thaumcraft:taint_log>, <thaumadditions:taintwood_planks>, 'only: TESawmill');
 
 // Sawdust compat
 mods.mekanism.sawmill.removeRecipe(<ore:plankWood>);

@@ -136,7 +136,7 @@ mods.thaumcraft.Infusion.registerRecipe(
   'INFUSION', // Research
   <botania:manaresource:5>, // Output
   10, // Instability
-  [<aspect:caeles> * 100, <aspect:draco> * 100, <aspect:rattus> * 100],
+  [Aspect.caeles * 100, <aspect:draco> * 100, <aspect:rattus> * 100],
   <rats:idol_of_ratlantis>, // Central Item
   Grid(['pretty',
     'S ◊ ╳',
@@ -152,13 +152,12 @@ mods.thaumcraft.Infusion.registerRecipe(
 
 // Peaceful alt
 // [Dice of Fate] from [Chaos Shard][+4]
-mods.thaumcraft.Infusion.removeRecipe(<botania:dice>);
 mods.thaumcraft.Infusion.registerRecipe(
   'dice', // Name
   'INFUSION', // Research
-  <botania:dice>.withTag({ soulbindUUID: 'e23a4a76-82ed-47e0-9ea3-fef726675065' }), // Output
+  <botania:dice>, // Output
   10, // Instability
-  [<aspect:caeles> * 160, <aspect:mana> * 160],
+  [Aspect.caeles * 160, <aspect:mana> * 160],
   <draconicevolution:chaos_shard>, // Central Item
   Grid(['pretty',
     '  D  ',

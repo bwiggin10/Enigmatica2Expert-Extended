@@ -78,7 +78,7 @@ for ore_entry in oreDict {
   }
 
   // Crushed Ore Smeltery compat
-  ore_name = getOreName(name, 'crushed');
+  ore_name = getOreName(name, 'crushedPurified');
   if (!isNull(ore_name)) {
     if (ore_name == 'Aluminum') continue;
     val exception = ore_liquid_exceptions[ore_name];
@@ -86,6 +86,11 @@ for ore_entry in oreDict {
     if (isNull(liquid)) continue;
 
     mods.tconstruct.Melting.addRecipe(liquid * 144, ore_entry);
+
+    val unpurified = oreDict.get('crushed' ~ ore_name);
+    if (isNull(unpurified) || unpurified.empty) continue;
+    
+    mods.tconstruct.Melting.addRecipe(liquid * 144, unpurified);
     continue;
   }
 
@@ -99,6 +104,19 @@ for ore_entry in oreDict {
     if (inpOre.items.length <= 0) continue;
     scripts.process.compress(inpOre, ore_entry.firstItem, 'only: Compactor');
     mods.immersiveengineering.MetalPress.addRecipe(ore_entry.firstItem, oreDict['plate' ~ ore_name], <immersiveengineering:mold:6>, 16000, 9);
+    continue;
+  }
+
+  // Dirty ore additional IC2 compat
+  ore_name = getOreName(name, 'dustDirty');
+  if (!isNull(ore_name)) {
+    if (ore_name == 'Aluminum') continue;
+
+    val dust = oreDict.get('dust' ~ ore_name);
+    if (isNull(dust) || dust.empty) continue;
+
+    mods.ic2.OreWasher.addRecipe([dust.firstItem], ore_entry);
+
     continue;
   }
 }

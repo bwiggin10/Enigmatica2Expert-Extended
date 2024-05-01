@@ -219,7 +219,7 @@ craft.remake(<rats:rat_upgrade_nonbeliever>, ['pretty',
 });
 
 // Rat flowers
-scripts.process.grow(<rats:ratglove_flower>, <rats:ratglove_flower> * 9, 'No exceptions', null, 0);
+scripts.process.grow(<rats:ratglove_flower>, <rats:ratglove_flower>, 'No exceptions', null, 0);
 
 // ######################################################################
 //
@@ -456,5 +456,5 @@ craft.make(<rats:plague_scythe>, ["pretty",
   "P M P",
   "P P P"], {
   "P": <rats:plague_essence>,              # Plague Essence
-  "M": <thaumadditions:mithminite_scythe>, # Mithminite Scythe
+  "M": utils.tryCatch('thaumadditions:mithminite_scythe', <draconicevolution:wyvern_sword>), # Mithminite Scythe
 });
