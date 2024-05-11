@@ -32,10 +32,11 @@ mods.botania.Orechid.removeOre('oreEmerald');
 mods.botania.Orechid.removeOre('orePlatinum');
 mods.botania.Orechid.removeOre('oreMithril');
 mods.botania.Orechid.removeOre('oreSapphire');
+mods.botania.Orechid.removeOre('oreRedstone');
 
 // Buff Apatite
 mods.botania.Orechid.removeOre('oreApatite');
-mods.botania.Orechid.addOre('oreApatite', 15000);
+mods.botania.Orechid.addOre('oreApatite', 7000);
 
 // Add Orechid Ingem ores
 mods.botania.OrechidIgnem.addOre('oreNetherChargedCertusQuartz', 800);
@@ -424,3 +425,15 @@ craft.remake(<botania:exchangerod>, ['pretty',
   'T': <ore:livingwoodTwig>, // Livingwood Twig
 });
 // ////////////////////////////////////////////////////////////////
+
+recipes.removeByRecipeName('botania:cobblerod');    recipes.addShaped(<botania:cobblerod>, [[null, null, <ore:cobblestone>], [null, <ore:livingwoodTwig>, null], [<ore:livingwoodTwig>, null, null]]);
+recipes.removeByRecipeName('botania:dirtrod');      recipes.addShaped(<botania:dirtrod>, [[null, <minecraft:dirt>], [<ore:livingwoodTwig>, null]]);
+recipes.removeByRecipeName('botania:diviningrod');  recipes.addShaped(<botania:diviningrod>, [[null, <ore:livingwoodTwig>, <ore:gemDiamondRat>], [null, <ore:livingwoodTwig>, <ore:livingwoodTwig>], [<ore:livingwoodTwig>, null, null]]);
+recipes.removeByRecipeName('botania:firerod');      recipes.addShaped(<botania:firerod>, [[null, <minecraft:blaze_powder>], [<ore:livingwoodTwig>, null]]);
+recipes.removeByRecipeName('botania:gravityrod');   recipes.addShaped(<botania:gravityrod>, [[null, <ore:dreamwoodTwig>, null], [null, <ore:cropWheat>, <ore:dreamwoodTwig>], [<ore:dreamwoodTwig>, null, null]]);
+recipes.removeByRecipeName('botania:missilerod');   recipes.addShaped(<botania:missilerod>, [[null, <ore:elvenDragonstone>, <ore:elvenDragonstone>], [null, <ore:dreamwoodTwig>, <ore:elvenDragonstone>], [<ore:dreamwoodTwig>, null, null]]);
+recipes.removeByRecipeName('botania:smeltrod');     recipes.addShaped(<botania:smeltrod>, [[null, <minecraft:blaze_rod>, null], [null, <ore:livingwoodTwig>, <minecraft:blaze_rod>], [<ore:livingwoodTwig>, null, null]]);
+recipes.removeByRecipeName('botania:terraformrod'); recipes.addShaped(<botania:terraformrod>, [[null, null, <ore:ingotTerrasteel>], [null, <botania:dirtrod>, null], [<botania:grassseeds>, null, null]]);
+recipes.removeByRecipeName('botania:tornadorod');   recipes.addShaped(<botania:tornadorod>, [[null, <ore:feather>], [<ore:livingwoodTwig>, null]]);
+recipes.removeByRecipeName('botania:waterrod');     recipes.addShaped(<botania:waterrod>, [[null, <minecraft:potion>.withTag({Potion: 'minecraft:water'})], [<ore:livingwoodTwig>, null]]);
+recipes.removeByRecipeName('botania:skydirtrod');   recipes.addShapeless(<botania:skydirtrod>, [<botania:dirtrod>, <ore:elvenPixieDust>]);

@@ -13,6 +13,34 @@ craft.remake(<psicosts:flux_resonator>, ['pretty',
   'O': <enderio:item_basic_capacitor:2>, // Octadic Capacitor
 });
 
+// [Psionic Lensing Pedestal] from [Rune of Fire][+3]
+craft.remake(<psicosts:mana_resonator>, ['pretty',
+  '□ □ □',
+  '▲ F ▲',
+  'l l l'], {
+  '□': <ore:plateObsidian>, // ic2.plate.obsidian
+  '▲': <ore:dustPsi>,       // Psidust
+  'F': <ore:runeFireB>,     // Rune of Fire
+  'l': <ore:livingrock>,    // Livingrock
+});
+
+// [Potentia Inverter] from [Phial of Potentia Essentia][+5]
+mods.thaumcraft.ArcaneWorkbench.removeRecipe(<psicosts:essentia_resonator>);
+mods.thaumcraft.ArcaneWorkbench.registerShapedRecipe(
+  "essentia_resonator", # Name
+  "FIRSTSTEPS", # Research
+  100, # Vis cost
+  [<aspect:ignis>, <aspect:ordo>],
+  <psicosts:essentia_resonator>, # Output
+  Grid(['pretty',
+  'i ▲ i',
+  '□   □',
+  'i ▲ i'], {
+  'i': <ic2:casing:3>,   // ic2.casing.iron
+  '▲': <ore:dustPsi>,    // Psidust
+  '□': <ore:plateBrass>, // Brass Plate
+}).shaped());
+
 val ingrs = {
   'P': <psicosts:material_glassy>,  // Psi Glass
   '1': <psicosts:psi_cell:0>.marked('marked'), // PSI Cell
