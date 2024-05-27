@@ -12,7 +12,7 @@ import mods.requious.SlotVisual;
 // -----------------------------------------------------------------------
 var x = <assembly:entity_drop>;
 x.addJEICatalyst(<minecraft:wooden_sword>);
-scripts.jei.requious.addInsOuts(x, [[0,0]], [
+scripts.jei.requious.addInsOuts(x, [[0,0],[0,1]], [
   [2,0],[3,0],[4,0],[5,0],[6,0],[7,0],[8,0],
   [2,1],[3,1],[4,1],[5,1],[6,1],[7,1],[8,1],
 ]);
@@ -32,7 +32,9 @@ function add(entity as IEntityDefinition, dropList as IItemStack[], percent as b
   } else {
     fixedList = dropList;
   }
-  scripts.jei.requious.add(<assembly:entity_drop>, {[Soul(entity.id)] as IIngredient[] : fixedList});
+  scripts.jei.requious.add(<assembly:entity_drop>, {[
+    Soul(entity.id), <minecraft:spawn_egg>.withTag({EntityTag: {id: entity.id}})
+  ] as IIngredient[] : fixedList});
 }
 
 /*Inject_js{
@@ -221,7 +223,7 @@ return list.map(({ groups: { id, display, items } }) => {
   add(<entity:rats:black_death>                       , [<rats:black_death_mask> * 100, <rats:herb_bundle> * 300, <rats:plague_scythe> * 100, <rats:rat_pelt> * 50, <rats:rat_upgrade_fragment> * 1, <rats:raw_rat> * 100, <rats:token_piece> * 195]); // Black Death
   add(<entity:rats:feral_ratlantean>                  , [<rats:feral_rat_claw> * 33, <rats:marbled_cheese_rat_head> * 4, <rats:rat_pelt> * 114, <rats:rat_toga> * 31]); // Feral Ratlantean
   add(<entity:rats:illager_piper>                     , [<minecraft:dye:4> * 229, <minecraft:feather> * 100, <minecraft:gold_nugget> * 241, <rats:piper_hat> * 8, <rats:rat_flute> * 10, <rats:rat_pelt> * 251, <rats:rat_upgrade_fragment> * 2, <rats:raw_rat> * 250, <rats:token_fragment> * 6]); // Pied Piper
-  add(<entity:rats:marbled_cheese_golem>              , [<rats:ancient_sawblade> * 100, <rats:arcane_technology> * 100, <ic2:crafting:3> * 300]); // Ratlantean Automaton
+  add(<entity:rats:marbled_cheese_golem>              , [<rats:ancient_sawblade> * 100, <rats:arcane_technology> * 100, <ic2:crafting:3> * 1800]); // Ratlantean Automaton
   add(<entity:rats:neo_ratlantean>                    , [<rats:psionic_rat_brain> * 100]); // Neo-Ratlantean
 # add(<entity:rats:pirat_boat>                        , []); // Pirat Boat
   add(<entity:rats:pirat>                             , [<actuallyadditions:block_misc:4> * 196, <rats:pirat_cutlass> * 22, <rats:pirat_hat> * 19, <rats:rat_pelt> * 50, <rats:rat_upgrade_fragment> * 1, <rats:raw_rat> * 100]); // Pirat
@@ -273,7 +275,7 @@ return list.map(({ groups: { id, display, items } }) => {
   add(<entity:twilightforest:blockchain_goblin>       , [<twilightforest:armor_shard> * 104]); // Block and Chain Goblin
   add(<entity:twilightforest:boggard>                 , [<twilightforest:maze_map_focus> * 27]); // Boggard [NYI]
   add(<entity:twilightforest:bunny>                   , [<minecraft:rabbit_foot> * 6, <minecraft:rabbit_hide> * 58, <minecraft:rabbit> * 47]); // Dwarf Rabbit
-# add(<entity:twilightforest:castle_guardian>         , []); // Castle Guardian [NYI]
+  add(<entity:twilightforest:castle_guardian>         , [<mekanism:saltblock> * 10000]); // Castle Guardian [NYI]
   add(<entity:twilightforest:death_tome>              , [<minecraft:book> * 90, <minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 16}]}) * 1, <minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 19}]}) * 1, <minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 1 as short, id: 32}]}) * 1, <minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 2 as short, id: 2}]}) * 1, <minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 2 as short, id: 32}, {lvl: 1 as short, id: 57}]}) * 1, <minecraft:enchanted_book>.withTag({StoredEnchantments: [{lvl: 3 as short, id: 34}]}) * 1, <minecraft:paper> * 352, <minecraft:writable_book> * 8, <twilightforest:magic_map_focus> * 2]); // Death Tome
   add(<entity:twilightforest:deer>                    , [<harvestcraft:venisonrawitem> * 194, <minecraft:leather> * 106, <betteranimalsplus:antler> * 50]); // Wild Deer
   add(<entity:twilightforest:fire_beetle>             , [<minecraft:gunpowder> * 99, <thermalfoundation:material:771> * 18]); // Fire Beetle

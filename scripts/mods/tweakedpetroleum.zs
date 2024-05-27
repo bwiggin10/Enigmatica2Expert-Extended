@@ -46,7 +46,7 @@ registerReservoir('aquifer'                            , <liquid:water>   , 5000
 registerReservoir('oil'                                , <liquid:oil>     , 2500000 , 15000000, 6   , 25   , 40, I, [], [0,     3, 7, -11325], [], []);
 registerReservoir('lava'                               , <liquid:lava>    , 250000  , 1000000 , 0   , 25   , 30, I, [], [0, -1, 3, 7, -11325], [], []);
 registerReservoir('Desert Oil Reservoir'               , <liquid:oil>     , 15000000, 30000000, 25  , 50   , 5 , I, [], [0]                  , [], ['SANDY']);
-registerReservoir('Deep Ocean Oil Reservoir'           , <liquid:oil>     , 15000000, 30000000, 25  , 50   , 5 , I, [], [0]                  , [], ['OCEAN']);
+registerReservoir('Ocean Oil Reservoir'                , <liquid:oil>     , 15000000, 30000000, 25  , 50   , 5 , I, [], [0]                  , [], ['OCEAN']);
 registerReservoir('Low Pressure Magma Chamber (Nether)', <liquid:lava>    , 500000  , 1500000 , 500 , 1500 , 5 , I, [], [-1]                 , [], []);
 registerReservoir('Molten Tungsten Reservoir (End)'    , <liquid:tungsten>, 720000  , 1440000 , 0   , 4    , 10, I, [], [1]                  , [], []);
 
@@ -194,8 +194,8 @@ registerGasReservoir('Cobalt Slurry Reservoir (Terra Nova)', <gas:slurryCobalt>,
 /*
 		Magic
 */
-registerReservoir('Flux Goo Reservoir (Stella)', <liquid:flux_goo>, 750000, 1750000, 10, 200, 30, I , [], [114], [], []);
-registerReservoir('Will Reservoir (Stella)'    , <liquid:raw_will>, 85000 , 265000 , 0 , 60 , 20, II, [], [114], [], []);
+registerReservoir('Flux Goo Reservoir (Stella)', <liquid:flux_goo>, 7500000, 17500000, 10, 200, 30, I , [], [114], [], []);
+registerReservoir('Will Reservoir (Stella)'    , <liquid:raw_will>, 850000 , 2650000 , 0 , 60 , 20, II, [], [114], [], []);
 
 // Hubble ID=116
 // Is not reachable with tpx command
@@ -221,11 +221,11 @@ registerReservoir('Hot Spring Water Reservoir (KELT-4ab)', <liquid:hot_spring_wa
 /*
 		alien forest
 */
-registerReservoir('Protein Reservoir (KELT-6a)'       , <liquid:protein>  , 265000 , 530000 ,  0,   60, 30, I  , [], [121], [], []);
-registerReservoir('Resonant Ender Reservoir (KELT-6a)', <liquid:ender>    , 2000000, 4500000, 50, 2000, 30, I  , [], [121], [], []);
-registerReservoir('Liquid DNA Reservoir (KELT-6a)'    , <liquid:liquiddna>, 85000  , 265000 ,  0,   60, 15, II , [], [121], [], []);
-registerReservoir('Mutagen Reservoir (KELT-6a)'       , <liquid:mutagen>  , 85000  , 265000 ,  0,   60, 15, II , [], [121], [], []);
-registerReservoir('Will Reservoir (KELT-6a)'          , <liquid:raw_will> , 850000 , 2650000, 30,   60, 20, III, [], [121], [], []);
+registerReservoir('Protein Reservoir (KELT-6a)'       , <liquid:protein>  , 2650000 , 5300000 ,  0,   60, 30, I  , [], [121], [], []);
+registerReservoir('Resonant Ender Reservoir (KELT-6a)', <liquid:ender>    , 20000000, 45000000, 50, 2000, 30, I  , [], [121], [], []);
+registerReservoir('Liquid DNA Reservoir (KELT-6a)'    , <liquid:liquiddna>, 850000  , 2650000 ,  0,   60, 15, II , [], [121], [], []);
+registerReservoir('Mutagen Reservoir (KELT-6a)'       , <liquid:mutagen>  , 850000  , 2650000 ,  0,   60, 15, II , [], [121], [], []);
+registerReservoir('Will Reservoir (KELT-6a)'          , <liquid:raw_will> , 8500000 , 26500000, 30,   60, 20, III, [], [121], [], []);
 
 // Kepler 0118 ID=122
 /*

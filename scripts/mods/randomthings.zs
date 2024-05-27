@@ -2,6 +2,9 @@
 
 import crafttweaker.item.IIngredient;
 
+// Defined by hammering
+recipes.remove(<randomthings:ingredient:5>);
+
 // Add hints with Spectre trees mechanics
 scripts.jei.crafting_hints.addInsOutCatl(
   [<randomthings:ingredient:2>, <ore:treeSapling>],
@@ -537,6 +540,15 @@ scripts.mods.forestry.ThermionicFabricator.addCast(<randomthings:biomeglass> * 8
   '*': <actuallyadditions:block_crystal_empowered:1>, // Empowered Palis Crystal Block
   '▬': <ore:ingotPlatinum>,        // Platinum Ingot
 }).shaped(), <fluid:glass> * 4000);
+
+// Defined by decaying of corals
+for i in 0 .. 5 {
+  val stone = <randomthings:biomestone>.definition.makeStack(i);
+  recipes.remove(stone);
+  if (i==0) continue;
+  mods.chisel.Carving.addVariation('biome_stone', stone);
+}
+furnace.addRecipe(<randomthings:biomestone:1>, <randomthings:biomestone>, 0.5);
 
 // Cheaper to use as ingredient
 craft.remake(<darkutils:monolith>, ['pretty',

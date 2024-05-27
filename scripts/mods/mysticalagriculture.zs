@@ -92,7 +92,7 @@ val essenceByTier = [
 
 val seedIngrByTier = [
   <ic2:crop_res:5>,                  // Weed
-  <biomesoplenty:coral:*>,           // Glowing Coral
+  <randomthings:ingredient:5>,
   <ore:gemXorcite>,                  // Xorcite Shard
   <bloodmagic:component:28>,         // Simple Lengthening Catalyst
   <ore:carminite>,                   // Carminite
@@ -541,7 +541,7 @@ mods.rats.recipes.addChefRatRecipe(<ore:quartzMana>.firstItem, <mysticalagricult
 mods.botania.ManaInfusion.addConjuration(<mysticalagriculture:infusion_crystal>, <astralsorcery:blockcelestialcollectorcrystal:*>, 25000);
 
 // [Fertilized Essence] from [Phyto-Gro]*2[+4]
-craft.reshapeless(<mysticalagriculture:fertilized_essence>, 'rF*ef', {
+craft.reshapeless(<mysticalagriculture:fertilized_essence> * 8, 'rF*ef', {
   '*': anyDamageCrystal, // Inferium Infusion Crystal
   'r': <actuallyadditions:item_fertilizer>, // Fertilizer
   'F': <ic2:crop_res:2>,                    // Fertilizer
@@ -860,7 +860,7 @@ remakeFluid ('mysticalagriculture:obsidian'             , <fluid:obsidian>      
 // remakeFluid ("mysticalagriculture:stone"                , <fluid:stone>                             , [<mysticalagriculture:stone_essence>]);
 remakeBlock   ('mysticalagriculture:gemquartzblack'       , <blockstate:actuallyadditions:block_misc:type=ore_black_quartz>          , [<mysticalagriculture:black_quartz_essence> * 7]);
 remakeBlock   ('mysticalagriculture:crystalcertusquartz'  , <blockstate:appliedenergistics2:quartz_ore>          , [<mysticalagriculture:certus_quartz_essence>]);
-remakeAltair  ('mysticalagriculture:blockcustomore'       , <astralsorcery:blockcustomore>            , [<mysticalagriculture:rock_crystal_essence>]);
+remakeBlock   ('mysticalagriculture:blockcustomore'       , <blockstate:astralsorcery:blockcustomore:oretype=rock_crystal>, [<mysticalagriculture:rock_crystal_essence>]);
 // remakeBlock   ("mysticalagriculture:itemcraftingcomponent", <blockstate:astralsorcery:blockcustomsandore>        , [<mysticalagriculture:aquamarine_essence>]);
 remakeBlock   ('mysticalagriculture:gem'                  , <blockstate:biomesoplenty:gem_ore:variant=amethyst>  , [<mysticalagriculture:ender_amethyst_essence>]);
 remakeBlock   ('mysticalagriculture:gemruby'              , <blockstate:biomesoplenty:gem_ore:variant=ruby>      , [<mysticalagriculture:ruby_essence>]);

@@ -4,6 +4,7 @@
 modifier.excompressum:smashingii.desc=Забивание сжатых блоков молотком
 tile.spectreCoil_number.info=Генерирует 32 RF/t и выдает их в блок, к которому прикреплен. Их можно найти в сундуках в подземельях.
 entity.twilightforest.harbinger_cube.name=Куб Предвестника
+entity.twilightforest.castle_guardian.name=Хранитель замка
 # --------------------------------------
 # Custom mechanics
 # --------------------------------------
@@ -175,6 +176,7 @@ tile.contenttweaker.compressed_string.name=Сжатая Нить
 tile.contenttweaker.compressed_string_double.name=Вдвойне Сжатая Нить
 tile.contenttweaker.compressed_basalt.name=Сжатый Базальт
 tile.contenttweaker.compressed_basalt_double.name=Вдвойне Сжатый Базальт
+tile.contenttweaker.compressed_coral.name=Сжатый Корал
 tile.contenttweaker.conglomerate_of_life.name=Конгломерат Жизни
 tile.contenttweaker.conglomerate_of_coal.name=Конгломерат Угля
 tile.contenttweaker.conglomerate_of_sun.name=Конгломерат Солнца

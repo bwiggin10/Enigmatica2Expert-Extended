@@ -153,7 +153,7 @@ craft.remake(<biomesoplenty:biome_finder>, ['pretty',
   'G C G',
   'd G d'], {
   'd': <ore:dyePurple>, // Purple Dye
-  'G': <biomesoplenty:coral:*>, // Glowing Coral
+  'G': <randomthings:ingredient:5>,
   'C': <minecraft:web>, // Cobweb
 });
 
@@ -227,7 +227,7 @@ for input, output in {
   <biomesoplenty:plant_1:3>     : <actuallyadditions:item_food:16>,
   <biomesoplenty:plant_1:4>     : <biomesoplenty:brown_dye:0>,
   <biomesoplenty:plant_1:10>    : <minecraft:dye:1>,
-} as IItemStack[IItemStack] {
+} as IItemStack[IItemStack]$orderly {
   scripts.lib.dropt.addDrop(input, output, 1.25, 'shears;-1;-1');
 }
 

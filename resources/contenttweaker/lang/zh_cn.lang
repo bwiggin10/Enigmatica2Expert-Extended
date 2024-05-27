@@ -4,6 +4,7 @@
 modifier.excompressum:smashingii.desc=锤击压缩方块
 tile.spectreCoil_number.info=产生 32 RF/t 并输出到所贴的方块中。它们可以在地牢箱子中找到。
 entity.twilightforest.harbinger_cube.name=先驱者立方体
+entity.twilightforest.castle_guardian.name=城堡守护者
 # --------------------------------------
 # Custom mechanics
 # --------------------------------------
@@ -175,6 +176,7 @@ tile.contenttweaker.compressed_string.name=压缩线
 tile.contenttweaker.compressed_string_double.name=双重压缩线
 tile.contenttweaker.compressed_basalt.name=压缩玄武岩
 tile.contenttweaker.compressed_basalt_double.name=双重压缩玄武岩
+tile.contenttweaker.compressed_coral.name=压缩珊瑚
 tile.contenttweaker.conglomerate_of_life.name=生命团块
 tile.contenttweaker.conglomerate_of_coal.name=煤炭团块
 tile.contenttweaker.conglomerate_of_sun.name=耀阳团块

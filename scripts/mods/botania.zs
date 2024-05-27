@@ -424,7 +424,6 @@ craft.remake(<botania:exchangerod>, ['pretty',
   'F': <ore:runeFireB>,      // Rune of Fire
   'T': <ore:livingwoodTwig>, // Livingwood Twig
 });
-// ////////////////////////////////////////////////////////////////
 
 recipes.removeByRecipeName('botania:cobblerod');    recipes.addShaped(<botania:cobblerod>, [[null, null, <ore:cobblestone>], [null, <ore:livingwoodTwig>, null], [<ore:livingwoodTwig>, null, null]]);
 recipes.removeByRecipeName('botania:dirtrod');      recipes.addShaped(<botania:dirtrod>, [[null, <minecraft:dirt>], [<ore:livingwoodTwig>, null]]);
@@ -437,3 +436,4 @@ recipes.removeByRecipeName('botania:terraformrod'); recipes.addShaped(<botania:t
 recipes.removeByRecipeName('botania:tornadorod');   recipes.addShaped(<botania:tornadorod>, [[null, <ore:feather>], [<ore:livingwoodTwig>, null]]);
 recipes.removeByRecipeName('botania:waterrod');     recipes.addShaped(<botania:waterrod>, [[null, <minecraft:potion>.withTag({Potion: 'minecraft:water'})], [<ore:livingwoodTwig>, null]]);
 recipes.removeByRecipeName('botania:skydirtrod');   recipes.addShapeless(<botania:skydirtrod>, [<botania:dirtrod>, <ore:elvenPixieDust>]);
+// ////////////////////////////////////////////////////////////////

@@ -4,6 +4,7 @@
 modifier.excompressum:smashingii.desc=Hammering compressed blocks
 tile.spectreCoil_number.info=Generates 32 RF/t and outputs it into the block it's attached to. They can be found in dungeon chests.
 entity.twilightforest.harbinger_cube.name=Harbinger Cube
+entity.twilightforest.castle_guardian.name=Castle Guardian
 # --------------------------------------
 # Custom mechanics
 # --------------------------------------
@@ -175,6 +176,7 @@ tile.contenttweaker.compressed_string.name=Compressed String
 tile.contenttweaker.compressed_string_double.name=Double Compressed String
 tile.contenttweaker.compressed_basalt.name=Compressed Basalt
 tile.contenttweaker.compressed_basalt_double.name=Double Compressed Basalt
+tile.contenttweaker.compressed_coral.name=Compressed Coral
 tile.contenttweaker.conglomerate_of_life.name=Conglomerate Of Life
 tile.contenttweaker.conglomerate_of_coal.name=Conglomerate Of Coal
 tile.contenttweaker.conglomerate_of_sun.name=Conglomerate Of Sun
@@ -193,7 +195,7 @@ item.contenttweaker.ore_phosphor.name=Phosphor Ore
 item.contenttweaker.nugget_phosphor.name=Phosphor Nugget
 item.contenttweaker.dust_tiny_gold.name=Tiny Pile of Gold Dust
 item.contenttweaker.dust_tiny_silver.name=Tiny Pile of Silver Dust
-item.contenttweaker.fruit_pill.name=Furit pill
+item.contenttweaker.fruit_pill.name=Fruit pill
 item.contenttweaker.dairy_pill.name=Dairy pill
 item.contenttweaker.vegetable_pill.name=Vegetable pill
 item.contenttweaker.protein_pill.name=Protein pill
