@@ -17,7 +17,7 @@ ao:2
 renderClouds:fast
 resourcePacks:["Better Gendustry v1.0.zip"]
 incompatibleResourcePacks:[]
-lastServer:192.168.193.234:55650
+lastServer:
 lang:en_us
 chatVisibility:0
 chatColors:true
