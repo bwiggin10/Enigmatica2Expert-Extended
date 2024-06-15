@@ -8,11 +8,11 @@ static dropList as IItemStack[string][string] = {} as IItemStack[string][string]
 
 function add(deadEntity as string, killerEntity as string, item as IItemStack) as void {
   var by_drop = dropList[deadEntity];
-  if (isNull(by_drop)) by_drop = {} as IItemStack[string];
+  if (isNull(by_drop)) by_drop = {};
   by_drop[killerEntity] = item;
   dropList[deadEntity] = by_drop;
 
-  scripts.jei.entity_kill_entity.add(Soul(killerEntity), Soul(deadEntity), item);
+  scripts.jei.entity_kill_entity.add(<entity:${killerEntity}>.asIngr(), <entity:${deadEntity}>.asIngr(), item);
 }
 
 events.onEntityLivingDeathDrops(function (e as crafttweaker.event.EntityLivingDeathDropsEvent) {

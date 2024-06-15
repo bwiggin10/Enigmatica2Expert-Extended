@@ -8,7 +8,6 @@
 !resources/
 !schematics/
 schematics/*.*
-!resourcepacks/bq_lootchests/
 !dev/
 !server/
 !README.md
@@ -25,6 +24,10 @@ structures/inactive
 !.imgbotconfig
 !CHANGELOG-latest.md
 !asm/
+
+!resourcepacks
+resourcepacks/*
+!resourcepacks/icons
 
 # Developing-only configs
 !.eslint.config.js
@@ -104,3 +107,5 @@ config/serializationisbad-remotecache.json
 config/loliasm/methods-stable_39.csv
 config/probezs.cfg
 config/InfinityItemEditor.cfg
+config/cherishedworlds/favorites.dat
+config/mcp_stable-39-1.12.zip

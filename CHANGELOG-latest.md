@@ -1,13 +1,10 @@
-# v1.38.1 (2024-5-27)
+# v1.39.1-beta (2024-6-11)
 
-## Mods changes
 
-### 🔴 Removed Mods
+## 🐛 Fixes
 
-Icon | Summary|Reason
-----:|:-------|---
-<img src="https://media.forgecdn.net/avatars/thumbnails/573/873/30/30/637936076465669614.png"            > |                                 [**IC2-No**](https://www.curseforge.com/minecraft/mc-mods/ic2-no)                       <sup><sub>IC2-No-1.1.jar                                   </sub></sup><br>A Mod that fix ref and ic2 support|Its causing server crash: https://github.com/XHL315/IC2-No/issues/1
------------
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/1111884b472300b5c3662da792a3b67209d46b1a)💙Fix server crash when ![](https://github.com/Krutoy242/mc-icons/raw/master/i/requious/replicator__0.png "Replicator") doesnt know owner player
+  > Replicator always know who placed it, even if it was block placer. But in rare circumstances "owner" field could be empty what causing crash.
 
 
 

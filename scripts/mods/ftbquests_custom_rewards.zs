@@ -1,5 +1,6 @@
 #modloaded ftbquests
 #reloadable
+#priority -2000
 
 import crafttweaker.player.IPlayer;
 
@@ -59,12 +60,58 @@ events.onCustomReward(function (e as mods.zenutils.ftbq.CustomRewardEvent) {
       );
     }
   }
+
+  /*
+    Regexp to replace all loot chest rewards:
+
+rewards: \[\{\n\s+uid: "(\w+)",\s+type: "item",\s+item: \{\s+id: "ftbquests:lootcrate",\s+tag: \{\s+type: "(\w+)"(?:\s+\}){3}\]
+
+rewards: [{
+		uid: "$1",
+		type: "custom",
+		title: "{e2ee.quest.$2}",
+		icon: {
+			id: "ftbquests:lootcrate",
+			Count: 2,
+			tag: {
+				type: "$2"
+			}
+		},
+		tags: [
+			"loot"
+		]
+	}]
+
+  */
+
+  /**
+  * Give loot crates based on player's difficulty level
+  */
+  if (e.reward.tags has 'loot') {
+    val amount = e.reward.icon.amount;
+    val diff = e.player.difficulty;
+    e.player.give(e.reward.icon * (
+      diff < 1.0 ? amount + 1 // Mostly zero difficulty +1 chest
+      : diff > 1000 ? max(1, amount - 1) // max difficulty -1 chest
+      : amount
+    ));
+    if(diff < 1.0) {
+      e.player.sendRichTextStatusMessage(
+        crafttweaker.text.ITextComponent.fromTranslation('e2ee.quest.loot.additional')
+      );
+    }
+  }
 });
 
 events.onCustomTask(function (e as mods.zenutils.ftbq.CustomTaskEvent) {
   if (e.task.hasTag('skyblock')) {
     e.checker = function (player, currentProgress) {
       return player.hasGameStage('skyblock') ? 1 : 0;
+    };
+  }
+  if (e.task.hasTag('crystal_memory_hit')) {
+    e.checker = function (player, currentProgress) {
+      return isNull(scripts.do.acquire.info.playersCompleted[player.uuid]) ? 0 : 1;
     };
   }
 });
