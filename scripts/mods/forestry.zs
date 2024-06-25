@@ -128,7 +128,7 @@ for liquid, ratio in FermenterFluid {
 mods.forestry.Squeezer.addRecipe(<liquid:juice> * 15, [<minecraft:melon>], 8);
 
 // Remove and hide charcoal block
-Purge(<forestry:charcoal>).ores();
+Purge(<forestry:charcoal>).ores([<ore:blockCharcoal>]);
 
 // Remove pulp recipe
 mods.forestry.Carpenter.removeRecipe(<forestry:wood_pulp>);
@@ -331,6 +331,9 @@ for i, input in farmBlocks {
     'T': <forestry:thermionic_tubes:1>, // Tin Electron Tube
   });
 }
+
+// Recycling
+scripts.process.melt(<forestry:smoker>, <fluid:tin> * (144 * 5));
 
 // [Carton] from [Compressed Sawdust]
 scripts.process.crush(<thermalfoundation:material:801> /* Compressed Sawdust */, <forestry:carton>, 'only: CrushingBlock');
