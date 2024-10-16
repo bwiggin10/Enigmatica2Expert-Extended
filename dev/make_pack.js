@@ -1,4 +1,3 @@
-/* eslint-disable node/prefer-global/process */
 /**
  * @file Make necessary preparations to turn dev version of pack
  * into distributable one.
@@ -131,7 +130,7 @@ const argv = yargs(process.argv.slice(2))
 
     // Iconize
     try {
-      execSyncInherit(`ts-node E:/dev/mc-icons/src/cli.ts "${latestPath}" --silent --no-short --modpack=e2ee --treshold=2`)
+      execSyncInherit(`tsx E:/dev/mc-icons/src/cli.ts "${latestPath}" --silent --no-short --modpack=e2ee --treshold=2`)
       await git.add(latestPath)
     }
     catch (error) {
