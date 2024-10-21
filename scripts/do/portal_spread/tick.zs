@@ -8,6 +8,7 @@
 #reloadable
 #modloaded zenutils
 
+import crafttweaker.block.IBlockDefinition;
 import crafttweaker.block.IBlockState;
 import crafttweaker.data.IData;
 import crafttweaker.util.Position3f;
@@ -156,9 +157,9 @@ function spreadBlock(
   spreadPos as Position3f,
   showParticles as bool,
   spreadStateRecipes as IBlockState[][IBlockState],
-  spreadWhitelist as bool[int],
-  spreadBlacklist as bool[int],
-  spreadWildcards as bool[int]
+  spreadWhitelist as bool[IBlockDefinition],
+  spreadBlacklist as bool[IBlockDefinition],
+  spreadWildcards as bool[IBlockDefinition]
 ) as bool {
   val inworldState = world.getBlockState(spreadPos);
   val inworldDefinition = inworldState.block.definition;
@@ -172,7 +173,7 @@ function spreadBlock(
     return false;
 
   // If block is wildcarded, lookup for its default state
-  val isWildcarded = !isNull(spreadWildcards[numId]);
+  val isWildcarded = !isNull(spreadWildcards[inworldDefinition]);
   val lookupState = isWildcarded ? inworldDefinition.defaultState : inworldState;
 
   // Determine result
