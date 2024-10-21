@@ -126,6 +126,8 @@ function tickPortalsToWorld(world as IWorld, targetDimIdStr as string, dimData a
         }
       }
     }
+
+    // Reset lookup radius to allow automation closest block near portal
     if (somethingReplaced && !Config.debug) portalIndexes[fullPortalId] = 1;
   }
 }
@@ -164,11 +166,10 @@ function spreadBlock(
 
   if (showParticles) particles(spreadPos.x, spreadPos.y, spreadPos.z);
 
-  if (
-    numId == 0 // Air
-    || isNull(spreadWhitelist[numId])
-    || !isNull(spreadBlacklist[numId])
-  ) return false;
+  if (numId == 0) return false; // Air
+
+  if(isNull(spreadWhitelist[inworldDefinition]) || !isNull(spreadBlacklist[inworldDefinition]))
+    return false;
 
   // If block is wildcarded, lookup for its default state
   val isWildcarded = !isNull(spreadWildcards[numId]);
