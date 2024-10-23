@@ -29,7 +29,7 @@ Battle Furor,tconevo.battle_furor,30,Hwæt!\nThis weapon grants its wielder incr
 Blasting,tconevo.blasting,15,I don't even think once!\nThis tool produces explosive results.,"Chance to cause an explosion, dealing bonus damage"
 Blessed,blessed_armor,30,"Undead, beware.\nWeakens undead on contact.",
 Blind Bandit,blindbandit,40,"Pulling a ... someone.\nA mob called the ""Blind Bandit"" will sometimes be summoned for a limited time after you attack or are attacked. She will attack hostile mobs, and will also attack those who dare attack her (except you), piercing armor on mobs.",Fully charged hits have a chance of summoning a Blind Bandit to fight for you temporarily
-Blind Rage,blindrage,10,Who said you need to see your enemies?\nDeal double damage when blinded.,Increased damage when blinded
+Blind Rage,blindrage,20,Who said you need to see your enemies?\nDeal double damage when blinded.,Increased damage when blinded
 Blizzard II,frost2,20,"Ice-ice baby!\nFreezes enemies in a block of ice for 15 seconds with added knockback, and deals additional dragon frost damage.",
 Blood Lust,bloodlust,10,I want more blood.\nAdds life essence to your soul network when killing.,
 Bloodbound,tconevo.bloodbound_armor,20,The multitudinous seas incarnadine...\nThis armour siphons its user's life essence to prevent damage to itself.,Tool will drain from the users LP network to repair itself
@@ -48,8 +48,8 @@ Celestial,tconevo.celestial_armor,500,Abyssal wings!\nThis armour grants creativ
 Chain Lightning,tconevo.chain_lightning,20,Full bridge rectifier!\nThis weapon's fully-charged attacks have a chance of arcing to nearby enemies.,Fully charged attacks have a chance of causing chain lightning between enemies
 Cheap,cheap_armor,15,More bang for your buck!\nIncreases durability gained when repairing the armor.,Increases durability regained when repairing
 Cheap,cheap,15,More bang for your buck!\nIncreases durability gained when repairing the tool.,Increases durability regained when repairing
-Cheapskate,cheapskate_armor,-10,Might be a knockoff!\nStone is bad. Your armor has less durability.,Overall durability decreased
-Cheapskate,cheapskate,-20,Cheeky!\nStone is bad. Your tool has less durability.,Overall durability decreased
+Cheapskate,cheapskate_armor,-5,Might be a knockoff!\nStone is bad. Your armor has less durability.,Overall durability decreased
+Cheapskate,cheapskate,-10,Cheeky!\nStone is bad. Your tool has less durability.,Overall durability decreased
 Chilling Touch,tconevo.chilling_touch_armor,20,Ice is nice!\nThis armour briefly slows attackers.,
 Chunky,chunky,40,Makes your tool or weapon randomly drop Mob Chunks.,Hit enemies have a chance to drop their mob chunk on death
 Cold-Blooded,coldblooded,30,Savage!\nDeal increased damage to targets at full health.,Increases damage against targets at full HP
