@@ -34,6 +34,7 @@ Blizzard II,frost2,20,"Ice-ice baby!\nFreezes enemies in a block of ice for 15 s
 Blood Lust,bloodlust,10,I want more blood.\nAdds life essence to your soul network when killing.,
 Bloodbound,tconevo.bloodbound_armor,20,The multitudinous seas incarnadine...\nThis armour siphons its user's life essence to prevent damage to itself.,Tool will drain from the users LP network to repair itself
 Bloodbound,tconevo.bloodbound,60,The multitudinous seas incarnadine...\nThis tool siphons its user's life essence to prevent damage to itself.,Tool will drain from the users LP network to repair itself
+Bloodlust,bloodlust,30,,Add life essence into Blood Network on kill
 Bloody Mary,bloodymary,80,"Brought to you by the legendary Queen of England...\nDeals bonus damage depending on the amount of health already lost by the target. Also, a chance to drop a Coagulated Blood for each hit.",Increases damage based on total HP loss of enemy; Chance to drop Coagulated Blood on strike
 Botanical,botanical,20,I eat zombies for breakfast\nIncreases the amount of modifier slots; the effect stacks greatly.,Gain +1 modifier (per stack)
 Bouncy,bouncy_armor,50,Always a bounce house!\nYour armor tends to bounce around.,"Protects well from fall damage, ease of moving around."
@@ -78,6 +79,7 @@ Duritae,duritos_ranch_armor,25,Doesn't taste as good as it sounds.\nYour armor l
 Duritae,duritos,25,Doesn't taste as good as it sounds.\nYour tool lasts longer ...most of the time.,"Using the tool has a chance to increase durability used, decrease it, nullify it or do nothing"
 Ecological,ecological_armor,40,"Green Power!\nRenewable resources are so good, they regenerate by themselves!",Slowly repairs over time
 Ecological,ecological,40,"Green Power!\nRenewable resources are so good, they regenerate by themselves!",Slowly repairs over time
+Eldritch Retribution,eldritch_retribution_armor,10,,
 Electric,tconevo.electric_armor,30,HAYO!\nThis armour consumes electricity before durability.,Tool will consume energy before durability
 Electric,tconevo.electric,70,HAYO!\nThis tool consumes electricity before durability.,Tool will consume energy before durability
 Elemental,elemental,30,"Elemental...\nWhen gravity-affected blocks are destroyed, break all blocks of the same type above and below. Also, a chance to gain various benefits from a sucessful attack.","Gain random buffs when attacking enemies; When breaking gravity-affected blocks, break all blocks of the same type above and below"
@@ -99,6 +101,7 @@ Experience Boost,xu_xp_boost,55,Gives bonus XP when mining or slaying mobs.,Incr
 Explosive,explosive,20,Ka-boom!\nAn explosion is created on each hit.,An explosion is created on impact
 Featherweight,featherweight_armor,30,"Light as a feather.\nYou're so light, you take less fall damage.",
 Fertilizing,tconevo.fertilizing,45,Green terra!\nThis tool can be used to fertilize crops at a large durability cost.,Tool can be used as Fertilizer for a durability cost
+First Stand,first_stand_armor,15,,
 Flammable,flammable,15,Can't have enough fire!\nBlocking blocks fire damage and getting hit sets the attacker on fire.,Blocking will block fire damage and getting hit sets the attacker on fire
 Fleet of Foot,tconevo.foot_fleet,20,Stay still--I'm trying to shoot you!\nThis weapon grants a burst of speed to its wielder on fully-charged hits.,Grants Speed II for a short period after a fully charged attack
 Flying Knockback,arrow_knockback,20,Up and At 'Um!\nThe arrow will inflict strong knockback when it hits an entity.,Projectile will strongly knock back impacted enemies
@@ -129,6 +132,7 @@ Infernal,infernal_armor,35,The latest in demonic fashion.\nExtra protection from
 Inferno II,flame2,45,"Burn baby burn!\nSets enemies on fire for 15 seconds with added knockbacks, and deals additional dragon flame damage.",
 Infinitum,tconevo.infinitum,400,Proven by induction!\nThis equipment is indestructible.,Tool is unbreakable
 Insatiable,insatiable,25,Devour!\nDuring combat you deal more and more damage but also consume more and more durability.,Increases damage and durability use during combat
+Instant Break,instantbreak,10,,
 Invigorating,invigorating_armor,40,"This feels great!\nSomehow, you feel healthier.",
 Jagged,jagged,20,Moves like jagged!\nEvery point durability lost increases damage.,Increases damage as more durability is used
 Juggernaut,tconevo.juggernaut,70,A titanic strike!\nThis weapon deals increased damage based on its wielder's current health.,Weapon will deal more damage scaling with the players current HP
@@ -172,6 +176,7 @@ Photosynthetic,tconevo.photosynthetic,50,Photosynthesis... photosynthesis...\nTh
 Piezoelectric,tconevo.piezoelectric,45,Electromechanical!\nThis weapon converts damage from fully-charged hits into usable energy.,
 Poisonous,poisonous_armor,25,So many to kill... so little time.\nPoisons enemies on contact.,Hit enemies gain Poison
 Poisonous,poisonous,25,Not exactly lead-free!\nPoisons enemies on hit.,Hit enemies gain Poison
+Porous,porous_armor,30,,
 Portly Gentleman,portly,70,"Testing nuclear bombs off the Korean coast, oh yeah!\nShift-right-click an entity to capture it (costs durability based on entity health). Press the ""release entity"" key (default ""0"") in order to release it.","Shift right-click an entity to capture it at the cost of durability. Press the ""release entity"" key (default ""O"") to release it."
 Possessed,possessed,70,J'zhahar's will descends on the instrument of destruction crying out for the essences of life.,
 Precipitate,precipitate,25,"The last standing escape plan.\nThe less health you have, the speedier it is!",Tool mines faster when at low HP
@@ -186,6 +191,7 @@ Reactive,tconevo.reactive_armor,35,They'll never get me in here!\nThis armour gr
 Rejuvenating,tconevo.rejuvenating,5,Your weapons betray you!\nThis weapon applies regeneration to attacked targets.,Attacked enemies gain Regeneration
 Relentless,tconevo.relentless,20,Swift strikes!\nThis weapon induces a shorter invulnerability period in struck enemies.,Struck enemies invulnerability timer is reduced
 Researcher,researcher,90,"Based on your research in thaumonomicon, there are various effects!",
+Robust,robust_armor,10,,
 Rough,rough_armor,40,Please don't touch.\nDamages attackers on contact based on durability.,
 Ruination,tconevo.ruination,50,I met a traveller...\nThis weapon deals damage scaling with enemy health on fully-charged hits.,Tool deals percentage damage if struck enemy has full HP
 Sassy,sassy,60,The sass...\nCrit on players and bosses.,All hits on players and bosses will be Critical hits
@@ -251,12 +257,13 @@ Vanishing,,5,Out of my way!\nChance to teleport enemies away.,Chance to teleport
 Veiled,veiled,5,Like a Specter!\nProjectile will be invisible.,Projectile becomes invisible
 Vengeful,vengeful_armor,35,They'll pay for this!\nYour attackers might not feel great after hitting you.,
 Vindictive,vindictive,10,"You are not forgiven!\nBonus damage to players, and you gain some health by attacking.",Increases damage against players
-Vis Equillibrium,vis_equilibrium,35,Depending on vis in aura your tool has better stats.,
 Vis Equillibrium,vis_equilibrium_armor,45,Depending on vis in aura your tool has better stats.,
-Vis Siphon,vis_siphon,45,Repairs tool using local vis in aura.,
+Vis Equillibrium,vis_equilibrium,35,Depending on vis in aura your tool has better stats.,
 Vis Siphon,vis_siphon_armor,25,Repairs tool using local vis in aura.,
+Vis Siphon,vis_siphon,45,Repairs tool using local vis in aura.,
 Voice of the Fae,tconevo.fae_voice_armor,25,"Hey, listen!\nThis armour may summon pixies to ward off attackers.",Chance to summon a pixie to dive bomb the enemy
 Voice of the Fae,tconevo.fae_voice,25,"Hey, listen!\nThis weapon may summon pixies to attack foes.",Chance to summon a pixie to dive bomb the enemy
+Void Shell,void_shell_armor,10,,
 Voltaic,voltaic_armor,35,"Biribiri!\nGetting hit charges your armor. Once fully charged, get hit again to discharge and deal damage to all surrounding creatures.",
 Warping,tconevo.warping_armor,5,Strange whispers reveal secrets...\nThis accursed plate saps at the sanity of those that would strike it.,Increases struck targets temporary Warp
 Warping,tconevo.warping,5,Strange whispers reveal secrets...\nThis accursed weapon saps at the sanity of those that bear its strikes.,Increases struck targets temporary Warp
