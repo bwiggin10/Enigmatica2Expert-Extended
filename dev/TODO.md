@@ -2,19 +2,14 @@
 
 🚧✅❌⚠️ List of priorities:
 
-- [ ] 🚧 TconScript: account trait "value" in resulted power
-- [ ] 🟢 Find how to work with Modrinth and install https://modrinth.com/mod/hit-indication
+- [ ] 💦 Integrate `Fluid Interaction Tweaker`: https://github.com/tttsaurus/Fluid-Interaction-Tweaker/releases/tag/v1.4.0-preview-2
 - [ ] 💬 fix sometimes when playing on server, it spam errors about uu matter tooltip. Caused by player.difficulty getter
-- [ ] Use `WaitingIdly` mixin to fix RT tp bug
-- [ ] 🌑 Add dark mode for Replicator
-- [ ] 🟢 add mod `improved stronghold`
-- [ ] Iterate all possible variants in Transmuter Stone
+- [ ] Fix `Uranium`, `Iron`, `Cobalt` doesnt have all variations in Transmuter Stone recipes
+- [ ] Add feature to clear drawer `Item: 0` when unlocking it https://github.com/jaquadro/StorageDrawers/commit/da9875158ad0fadc190aae437ea2d9e89d616cca
 - [ ] Fix PSI "silk touch falling" turning Netherending Ores into meta-0 ones
-- [ ] `Black Quartz Ore` transforms in Nether Portal only after `/ct relaod`
-
-```
-{validSpell:1b,spellName:"Collapse Block",uuidMost:-2407616212808744454L,uuidLeast:-5336080093071054503L,spellList:[{x:2,y:2,data:{key:"operatorEntityPosition",params:{_target:2}}},{x:2,y:3,data:{key:"selectorFocalPoint"}},{x:3,y:2,data:{key:"operatorVectorRaycast",params:{_position:3,_ray:2,_max:0}}},{x:3,y:3,data:{key:"operatorEntityLook",params:{_target:3}}},{x:4,y:2,data:{key:"trickCollapseBlock",params:{_position:3}}}]}
-```
+  ```
+  {validSpell:1b,spellName:"Collapse Block",uuidMost:-2407616212808744454L,uuidLeast:-5336080093071054503L,spellList:[{x:2,y:2,data:{key:"operatorEntityPosition",params:{_target:2}}},{x:2,y:3,data:{key:"selectorFocalPoint"}},{x:3,y:2,data:{key:"operatorVectorRaycast",params:{_position:3,_ray:2,_max:0}}},{x:3,y:3,data:{key:"operatorEntityLook",params:{_target:3}}},{x:4,y:2,data:{key:"trickCollapseBlock",params:{_position:3}}}]}
+  ```
 
 ---
 
@@ -110,6 +105,7 @@ Planned non-urgent changes, or just good ideas:
 - [ ] 💬 Add messages "Player killex xxx mobs! WOW" with respective loot box reward. Ideas: Mined blocks, Jumps, Death
 
 ### Mods
+- [ ] 🟢 Find how to work with Modrinth and install https://modrinth.com/mod/hit-indication
 - [ ] 🔴 Remove `Random Patches` since UT and Valkyrie now do most of its features
 - [ ] 🟠 Do not update `ae2-uel-v0.56.6` since its breaking plus + button craftings
 - [ ] 🔴 Remove `XTones` and `Environmental Materials`
@@ -132,7 +128,6 @@ Planned non-urgent changes, or just good ideas:
 
 - [ ] 🌠 Tweak Shooting Star drop list
 - [ ] 📀 Concrete make hardening slower for servers. Source code of concrete https://github.com/BluSunrize/ImmersiveEngineering/blob/master/src/main/java/blusunrize/immersiveengineering/common/blocks/BlockIEFluidConcrete.java#L51-L191
-- [ ] 💦 Integrate `Fluid Interaction Tweaker` when resolved: https://github.com/tttsaurus/Fluid-Interaction-Tweaker/issues/4
 - [ ] 🦊 Transormation powder turn `Fox` into `Foxhound`
 - [ ] 🟢 Integrate `villager-contracts`
 - [ ] 🕰️ Make Timewood Clock function unstackable
