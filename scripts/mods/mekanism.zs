@@ -1,4 +1,4 @@
-#modloaded mekanism
+#modloaded mekanism nuclearcraft
 
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;

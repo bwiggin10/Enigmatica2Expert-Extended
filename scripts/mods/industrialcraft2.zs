@@ -1,4 +1,4 @@
-#modloaded ic2
+#modloaded ic2 thermalfoundation
 
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
