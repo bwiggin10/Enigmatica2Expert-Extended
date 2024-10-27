@@ -49,38 +49,62 @@ function addTransmuters(input as IIngredient, output as IIngredient) as void {
     .build();
 }
 
-// Available prefixes
-// "ore", "nugget", "block", "ingot", "gem", "dust"
-
 for i, pair in [
-  ['oreIron'           , 'oreGold'],
-  ['oreTin'            , 'oreCopper'],
-  ['oreLead'           , 'oreSilver'],
-  ['oreCobalt'         , 'oreArdite'],
-  ['oreAstralStarmetal', 'oreDraconium'],
-  ['orePlatinum'       , 'oreIridium'],
-  ['oreAluminum'       , 'oreTitanium'],
-  ['oreUranium'        , 'oreThorium'],
-  ['oreXorcyte'        , 'oreAquamarine'],
-  ['oreDiamond'        , 'oreSapphire'],
-  ['oreEmerald'        , 'orePeridot'],
-  ['oreRedstone'       , 'oreRuby'],
-  ['oreCertusQuartz'   , 'oreChargedCertusQuartz'],
-  ['oreDilithium'      , 'oreDimensionalShard'],
-  ['gemCoal'           , 'bitumen'],
-  ['oreCoal'           , 'oreClathrateOilShale'],
+  ['Iron', 'Gold'],
+  ['Tin', 'Copper'],
+  ['Lead', 'Silver'],
+  ['Cobalt', 'Ardite'],
+  ['AstralStarmetal', 'Draconium'],
+  ['Platinum', 'Iridium'],
+  ['Aluminum', 'Titanium'],
+  ['Uranium', 'Thorium'],
+  ['Xorcyte', 'Aquamarine'],
+  ['Diamond', 'Sapphire'],
+  ['Emerald', 'Peridot'],
+  ['Redstone', 'Ruby'],
+  ['CertusQuartz', 'ChargedCertusQuartz'],
+  ['Dilithium', 'DimensionalShard'],
+  ['gemCoal', 'bitumen'],
+  ['oreCoal', 'oreClathrateOilShale'],
 ] as string[][] {
-  val one = oreDict[pair[0]].firstItem;
-  val two = oreDict[pair[1]].firstItem;
+  val aOreID = pair[0];
+  val bOreID = pair[1];
 
-  if (isNull(one) || isNull(two)) continue;
-  addTransmuters(one, two);
-  addTransmuters(two, one);
+  var a as IIngredient = null;
+  var b as IIngredient = null;
+
+  // Plain ore
+  if (
+    !isNull(oreDict[aOreID]) && !isNull(oreDict[aOreID].firstItem) &&
+    !isNull(oreDict[bOreID]) && !isNull(oreDict[bOreID].firstItem)
+  ) {
+    a = oreDict[aOreID].firstItem;
+    b = oreDict[bOreID].firstItem;
+  }
+
+  // All other variants
+  val orePrefixes = ['ore', 'nugget', 'block', 'ingot', 'gem', 'dust'] as string[];
+  for orePrefix in orePrefixes {
+    val aOreEntry = oreDict[orePrefix + aOreID];
+    val bOreEntry = oreDict[orePrefix + bOreID];
+    if (
+      !isNull(aOreEntry) && !isNull(aOreEntry.firstItem) &&
+      !isNull(bOreEntry) && !isNull(bOreEntry.firstItem)
+    ) {
+      a = isNull(a) ? aOreEntry.firstItem as IIngredient : a | aOreEntry.firstItem;
+      b = isNull(b) ? bOreEntry.firstItem as IIngredient : b | bOreEntry.firstItem;
+    }
+  }
+
+  if (isNull(a) || isNull(b)) continue;
+  addTransmuters(a, b);
+  addTransmuters(b, a);
 }
+
 // -----------------------------------------------------------------------
 
 // Usage example: https://github.com/Project-AT/ThirdRebirth/blob/3332053abc6df98938b5b92630bcef87a14e1091/.minecraft/scripts/CraftTweaker/Mods/JEI/magneticAttractionJei.zs
-val p = mods.jei.JEI.createJei('void_beacon', "Void Beacon")
+val p = mods.jei.JEI.createJei('void_beacon', 'Void Beacon')
 .setBackground(IJeiUtils.createBackground(9*18, 5*18))
 .addRecipeCatalyst(<thaumicwonders:void_beacon>)
 .setIcon(<thaumicwonders:void_beacon>)
@@ -95,7 +119,7 @@ for y in 0 .. 5 {
 p.register();
 
 function addVoidBeaconRecipe(outputs as IIngredient[]) as void {
-  mods.jei.JEI.createJeiRecipe("void_beacon").setOutputs(outputs).build();
+  mods.jei.JEI.createJeiRecipe('void_beacon').setOutputs(outputs).build();
 }
 
 // Recipes from: https://github.com/daedalus4096/ThaumicWonders/blob/251829dee76d72368d0ed0af1f2104121b781e63/src/main/java/com/verdantartifice/thaumicwonders/common/init/InitVoidBeacon.java
