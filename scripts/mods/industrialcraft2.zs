@@ -677,3 +677,12 @@ craft.remake(<advgenerators:eu_output_lv>, ['pretty',
   'R': <advgenerators:iron_wiring>,  // Redstone-Iron Wiring
 });
 // --------------------------
+
+mods.immersivetechnology.HeatExchanger.addRecipe(
+  <liquid:ic2superheated_steam> * 3500, <liquid:ic2coolant> * 140,
+  <liquid:ic2hot_coolant> * 140, <liquid:condensate_water> * 875,
+  64, 1);
+mods.immersivetechnology.HeatExchanger.addRecipe(
+  <liquid:ic2superheated_steam> * 3500, <liquid:ic2coolant> * 140,
+  <liquid:ic2hot_coolant> * 140, <liquid:water> * 875,
+  64, 1);
