@@ -1,93 +1,82 @@
-# v1.46.0 (2024-10-27)
+# v1.47.0 (2024-11-02)
 ## Mods changes
+### 🟢 Added Mods
+
+Icon | Summary
+----:|:-------
+<img src="https://media.forgecdn.net/avatars/thumbnails/1010/387/30/30/638534013587034382.png"           > |                    [**NCO Java Legacy Lib**](https://www.curseforge.com/minecraft/mc-mods/nco-java-legacy-lib)          <sup><sub>NCOLegacyLib-1.12.2-1.2.jar                      </sub></sup><br>An API consisting of a collection of legacy classes for use in NCO addons
+<img src="https://media.forgecdn.net/avatars/thumbnails/1109/618/30/30/638660579625539174.png"           > |                       [**Backpack Display**](https://www.curseforge.com/minecraft/mc-mods/backpack-display)             <sup><sub>backpackdisplay-1.1.jar                          </sub></sup><br>A mod to show what&#x27;s in your backpacks, drawers, or any similar containers
+-----------
 
 ### 🟡 Updated Mods
 
 Icon | Summary | Old / New
 ----:|:--------|:---------
-<img src="https://media.forgecdn.net/avatars/thumbnails/108/684/30/30/636374315485450120.png"            > |                            [**U Team Core**](https://www.curseforge.com/minecraft/mc-mods/u-team-core)                 | <nobr>u_team_core-forge-1.12.2-2.2.5.305</nobr><br><nobr>u_team_core-forge-1.12.2-2.2.5.319</nobr>
-<img src="https://media.forgecdn.net/avatars/thumbnails/180/855/30/30/636796143936766724.png"            > |                           [**PackagedAuto**](https://www.curseforge.com/minecraft/mc-mods/packagedauto)                | <nobr>PackagedAuto-1.12.2-1.0.14.55</nobr><br><nobr>PackagedAuto-1.12.2-1.0.15.56</nobr>
-<img src="https://media.forgecdn.net/avatars/thumbnails/205/161/30/30/636946414091294708.png"            > |                     [**PackagedExCrafting**](https://www.curseforge.com/minecraft/mc-mods/packagedexcrafting)          | <nobr>PackagedExCrafting-1.12.2-1.0.2.24</nobr><br><nobr>PackagedExCrafting-1.12.2-1.0.2.25</nobr>
-<img src="https://media.forgecdn.net/avatars/thumbnails/648/528/30/30/638050129235150630.png"            > |                               [**RLMixins**](https://www.curseforge.com/minecraft/mc-mods/rlmixins)                    | <nobr>RLMixins-1.3.8</nobr><br><nobr>RLMixins-1.3.9</nobr>
-<img src="https://media.forgecdn.net/avatars/thumbnails/759/528/30/30/638095905122883877.png"            > |                         [**PackagedAstral**](https://www.curseforge.com/minecraft/mc-mods/packagedastral)              | <nobr>PackagedAstral-1.12.2-1.0.2.15</nobr><br><nobr>PackagedAstral-1.12.2-1.0.2.16</nobr>
-<img src="https://media.forgecdn.net/avatars/thumbnails/785/360/30/30/638135438959255507.png"            > |                       [**PackagedDraconic**](https://www.curseforge.com/minecraft/mc-mods/packageddraconic)            | <nobr>PackagedDraconic-1.12.2-1.0.2.17</nobr><br><nobr>PackagedDraconic-1.12.2-1.0.2.18</nobr>
-<img src="https://media.forgecdn.net/avatars/thumbnails/856/836/30/30/638260772226865253.png"            > |                             [**VisualOres**](https://www.curseforge.com/minecraft/mc-mods/visualores)                  | <nobr>visualores-0.2.5</nobr><br><nobr>visualores-0.2.6</nobr>
-<img src="https://media.forgecdn.net/avatars/thumbnails/937/632/30/30/638416090890641368.png"            > |            [**Thaumic Tinkerer Unofficial**](https://www.curseforge.com/minecraft/mc-mods/thaumic-tinkerer-unofficial) | <nobr>thaumictinkerer-1.12.2-5.7.1-Unofficial</nobr><br><nobr>thaumictinkerer-1.12.2-5.7.2-Unofficial</nobr>
-<img src="https://media.forgecdn.net/avatars/thumbnails/1062/375/30/30/638594947374082619.png"           > |                         [**JEI Area Fixer**](https://www.curseforge.com/minecraft/mc-mods/jei-area-fixer)              | <nobr>jei_area_fixer-1.6.0</nobr><br><nobr>jei_area_fixer-2.0.0</nobr>
-<img src="https://media.forgecdn.net/avatars/thumbnails/1071/348/30/30/638606872011907048.png"           > |              [**Fluid Interaction Tweaker**](https://www.curseforge.com/minecraft/mc-mods/fluid-interaction-tweaker)   | <nobr>fluidintetweaker-1.4.0-preview-1</nobr><br><nobr>fluidintetweaker-1.4.0-preview-2</nobr>
+<img src="https://media.forgecdn.net/avatars/thumbnails/92/854/30/30/636258666554688823.png"             > |                        [**Xaero's Minimap**](https://www.curseforge.com/minecraft/mc-mods/xaeros-minimap)              | <nobr>Xaeros_Minimap_24.5.0_Forge_1.12</nobr><br><nobr>Xaeros_Minimap_24.6.1_Forge_1.12</nobr>
+<img src="https://media.forgecdn.net/avatars/thumbnails/220/544/30/30/637020855283796863.jpeg"           > |               [**NuclearCraft: Overhauled**](https://www.curseforge.com/minecraft/mc-mods/nuclearcraft-overhauled)     | <nobr>NuclearCraft-2o.6.2-1.12.2</nobr><br><nobr>nuclearcraft-1.12.2-2o.7.7</nobr>
+<img src="https://media.forgecdn.net/avatars/thumbnails/240/433/30/30/637120769373275944.png"            > |                                [**Trinity**](https://www.curseforge.com/minecraft/mc-mods/trinity)                     | <nobr>Trinity-1.4.b</nobr><br><nobr>Trinity-1.12.2-1.5.f</nobr>
+<img src="https://media.forgecdn.net/avatars/thumbnails/248/435/30/30/637168261428598002.png"            > |                                    [**QMD**](https://www.curseforge.com/minecraft/mc-mods/qmd)                         | <nobr>QMD-1.3.5-1.12.2</nobr><br><nobr>QMD-1.4.1-1.12.2</nobr>
+<img src="https://media.forgecdn.net/avatars/thumbnails/292/428/30/30/637325593905195388.png"            > |                              [**Zen Utils**](https://www.curseforge.com/minecraft/mc-mods/zenutil)                     | <nobr>zenutils-1.20.10</nobr><br><nobr>zenutils-1.20.12</nobr>
+<img src="https://media.forgecdn.net/avatars/thumbnails/641/454/30/30/638043757664856777.png"            > |                       [**Universal Tweaks**](https://www.curseforge.com/minecraft/mc-mods/universal-tweaks)            | <nobr>UniversalTweaks-1.12.2-1.12.0</nobr><br><nobr>UniversalTweaks-1.12.2-1.13.0</nobr>
+<img src="https://media.forgecdn.net/avatars/thumbnails/648/528/30/30/638050129235150630.png"            > |                               [**RLMixins**](https://www.curseforge.com/minecraft/mc-mods/rlmixins)                    | <nobr>RLMixins-1.3.9</nobr><br><nobr>RLMixins-1.3.13</nobr>
+<img src="https://media.forgecdn.net/avatars/thumbnails/983/99/30/30/638491305320584710.png"             > |                                  [**Fugue**](https://www.curseforge.com/minecraft/mc-mods/fugue)                       | <nobr>+Fugue-1.12.2-0.16.3</nobr><br><nobr>+Fugue-1.12.2-0.16.4</nobr>
+<img src="https://media.forgecdn.net/avatars/thumbnails/1071/348/30/30/638606872011907048.png"           > |              [**Fluid Interaction Tweaker**](https://www.curseforge.com/minecraft/mc-mods/fluid-interaction-tweaker)   | <nobr>fluidintetweaker-1.4.0-preview-2</nobr><br><nobr>fluidintetweaker-1.4.1</nobr>
 -----------
 
 ## ✨ New Features
 
 
-#### Gear
+#### Quest
 
-* <img src="https://i.imgur.com/IOAi9XP.png" align=right> [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/7bd90e47b24ed9a3b3b126883e5d5b114b4a1709)🔨Considering trait power for TCon calculations
-  > Thanks for @TamatLT for providint table of trait powers.
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/0f3ef4a7060d27cde36cb6f3e0cc9e2888d40a70)📖Add mandatory `Schematica` quest in NC chapter
+  > Since its highly recommended to use Schematica for NC builds, now to progress player must open one of Schematica GUIs.
   > 
-  > Now, sorting in ![](https://github.com/Krutoy242/mc-icons/raw/master/i/tconstruct/book__0.png "Materials and You") will consider not only stats but also traits that material could give.
-  > 
-  > This will update tables of materials in [E2EE Wiki](https://github.com/Krutoy242/Enigmatica2Expert-Extended/blob/master/dev/tools/tcon/stats/Stats.csv) pages.
-  > 
-  > Also, mobs will now more precisely spawn with appropriate materials.
-
-#### Hei
-
-* <img src="https://i.imgur.com/1nv7lUL.png" align=right> [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/5ae08af3fd24b3d55838a17ae4b4da8a6e811102)🏪Add all variations in [Transmuter's stone] tab
-  > Now they will cycle all possible transmutations, not only Ore blocks.
-  > 
-  > (some ores like Iron and Uranium could miss few variants, but they all work in reality)
-
-#### Portal_spread
-
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/c848338928da38be99a0704e1e7d0d877069c4cb)⛑️![](https://github.com/Krutoy242/mc-icons/raw/master/i/contenttweaker/conglomerate_of_coal__0.png "Conglomerate Of Coal") now increasing radius non-lineary
-  > +3 on 1 block, +12 on 2, +27 on 3 and +48 on 4.
-
-#### Recipes
-
-* <img src="https://i.imgur.com/tSBEo7l.png" align=right> [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/40513be533d221c2c7893f528eb0e7c4523eeaaf)✏️add ![](https://github.com/Krutoy242/mc-icons/raw/master/i/fluid/ic2superheated_steam.png "Superheated Steam") recipe
-  > To make Fluid IC2 reactor viable without 150 heat exchangers.
+  > Fix https://github.com/Krutoy242/Enigmatica2Expert-Extended/issues/428
 
 ## 🐛 Fixes
 
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/162edc0f2e282b450c50ed5a16d20c4e51156ddc)🐛Fix Spectre dimension tp stall
-  > Players on servers can experience 15 minutes stalls after teleporting to Spectre dimension.
-  > I was fixed this recently with a temporary creative mode, but now `WaitingIdly` suggested a more proper mixin script.
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/09d62d1d776b3630a57903eed5105868ed1a7d39)💥Fix crash on attaching ![](https://github.com/Krutoy242/mc-icons/raw/master/i/requious/infinity_furnace__0.png "Infinity Furnace") to RTG
+  > .. or any other IC2 power source.
   > 
-  > Related to https://github.com/ACGaming/UniversalTweaks/issues/460
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/1da16374cd4bb53ea1043d91c2f977cef32439a7)🐦Fix mixin error on server
-  > No functional problems with it, just a error.
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/b41f3ae4cb346a34c274b662364a2dc8c7f679c3)🔄Update Thaumcraft aspects in JEI
-  > 
+  > Fix https://github.com/Krutoy242/Enigmatica2Expert-Extended/issues/369
 
 #### Configs
 
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/4ba698fa5232f0d34298aa450e37a5414d5dde78)🏋️whitelist carryon for all `Packaged-` blocks
-  > 
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/7dea28601e6c8f9141fb5e834ffdf5ee28caa23d)🔌![](https://github.com/Krutoy242/mc-icons/raw/master/i/ic2/te__31.png "Liquid Heat Exchanger") make coolant takes x2 more heat
-  > 
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/4f793876c5f3c28ffa4062979ae3581754a4f3c0)🧩Enable some `rlmixins` config options
-  > - Force OTG No Set Spawn
-  > - OTG CustomStructureCache Crash Delay
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/fdfeff34278456b54ffc573c20686188c83696c6)🧩Enable some `rlmixins` config options
+  > - OTG Save To Disk Crash Checks
 
-#### Portal_spread
+#### Docs
 
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/5d895efe68c9334695bbe22b91e788469fb1cd8a)⛑️fix not converting some modded blocks after update
-  > Fixes bug when after several modpack updates, some blocks like ![](https://github.com/Krutoy242/mc-icons/raw/master/i/actuallyadditions/block_misc__3.png "Black Quartz Ore") doesnt converted into respective Nether Ore.
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/fd3ecf8aace908019b05c855e7651722980a5e3e)📝Remove tip `You can spill Milk in The Nether`
   > 
-  > Technical info: blocks to convert stored by their numerical ID, and numerical ID of blocks can vary on game load and world load.
+
+#### Mods
+
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/31aa1ee835a8d326202c6505450e3cd5bca0246f)🦯![](https://github.com/Krutoy242/mc-icons/raw/master/i/botania/missilerod__0.png "Rod of the Unstable Reservoir") remove [Caeles] aspect
+  > Recipe was used to have Gaia ingots in it, but after a nerf I forgot to change aspects too.
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/dda80b6f7c3ebd891a6cdea9a40ffaae5971ba78)🦯Allow ![](https://github.com/Krutoy242/mc-icons/raw/master/i/thaumcraft/celestial_notes__0.png "Celestial Notes") to get in Dim3 (skyblock)
+  > 
 
 #### Quest
 
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/bcc1e3c26b96a3d2d50f8ea37cbfc8c35fd35a3a)📖![](https://github.com/Krutoy242/mc-icons/raw/master/i/thaumcraft/bellows__0.png "Arcane Bellows") fix ru/en swapped translations
-  > 
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/5b6b7ec9372f77b4a5071c9145aece78c478ef37)📖Fix player get "Now you can visit the Nether" message even if already can
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/30e8ad208924166d5319e6e906ac743a969dc503)📖Fix MaterialSystem localization and some typos
+  > > Contributed by [ice](44568304+icepony@users.noreply.github.com)
+  >
+  > - Fix ![](https://github.com/Krutoy242/mc-icons/raw/master/i/fluid/heavy_metal.png "Molten Heavy Metal") and ![](https://github.com/Krutoy242/mc-icons/raw/master/i/fluid/cheese.png "Molten Cheese") localization
+  > - Fix technical typo in quest
+  > - Fix `Aveary` typo
+  > - Improve number format
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/1c88952491618f0e419fe6b85ec257bb516ab14c)📖Update Chinese localization
+  > > Contributed by [ice](44568304+icepony@users.noreply.github.com)
+  >
   > 
 
 #### Recipes
 
-* <img src="https://i.imgur.com/mqb03Cs.png" align=right> [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/4924d345171cd8376ce81fc91363e86e50927568)✏️![](https://github.com/Krutoy242/mc-icons/raw/master/i/thaumicenergistics/arcane_terminal__0.png "Arcane Crafting Terminal") sync with harder recipe
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/5900e193ffd64b769da2783f6887257b6a96f1c3)✏️![](https://github.com/Krutoy242/mc-icons/raw/master/i/rats/plastic_waste__0.png "Plastic Waste") recipe remove Liquid Dirt sub-product
   > 
+* <img src="https://i.imgur.com/uyepoNt.png" align=right> [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/097a5c84783fcb391b5b8e1a88de2d7bc8914d76)✏️Fix ![](https://github.com/Krutoy242/mc-icons/raw/master/i/bloodmagic/alchemy_table__0.png "Alchemy Table") recipes not consuming all ingredients
+  > Fix only 1 of each ingredients was required, even if recipe show 32 in HEI. Now all recipes that used more than 1 item was changed.
 
 
 
