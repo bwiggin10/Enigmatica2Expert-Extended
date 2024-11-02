@@ -1,9 +1,11 @@
 #modloaded thaumcraft
 #loader mixin
 
-import native.thaumcraft.api.golems.parts.GolemMaterial;
 import mixin.CallbackInfo;
 import mixin.CallbackInfoReturnable;
+import native.net.minecraft.world.DimensionType;
+import native.net.minecraft.world.WorldProvider;
+import native.thaumcraft.api.golems.parts.GolemMaterial;
 
 #mixin Mixin
 #{targets: "thaumcraft.api.golems.parts.GolemMaterial"}
@@ -176,3 +178,22 @@ zenClass MixinTileVisGenerator {
     }
 }
 
+/*
+Allow Celestial Notes being possible to get in dimension 3 (skyblock in E2EE)
+*/
+#mixin Mixin
+#{targets: "thaumcraft.common.lib.research.ScanSky"}
+zenClass MixinScanSky {
+    #mixin Redirect
+    #{
+    #   method: "checkThing",
+    #   at: {
+    #       value: "INVOKE",
+    #       target: "Lnet/minecraft/world/WorldProvider;func_186058_p()Lnet/minecraft/world/DimensionType;"
+    #   }
+    #}
+    function allowDimension3(provider as WorldProvider) as DimensionType {
+        if (provider.getDimension() == 3) return DimensionType.OVERWORLD;
+        return provider.getDimensionType();
+    }
+}
