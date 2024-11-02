@@ -19,4 +19,14 @@ zenClass MixinTileEntityAssembly {
             cir.setReturnValue(false);
         }
     }
+
+    #mixin Inject
+    #{
+    #    method: "injectEnergy",
+    #    at: {value: "HEAD"},
+    #    cancellable: true
+    #}
+    function fixCrashOnAttachPowerlessMachineToIC2Power(facing as EnumFacing, amount as double, voltage as double, cir as CallbackInfoReturnable) as double {
+        if (isNull(this0.processor) || isNull(this0.processor.getIC2Handler())) cir.setReturnValue(0.0);
+    }
 }
