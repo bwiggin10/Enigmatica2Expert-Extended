@@ -6,6 +6,8 @@
 - [ ] 💬 fix sometimes when playing on server, it spam errors about uu matter tooltip. Caused by player.difficulty getter
 - [ ] Fix `Uranium`, `Iron`, `Cobalt` doesnt have all variations in Transmuter Stone recipes
 - [ ] Add feature to clear drawer `Item: 0` when unlocking it https://github.com/jaquadro/StorageDrawers/commit/da9875158ad0fadc190aae437ea2d9e89d616cca
+- [ ] Using "Challenger" trait should not make "Acquiring" sound and effects
+- [ ] ⚡ Disallow to connect `Storage Bus` to ISS - can cause 10% TPS strain
 - [ ] Fix PSI "silk touch falling" turning Netherending Ores into meta-0 ones
   ```
   {validSpell:1b,spellName:"Collapse Block",uuidMost:-2407616212808744454L,uuidLeast:-5336080093071054503L,spellList:[{x:2,y:2,data:{key:"operatorEntityPosition",params:{_target:2}}},{x:2,y:3,data:{key:"selectorFocalPoint"}},{x:3,y:2,data:{key:"operatorVectorRaycast",params:{_position:3,_ray:2,_max:0}}},{x:3,y:3,data:{key:"operatorEntityLook",params:{_target:3}}},{x:4,y:2,data:{key:"trickCollapseBlock",params:{_position:3}}}]}

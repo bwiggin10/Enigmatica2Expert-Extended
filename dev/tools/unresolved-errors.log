@@ -1,55 +1,61 @@
 [main/WARN] [Foundation]: The jar file D:\Program Files\PrismLauncher\libraries\lzma\lzma\0.0.1\lzma-0.0.1.jar has a security seal for path LZMA, but that path is defined and not secure
 [main/WARN] [Foundation]: The jar file D:\Program Files\PrismLauncher\libraries\lzma\lzma\0.0.1\lzma-0.0.1.jar has a security seal for path LZMA, but that path is defined and not secure
-[main/ERROR] [Foundation]: Error registering transformer class $wrapper.zmaster587.advancedRocketry.asm.ClassTransformer
-java.lang.reflect.InvocationTargetException: null
-	at jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(Unknown Source) ~[?:?]
-	at java.lang.reflect.Constructor.newInstanceWithCaller(Unknown Source) ~[?:?]
-	at java.lang.reflect.Constructor.newInstance(Unknown Source) ~[?:?]
-  [...]
 [main/WARN] [stellar_core]: ***************************************************************************
+[main/WARN] [stellar_core]: *
 [main/WARN] [stellar_core]: * CensoredASM option `delayItemStackCapabilityInit` is enabled.
 [main/WARN] [stellar_core]: * This is not compatible with StellarCore's `AsyncItemStackCapabilityInit`.
+[main/WARN] [stellar_core]: *
 [main/WARN] [stellar_core]: * StellarCore now will automatic disable `AsyncItemStackCapabilityInit`.
+[main/WARN] [stellar_core]: *
 [main/WARN] [stellar_core]: ***************************************************************************
 [main/WARN] [stellar_core]: ************************************************************************************************************
+[main/WARN] [stellar_core]: *
 [main/WARN] [stellar_core]: * CensoredASM option `optimizeNBTTagCompoundBackingMap` or `nbtBackingMapStringCanonicalization` is enabled.
 [main/WARN] [stellar_core]: * This is not compatible with StellarCore's `NBTTagCompoundMapImprovements`.
+[main/WARN] [stellar_core]: *
 [main/WARN] [stellar_core]: * StellarCore now will automatic disable `NBTTagCompoundMapImprovements`.
+[main/WARN] [stellar_core]: *
 [main/WARN] [stellar_core]: ************************************************************************************************************
 [main/ERROR] [mixin]: Failed reading REFMAP JSON from : java.lang.NullPointerException Cannot invoke "org.spongepowered.asm.mixin.refmap.ReferenceMapper.setResourceName(String)" because "mapper" is null
 [main/WARN] [mixin]: Reference map '' for mixins.vintagefix.init.json could not be read. If this is a development environment you can ignore this message
 [Client thread/ERROR] [VintageFix]: Error accessing resource pack on classpath (with URI jar:file:/E:/mc/packs/E2EE-Java22/libraries/cleanroom-0.2.3-alpha%20build.5.run.696-universal.jar)
 java.nio.file.NoSuchFileException: E:\mc\packs\E2EE-Java22\libraries\cleanroom-0.2.3-alpha build.5.run.696-universal.jar
-	at jdk.nio.zipfs.ZipFileSystem.<init>(Unknown Source) ~[jdk.zipfs:?]
-	at jdk.nio.zipfs.ZipFileSystemProvider.getZipFileSystem(Unknown Source) ~[jdk.zipfs:?]
-	at jdk.nio.zipfs.ZipFileSystemProvider.newFileSystem(Unknown Source) ~[jdk.zipfs:?]
+	at jdk.nio.zipfs.ZipFileSystem.<init>(ZipFileSystem.java:166) ~[jdk.zipfs:?]
+	at jdk.nio.zipfs.ZipFileSystemProvider.getZipFileSystem(ZipFileSystemProvider.java:125) ~[jdk.zipfs:?]
+	at jdk.nio.zipfs.ZipFileSystemProvider.newFileSystem(ZipFileSystemProvider.java:106) ~[jdk.zipfs:?]
   [...]
 [Client thread/ERROR] [VintageFix]: Error accessing resource pack on classpath (with URI jar:file:/D:/Program%20Files/PrismLauncher/libraries/com/cleanroommc/sponge-mixin/0.20.6%20mixin.0.8.7/sponge-mixin-0.20.6%20mixin.0.8.7.jar)
 java.nio.file.NoSuchFileException: D:\Program Files\PrismLauncher\libraries\com\cleanroommc\sponge-mixin\0.20.6 mixin.0.8.7\sponge-mixin-0.20.6 mixin.0.8.7.jar
-	at jdk.nio.zipfs.ZipFileSystem.<init>(Unknown Source) ~[jdk.zipfs:?]
-	at jdk.nio.zipfs.ZipFileSystemProvider.getZipFileSystem(Unknown Source) ~[jdk.zipfs:?]
-	at jdk.nio.zipfs.ZipFileSystemProvider.newFileSystem(Unknown Source) ~[jdk.zipfs:?]
+	at jdk.nio.zipfs.ZipFileSystem.<init>(ZipFileSystem.java:166) ~[jdk.zipfs:?]
+	at jdk.nio.zipfs.ZipFileSystemProvider.getZipFileSystem(ZipFileSystemProvider.java:125) ~[jdk.zipfs:?]
+	at jdk.nio.zipfs.ZipFileSystemProvider.newFileSystem(ZipFileSystemProvider.java:106) ~[jdk.zipfs:?]
   [...]
-[Client thread/ERROR] [VintageFix]: Error accessing resource pack on classpath (with URI jar:file:/E:/mc/packs/E2EE-Java22/.minecraft/mods/%20Fugue-1.12.2-0.16.3.jar)
-java.nio.file.NoSuchFileException: E:\mc\packs\E2EE-Java22\.minecraft\mods\ Fugue-1.12.2-0.16.3.jar
-	at jdk.nio.zipfs.ZipFileSystem.<init>(Unknown Source) ~[jdk.zipfs:?]
-	at jdk.nio.zipfs.ZipFileSystemProvider.getZipFileSystem(Unknown Source) ~[jdk.zipfs:?]
-	at jdk.nio.zipfs.ZipFileSystemProvider.newFileSystem(Unknown Source) ~[jdk.zipfs:?]
+[Client thread/ERROR] [VintageFix]: Error accessing resource pack on classpath (with URI jar:file:/E:/mc/packs/E2EE-Java22/.minecraft/mods/%20Fugue-1.12.2-0.16.4.jar)
+java.nio.file.NoSuchFileException: E:\mc\packs\E2EE-Java22\.minecraft\mods\ Fugue-1.12.2-0.16.4.jar
+	at jdk.nio.zipfs.ZipFileSystem.<init>(ZipFileSystem.java:166) ~[jdk.zipfs:?]
+	at jdk.nio.zipfs.ZipFileSystemProvider.getZipFileSystem(ZipFileSystemProvider.java:125) ~[jdk.zipfs:?]
+	at jdk.nio.zipfs.ZipFileSystemProvider.newFileSystem(ZipFileSystemProvider.java:106) ~[jdk.zipfs:?]
   [...]
 [Client thread/ERROR] [VintageFix]: Error accessing resource pack on classpath (with URI jar:file:/E:/mc/packs/E2EE-Java22/.minecraft/mods/[___MixinCompat-1.1-1.12.2___].jar)
 java.lang.IllegalArgumentException: Illegal character in path at index 46: file:/E:/mc/packs/E2EE-Java22/.minecraft/mods/[___MixinCompat-1.1-1.12.2___].jar
-	at jdk.nio.zipfs.ZipFileSystemProvider.uriToPath(Unknown Source) ~[jdk.zipfs:?]
-	at jdk.nio.zipfs.ZipFileSystemProvider.getFileSystem(Unknown Source) ~[jdk.zipfs:?]
-	at java.nio.file.FileSystems.getFileSystem(Unknown Source) ~[?:?]
+	at jdk.nio.zipfs.ZipFileSystemProvider.uriToPath(ZipFileSystemProvider.java:78) ~[jdk.zipfs:?]
+	at jdk.nio.zipfs.ZipFileSystemProvider.getFileSystem(ZipFileSystemProvider.java:151) ~[jdk.zipfs:?]
+	at java.nio.file.FileSystems.getFileSystem(FileSystems.java:235) ~[?:?]
   [...]
 [Client thread/ERROR] [VintageFix]: Error accessing resource pack on classpath (with URI jar:file:/E:/mc/packs/E2EE-Java22/.minecraft/mods/OpenComputers-MC1.12.2-1.8.6%20cd8851e-patched.jar)
 java.nio.file.NoSuchFileException: E:\mc\packs\E2EE-Java22\.minecraft\mods\OpenComputers-MC1.12.2-1.8.6 cd8851e-patched.jar
-	at jdk.nio.zipfs.ZipFileSystem.<init>(Unknown Source) ~[jdk.zipfs:?]
-	at jdk.nio.zipfs.ZipFileSystemProvider.getZipFileSystem(Unknown Source) ~[jdk.zipfs:?]
-	at jdk.nio.zipfs.ZipFileSystemProvider.newFileSystem(Unknown Source) ~[jdk.zipfs:?]
+	at jdk.nio.zipfs.ZipFileSystem.<init>(ZipFileSystem.java:166) ~[jdk.zipfs:?]
+	at jdk.nio.zipfs.ZipFileSystemProvider.getZipFileSystem(ZipFileSystemProvider.java:125) ~[jdk.zipfs:?]
+	at jdk.nio.zipfs.ZipFileSystemProvider.newFileSystem(ZipFileSystemProvider.java:106) ~[jdk.zipfs:?]
   [...]
 [Client thread/WARN] [mixin]: Method overwrite conflict for hashCode in mixins.vintagefix.json:blockstates.FastMapStateHolderMixin from mod unknown-owner, previously written by github.kasuminova.stellarcore.mixin.minecraft.blockstateimpl.MixinStateImplementation. Skipping method.
 [Client thread/WARN] [oshi.util.FileUtil]: Configuration conflict: there is more than one oshi.properties file on the classpath: [jar:file:/D:/Program%20Files/PrismLauncher/libraries/com/github/oshi/oshi-core/6.5.0/oshi-core-6.5.0.jar!/oshi.properties, jar:file:/D:/Program%20Files/PrismLauncher/libraries/com/github/oshi/oshi-core/6.5.0/oshi-core-6.5.0.jar!/oshi.properties]
+[Client thread/ERROR] [FML]: The mcmod.info file in Trinity-1.12.2-1.5.f.jar cannot be parsed as valid JSON. It will be ignored
+com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: Expected name at line 15 column 2 path $[0].dependencies
+See https://github.com/google/gson/blob/main/Troubleshooting.md#malformed-json
+	at com.google.gson.internal.Streams.parse(Streams.java:58) ~[gson-2.11.0.jar:?]
+	at com.google.gson.JsonParser.parseReader(JsonParser.java:146) ~[gson-2.11.0.jar:?]
+  [...]
 [Client thread/WARN] [FML]: Mod scalar has been disabled through configuration
 [Client thread/WARN] [mixin]: Reference map 'mixins.thaumicenergistics.refmap.json' for mixins.thaumicenergistics.late.json could not be read. If this is a development environment you can ignore this message
 [Client thread/WARN] [mixin]: Static binding violation: PRIVATE @Overwrite method func_76615_h in mixins.alfheim.json:ChunkMixin from mod unknown-owner cannot reduce visibiliy of PUBLIC target method, visibility will be upgraded.
@@ -142,6 +148,10 @@ org.spongepowered.asm.mixin.transformer.throwables.InvalidMixinException: Unexpe
 [Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_VOID_ELEMENTAL_SHOVEL
 [Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry TAR_VOID_ELEMENTAL_HOE
 [Client thread/WARN] [THAUMCRAFT]: Could not add invalid research entry !TARBlueWolf
+[Client thread/WARN] [Universal Tweaks]: Unable to parse sound properties for minecraft:entity.experience_orb.pickup
+[Client thread/WARN] [Universal Tweaks]: Unable to parse sound properties for minecraft:entity.player.levelup
+[Client thread/WARN] [Universal Tweaks]: Unable to parse sound properties for minecraft:entity.experience_orb.pickup
+[Client thread/WARN] [Universal Tweaks]: Unable to parse sound properties for minecraft:entity.player.levelup
 [Client thread/ERROR] [Had Enough Items]: A Recipe Handler has already been registered for this recipe class: com.github.alexthe666.iceandfire.recipe.DragonForgeRecipe
 [Client thread/ERROR] [Had Enough Items]: A Recipe Handler has already been registered for this recipe class: com.github.alexthe666.rats.server.recipes.SharedRecipe
 [Client thread/ERROR] [Had Enough Items]: A Recipe Handler has already been registered for this recipe class: com.github.alexthe666.rats.server.recipes.SharedRecipe
