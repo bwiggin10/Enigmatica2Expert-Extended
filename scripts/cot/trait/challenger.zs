@@ -1,5 +1,5 @@
 #loader contenttweaker
-#modloaded scalinghealth ctintegration
+#modloaded scalinghealth ctintegration zenutils
 
 import crafttweaker.player.IPlayer;
 import mods.zenutils.NetworkHandler;

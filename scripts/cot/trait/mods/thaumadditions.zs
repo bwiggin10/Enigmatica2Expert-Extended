@@ -1,5 +1,5 @@
 #loader contenttweaker
-#modloaded ctintegration thaumadditions
+#modloaded ctintegration thaumadditions zenutils
 
 import crafttweaker.block.IBlock;
 import crafttweaker.entity.IEntity;
