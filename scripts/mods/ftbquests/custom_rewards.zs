@@ -114,6 +114,16 @@ events.onCustomTask(function (e as mods.zenutils.ftbq.CustomTaskEvent) {
       return isNull(scripts.do.acquire.info.playersCompleted[player.uuid]) ? 0 : 1;
     };
   }
+  if (e.task.hasTag('schematica')) {
+    e.checkTimer = 10;
+    e.checker = function (player, currentProgress) {
+      return (
+        isNull(player.data.enigmatica)
+        || isNull(player.data.enigmatica.usedSchematica)
+        || player.data.enigmatica.usedSchematica.asBool() != true
+      ) ? 0 : 1;
+    };
+  }
 });
 
 events.onPlayerLoggedIn(function (e as crafttweaker.event.PlayerLoggedInEvent) {
@@ -127,3 +137,11 @@ events.onPlayerLoggedIn(function (e as crafttweaker.event.PlayerLoggedInEvent) {
       );
   }
 });
+
+// Catch message from client that player opened schematica GUI
+mods.zenutils.NetworkHandler.registerClient2ServerMessage(
+  'openGuiSchematicLoad',
+  function(server, byteBuf, player) {
+    player.update({ enigmatica: { usedSchematica: true } });
+  }
+);
