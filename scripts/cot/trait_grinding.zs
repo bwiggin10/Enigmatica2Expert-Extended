@@ -131,8 +131,6 @@ return result.map((line) => {
   <item:nuclearcraft:ore:6>                    : <item:ic2:dust:11>                           * 4 ,
   <item:nuclearcraft:ore:7>                    : <item:nuclearcraft:dust:7>                   * 4 ,
   <item:rftools:dimensional_shard_ore>         : <item:jaopca:item_dustdimensionalshard>      * 12,
-  <item:rftools:dimensional_shard_ore:1>       : <item:jaopca:item_dustdimensionalshard>      * 12,
-  <item:rftools:dimensional_shard_ore:2>       : <item:jaopca:item_dustdimensionalshard>      * 12,
   <item:thaumcraft:ore_amber>                  : <item:jaopca:item_dustamber>                 * 8 ,
   <item:thermalfoundation:ore>                 : <item:thermalfoundation:material:64>         * 4 ,
   <item:thermalfoundation:ore:1>               : <item:thermalfoundation:material:65>         * 4 ,
