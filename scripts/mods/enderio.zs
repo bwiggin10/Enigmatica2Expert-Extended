@@ -532,16 +532,26 @@ for ingr, amount in {
   <betteranimalsplus:pheasant_egg>: 1,
 } as int[IIngredient] {
   mods.bloodmagic.AlchemyTable.addRecipe(<enderio:item_material:48> * amount, [
-    <enderio:item_material:46> * 6,
+    <enderio:item_material:46>,
+    <enderio:item_material:46>,
     <ore:ingotUranium238>,
+    <enderio:item_material:46>,
+    <enderio:item_material:46>,
     ingr,
     ], 300, 40, 2);
   mods.bloodmagic.AlchemyTable.addRecipe(<enderio:item_material:50> * amount, [
-    <thermalfoundation:material:768> * 3, ingr], 300, 40, 2);
+    <thermalfoundation:material:768>,
+    <thermalfoundation:material:768>,
+    <thermalfoundation:material:768>,
+    ingr,
+    ], 300, 40, 2);
 }
 mods.bloodmagic.AlchemyTable.addRecipe(<enderio:item_material:49>, [
-  <enderio:item_material:47> * 4,
+  <enderio:item_material:47>,
+  <enderio:item_material:47>,
   <forestry:mulch>,
+  <enderio:item_material:47>,
+  <enderio:item_material:47>,
   <actuallyadditions:item_misc:21>,
 ], 300, 40, 2);
 
