@@ -246,7 +246,7 @@ craft.remake(<rats:marbled_cheese_raw> * 9, ['pretty',
 
 // Raw Plastic from squeeser
 furnace.remove(<rats:raw_plastic>);
-scripts.process.squeeze([<rats:plastic_waste>], <liquid:dirt> * 100, null, <rats:raw_plastic>);
+scripts.process.squeeze([<rats:plastic_waste>], null, 'only: Squeezer MechanicalSqueezer TECentrifuge', <rats:raw_plastic>);
 
 // Polyethene from rat plastic
 mods.mekanism.enrichment.addRecipe(<rats:raw_plastic> * 16, <mekanism:polyethene>);

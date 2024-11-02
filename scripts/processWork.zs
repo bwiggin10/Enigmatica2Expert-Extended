@@ -883,15 +883,17 @@ function workEx(machineNameAnyCase as string, exceptionsAnyCase as string,
       return machineName;
     }
 
-    if (machineName == 'forestrysqueezer') {
-      // mods.forestry.Squeezer.addRecipe(ILiquidStack fluidOutput, IItemStack[] ingredients, int timePerItem, @Optional WeightedItemStack itemOutput);
-      var inputItemStacks = [] as IItemStack[];
-      for inIngr in inputItems {
-        inputItemStacks = inputItemStacks + inIngr.itemArray[0];
+    if (haveLiquidOutput) {
+      if (machineName == 'forestrysqueezer') {
+        // mods.forestry.Squeezer.addRecipe(ILiquidStack fluidOutput, IItemStack[] ingredients, int timePerItem, @Optional WeightedItemStack itemOutput);
+        var inputItemStacks = [] as IItemStack[];
+        for inIngr in inputItems {
+          inputItemStacks = inputItemStacks + inIngr.itemArray[0];
+        }
+        val wOut as WeightedItemStack = !isNull(outputItem0) ? outputItem0 % defaultChance0_int(extraChance, 20) : null;
+        mods.forestry.Squeezer.addRecipe(outputLiquid0, inputItemStacks, 20, wOut);
+        return machineName;
       }
-      val wOut as WeightedItemStack = !isNull(outputItem0) ? outputItem0 % defaultChance0_int(extraChance, 20) : null;
-      mods.forestry.Squeezer.addRecipe(outputLiquid0, inputItemStacks, 20, wOut);
-      return machineName;
     }
   }
 
