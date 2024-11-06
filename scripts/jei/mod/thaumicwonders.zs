@@ -1,10 +1,9 @@
-#modloaded thaumicwonders requious
+#modloaded thaumicwonders
 #priority 950
 
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 import mods.randomtweaker.jei.IJeiUtils;
-import mods.requious.SlotVisual;
 
 function registerStoneCategory(ID as string, catalysts as IItemStack[]) as void {
   val SLOT_SIZE = 18;
@@ -58,7 +57,7 @@ for i, pair in [
   ['Platinum', 'Iridium'],
   ['Aluminum', 'Titanium'],
   ['Uranium', 'Thorium'],
-  ['Xorcyte', 'Aquamarine'],
+  ['Xorcyte', 'Aquamarine'], // TODO: Fix Xorcyte => Xorcite (in Bansoukou too)
   ['Diamond', 'Sapphire'],
   ['Emerald', 'Peridot'],
   ['Redstone', 'Ruby'],
@@ -74,10 +73,7 @@ for i, pair in [
   var b as IIngredient = null;
 
   // Plain ore
-  if (
-    !isNull(oreDict[aOreID]) && !isNull(oreDict[aOreID].firstItem) &&
-    !isNull(oreDict[bOreID]) && !isNull(oreDict[bOreID].firstItem)
-  ) {
+  if (!isNull(oreDict[aOreID].firstItem) && !isNull(oreDict[bOreID].firstItem)) {
     a = oreDict[aOreID].firstItem;
     b = oreDict[bOreID].firstItem;
   }
@@ -87,13 +83,9 @@ for i, pair in [
   for orePrefix in orePrefixes {
     val aOreEntry = oreDict[orePrefix + aOreID];
     val bOreEntry = oreDict[orePrefix + bOreID];
-    if (
-      !isNull(aOreEntry) && !isNull(aOreEntry.firstItem) &&
-      !isNull(bOreEntry) && !isNull(bOreEntry.firstItem)
-    ) {
-      a = isNull(a) ? aOreEntry.firstItem as IIngredient : a | aOreEntry.firstItem;
-      b = isNull(b) ? bOreEntry.firstItem as IIngredient : b | bOreEntry.firstItem;
-    }
+    if (isNull(aOreEntry.firstItem) || isNull(bOreEntry.firstItem)) continue;
+    a = isNull(a) ? aOreEntry.firstItem as IIngredient : a | aOreEntry.firstItem;
+    b = isNull(b) ? bOreEntry.firstItem as IIngredient : b | bOreEntry.firstItem;
   }
 
   if (isNull(a) || isNull(b)) continue;

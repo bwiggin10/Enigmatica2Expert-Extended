@@ -29,6 +29,7 @@ Purge(<ic2:crafting:19>).ores([<ore:gemDiamond>]);
 // Unused dusts
 Purge(<ic2:dust:4>).ores([<ore:dustCopper>]);
 Purge(<ic2:dust:7>).ores([<ore:dustGold>]);
+Purge(<ic2:dust:8>).ores([<ore:dustIron>]);
 Purge(<ic2:dust:10>).ores([<ore:dustLead>]);
 Purge(<ic2:dust:12>).ores([<ore:dustObsidian>]);
 Purge(<ic2:dust:14>).ores([<ore:dustSilver>]);
@@ -40,6 +41,7 @@ Purge(<ic2:nuclear:9>);
 Purge(<ic2:resource:8>).ores([<ore:blockSteel>]); // Steel blocks
 Purge(<ic2:resource:6>).ores([<ore:blockCopper>]); // Copper blocks
 Purge(<ic2:resource:9>).ores([<ore:blockTin>]); // Tin blocks
+Purge(<ic2:resource:10>).ores([<ore:blockUranium>]);
 Purge(<ic2:resource:15>).ores([<ore:blockSilver>]); // Silver blocks
 Purge(<ic2:resource:7>).ores([<ore:blockLead>]); // Lead blocks
 Purge(<ic2:misc_resource>).ores([<ore:dustAshes>]); // Ashes
@@ -55,6 +57,34 @@ Purge(<actuallyadditions:item_food:9>);
 Purge(<avaritia:compressed_crafting_table>);
 Purge(<avaritia:double_compressed_crafting_table>);
 Purge(<avaritia:resource>); // Diamond Lattice
+Purge(<nuclearcraft:alloy>).ores([<ore:ingotBronze>]);
+Purge(<nuclearcraft:alloy:5>).ores([<ore:ingotSteel>]);
+Purge(<nuclearcraft:dust>).ores([<ore:dustCopper>]);
+Purge(<nuclearcraft:dust:1>).ores([<ore:dustTin>]);
+Purge(<nuclearcraft:dust:2>).ores([<ore:dustLead>]);
+Purge(<nuclearcraft:dust:4>).ores([<ore:dustUranium>]);
+Purge(<nuclearcraft:gem_dust>).ores([<ore:dustDiamond>]);
+Purge(<nuclearcraft:gem_dust:2>);
+Purge(<nuclearcraft:gem_dust:3>).ores([<ore:dustObsidian>]);
+Purge(<nuclearcraft:gem_dust:6>).ores([<ore:dustSulfur>, <ore:dustSulphur>]);
+Purge(<nuclearcraft:gem:6>);
+Purge(<nuclearcraft:ingot>).ores([<ore:ingotCopper>]);
+Purge(<nuclearcraft:ingot:1>).ores([<ore:ingotTin>]);
+Purge(<nuclearcraft:ingot:2>).ores([<ore:ingotLead>]);
+Purge(<nuclearcraft:ingot:4>).ores([<ore:ingotUranium>]);
+Purge(<nuclearcraft:ingot_block:4>).ores([<ore:blockUranium>]);
+Purge(<nuclearcraft:ore>);
+Purge(<nuclearcraft:ore:1>);
+Purge(<nuclearcraft:ore:2>);
+Purge(<nuclearcraft:ore:4>);
+Purge(<qmd:dust:4>).ores([<ore:dustCobalt>]); // Cobalt
+Purge(<qmd:dust:3>).ores([<ore:dustTitanium>]); // Cobalt
+Purge(<qmd:ingot_alloy:4>).ores([<ore:ingotOsmiridium>]); // Osmiridium
+Purge(<qmd:ingot:3>).ores([<ore:ingotTitanium>]); // Titanium Ingot
+Purge(<qmd:ingot:4>).ores([<ore:ingotCobalt>]); // Cobalt
+Purge(<qmd:ingot:9>).ores([<ore:ingotIridium>]); // Iridium
+Purge(<qmd:ingot:10>).ores([<ore:ingotPlatinum>]); // Platinum
+Purge(<qmd:ingot>).furn().ores([<ore:ingotTungsten>]); // Tungsten
 
 // Purge saltpeter and sulfur
 Purge(<bloodmagic:component:24>);
@@ -228,7 +258,6 @@ Purge(<mysticalagriculture:crafting:48>);
 Purge(<mysticalagradditions:insanium:4>);
 Purge(<mysticalagradditions:stuff:69>);
 Purge(<immersiveengineering:ore:1>).ores([<ore:oreAluminum>, <ore:oreAluminium>]);
-Purge(<qmd:ingot:3>).ores([<ore:ingotTitanium>]); // Titanium Ingot
 Purge(<betteranimalsplus:cheese>);
 
 // Pams replacements

@@ -525,27 +525,6 @@ scripts.process.electrolyze(<fluid:nitric_oxide> * 100, [<fluid:nitrogen> * 500,
 // Remove worthless recipes
 // ------------------------------------------------------------
 
-// Common resources
-Purge(<nuclearcraft:alloy>).ores([<ore:ingotBronze>]);
-Purge(<nuclearcraft:alloy:5>).ores([<ore:ingotSteel>]);
-Purge(<nuclearcraft:dust>).ores([<ore:dustCopper>]);
-Purge(<nuclearcraft:dust:1>).ores([<ore:dustTin>]);
-Purge(<nuclearcraft:dust:2>).ores([<ore:dustLead>]);
-Purge(<nuclearcraft:dust:4>).ores([<ore:dustUranium>]);
-Purge(<nuclearcraft:gem_dust>).ores([<ore:dustDiamond>]);
-Purge(<nuclearcraft:gem_dust:2>);
-Purge(<nuclearcraft:gem_dust:3>).ores([<ore:dustObsidian>]);
-Purge(<nuclearcraft:gem_dust:6>).ores([<ore:dustSulfur>, <ore:dustSulphur>]);
-Purge(<nuclearcraft:gem:6>);
-Purge(<nuclearcraft:ingot>).ores([<ore:ingotCopper>]);
-Purge(<nuclearcraft:ingot:1>).ores([<ore:ingotTin>]);
-Purge(<nuclearcraft:ingot:2>).ores([<ore:ingotLead>]);
-Purge(<nuclearcraft:ingot:4>).ores([<ore:ingotUranium>]);
-Purge(<nuclearcraft:ore>);
-Purge(<nuclearcraft:ore:1>);
-Purge(<nuclearcraft:ore:2>);
-Purge(<nuclearcraft:ore:4>);
-
 // Unimplemented multiblocks
 Purge(<nuclearcraft:heat_exchanger_controller>);
 Purge(<nuclearcraft:condenser_controller>);
