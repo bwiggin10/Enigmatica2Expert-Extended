@@ -21,15 +21,17 @@ a.calcDamage = function (trait, tool, attacker, target, originalDamage, newDamag
   return newDamage * getToolBonus(target);
 };
 
-a.afterHit = function (trait, tool, attacker, target, damageDealt, wasCritical, wasHit) {
-  if (attacker.world.remote || !wasHit) return;
-  showFX(attacker, target.x, target.y, target.z, Math.sqrt(damageDealt));
-};
+// Deprecated - do not show effect of Acquiring since its confusing players that they getting difficulty
+//
+// a.afterHit = function (trait, tool, attacker, target, damageDealt, wasCritical, wasHit) {
+//   if (attacker.world.remote || !wasHit) return;
+//   showFX(attacker, target.x, target.y, target.z, Math.sqrt(damageDealt));
+// };
 
-a.afterBlockBreak = function (trait, tool, world, blockstate, blockPos, miner, wasEffective) {
-  if (miner.world.remote || !wasEffective) return;
-  showFX(miner, 0.5 + blockPos.x, 0.5 + blockPos.y, 0.5 + blockPos.z, 0.05);
-};
+// a.afterBlockBreak = function (trait, tool, world, blockstate, blockPos, miner, wasEffective) {
+//   if (miner.world.remote || !wasEffective) return;
+//   showFX(miner, 0.5 + blockPos.x, 0.5 + blockPos.y, 0.5 + blockPos.z, 0.05);
+// };
 
 // a.extraInfo = function(trait, tool, tag) {
 //   return [] as string[];
@@ -50,21 +52,21 @@ b.getModifications = function (trait, player, mods, armor, damageSource, damage,
   mods.toughnessMod *= bonus;
   return mods;
 };
-b.onDamaged = function (trait, armor, player, source, damage, newDamage, evt) {
-  if (player.world.remote || newDamage <= 0) return newDamage;
-  showFX(player, player.x, player.y, player.z, Math.log(getAnyBonus(player)));
-  return newDamage;
-};
+// b.onDamaged = function (trait, armor, player, source, damage, newDamage, evt) {
+//   if (player.world.remote || newDamage <= 0) return newDamage;
+//   showFX(player, player.x, player.y, player.z, Math.log(getAnyBonus(player)));
+//   return newDamage;
+// };
 b.register();
 
 // /////////////////////////////////////////////////////////////////////////////
 // /////////////////////////////////////////////////////////////////////////////
-function showFX(entity as IEntity, x as double,y as double,z as double, value as double) as void {
-  NetworkHandler.sendToAllAround('acquire_star_and_flare',
-    entity.x, entity.y, entity.z, 30, entity.world.getDimension(), function (b) {
-      b.writeData({ x: x, y: y, z: z, value: value });
-    });
-}
+// function showFX(entity as IEntity, x as double,y as double,z as double, value as double) as void {
+//   NetworkHandler.sendToAllAround('acquire_star_and_flare',
+//     entity.x, entity.y, entity.z, 30, entity.world.getDimension(), function (b) {
+//       b.writeData({ x: x, y: y, z: z, value: value });
+//     });
+// }
 
 function getToolBonus(entity as IEntity) as double {
   return getAnyBonus(entity);
