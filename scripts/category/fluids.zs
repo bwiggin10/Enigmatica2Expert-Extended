@@ -3,39 +3,6 @@
 import crafttweaker.item.IItemStack;
 import crafttweaker.liquid.ILiquidStack;
 
-import mods.thermalexpansion.Crucible;
-
-Crucible.addRecipe(<liquid:alumite> * 16, <plustic:alumitenugget>, 500);
-Crucible.addRecipe(<liquid:alumite> * 144, <plustic:alumiteingot>, 5000);
-Crucible.addRecipe(<liquid:alumite> * 1296, <plustic:alumiteblock>, 40000);
-Crucible.addRecipe(<liquid:osgloglas> * 16, <plustic:osgloglasnugget>, 500);
-Crucible.addRecipe(<liquid:osgloglas> * 144, <plustic:osgloglasingot>, 5000);
-Crucible.addRecipe(<liquid:osgloglas> * 1296, <plustic:osgloglasblock>, 40000);
-Crucible.addRecipe(<liquid:osmiridium> * 16, <plustic:osmiridiumnugget>, 500);
-Crucible.addRecipe(<liquid:osmiridium> * 144, <plustic:osmiridiumingot>, 5000);
-Crucible.addRecipe(<liquid:osmiridium> * 1296, <plustic:osmiridiumblock>, 40000);
-Crucible.addRecipe(<liquid:elementium> * 16, <botania:manaresource:19>, 500);
-Crucible.addRecipe(<liquid:elementium> * 144, <botania:manaresource:7>, 5000);
-Crucible.addRecipe(<liquid:elementium> * 1296, <botania:storage:2>, 40000);
-Crucible.addRecipe(<liquid:mirion> * 16, <plustic:mirionnugget>, 500);
-Crucible.addRecipe(<liquid:mirion> * 144, <plustic:mirioningot>, 5000);
-Crucible.addRecipe(<liquid:mirion> * 1296, <plustic:mirionblock>, 40000);
-Crucible.addRecipe(<liquid:psimetal> * 144, <psi:material:1>, 5000);
-Crucible.addRecipe(<liquid:psimetal> * 144, <psi:material:0>, 5000);
-Crucible.addRecipe(<liquid:psimetal> * 1296, <psi:psi_decorative:1>, 40000);
-Crucible.addRecipe(<liquid:psimetal> * 1296, <psi:psi_decorative:0>, 40000);
-Crucible.addRecipe(<liquid:thaumium> * 16, <thaumcraft:nugget:6>, 500);
-Crucible.addRecipe(<liquid:thaumium> * 144, <thaumcraft:ingot:0>, 5000);
-Crucible.addRecipe(<liquid:thaumium> * 1296, <thaumcraft:metal_thaumium>, 40000);
-Crucible.addRecipe(<liquid:manasteel> * 16, <botania:manaresource:17>, 500);
-Crucible.addRecipe(<liquid:manasteel> * 144, <botania:manaresource:0>, 5000);
-Crucible.addRecipe(<liquid:manasteel> * 1296, <botania:storage:0>, 40000);
-Crucible.addRecipe(<liquid:terrasteel> * 16, <botania:manaresource:18>, 500);
-Crucible.addRecipe(<liquid:terrasteel> * 144, <botania:manaresource:4>, 5000);
-Crucible.addRecipe(<liquid:terrasteel> * 1296, <botania:storage:1>, 40000);
-Crucible.addRecipe(<liquid:purpleslime> * 250, <tconstruct:edible:2>, 2500);
-Crucible.addRecipe(<liquid:blood> * 40, <minecraft:rotten_flesh>, 2500);
-
 // Make Rustic Honeycomb produce forestry honey
 mods.thermalexpansion.Centrifuge.removeRecipe(<rustic:honeycomb>);
 mods.thermalexpansion.Centrifuge.addRecipe([<rustic:beeswax> % 100], <rustic:honeycomb>, <liquid:for.honey> * 250, 2000);
