@@ -10,6 +10,7 @@ import crafttweaker.player.IPlayer;
 import crafttweaker.world.IWorld;
 import crafttweaker.entity.IEntity;
 import crafttweaker.world.IBlockPos;
+import native.net.minecraft.item.ItemStack;
 
 function giveChest(player as IPlayer, items as IItemStack[]) as void {
   var tag = {
@@ -156,6 +157,13 @@ events.onPlayerLeftClickBlock(function (e as crafttweaker.event.PlayerLeftClickB
   //   display:{id:"minecraft:golden_hoe",Count:1,Damage:0 as short}
   // }}));
   // dumpOreBlocks();
+  // var i = 0;
+  // val map as ItemStack[ItemStack] = native.com.github.alexthe666.rats.server.items.RatsNuggetRegistry.ORE_TO_INGOTS as ItemStack[ItemStack];
+  // for k,v in map {
+  //   print(i);
+  //   i += 1;
+  // }
+
   e.player.sendMessage('§8Done!§r');
 });
 

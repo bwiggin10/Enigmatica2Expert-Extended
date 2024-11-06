@@ -402,5 +402,26 @@
       "snippet": "utils.tryCatch('$TM_SELECTED_TEXT', $0)",
       "languageIds": ["zenscript"]
     }
+  },
+  "search.exclude": {
+    "config/jeresources/world-gen.json": true,
+    ".gitignore": true,
+    "dev/automation/betterquesting/*": true,
+    "dev/lang/tmp*": true,
+    "config/BiomeTweaker/output/biome/*": true,
+    "node_modules/*": true,
+    "dev/default_configs/*": true,
+    "config/tellme/*": true,
+    "scripts/wrap/*": true,
+    "crash-reports/*": true,
+    ".git/*": true,
+    "CHANGELOG*": true,
+    "minecraftinstance.json*": true,
+    "assets/*": true,
+    "dumps/*": true,
+    "saves/* ": true,
+    "*.zsrc": true,
+    "*.log": true,
+    "config/*aspects.json": true
   }
 }
