@@ -1,7 +1,10 @@
 #modloaded nuclearcraft thermalexpansion
+#reloadable
 
 import crafttweaker.item.IItemStack;
 import crafttweaker.liquid.ILiquidStack;
+import mods.fluidintetweaker.FBTweaker;
+import mods.fluidintetweaker.FITweaker;
 
 // Chalice interactions
 val chaliceGrid = {
@@ -56,10 +59,7 @@ for lList, itList in chaliceGrid {
   }
   scripts.jei.mod.astralsorcery.add_everflow_chalice(lList[0] * 10, lList[1] * 100, [itList[0] * weights[0], itList[1] * weights[1], itList[2] * weights[2]]);
 
-  // Liquid interactions:
-  mods.plustweaks.Liquid.registerLiquidInteraction(lList[0], lList[1], itList[0].asBlock().definition.getStateFromMeta(itList[0].damage), false);
-  mods.plustweaks.Liquid.registerLiquidInteraction(lList[1], lList[0], itList[0].asBlock().definition.getStateFromMeta(itList[0].damage), false);
-  scripts.jei.liquids.interact(lList[0], lList[1], null, itList[0]);
+  FITweaker.addRecipe(lList[0], lList[1], utils.getStateFromItem(itList[0]));
 }
 
 // *======= Fuels =======*
