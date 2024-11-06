@@ -23,14 +23,6 @@ function giveChest(player as IPlayer, items as IItemStack[]) as void {
   player.give(<draconicevolution:draconium_chest>.withTag(tag));
 }
 
-function getStateFromItem(item as IItemStack) as IBlockState {
-  val block = item.asBlock();
-  if (isNull(block)) return null;
-  val def = block.definition;
-  val state = def.getStateFromMeta(block.meta);
-  return state;
-}
-
 function forEachBlockState(callback as function(IItemStack,IBlockState)void) as void {
   for item in game.items {
     if (
@@ -43,7 +35,7 @@ function forEachBlockState(callback as function(IItemStack,IBlockState)void) as 
     for sub in item.subItems {
       if (lastMeta == sub.damage) continue;
       lastMeta = sub.damage;
-      val state = getStateFromItem(sub);
+      val state = utils.getStateFromItem(sub);
       if (isNull(state)) continue;
       callback(sub, state);
     }
@@ -67,7 +59,7 @@ function dumpOreBlocks() {
       val material = ore.name.replaceAll('^(oreEnd|oreNether)', '');
       val origOre = oreDict['ore' + material];
       for origItem in origOre.items {
-        val state = getStateFromItem(origItem);
+        val state = utils.getStateFromItem(origItem);
         if (isNull(state)) continue;
         val origLvl = state.block.definition.getHarvestLevel(state);
         targetLvl = max(3, origLvl) + (isEnd ? 3 : 2);

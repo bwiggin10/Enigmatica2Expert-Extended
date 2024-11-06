@@ -8,15 +8,16 @@
 #priority 4000
 #reloadable
 
+import crafttweaker.block.IBlockState;
 import crafttweaker.command.ICommandSender;
 import crafttweaker.data.IData;
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 import crafttweaker.oredict.IOreDictEntry;
 import crafttweaker.recipes.IRecipeFunction;
+import crafttweaker.util.Math;
 import crafttweaker.world.IWorld;
 import mods.zenutils.StaticString;
-import crafttweaker.util.Math;
 
 zenClass Utils {
   var DEBUG as bool = false;
@@ -394,35 +395,35 @@ zenClass Utils {
     = function (sender as ICommandSender, command as string) as void {};
 
   val geyser as function(IWorld,IItemStack,float,float,float,int,double,double,double,int)void
-    = function (
-      world as IWorld, // World where everything happen
-      output as IItemStack, // Item that would be spawned
-      x as float, y as float, z as float, // Position where new items spawned
-      desiredAmount as int, // Number of new items spawned
-      mx as double, my as double, mz as double, // Motion of spawned items
-      delay as int // Delay between spawning
-    ) as void {
-    val rnd = world.getRandom();
-      val f = desiredAmount as float / 8.0f;
-      var total = 0;
-      var i = 0;
-      val pos = crafttweaker.util.Position3f.create(x, y, z);
-      while (total < desiredAmount) {
-      val count = max(1, (f * (i + 1) + 0.5f) as int - total);
-        total += count;
+  = function (
+    world as IWorld, // World where everything happen
+    output as IItemStack, // Item that would be spawned
+    x as float, y as float, z as float, // Position where new items spawned
+    desiredAmount as int, // Number of new items spawned
+    mx as double, my as double, mz as double, // Motion of spawned items
+    delay as int // Delay between spawning
+  ) as void {
+  val rnd = world.getRandom();
+    val f = desiredAmount as float / 8.0f;
+    var total = 0;
+    var i = 0;
+    val pos = crafttweaker.util.Position3f.create(x, y, z);
+    while (total < desiredAmount) {
+    val count = max(1, (f * (i + 1) + 0.5f) as int - total);
+      total += count;
 
-        val itemEntity = (output * count).createEntityItem(world, x, y, z);
-        itemEntity.motionY = my + 0.4;
-        itemEntity.motionX = mx + rnd.nextDouble(-0.1, 0.1);
-        itemEntity.motionZ = mz + rnd.nextDouble(-0.1, 0.1);
-        world.spawnEntity(itemEntity);
+      val itemEntity = (output * count).createEntityItem(world, x, y, z);
+      itemEntity.motionY = my + 0.4;
+      itemEntity.motionX = mx + rnd.nextDouble(-0.1, 0.1);
+      itemEntity.motionZ = mz + rnd.nextDouble(-0.1, 0.1);
+      world.spawnEntity(itemEntity);
 
-        // world.playSound("thaumcraft:poof", "ambient", pos, 0.5f, 1.5f);
-        executeCommandSilent(itemEntity, '/particle fireworksSpark ' ~ x as float ~ ' ' ~ y as float ~ ' ' ~ z as float ~ ' 0 0.1 0 0.1 5');
+      // world.playSound("thaumcraft:poof", "ambient", pos, 0.5f, 1.5f);
+      executeCommandSilent(itemEntity, '/particle fireworksSpark ' ~ x as float ~ ' ' ~ y as float ~ ' ' ~ z as float ~ ' 0 0.1 0 0.1 5');
 
-        i += 1;
-      }
-    };
+      i += 1;
+    }
+  };
 
   // Get Shimmer enchant + Random Things colored shining
   var shimmerTag as IData = <enchantment:minecraft:protection>.makeEnchantment(1).makeTag();
@@ -455,6 +456,17 @@ zenClass Utils {
     ), null);
     worldIn.native.spawnEntity(entity);
     entityliving.playLivingSound();
+  }
+
+  // Convert item to block.
+  // Handle special cases when `asBlock` not propertly working
+  function getStateFromItem(item as IItemStack) as IBlockState {
+    if (isNull(item)) return null;
+    val block = item.asBlock();
+    if (isNull(block)) return null;
+    val def = block.definition;
+    val state = def.getStateFromMeta(block.meta);
+    return state;
   }
 }
 global utils as Utils = Utils();
