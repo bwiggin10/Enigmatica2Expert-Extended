@@ -182,6 +182,17 @@ mods.thaumcraft.Infusion.registerRecipe(
 scripts.process.beneficiate(<contenttweaker:ore_anglesite>, 'Anglesite', 1, { exceptions: 'only: Grindstone' });
 scripts.process.beneficiate(<contenttweaker:ore_benitoite>, 'Benitoite', 1, { exceptions: 'only: Grindstone' });
 
+// Perfect Fuel is best fluid fuel in game
+mods.tconstruct.Alloy.addRecipe(<liquid:perfect_fuel>, [
+  <liquid:rocketfuel> * 40,
+  <liquid:enrichedlava> * 40,
+  <liquid:sunnarium> * 10,
+]);
+
+// Usage for Perfect Fuel
+mods.enderio.CombustionGen.addFuel(<fluid:perfect_fuel>, 20000, 1500000);
+mods.thermalexpansion.MagmaticDynamo.addFuel(<fluid:perfect_fuel>, 2000000000);
+
 /*
 # Knowledge absorber craft
 # [Golden eye] from [Ender Orb Translocator][+3]

@@ -129,6 +129,16 @@ for i in 0 .. 17 {
   );
 }
 
+// Make Rustic Honeycomb produce forestry honey
+mods.thermalexpansion.Centrifuge.removeRecipe(<rustic:honeycomb>);
+mods.thermalexpansion.Centrifuge.addRecipe([<rustic:beeswax> % 100], <rustic:honeycomb>, <liquid:for.honey> * 250, 2000);
+
+mods.forestry.Squeezer.removeRecipe(<liquid:honey>, [<rustic:honeycomb>]);
+mods.forestry.Squeezer.addRecipe(<liquid:for.honey> * 250, [<rustic:honeycomb>], 8);
+
+mods.rustic.CrushingTub.removeRecipe(<liquid:honey>, <rustic:honeycomb>);
+mods.rustic.CrushingTub.addRecipe(<liquid:for.honey> * 250, null, <rustic:honeycomb>);
+
 // ---------------------------
 // Remake old combs
 function crushComb(comb as IItemStack, outputs as WeightedItemStack[]) as void {

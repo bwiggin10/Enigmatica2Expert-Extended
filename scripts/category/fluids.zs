@@ -3,21 +3,6 @@
 import crafttweaker.item.IItemStack;
 import crafttweaker.liquid.ILiquidStack;
 
-// Make Rustic Honeycomb produce forestry honey
-mods.thermalexpansion.Centrifuge.removeRecipe(<rustic:honeycomb>);
-mods.thermalexpansion.Centrifuge.addRecipe([<rustic:beeswax> % 100], <rustic:honeycomb>, <liquid:for.honey> * 250, 2000);
-
-mods.forestry.Squeezer.removeRecipe(<liquid:honey>, [<rustic:honeycomb>]);
-mods.forestry.Squeezer.addRecipe(<liquid:for.honey> * 250, [<rustic:honeycomb>], 8);
-
-mods.rustic.CrushingTub.removeRecipe(<liquid:honey>, <rustic:honeycomb>);
-mods.rustic.CrushingTub.addRecipe(<liquid:for.honey> * 250, null, <rustic:honeycomb>);
-
-// Make sure Botania molten metals can be casted
-mods.tconstruct.Casting.addBasinRecipe(<botania:storage:0>, null, <liquid:manasteel>, 1296);
-mods.tconstruct.Casting.addBasinRecipe(<botania:storage:1>, null, <liquid:terrasteel>, 1296);
-mods.tconstruct.Casting.addBasinRecipe(<botania:storage:2>, null, <liquid:elementium>, 1296);
-
 // Chalice interactions
 val chaliceGrid = {
   // First                      , Second                                                             , ⏩ + ⏩                                , ⏩ + 🔷                             , 🔷 + ⏩                      ,
@@ -162,80 +147,3 @@ for pos, names in utils.graph([
     }
   }
 }
-
-// *============================*
-
-/*
-
-  Fuels in Combustion Generator
-
-*/
-
-val combustionGenerator_fuels = {
-  // name: [power_per_tick, burn_time]
-
-  /* Inject_js(
-[...
-  (await getPDF('config/enderio/recipes/fuels.pdf'))
-  .matchAll(/<recipe name="Fuel: .*\n.*?<fuel fluid="(\w+)" pertick="(\d+)" ticks="(\d+)".*\n.*?<\/recipe>/gm)
-]
-.sort((a,b)=>b[2]*b[3] - a[2]*a[3])
-.map(function ([_, fluid, pertick, ticks]) {
-  return this.some(({Name})=>Name===fluid)
-  ? `  ${fluid.padEnd(16)}: [${pertick.padStart(3)}, ${ticks.padStart(5)}],`
-  : undefined
-}, getCSV('config/tellme/fluids-csv.csv'))
-.filter(l=>l)
-) */
-  fire_water      : [ 80, 15000],
-  refined_fuel    : [200,  6000],
-  rocket_fuel     : [160,  7000],
-  gasoline        : [160,  6000],
-  empoweredoil    : [140,  6000],
-  refined_biofuel : [125,  6000],
-  biodiesel       : [125,  6000],
-  diesel          : [125,  6000],
-  biofuel         : [125,  6000],
-  refined_oil     : [100,  6000],
-  crystaloil      : [ 80,  6000],
-  hootch          : [ 60,  6000],
-  crude_oil       : [ 50,  6000],
-  tree_oil        : [ 50,  6000],
-  oil             : [ 50,  6000],
-  ic2biogas       : [ 50,  6000],
-  coal            : [ 40,  6000],
-  refinedcanolaoil: [ 40,  6000],
-  creosote        : [ 20,  6000],
-  seed_oil        : [ 20,  6000],
-  canolaoil       : [ 20,  6000],
-/**/
-} as int[][string];
-
-// Way harder [Rocket Fuel] recipe
-mods.tconstruct.Alloy.addRecipe(<liquid:rocketfuel> * 1000, [
-  <liquid:gasoline> * 1000,
-  <liquid:syngas> * 1000,
-  <liquid:liquidfusionfuel> * 200,
-  <liquid:empoweredoil> * 200,
-  <liquid:refined_fuel> * 200,
-]);
-
-// Craft for Enriched Lava as exploration alt
-// [Enriched Lava Bucket] from [Molten Demon Metal Bucket][+3]
-mods.tconstruct.Alloy.addRecipe(<liquid:enrichedlava> * 1000, [
-  <liquid:ic2pahoehoe_lava> * 2000, // Pahoehoe Lava
-  <liquid:xu_demonic_metal> * 1000, // Molten Demon Metal
-  <liquid:xu_enchanted_metal> * 288, // Enchanted Metal
-  <liquid:sic_vapor> * 250, // Silicon Carbide Vapor
-]);
-
-// Perfect Fuel is best fluid fuel in game
-mods.tconstruct.Alloy.addRecipe(<liquid:perfect_fuel>, [
-  <liquid:rocketfuel> * 40,
-  <liquid:enrichedlava> * 40,
-  <liquid:sunnarium> * 10,
-]);
-
-// Usage for Perfect Fuel
-mods.enderio.CombustionGen.addFuel(<fluid:perfect_fuel>, 20000, 1500000);
-mods.thermalexpansion.MagmaticDynamo.addFuel(<fluid:perfect_fuel>, 2000000000);
