@@ -244,6 +244,7 @@ craft.make(<nuclearcraft:compound:2>, ['pretty',
 furnace.addRecipe(<nuclearcraft:ingot:8>, <minecraft:coal:*>);
 
 // Coal casted into graphite block
+mods.tconstruct.Casting.removeBasinRecipe(<minecraft:coal_block>);
 mods.tconstruct.Casting.removeBasinRecipe(<nuclearcraft:ingot_block:8>);
 mods.tconstruct.Casting.addBasinRecipe(<nuclearcraft:ingot_block:8>, null, <liquid:coal>, 900);
 mods.thermalexpansion.Crucible.addRecipe(<liquid:coal> * 900, <nuclearcraft:ingot_block:8>, 2000);
