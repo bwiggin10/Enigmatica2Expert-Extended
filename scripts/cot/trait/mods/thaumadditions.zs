@@ -28,6 +28,7 @@ import mods.zenutils.DataUpdateOperation.MERGE;
 import mods.zenutils.DataUpdateOperation.REMOVE;
 import mods.zenutils.DataUpdateOperation.BUMP;
 import crafttweaker.entity.AttributeModifier;
+import native.net.minecraft.util.EnumParticleTypes;
 
 function entityEyeHeight(entity as IEntity) as double{
     return entity.y+entity.eyeHeight;
@@ -415,7 +416,8 @@ function porous(player as IPlayer) as void {
   if (isNull(block)) return;
   if (block.definition.id != 'minecraft:stone') return;
   world.setBlockState(porousStone.definition.defaultState, pos);
-  // utils.spawnParticles(world, 'fireworksSpark', x+i, y+j, z+k, 0.1, 0.1, 0.1, 0.1, 2);
+  (world.native as native.net.minecraft.world.WorldServer).spawnParticle(
+    EnumParticleTypes.FIREWORKS_SPARK, 0.5 + pos.x, 0.5 + pos.y, 0.5 + pos.z, 10, 0.5, 0.5, 0.5, 0.0, 0);
   player.sendPlaySoundPacket('thaumcraft:roots', 'ambient', pos.asPosition3f(), 0.5f, 0.8f);
 }
 

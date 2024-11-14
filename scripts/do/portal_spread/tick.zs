@@ -25,6 +25,7 @@ import scripts.do.portal_spread.message.notifyPlayers;
 import scripts.do.portal_spread.modifiers.getModifiers;
 import scripts.do.portal_spread.recipes.spread;
 import scripts.do.portal_spread.utils.getNextPoint;
+import native.net.minecraft.util.EnumParticleTypes;
 
 ////////////////////////////////////////////////////
 
@@ -165,7 +166,11 @@ function spreadBlock(
   val inworldDefinition = inworldState.block.definition;
   val numId = inworldDefinition.numericalId;
 
-  if (showParticles) particles(spreadPos.x, spreadPos.y, spreadPos.z);
+  if (showParticles) {
+    (world.native as native.net.minecraft.world.WorldServer).spawnParticle(
+      EnumParticleTypes.SPELL_WITCH,
+      spreadPos.x as double, spreadPos.y as double, spreadPos.z as double, 1, 0.0, 0.0, 0.0, 0.0, 0);
+  }
 
   if (numId == 0) return false; // Air
 
@@ -219,11 +224,6 @@ function spreadBlock(
 
   // Return false if transformed block was air to prevent stopping on those blocks
   return blockToNumId != 0;
-}
-
-// Spawn particles
-function particles(x as float, y as float, z as float) as void {
-  server.commandManager.executeCommandSilent(server, '/particle witchMagic ' ~ x ~ ' ' ~ y ~ ' ' ~ z ~ ' 0 0 0 0 1');
 }
 
 // Replace block on position

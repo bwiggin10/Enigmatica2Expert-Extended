@@ -326,11 +326,19 @@ function onFalling(armor as IItemStack, player as IPlayer) as void {
   val verticalSpeedChance = 1.0 - 1.0 / (abs(motionY) + 1.0);
   if (isVerbose) player.sendMessage('§8Chance to break:§7 ' ~ (verticalSpeedChance * 100.0) as int ~ '%');
   if (world.getRandom().nextDouble() > verticalSpeedChance) {
-    player.sendPlaySoundPacket('minecraft:block.anvil.hit', 'ambient', player.position, 0.5f, 1.5f);
-    // server.commandManager.executeCommandSilent(server, "/particle fireworksSpark "
-    //   ~(player.position.x as float + 0.5f)~" "
-    //   ~(player.position.y as float + 1.0f)~" "
-    //   ~(player.position.z as float + 0.5f)~" 0 0.1 0 0.1 2");
+    world.native.playSound(null, player.position,
+      native.net.minecraft.init.SoundEvents.BLOCK_ANVIL_HIT,
+      native.net.minecraft.util.SoundCategory.AMBIENT,
+      1.0f, 1.0f);
+    if (!world.remote) {
+      (world as native.net.minecraft.world.WorldServer).spawnParticle(
+        native.net.minecraft.util.EnumParticleTypes.FIREWORKS_SPARK,
+        0.5 + player.position.x,
+        1.0 + player.position.y,
+        0.5 + player.position.z,
+        100, 0.0, 0.1, 0.0, 0.02, 0
+      );
+    }
     if (isVerbose) player.sendMessage('§8Unlucky!');
     return;
   }

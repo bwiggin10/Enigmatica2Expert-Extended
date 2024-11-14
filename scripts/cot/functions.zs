@@ -9,6 +9,7 @@ import crafttweaker.world.IFacing;
 import mods.contenttweaker.BlockPos;
 import mods.contenttweaker.BlockState;
 import mods.contenttweaker.World;
+import native.net.minecraft.util.EnumParticleTypes;
 
 function abs(n as double) as double { return n < 0 ? -n : n; }
 
@@ -37,15 +38,10 @@ function getPlayer(world as IWorld, p as IBlockPos) as IPlayer {
   return null;
 }
 
-function createParticles(world as IWorld, p as IBlockPos, amount as int = 10, type as string = 'heart') as void {
+function createParticles(world as IWorld, p as IBlockPos, type as EnumParticleTypes, amount as int = 10) as void {
   if (world.remote) return;
-  val player = getPlayer(world, p);
-  if (isNull(player)) return;
-  server.commandManager.executeCommandSilent(<minecraft:dirt>.createEntityItem(world, p.x, p.y, p.z),
-    '/particle ' ~ type ~ ' '
-    ~ ((p.x + 0.5)) ~ ' ' ~ (p.y + 0.5) ~ ' ' ~ ((p.z + 0.5))
-    ~ ' 0.25 0.25 0.25 0.02 ' ~ amount
-  );
+  (world.native as native.net.minecraft.world.WorldServer)
+    .spawnParticle(type, 0.5 + p.x, 0.5 + p.y, 0.5 + p.z, amount, 0.25, 0.25, 0.25, 0.02, 0);
 }
 
 val lifeRecipes = {
@@ -55,9 +51,9 @@ val lifeRecipes = {
 
 <cotBlock:conglomerate_of_life>.onBlockPlace = function (world, p, blockState) {
   if (!world.remote) scripts.do.build.entity.build(world, p, blockState);
-  createParticles(world, p);
+  createParticles(world, p, EnumParticleTypes.HEART);
 };
-<cotBlock:conglomerate_of_life>.onBlockBreak = function (world, p, blockState) { createParticles(world, p); };
+<cotBlock:conglomerate_of_life>.onBlockBreak = function (world, p, blockState) { createParticles(world, p, EnumParticleTypes.HEART); };
 <cotBlock:conglomerate_of_life>.onRandomTick = function (world, p, blockState) {
   if (world.remote) return;
   for entity in world.getEntities() {
@@ -72,16 +68,16 @@ val lifeRecipes = {
       val itemEntity = (outItem * 1).createEntityItem(w, entity.x as float, entity.y as float, entity.z as float);
       itemEntity.motionY = 0.4;
       world.spawnEntity(itemEntity);
-      createParticles(world, p, 3);
+      createParticles(world, p, EnumParticleTypes.HEART, 3);
     }
   }
 };
 
 <cotBlock:conglomerate_of_sun>.onBlockPlace = function (world, p, blockState) {
   if (!world.remote) scripts.do.build.entity.build(world, p, blockState);
-  createParticles(world, p, 10, 'endRod');
+  createParticles(world, p, EnumParticleTypes.END_ROD, 10);
 };
-<cotBlock:conglomerate_of_sun>.onBlockBreak = function (world, p, blockState) { createParticles(world, p, 10, 'endRod'); };
+<cotBlock:conglomerate_of_sun>.onBlockBreak = function (world, p, blockState) { createParticles(world, p, EnumParticleTypes.END_ROD, 10); };
 <cotBlock:conglomerate_of_sun>.onRandomTick = function (world, p, blockState) {
   if (world.remote) return;
   var hadEffect = false;
@@ -96,9 +92,9 @@ val lifeRecipes = {
     // Speed up growth of ageble mobs
     ageable.addGrowth(300);
     hadEffect = true;
-    createParticles(world, ageable.position, 10, 'endRod');
+    createParticles(world, ageable.position, EnumParticleTypes.END_ROD, 10);
   }
-  if (hadEffect) createParticles(world, p, 10, 'endRod');
+  if (hadEffect) createParticles(world, p, EnumParticleTypes.END_ROD, 10);
 };
 // ------------------------------------------
 // Coral
@@ -129,7 +125,9 @@ function canPlaceCoral(world as World, p as IBlockPos) as bool {
     val newPos = p.getOffset(face, 1);
     if (canPlaceCoral(world, newPos)) {
       world.setBlockState(coral, newPos);
-      utils.spawnParticles(world, 'droplet', 0.5 + p.x, 0.5 + p.y, 0.5 + p.z, 0.5, 0.5, 0.5, 0, 100);
+      val iworld as IWorld = world;
+      (iworld.native as native.net.minecraft.world.WorldServer)
+        .spawnParticle(EnumParticleTypes.WATER_DROP, 0.5 + p.x, 0.5 + p.y, 0.5 + p.z, 100, 0.5, 0.5, 0.5, 0.0, 0);
     }
   }
 };

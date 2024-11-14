@@ -21,6 +21,7 @@ import crafttweaker.world.IBlockPos;
 import mods.zenutils.StaticString;
 import native.net.minecraft.util.SoundCategory;
 import native.net.minecraft.util.SoundEvent;
+import native.net.minecraft.util.EnumParticleTypes;
 
 zenClass Utils {
   var DEBUG as bool = false;
@@ -371,29 +372,6 @@ zenClass Utils {
     return sorted;
   }
 
-  // Spawn particles
-  // Overloaded with world instead of CommandSender
-  function spawnParticles(
-    world as IWorld,
-    type as string,
-    x as float, y as float, z as float,
-    dx as float, dy as float, dz as float,
-    vel as float, amount as int
-  ) as void {
-    val sender as ICommandSender = <minecraft:dirt>.createEntityItem(world, x, y, z);
-    return spawnParticles(sender, type, x, y, z, dx, dy, dz, vel, amount);
-  }
-
-  function spawnParticles(
-    sender as ICommandSender,
-    type as string,
-    x as float, y as float, z as float,
-    dx as float, dy as float, dz as float,
-    vel as float, amount as int
-  ) as void {
-    executeCommandSilent(sender, '/particle ' ~ type ~ ' ' ~ x ~ ' ' ~ y ~ ' ' ~ z ~ ' ' ~ dx ~ ' ' ~ dy ~ ' ' ~ dz ~ ' ' ~ vel ~ ' ' ~ amount);
-  }
-
   val executeCommandSilent as function(ICommandSender,string)void
     = function (sender as ICommandSender, command as string) as void {};
 
@@ -421,7 +399,9 @@ zenClass Utils {
       itemEntity.motionZ = mz + rnd.nextDouble(-0.1, 0.1);
       world.spawnEntity(itemEntity);
 
-      executeCommandSilent(itemEntity, '/particle fireworksSpark ' ~ x as float ~ ' ' ~ y as float ~ ' ' ~ z as float ~ ' 0 0.1 0 0.1 5');
+      (world.native as native.net.minecraft.world.WorldServer).spawnParticle(
+        EnumParticleTypes.FIREWORKS_SPARK,
+        x as double, y as double, z as double, 5, 0.0, 0.1, 0.0, 0.1, 0);
 
       i += 1;
     }
