@@ -9,6 +9,12 @@ import crafttweaker.liquid.ILiquidStack;
 
 mods.tconstruct.Melting.addEntityMelting(<entity:iceandfire:hippocampus>, <fluid:liquid_helium> * 20);
 
+// Melt vanilla items since autimatic calculation is disabled
+scripts.process.melt(<minecraft:cauldron>, <fluid:iron> * (144 * 7));
+scripts.process.melt(<minecraft:anvil>, <fluid:iron> * (144 * 31));
+scripts.process.melt(<minecraft:anvil:1>, <fluid:iron> * (144 * 23));
+scripts.process.melt(<minecraft:anvil:2>, <fluid:iron> * (144 * 15));
+
 // Remove and re-add dragon steel meltable items since they was removed with Gauntlet mod
 mods.tconstruct.Melting.removeRecipe(<fluid:dragonsteel_fire>);
 mods.tconstruct.Melting.addRecipe(<fluid:dragonsteel_fire> * 144, <iceandfire:dragonsteel_fire_ingot>);
