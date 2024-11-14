@@ -17,7 +17,10 @@ import crafttweaker.oredict.IOreDictEntry;
 import crafttweaker.recipes.IRecipeFunction;
 import crafttweaker.util.Math;
 import crafttweaker.world.IWorld;
+import crafttweaker.world.IBlockPos;
 import mods.zenutils.StaticString;
+import native.net.minecraft.util.SoundCategory;
+import native.net.minecraft.util.SoundEvent;
 
 zenClass Utils {
   var DEBUG as bool = false;
@@ -418,7 +421,6 @@ zenClass Utils {
       itemEntity.motionZ = mz + rnd.nextDouble(-0.1, 0.1);
       world.spawnEntity(itemEntity);
 
-      // world.playSound("thaumcraft:poof", "ambient", pos, 0.5f, 1.5f);
       executeCommandSilent(itemEntity, '/particle fireworksSpark ' ~ x as float ~ ' ' ~ y as float ~ ' ' ~ z as float ~ ' 0 0.1 0 0.1 5');
 
       i += 1;
@@ -467,6 +469,17 @@ zenClass Utils {
     val def = block.definition;
     val state = def.getStateFromMeta(block.meta);
     return state;
+  }
+
+  function abs(n as double) as double { return n < 0 ? -n : n; }
+
+  // Server-side sound playing
+  function playSound(world as IWorld, sound as string, pos as IBlockPos, volume as float = 1.0f, pitch as float = 1.0f) as void {
+    val split = sound.split(':');
+    val soundRes = SoundEvent.REGISTRY.getObject(
+      native.net.minecraft.util.ResourceLocation(split[0], sound.substring(split[0].length + 1))
+    ) as SoundEvent;
+    world.native.playSound(null, pos, soundRes, SoundCategory.AMBIENT, volume, pitch);
   }
 }
 global utils as Utils = Utils();
