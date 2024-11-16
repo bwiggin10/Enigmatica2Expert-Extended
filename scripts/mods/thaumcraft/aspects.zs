@@ -4,7 +4,7 @@ import thaumcraft.aspect.CTAspectStack;
 
 #ignoreBracketErrors
 
-#modloaded thaumcraft
+#modloaded thaumcraft randomtweaker
 
 /*
  █████╗ ███████╗██████╗ ███████╗ ██████╗████████╗███████╗

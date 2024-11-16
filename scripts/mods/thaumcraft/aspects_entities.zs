@@ -4,7 +4,7 @@ import crafttweaker.data.IData;
 import thaumcraft.aspect.CTAspectStack;
 import crafttweaker.entity.IEntityDefinition;
 
-#modloaded thaumcraft
+#modloaded thaumcraft randomtweaker
 
 /* 
 ___  ____ ___ ___ ____ ____    ____ _  _ _ _  _ ____ _    ____ 
