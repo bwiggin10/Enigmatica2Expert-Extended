@@ -69,9 +69,6 @@ zenClass MixinTileMeatyOrb {
 #{targets: "com.verdantartifice.thaumicwonders.common.items.catalysts.ItemAlchemistStone"}
 zenClass MixinItemAlchemistStone {
 
-  // PLACEHOLDER: Repearable injection
-  // There should be injection of code that making this stone repearable. Not implemented but must be here due refactoring.
-
   // Make stone enchantable with Unbreaking and Mending
   #mixin Overwrite
   function isBookEnchantable(stack as ItemStack, book as ItemStack) as bool {
@@ -111,9 +108,6 @@ zenClass MixinItemAlchemistStone {
 #{targets: "com.verdantartifice.thaumicwonders.common.items.catalysts.ItemAlienistStone"}
 zenClass MixinItemAlienistStone {
 
-  // PLACEHOLDER: Repearable injection
-  // There should be injection of code that making this stone repearable. Not implemented but must be here due refactoring.
-
   // Make stone enchantable with Unbreaking and Mending
   #mixin Overwrite
   function isBookEnchantable(stack as ItemStack, book as ItemStack) as bool {
@@ -152,9 +146,6 @@ zenClass MixinItemAlienistStone {
 #mixin Mixin
 #{targets: "com.verdantartifice.thaumicwonders.common.items.catalysts.ItemTransmuterStone"}
 zenClass MixinItemTransmuterStone {
-
-  // PLACEHOLDER: Repearable injection
-  // There should be injection of code that making this stone repearable. Not implemented but must be here due refactoring.
 
   // Make stone enchantable with Unbreaking and Mending
   #mixin Overwrite
