@@ -48,26 +48,10 @@ function addTransmuters(input as IIngredient, output as IIngredient) as void {
     .build();
 }
 
-for i, pair in [
-  ['Iron', 'Gold'],
-  ['Tin', 'Copper'],
-  ['Lead', 'Silver'],
-  ['Cobalt', 'Ardite'],
-  ['AstralStarmetal', 'Draconium'],
-  ['Platinum', 'Iridium'],
-  ['Aluminum', 'Titanium'],
-  ['Uranium', 'Thorium'],
-  ['Xorcyte', 'Aquamarine'], // TODO: Fix Xorcyte => Xorcite (in Bansoukou too)
-  ['Diamond', 'Sapphire'],
-  ['Emerald', 'Peridot'],
-  ['Redstone', 'Ruby'],
-  ['CertusQuartz', 'ChargedCertusQuartz'],
-  ['Dilithium', 'DimensionalShard'],
-  ['gemCoal', 'bitumen'],
-  ['oreCoal', 'oreClathrateOilShale'],
-] as string[][] {
-  val aOreID = pair[0];
-  val bOreID = pair[1];
+val refiningResults = scripts.mods.thaumicwonders.transmuterStone.refiningResults;
+for i in 0 .. refiningResults.length / 2 {
+  val aOreID = refiningResults[i * 2];
+  val bOreID = refiningResults[i * 2 + 1];
 
   var a as IIngredient = null;
   var b as IIngredient = null;
@@ -79,8 +63,7 @@ for i, pair in [
   }
 
   // All other variants
-  val orePrefixes = ['ore', 'nugget', 'block', 'ingot', 'gem', 'dust'] as string[];
-  for orePrefix in orePrefixes {
+  for orePrefix in scripts.mods.thaumicwonders.transmuterStone.orePrefixes {
     val aOreEntry = oreDict[orePrefix + aOreID];
     val bOreEntry = oreDict[orePrefix + bOreID];
     if (isNull(aOreEntry.firstItem) || isNull(bOreEntry.firstItem)) continue;
