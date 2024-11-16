@@ -28,6 +28,21 @@ function addRecipe(
     );
   });
 
+  // Add icon display
+  mods.backpackdisplay.BackpackDisplay.addBackDisplay(F, function(item) {
+    if (isNull(item.tag) || isNull(item.tag.singularity)) return null;
+    val length = getMapLength(item.tag.singularity);
+    val result = arrayOf(length, null as IItemStack);
+    var i = 0;
+    for itemStr, value in item.tag.singularity.asMap() {
+      val item = getItemFromString(itemStr);
+      if (!isNull(item) && value > 0)
+        result[i] = item * value;
+      i += 1;
+    }
+    return result;
+  });
+
   // Actual recipe
   recipes.addShaped(recipeName, R, [
     [(E | F).marked('0'), A.marked('1'), A.marked('2')],
@@ -115,6 +130,11 @@ function getFireproofPower(item as IItemStack) as double {
   return getPower(median, length);
 }
 
+function getItemFromString(itemStr as string) as IItemStack {
+  val split = itemStr.split(':');
+  return itemUtils.getItem(split[0] ~ ':' ~ split[1], split[2] as int);
+}
+
 // -------------------------------------------------------------------
 
 events.onPlayerInteractBlock(function (e as crafttweaker.event.PlayerInteractBlockEvent) {
@@ -133,8 +153,7 @@ events.onPlayerInteractBlock(function (e as crafttweaker.event.PlayerInteractBlo
   var itemData = [] as IData;
   var values = [] as int[];
   for itemStr, value in e.item.tag.singularity.asMap() {
-    val split = itemStr.split(':');
-    val item = itemUtils.getItem(split[0] ~ ':' ~ split[1], split[2] as int);
+    val item = getItemFromString(itemStr);
     if (isNull(item)) continue;
     values += value;
     itemData += [{
