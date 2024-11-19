@@ -20,5 +20,5 @@ static refiningResults as string[] = [
   'Redstone',        /*🢥*/ 'Ruby',
   'Tin',             /*🢥*/ 'Copper',
   'Uranium',         /*🢥*/ 'Thorium',
-  'Xorcyte',         /*🢥*/ 'Aquamarine',
+  'Xorcite',         /*🢥*/ 'Aquamarine',
 ] as string[];
