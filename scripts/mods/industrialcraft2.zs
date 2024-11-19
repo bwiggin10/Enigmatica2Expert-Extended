@@ -34,7 +34,7 @@ for input, output in {
   <ic2:crushed:4>: <thermalfoundation:material:130>,
   <ic2:crushed:5>: <thermalfoundation:material:129>,
   <ic2:crushed:3>: <thermalfoundation:material:131>,
-  <ic2:crushed:6>: <immersiveengineering:metal:5>,  
+  <ic2:crushed:6>: <immersiveengineering:metal:5>,
 } as IItemStack[IItemStack] {
   furnace.addRecipe(output, input, 0.5);
   furnace.addRecipe(output, <ic2:purified>.withDamage(input.damage), 0.5);
@@ -374,29 +374,52 @@ mods.actuallyadditions.Compost.addRecipe(<ic2:crop_res:2>, <minecraft:wool:13>, 
 // Scrap making from seed bags
 scripts.process.crush(<ic2:crop_seed_bag>, <ic2:crafting:23>, 'only: Macerator', null, null);
 
-// [Scrap]*64 from [Condensate Water Bucket][+1]
-craft.shapeless(<ic2:crafting:23> * 64, 'G~', {
-  'G': <rats:garbage_pile>, // Garbage Pile
-  '~': LiquidIngr('condensate_water'), // Condensate Water
-});
+function addScrapCrush(source as IItemStack, amount as int) as void {
+  scripts.process.crush(
+    source,
+    <ic2:crafting:23> * amount,
+    'only: Macerator SagMill',
+    [<ic2:crafting:23> * (amount / 2), <ic2:crafting:23> * (amount / 4)],
+    [0.5f, 0.5f]);
+}
 
-// [Scrap]*64
-craft.shapeless(<ic2:crafting:23> * 64, 'G~', {
-  'G': <nuclearcraft:wasteland_earth>,
-  '~': LiquidIngr('condensate_water'), // Condensate Water
-});
+function addPieceCrush(source as IItemStack, amount as int) as void {
+  val itemStr = source.definition.id
+    + (source.damage != 0 ? ':' ~ source.damage : '');
+  val piece = <littletiles:blocklittletiles>.withTag({
+    bBox: [3, 3, 3, 5, 5, 5] as int[],
+    grid: 8,
+    tile: { block: itemStr }, block: itemStr});
 
-// [Scrap Box]*64
-craft.shapeless(<ic2:crafting:24> * 32, 'G~', {
-  'G': <trinity:radioactive_earth>,
-  '~': LiquidIngr('condensate_water'), // Condensate Water
-});
+  val pieceAmount = min(64, amount);
+  scripts.process.crush(
+    source,
+    piece * pieceAmount,
+    'only: Macerator SagMill',
+    [piece * (pieceAmount / 2), piece * (pieceAmount / 4)],
+    [0.5f, 0.5f]);
+  
+  val piece64 = <littletiles:blocklittletiles>.withTag({
+    bBox: [7, 7, 7, 8, 8, 8] as int[],
+    tile: { block: itemStr }, block: itemStr});
 
-// [Scrap Box]*64
-craft.shapeless(<ic2:crafting:24> * 64, 'G~', {
-  'G': <trinity:radioactive_earth2>,
-  '~': LiquidIngr('water'), // Condensate Water
-});
+  if (amount > 64) {
+    val piece64Amount = amount / 64;
+    scripts.process.crush(
+      piece,
+      piece64 * piece64Amount,
+      'only: Macerator SagMill',
+      [piece64 * (piece64Amount / 2), piece64 * (piece64Amount / 4)],
+      [0.5f, 0.5f]);
+  }
+  
+  addScrapCrush(amount > 64 ? piece64 : piece, 64);
+}
+
+addScrapCrush(<rats:garbage_pile>, 16);
+addScrapCrush(<nuclearcraft:wasteland_earth>, 32);
+addPieceCrush(<trinity:radioactive_earth>, 64);
+addPieceCrush(<trinity:radioactive_earth2>, 4096);
 
 // --------------------------------------------------------------------------------------------
 // CROPS
