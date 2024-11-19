@@ -30,6 +30,7 @@ import scripts.processUtils.warning;
 // ######################################################################
 
 static staticOpts as IData = {} as IData;
+static cantNbtError as string = 'received work, but this machine can not work with input contain NBT tags';
 
 function getOption(options as IData, field as string) as IData {
   return (!isNull(options) && !isNull(options.memberGet(field)))
@@ -197,26 +198,26 @@ function workEx(machineNameAnyCase as string, exceptionsAnyCase as string,
     }
 
     if (machineName == 'mekenrichment') {
-      if (inputHasTag) return info(machineNameAnyCase, getItemName(inputIngr0.itemArray[0]), 'received work, but this machine can not work with input contain NBT tags');
+      if (inputHasTag) return info(machineNameAnyCase, getItemName(inputIngr0.itemArray[0]), cantNbtError);
       // # mods.mekanism.enrichment.addRecipe(IIngredient inputStack, IItemStack outputStack);
       mods.mekanism.enrichment.addRecipe(inputIngr0, outputItem0);
       return machineName;
     }
 
     if (machineName == 'mekpurification') {
-      if (inputHasTag) return info(machineNameAnyCase, getItemName(inputIngr0.itemArray[0]), 'received work, but this machine can not work with input contain NBT tags');
+      if (inputHasTag) return info(machineNameAnyCase, getItemName(inputIngr0.itemArray[0]), cantNbtError);
       mods.mekanism.purification.addRecipe(inputIngr0, outputItem0);
       return machineName;
     }
 
     if (machineName == 'mekinjection') {
-      if (inputHasTag) return info(machineNameAnyCase, getItemName(inputIngr0.itemArray[0]), 'received work, but this machine can not work with input contain NBT tags');
+      if (inputHasTag) return info(machineNameAnyCase, getItemName(inputIngr0.itemArray[0]), cantNbtError);
       mods.mekanism.chemical.injection.addRecipe(inputIngr0, <gas:hydrogenchloride>, outputItem0);
       return machineName;
     }
 
     if (machineName == 'meksawmill') {
-      if (inputHasTag) return info(machineNameAnyCase, getItemName(inputIngr0.itemArray[0]), 'received work, but this machine can not work with input contain NBT tags');
+      if (inputHasTag) return info(machineNameAnyCase, getItemName(inputIngr0.itemArray[0]), cantNbtError);
       if (strict) { mods.mekanism.sawmill.removeRecipe(inputIngr0); }
       // mods.mekanism.sawmill.addRecipe(IIngredient inputStack, IItemStack outputStack, @Optional IItemStack bonusOutput, @Optional double bonusChance);
       if (haveExtra) {
@@ -229,7 +230,7 @@ function workEx(machineNameAnyCase as string, exceptionsAnyCase as string,
     }
 
     if (machineName == 'mekcrusher') {
-      if (inputHasTag) return info(machineNameAnyCase, getItemName(inputIngr0.itemArray[0]), 'received work, but this machine can not work with input contain NBT tags');
+      if (inputHasTag) return info(machineNameAnyCase, getItemName(inputIngr0.itemArray[0]), cantNbtError);
       // mods.mekanism.crusher.addRecipe(IIngredient inputStack, IItemStack outputStack);
       // mods.mekanism.crusher.removeRecipe(IIngredient outputStack, @Optional IIngredient inputStack);
       if (strict) { mods.mekanism.crusher.removeRecipe(outputItem0); }
@@ -456,7 +457,7 @@ function workEx(machineNameAnyCase as string, exceptionsAnyCase as string,
     }
 
     if (machineName == 'iecrusher') {
-      // mods.immersiveengineering.Crusher.removeRecipe(IItemstack output);
+      if (inputHasTag) return info(machineNameAnyCase, getItemName(inputIngr0.itemArray[0]), cantNbtError);
       if (strict) { mods.immersiveengineering.Crusher.removeRecipe(outputItem0); }
       // mods.immersiveengineering.Crusher.addRecipe(IItemStack output, IIngredient input, int energy, @Optional IItemStack secondaryOutput, @Optional double secondaryChance);
       if (haveExtra) {
@@ -901,7 +902,7 @@ function workEx(machineNameAnyCase as string, exceptionsAnyCase as string,
   // 📦 → 🟡
   if (inputIsSingle && haveGasOutput) {
     if (machineName == 'mekdissolution') {
-      if (inputHasTag) return info(machineNameAnyCase, getItemName(inputIngr0.itemArray[0]), 'received work, but this machine can not work with input contain NBT tags');
+      if (inputHasTag) return info(machineNameAnyCase, getItemName(inputIngr0.itemArray[0]), cantNbtError);
       mods.mekanism.chemical.dissolution.addRecipe(inputIngr0, outputGas);
       return machineName;
     }
