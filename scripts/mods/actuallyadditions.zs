@@ -65,7 +65,7 @@ craft.remake(<actuallyadditions:item_drill_upgrade_five_by_five>, ['pretty',
   '╳ A ╳',
   '* ╳ *'], {
   '*': <ore:crystalDiamantine>, // Diamatine Crystal
-  '╳': <ore:crystalRestonia>, // Restonia Crystal
+  '╳': <actuallyadditions:item_crystal_empowered>,
   'A': <actuallyadditions:item_misc:8>, // Advanced Coil
 });
 
