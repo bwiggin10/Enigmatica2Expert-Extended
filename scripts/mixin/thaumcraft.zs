@@ -17,8 +17,8 @@ zenClass MixinGolemMaterial {
     #    at: {value: "HEAD"}
     #}
     function buffStats(material as GolemMaterial, ci as CallbackInfo) as void {
-        material.healthMod = material.healthMod * 2;
-        material.armor = material.armor * material.armor / 10 + material.armor;
+        material.healthMod = material.healthMod * 20;
+        material.armor = material.armor * material.armor / 2 + material.armor;
         material.damage = material.damage * material.damage / 2 + material.damage;
     }
 }
