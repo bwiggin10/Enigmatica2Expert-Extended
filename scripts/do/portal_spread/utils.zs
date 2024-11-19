@@ -9,6 +9,9 @@
 #modloaded zenutils
 #reloadable
 
+import crafttweaker.block.IBlockState;
+import crafttweaker.item.IItemStack;
+
 static maxRadius as int = scripts.do.portal_spread.config.Config.maxRadius;
 
 // 8 is maximum z_group size in table_sum_of_two_squares_variants for maxRadius=256.
@@ -105,3 +108,31 @@ function getNextPoint(index as int) as int[] {
 }
 
 function abs(n as double) as double { return n < 0 ? -n : n; }
+
+// Replaces for blocks that cant be converted into items
+static blockRepresentation as IItemStack[string] = {
+  'minecraft:double_stone_slab' : <minecraft:stone_slab>,
+  'minecraft:double_wooden_slab': <minecraft:wooden_slab>,
+  'minecraft:fire'              : <minecraft:flint_and_steel>,
+  'minecraft:lava'              : <minecraft:lava_bucket>,
+  'minecraft:water'             : <minecraft:water_bucket>,
+  'minecraft:air'               : <mechanics:empty>,
+  'biomesoplenty:blood'         : <forge:bucketfilled>.withTag({ FluidName: 'blood', Amount: 1000 }),
+};
+
+function stateToItem(state as IBlockState) as IItemStack {
+  if (
+    isNull(state)
+    || isNull(state.block)
+    || isNull(state.block.definition)
+  ) return null;
+
+  val defId = state.block.definition.id;
+  var item = defId.startsWith('netherendingores:')
+    ? <item:${defId}:${state.block.meta}>
+    : state.block.getItem(null, null, state);
+  if (isNull(item)) item = blockRepresentation[defId];
+  if (isNull(item))
+    logger.logWarning('Cannot find item representation for block: ' ~ defId);
+  return item;
+}

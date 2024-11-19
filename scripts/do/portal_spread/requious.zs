@@ -14,20 +14,9 @@
 #modloaded requious zenutils
 #priority -4000
 
-import crafttweaker.block.IBlockState;
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
-
-// Replaces for blocks that cant be converted into items
-static blockRepresentation as IItemStack[string] = {
-  'minecraft:double_stone_slab' : <minecraft:stone_slab>,
-  'minecraft:double_wooden_slab': <minecraft:wooden_slab>,
-  'minecraft:fire'              : <minecraft:flint_and_steel>,
-  'minecraft:lava'              : <minecraft:lava_bucket>,
-  'minecraft:water'             : <minecraft:water_bucket>,
-  'minecraft:air'               : <mechanics:empty>,
-  'biomesoplenty:blood'         : <forge:bucketfilled>.withTag({ FluidName: 'blood', Amount: 1000 }),
-};
+import scripts.do.portal_spread.utils.stateToItem;
 
 val x = <assembly:portal_spread>;
 x.addJEICatalyst(<minecraft:obsidian>);
@@ -38,23 +27,6 @@ for i in 2 .. 6 {
 }
 
 val wildcardedNumIds = scripts.do.portal_spread.recipes.spread.wildcardedNumIds;
-
-function stateToItem(state as IBlockState) as IItemStack {
-  if (
-    isNull(state)
-    || isNull(state.block)
-    || isNull(state.block.definition)
-  ) return null;
-
-  val defId = state.block.definition.id;
-  var item = defId.startsWith('netherendingores:')
-    ? <item:${defId}:${state.block.meta}>
-    : state.block.getItem(null, null, state);
-  if (isNull(item)) item = blockRepresentation[defId];
-  if (isNull(item))
-    logger.logWarning('Cannot find item representation for block: ' ~ defId);
-  return item;
-}
 
 /**
  * Compare two lists of items to be the same items and same amounts
