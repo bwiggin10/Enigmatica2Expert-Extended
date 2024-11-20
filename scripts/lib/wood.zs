@@ -145,6 +145,18 @@ static logPlankFireproof as IItemStack[IItemStack] = {
   <forestry:logs.vanilla.fireproof.1>  : <forestry:planks.vanilla.fireproof.0:4>,
 } as IItemStack[IItemStack]$orderly;
 
+// Create nonfireproof oredict
+function addToNonfireproof(list as IItemStack[IItemStack]) as void {
+  for log, plank in list {
+    if(isNull(log) || isNull(plank)) continue;
+    <ore:logNonfireproof>.add(log);
+    <ore:plankNonfireproof>.add(plank);
+  }
+}
+
+addToNonfireproof(logPlank); // Vanilla only here
+addToNonfireproof(logPlankForestry);
+
 // Create fireproof oredict
 for log, plank in logPlankFireproof {
   if(isNull(log) || isNull(plank)) continue;
