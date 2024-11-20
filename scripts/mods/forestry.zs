@@ -335,8 +335,7 @@ scripts.process.melt(<forestry:smoker>, <fluid:tin> * (144 * 5));
 scripts.process.crush(<thermalfoundation:material:801> /* Compressed Sawdust */, <forestry:carton>, 'only: CrushingBlock');
 
 // Remove all fireproof recipes. Fireproof only obtainable through breeding.
-for log, plank in scripts.lib.wood.logPlank {
-  if (!log.definition.id.matches('.*fireproof.*')) continue;
+for log, plank in scripts.lib.wood.logPlankFireproof {
   mods.forestry.ThermionicFabricator.removeCast(log);
   mods.forestry.ThermionicFabricator.removeCast(plank * 5);
 }
