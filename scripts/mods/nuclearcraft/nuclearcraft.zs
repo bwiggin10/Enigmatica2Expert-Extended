@@ -28,9 +28,8 @@ recipes.addShapeless('Plutonium conversion', <nuclearcraft:plutonium:5> * 2, [<i
 utils.compact(<nuclearcraft:ingot:14>, <nuclearcraft:ingot_block:14>);
 utils.compact(<nuclearcraft:ingot:15>, <nuclearcraft:ingot_block:15>);
 
-// Remove Manganese ingot (and oxide) tooltip about smelting 3 times since its misleading
-<nuclearcraft:ingot:11>.removeTooltipLine(1);
-<nuclearcraft:ingot:14>.removeTooltipLine(1);
+// This recipe was only available in Arc Furnace
+furnace.addRecipe(<nuclearcraft:ingot:14>, <nuclearcraft:dust:14>, 0.5);
 
 // ------------------------------------------------------------------
 // Recipes and integrations
