@@ -191,3 +191,13 @@ zenClass MixinTileEntityDisplayStand {
         return 2000;
     }
 }
+
+#mixin Mixin
+#{targets: "de.ellpeck.actuallyadditions.mod.items.ItemDrill"}
+zenClass MixinAAItemDrill {
+    #mixin ModifyConstant
+    #{ method: "*", constant: { intValue: 4 } }
+    function increaseMiningLevel(value as int) as int {
+        return 7;
+    }
+}
