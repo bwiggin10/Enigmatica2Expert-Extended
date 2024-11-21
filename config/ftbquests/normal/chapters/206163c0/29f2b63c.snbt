@@ -12,7 +12,8 @@
 		type: "item",
 		items: [{
 			item: "forestry:portable_alyzer"
-		}]
+		}],
+		ignore_nbt: 1b
 	}],
 	rewards: [{
 		uid: "a69b7f5d",
