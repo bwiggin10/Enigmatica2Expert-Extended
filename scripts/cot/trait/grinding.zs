@@ -42,7 +42,7 @@ import crafttweaker.world.IWorld;
 import mods.ctutils.utils.Math.abs;
 import mods.ctutils.utils.Math.max;
 
-import scripts.cot.utils_tcon_cot.getArmorMatsAmount;
+import scripts.cot.trait.utils.getArmorMatsAmount;
 
 static HARDNESS_MULT as float = 1.0 as float;
 

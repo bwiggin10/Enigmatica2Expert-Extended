@@ -1,4 +1,5 @@
-#loader contenttweaker crafttweakerutils
+#loader contenttweaker
+#modloaded crafttweakerutils
 #priority 9000
 
 import crafttweaker.item.IItemStack;
@@ -17,12 +18,6 @@ import mods.ctutils.utils.Math.abs;
 
 mods.contenttweaker.VanillaFactory.createCreativeTab('other', <item:minecraft:coal:1>).register();
 
-function buildItem(name as string) {
-  val item = VanillaFactory.createItem(name) as Item;
-  item.setCreativeTab(<creativetab:other>);
-  item.register();
-}
-
 function createBlock(name as string, level as int, blockMaterial as BlockMaterial, blockSoundType as SoundType, lightValue as int = 0) as void {
   val c = VanillaFactory.createBlock(name, blockMaterial);
   c.toolClass = 'pickaxe';
@@ -34,19 +29,14 @@ function createBlock(name as string, level as int, blockMaterial as BlockMateria
   c.register();
 }
 
-function createBlockGround(name as string, level as int, blockMaterial as BlockMaterial) {
-  createBlock(name, level, blockMaterial, <soundtype:ground>);
-}
-
 function createBlockStone(name as string, level as int, blockMaterial as BlockMaterial) {
   createBlock(name, level, blockMaterial, <soundtype:stone>);
 }
 
-function createPill(name as string) {
-  val pill = VanillaFactory.createItemFood(name, 50);
-  pill.saturation = 0.0f;
-  pill.alwaysEdible = true;
-  pill.register();
+function buildItem(name as string) {
+  val item = VanillaFactory.createItem(name) as Item;
+  item.setCreativeTab(<creativetab:other>);
+  item.register();
 }
 
 /** Crafting Materials **/
@@ -192,7 +182,7 @@ seed_fluid.register();
 // -------------------------------
 // Animal's blocks
 // -------------------------------
-createBlockGround('conglomerate_of_coal', 5, <blockmaterial:clay>);
+createBlock('conglomerate_of_coal', 5, <blockmaterial:clay>, <soundtype:ground>);
 
 b = VanillaFactory.createBlock('conglomerate_of_life', <blockmaterial:clay>);
 b.toolClass = 'shovel';
@@ -222,6 +212,13 @@ buildItem('blasted_coal');
 // -------------------------------
 // Nutrition pills
 // -------------------------------
+function createPill(name as string) {
+  val pill = VanillaFactory.createItemFood(name, 50);
+  pill.saturation = 0.0f;
+  pill.alwaysEdible = true;
+  pill.register();
+}
+
 createPill('dairy_pill');
 createPill('fruit_pill');
 createPill('grain_pill');
@@ -349,7 +346,7 @@ mm.register();
 mods.contenttweaker.VanillaFactory.createCreativeTab('coins_tab', <item:thermalfoundation:coin:64>).register();
 
 function buildCoin(name as string, glowing as bool = false) {
-  val item = VanillaFactory.createItem(name) as Item;
+  val item = VanillaFactory.createItem('coin_' ~ name) as Item;
   item.setCreativeTab(<creativetab:coins_tab>);
   item.glowing = glowing;
   item.textureLocation = mods.contenttweaker.ResourceLocation.create('contenttweaker:items/coin/' ~ name);
@@ -357,132 +354,132 @@ function buildCoin(name as string, glowing as bool = false) {
 }
 
 function buildFoodyCoin(name as string, foodValue as int, foodSaturation as float) {
-  val item = VanillaFactory.createItemFood(name, foodValue) as ItemFood;
+  val item = VanillaFactory.createItemFood('coin_' ~ name, foodValue) as ItemFood;
   item.setCreativeTab(<creativetab:coins_tab>);
   item.textureLocation = mods.contenttweaker.ResourceLocation.create('contenttweaker:items/coin/' ~ name);
   item.saturation = foodSaturation;
   item.register();
 }
 
-buildCoin('coin_adaminite');
-buildCoin('coin_advancedalloy');
-buildCoin('coin_alchemicalbrass');
-buildCoin('coin_aluminumbrass');
-buildCoin('coin_alumite');
-buildCoin('coin_awakeneddraconium');
-buildCoin('coin_baseessence');
-buildCoin('coin_beryllium');
-buildCoin('coin_blackiron');
-buildCoin('coin_bloodglitchinfused');
-buildCoin('coin_bound');
-buildCoin('coin_calcium');
-buildCoin('coin_chaoticmetal');
-buildCoin('coin_chromium');
-buildCoin('coin_conductiveiron');
-buildCoin('coin_cookedmeat');
-buildCoin('coin_crystallinealloy');
-buildCoin('coin_crystallinepinkslimealloy');
-buildCoin('coin_crystalmatrix');
-buildCoin('coin_crystaltine');
-buildCoin('coin_darksteel');
-buildCoin('coin_demonmetal');
-buildFoodyCoin('coin_doublesmore', 6, 9.6);
-buildCoin('coin_draconicmetal');
-buildCoin('coin_ebonypsimetal');
-buildCoin('coin_electricalsteel');
-buildCoin('coin_elektron60');
-buildCoin('coin_elementium');
-buildCoin('coin_enchantedmetal');
-buildCoin('coin_ender');
-buildCoin('coin_endorium');
-buildCoin('coin_endsteel');
-buildCoin('coin_energium');
-buildCoin('coin_energizedalloy');
-buildCoin('coin_enhancedender', true);
-buildCoin('coin_essenceinfused');
-buildCoin('coin_evilinfusedmetal');
-buildCoin('coin_extremealloy');
-buildCoin('coin_fakeiron');
-buildCoin('coin_ferroboron');
-buildCoin('coin_fierymetal');
-buildCoin('coin_firedragonsteel');
-buildCoin('coin_fluixsteel');
-buildCoin('coin_fluxedelectrum');
-buildFoodyCoin('coin_foursmore', 12, 47.45);
-buildCoin('coin_gaiaspirit');
-buildCoin('coin_glitchinfused');
-buildCoin('coin_glowstone');
-buildCoin('coin_graphite');
-buildCoin('coin_hafnium');
-buildCoin('coin_hardcarbon');
-buildCoin('coin_heavymetal');
-buildCoin('coin_hopgraphite');
-buildCoin('coin_hslasteel');
-buildCoin('coin_icedragonsteel');
-buildCoin('coin_inferium');
-buildCoin('coin_infinity', true);
-buildCoin('coin_insanium');
-buildCoin('coin_intermedium');
-buildCoin('coin_ironwood');
-buildCoin('coin_ivorypsimetal');
-buildCoin('coin_knightmetal');
-buildCoin('coin_knightslime');
-buildCoin('coin_lithiummanganesedioxide');
-buildCoin('coin_magnesiumdiboride');
-buildCoin('coin_manasteel');
-buildCoin('coin_manganese');
-buildCoin('coin_manganesedioxide');
-buildCoin('coin_manganeseoxide');
-buildCoin('coin_manyullyn');
-buildCoin('coin_melodicalloy');
-buildCoin('coin_mirion');
-buildCoin('coin_mithminite');
-buildCoin('coin_mithrillium');
-buildCoin('coin_neodymium');
-buildCoin('coin_neutronium');
-buildCoin('coin_nichrome');
-buildCoin('coin_niobium');
-buildCoin('coin_niobiumtin');
-buildCoin('coin_niobiumtitanium');
-buildCoin('coin_osgloglas');
-buildCoin('coin_osmiridium');
-buildCoin('coin_pigiron');
-buildCoin('coin_pinkmetal');
-buildCoin('coin_potassium');
-buildCoin('coin_primalmetal');
-buildCoin('coin_prudentium');
-buildCoin('coin_psimetal');
-buildCoin('coin_pulsatingiron');
-buildCoin('coin_redstonealloy');
-buildCoin('coin_refinedobsidian');
-buildCoin('coin_sentient');
-buildFoodyCoin('coin_smore', 4, 3);
-buildCoin('coin_sodium');
-buildCoin('coin_soularium');
-buildCoin('coin_soulium');
-buildCoin('coin_spectre');
-buildCoin('coin_stainlesssteel');
-buildCoin('coin_stellaralloy');
-buildCoin('coin_strontium');
-buildCoin('coin_superalloy');
-buildCoin('coin_superium');
-buildCoin('coin_supremium');
-buildCoin('coin_terrasteel');
-buildCoin('coin_titaniumaluminide');
-buildCoin('coin_titaniumiridium');
-buildCoin('coin_thaumium');
-buildCoin('coin_thermoconductingalloy');
-buildCoin('coin_toughalloy');
-buildCoin('coin_tungstencarbide');
-buildCoin('coin_ultimate', true);
-buildCoin('coin_unstable');
-buildCoin('coin_uumetal');
-buildCoin('coin_vibrantalloy');
-buildCoin('coin_voidmetal');
-buildCoin('coin_vividalloy');
-buildCoin('coin_wyvernmetal');
-buildCoin('coin_yttrium');
-buildCoin('coin_zinc');
-buildCoin('coin_zircaloy');
-buildCoin('coin_zirconium');
-buildCoin('coin_zirconiummolybdenum');
+buildCoin('adaminite');
+buildCoin('advancedalloy');
+buildCoin('alchemicalbrass');
+buildCoin('aluminumbrass');
+buildCoin('alumite');
+buildCoin('awakeneddraconium');
+buildCoin('baseessence');
+buildCoin('beryllium');
+buildCoin('blackiron');
+buildCoin('bloodglitchinfused');
+buildCoin('bound');
+buildCoin('calcium');
+buildCoin('chaoticmetal');
+buildCoin('chromium');
+buildCoin('conductiveiron');
+buildCoin('cookedmeat');
+buildCoin('crystallinealloy');
+buildCoin('crystallinepinkslimealloy');
+buildCoin('crystalmatrix');
+buildCoin('crystaltine');
+buildCoin('darksteel');
+buildCoin('demonmetal');
+buildFoodyCoin('doublesmore', 6, 9.6);
+buildCoin('draconicmetal');
+buildCoin('ebonypsimetal');
+buildCoin('electricalsteel');
+buildCoin('elektron60');
+buildCoin('elementium');
+buildCoin('enchantedmetal');
+buildCoin('ender');
+buildCoin('endorium');
+buildCoin('endsteel');
+buildCoin('energium');
+buildCoin('energizedalloy');
+buildCoin('enhancedender', true);
+buildCoin('essenceinfused');
+buildCoin('evilinfusedmetal');
+buildCoin('extremealloy');
+buildCoin('fakeiron');
+buildCoin('ferroboron');
+buildCoin('fierymetal');
+buildCoin('firedragonsteel');
+buildCoin('fluixsteel');
+buildCoin('fluxedelectrum');
+buildFoodyCoin('foursmore', 12, 47.45);
+buildCoin('gaiaspirit');
+buildCoin('glitchinfused');
+buildCoin('glowstone');
+buildCoin('graphite');
+buildCoin('hafnium');
+buildCoin('hardcarbon');
+buildCoin('heavymetal');
+buildCoin('hopgraphite');
+buildCoin('hslasteel');
+buildCoin('icedragonsteel');
+buildCoin('inferium');
+buildCoin('infinity', true);
+buildCoin('insanium');
+buildCoin('intermedium');
+buildCoin('ironwood');
+buildCoin('ivorypsimetal');
+buildCoin('knightmetal');
+buildCoin('knightslime');
+buildCoin('lithiummanganesedioxide');
+buildCoin('magnesiumdiboride');
+buildCoin('manasteel');
+buildCoin('manganese');
+buildCoin('manganesedioxide');
+buildCoin('manganeseoxide');
+buildCoin('manyullyn');
+buildCoin('melodicalloy');
+buildCoin('mirion');
+buildCoin('mithminite');
+buildCoin('mithrillium');
+buildCoin('neodymium');
+buildCoin('neutronium');
+buildCoin('nichrome');
+buildCoin('niobium');
+buildCoin('niobiumtin');
+buildCoin('niobiumtitanium');
+buildCoin('osgloglas');
+buildCoin('osmiridium');
+buildCoin('pigiron');
+buildCoin('pinkmetal');
+buildCoin('potassium');
+buildCoin('primalmetal');
+buildCoin('prudentium');
+buildCoin('psimetal');
+buildCoin('pulsatingiron');
+buildCoin('redstonealloy');
+buildCoin('refinedobsidian');
+buildCoin('sentient');
+buildFoodyCoin('smore', 4, 3);
+buildCoin('sodium');
+buildCoin('soularium');
+buildCoin('soulium');
+buildCoin('spectre');
+buildCoin('stainlesssteel');
+buildCoin('stellaralloy');
+buildCoin('strontium');
+buildCoin('superalloy');
+buildCoin('superium');
+buildCoin('supremium');
+buildCoin('terrasteel');
+buildCoin('titaniumaluminide');
+buildCoin('titaniumiridium');
+buildCoin('thaumium');
+buildCoin('thermoconductingalloy');
+buildCoin('toughalloy');
+buildCoin('tungstencarbide');
+buildCoin('ultimate', true);
+buildCoin('unstable');
+buildCoin('uumetal');
+buildCoin('vibrantalloy');
+buildCoin('voidmetal');
+buildCoin('vividalloy');
+buildCoin('wyvernmetal');
+buildCoin('yttrium');
+buildCoin('zinc');
+buildCoin('zircaloy');
+buildCoin('zirconium');
+buildCoin('zirconiummolybdenum');
