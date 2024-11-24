@@ -44,6 +44,7 @@ utils.compact(<contenttweaker:compressed_basalt>, <contenttweaker:compressed_bas
 val C = <biomesoplenty:coral:*>;
 recipes.addShapeless(<contenttweaker:compressed_coral>, [C, C, C, C, C, C, C, C, C]);
 recipes.addShapeless(<biomesoplenty:coral> * 9, [<contenttweaker:compressed_coral>]);
+scripts.jei.crafting_hints.add1to1(<contenttweaker:compressed_coral>, <randomthings:biomestone>);
 
 // Molten Cheese
 scripts.process.melt(<rats:block_of_cheese>, <liquid:cheese> * 1000);

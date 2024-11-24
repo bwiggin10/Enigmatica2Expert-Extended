@@ -8,6 +8,7 @@
 #priority 3000
 #modloaded zenutils
 #reloadable
+#ignoreBracketErrors
 
 import crafttweaker.block.IBlockState;
 import crafttweaker.item.IItemStack;
@@ -116,7 +117,7 @@ static blockRepresentation as IItemStack[string] = {
   'minecraft:fire'              : <minecraft:flint_and_steel>,
   'minecraft:lava'              : <minecraft:lava_bucket>,
   'minecraft:water'             : <minecraft:water_bucket>,
-  'minecraft:air'               : <mechanics:empty>,
+  'minecraft:air'               : !isNull(<mechanics:empty>) ? <mechanics:empty> : <minecraft:barrier>,
   'biomesoplenty:blood'         : <forge:bucketfilled>.withTag({ FluidName: 'blood', Amount: 1000 }),
 };
 

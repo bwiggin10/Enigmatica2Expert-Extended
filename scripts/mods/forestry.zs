@@ -1,4 +1,4 @@
-#modloaded forestry
+#modloaded forestry thaumcraft
 
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;

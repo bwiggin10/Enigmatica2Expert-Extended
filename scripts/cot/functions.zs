@@ -1,5 +1,6 @@
 #modloaded contenttweaker
 #reloadable
+#ignoreBracketErrors
 
 import crafttweaker.item.IItemStack;
 import crafttweaker.player.IPlayer;
@@ -99,8 +100,6 @@ val lifeRecipes = {
 // ------------------------------------------
 // Coral
 // ------------------------------------------
-scripts.jei.crafting_hints.add1to1(<contenttweaker:compressed_coral>, <randomthings:biomestone>);
-
 function canPlaceCoral(world as World, p as IBlockPos) as bool {
   val floorBlockId = world.getBlockState(p.down()).block.definition.id;
   return 

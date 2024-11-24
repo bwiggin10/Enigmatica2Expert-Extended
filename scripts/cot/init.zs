@@ -34,7 +34,7 @@ function createBlockStone(name as string, level as int, blockMaterial as BlockMa
 }
 
 function buildItem(name as string) {
-  val item = VanillaFactory.createItem(name) as Item;
+  val item = VanillaFactory.createExpandItem(name);
   item.setCreativeTab(<creativetab:other>);
   item.register();
 }
@@ -269,7 +269,7 @@ perfect_fuel.register();
 // -------------------------------
 // Knowledge Absorber
 // -------------------------------
-x = VanillaFactory.createItem('knowledge_absorber');
+x = VanillaFactory.createExpandItem('knowledge_absorber');
 x.maxStackSize = 1;
 x.rarity = 'rare';
 x.maxDamage = 9;
@@ -346,7 +346,7 @@ mm.register();
 mods.contenttweaker.VanillaFactory.createCreativeTab('coins_tab', <item:thermalfoundation:coin:64>).register();
 
 function buildCoin(name as string, glowing as bool = false) {
-  val item = VanillaFactory.createItem('coin_' ~ name) as Item;
+  val item = VanillaFactory.createExpandItem('coin_' ~ name) as Item;
   item.setCreativeTab(<creativetab:coins_tab>);
   item.glowing = glowing;
   item.textureLocation = mods.contenttweaker.ResourceLocation.create('contenttweaker:items/coin/' ~ name);

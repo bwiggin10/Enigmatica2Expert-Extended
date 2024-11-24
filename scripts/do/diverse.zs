@@ -6,7 +6,7 @@ and if you provide more diversity in those items you need less of them
 */
 
 #reloadable
-#modloaded ctintegration
+#modloaded ctintegration backpackdisplay
 #priority 2000
 
 import crafttweaker.data.IData;
