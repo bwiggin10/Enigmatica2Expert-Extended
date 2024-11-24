@@ -194,9 +194,14 @@ static evt as IIngredient[][string] = {
 
 // Fixing weird but where [Tungsten Ore Chunk] mined by Ore Miner on servers only
 recipes.addShapeless(
-  'ore chunk fix',
+  'ore chunk fix 1',
   <endreborn:block_wolframium_ore>, [
     <contenttweaker:item_ore_tungsten:1>
+]);
+recipes.addShapeless(
+  'ore chunk fix 2',
+  <endreborn:block_wolframium_ore>, [
+    <jaopca:item_hunktungsten>
 ]);
 
 // "Core" material
