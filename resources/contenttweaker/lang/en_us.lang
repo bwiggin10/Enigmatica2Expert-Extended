@@ -348,7 +348,7 @@ warp.sword.speak.story.11.3=§o§5and bend reality to our will.
 ##################################
 item.singularity.iron.name=§7Empty Singularity
 
-# Burn singularity
+# Custom singularities
 item.singularity.silver.name=§bFur Singularity
 item.singularity.nickel.name=§eHeat Singularity
 item.singularity.fluxed.name=§4Burn Singularity

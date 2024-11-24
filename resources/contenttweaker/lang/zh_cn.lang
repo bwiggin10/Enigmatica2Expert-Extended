@@ -348,7 +348,7 @@ warp.sword.speak.story.11.3=§o§5让现实按照我们的意志弯曲。
 ##################################
 item.singularity.iron.name=§7空奇点
 
-# Burn singularity
+# Custom singularities
 item.singularity.silver.name=§b皮毛奇点
 item.singularity.nickel.name=§e火热奇点
 item.singularity.fluxed.name=§4燃烧奇点
