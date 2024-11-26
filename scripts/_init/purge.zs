@@ -196,6 +196,7 @@ furnaceRemove(<thermalfoundation:material:129>      , <nuclearcraft:ore:1>);
 furnaceRemove(<thermalfoundation:material:131>      , <nuclearcraft:ore:2>);
 furnaceRemove(<immersiveengineering:metal:5>        , <nuclearcraft:ore:4>);
 furnaceRemove(<thermalfoundation:material:128>      , <nuclearcraft:ore>);
+furnaceRemove(<libvulpes:productingot:7>            , <qmd:dust:3>);
 furnaceRemove(<tconstruct:ingots>                   , <qmd:dust:4>);
 furnaceRemove(<minecraft:gold_ingot> * 3            , <thaumicwonders:eldritch_cluster:1>);
 furnaceRemove(<thaumcraft:quicksilver> * 3          , <thaumicwonders:eldritch_cluster:6>);
