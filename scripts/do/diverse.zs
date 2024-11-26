@@ -6,7 +6,7 @@ and if you provide more diversity in those items you need less of them
 */
 
 #reloadable
-#modloaded ctintegration backpackdisplay
+#modloaded ctintegration
 #priority 2000
 
 import crafttweaker.data.IData;
@@ -26,21 +26,6 @@ function addRecipe(
       game.localize('e2ee.do.diverse.power'),
       mods.zenutils.StaticString.format('%,f', getFireproofPower(item)).replaceAll('\\.0+$', '')
     );
-  });
-
-  // Add icon display
-  mods.backpackdisplay.BackpackDisplay.addBackDisplay(F, function(item) {
-    if (isNull(item.tag) || isNull(item.tag.singularity)) return null;
-    val length = getMapLength(item.tag.singularity);
-    val result = arrayOf(length, null as IItemStack);
-    var i = 0;
-    for itemStr, value in item.tag.singularity.asMap() {
-      val item = getItemFromString(itemStr);
-      if (!isNull(item) && value > 0)
-        result[i] = item * value;
-      i += 1;
-    }
-    return result;
   });
 
   // Actual recipe

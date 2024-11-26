@@ -9,6 +9,28 @@ import crafttweaker.block.IBlockDefinition;
 import crafttweaker.world.IWorld;
 import native.net.minecraft.util.math.BlockPos;
 
+function addSingularity(item as IItemStack) as void {
+  if (isNull(item)) return;
+  addBackDisplay(item, function(item) {
+    if (isNull(item.tag) || isNull(item.tag.singularity)) return null;
+    val length = scripts.do.diverse.getMapLength(item.tag.singularity);
+    val result = arrayOf(length, null as IItemStack);
+    var i = 0;
+    for itemStr, value in item.tag.singularity.asMap() {
+      val item = scripts.do.diverse.getItemFromString(itemStr);
+      if (!isNull(item) && value > 0)
+        result[i] = item * value;
+      i += 1;
+    }
+    return result;
+  });
+}
+
+// See in `scripts/mods/avaritia.zs`
+addSingularity(<avaritia:singularity:4>);
+
+// -----------------------------------------------------------------------------------
+
 function itemFromBlockNumId(numericalID as int, meta as int) as IItemStack {
   val state = IBlockDefinition
     .getFromNumericalId(numericalID);
