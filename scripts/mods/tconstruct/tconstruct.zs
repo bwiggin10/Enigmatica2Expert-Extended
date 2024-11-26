@@ -510,7 +510,7 @@ mods.tconstruct.Casting.addTableRecipe(
 scripts.mods.forestry.ThermionicFabricator.addCast(<tconstruct:clear_glass> * 16, Grid([
   'ggg', 'g g', 'ggg'], {
   'g': <ore:blockGlass>,
-}).shaped(), <liquid:glass> * 8000, <forestry:wax_cast:*>);
+}).shaped(), <liquid:glass> * 6000, <forestry:wax_cast:*>);
 
 // Pigiron high-tech recipe
 scripts.process.alloy([
