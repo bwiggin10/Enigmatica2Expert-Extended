@@ -96,9 +96,12 @@ zenClass MixinItemAlchemistStone {
     for oreID in ids {
       val newName = OreDictionary.getOreName(oreID);
       if (isNull(newName) || !newName.startsWith("ore")) continue;
-      val clusterName = "cluster" + newName.substring(3);
-      val item = scripts.mixin.utils.firstItem(clusterName);
-      if (!isNull(item)) return item;
+      val oreName = "cluster" + newName.substring(3);
+      val list as NonNullList = OreDictionary.getOres(oreName);
+      if (list.size() > 0) {
+        val item = list.get(0);
+        if (!isNull(item)) return item as ItemStack;
+      }
     }
     return null;
   }
@@ -135,9 +138,12 @@ zenClass MixinItemAlienistStone {
     for oreID in ids {
       val newName = OreDictionary.getOreName(oreID);
       if (isNull(newName) || !newName.startsWith("cluster")) continue;
-      val clusterName = "crystalShard" + newName.substring(7);
-      val item = scripts.mixin.utils.firstItem(clusterName);
-      if (!isNull(item)) return item;
+      val oreName = "crystalShard" + newName.substring(7);
+      val list as NonNullList = OreDictionary.getOres(oreName);
+      if (list.size() > 0) {
+        val item = list.get(0);
+        if (!isNull(item)) return item as ItemStack;
+      }
     }
     return null;
   }
@@ -178,12 +184,29 @@ zenClass MixinItemTransmuterStone {
       if (isNull(inputOre)) continue;
       // print('     inputOre: '~inputOre);
 
-      for orePrefix in scripts.mods.thaumicwonders.transmuterStone.orePrefixes {
+      for orePrefix in ['ore', 'nugget', 'block', 'ingot', 'gem', 'dust', ''] as string[] {
         // print('       orePrefix: '~orePrefix);
         if (!inputOre.startsWith(orePrefix)) continue;
 
         val inputBase = inputOre.substring(orePrefix.length);
-        val refiningResults = scripts.mods.thaumicwonders.transmuterStone.refiningResults;
+        val refiningResults = [
+          'Aluminum',        /*🢥*/ 'Titanium',
+          'AstralStarmetal', /*🢥*/ 'Draconium',
+          'CertusQuartz',    /*🢥*/ 'ChargedCertusQuartz',
+          'Cobalt',          /*🢥*/ 'Ardite',
+          'Diamond',         /*🢥*/ 'Sapphire',
+          'Dilithium',       /*🢥*/ 'DimensionalShard',
+          'Emerald',         /*🢥*/ 'Peridot',
+          'gemCoal',         /*🢥*/ 'bitumen',
+          'Iron',            /*🢥*/ 'Gold',
+          'Lead',            /*🢥*/ 'Silver',
+          'oreCoal',         /*🢥*/ 'oreClathrateOilShale',
+          'Platinum',        /*🢥*/ 'Iridium',
+          'Redstone',        /*🢥*/ 'Ruby',
+          'Tin',             /*🢥*/ 'Copper',
+          'Uranium',         /*🢥*/ 'Thorium',
+          'Xorcite',         /*🢥*/ 'Aquamarine',
+        ] as string[];
         // print('       inputBase: "'~inputBase~'"');
         for i in 0 .. refiningResults.length / 2 {
           val k = i * 2;
