@@ -828,6 +828,9 @@ addItems(<ore:wallTurbine>, [
 // QMD
 //#################
 
+add(<ore:ingotMercury>, <thaumcraft:quicksilver>);
+add(<ore:nuggetMercury>, <thaumcraft:nugget:5>);
+
 // Accelerators
 addItems(<ore:wallAccelerator>, [
   <qmd:accelerator_casing>,
