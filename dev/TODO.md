@@ -2,20 +2,20 @@
 
 🚧✅❌⚠️ List of priorities:
 
-- [ ] Add feature to clear drawer `Item: 0` when unlocking it https://github.com/jaquadro/StorageDrawers/commit/da9875158ad0fadc190aae437ea2d9e89d616cca
-- [ ] 🐀 Rat Ore Doubling can dupe IC2 "Iridium Ore". Removing oreIridium from it wont help
-- [ ] Test on server if `sendPlaySoundPacket` actually work
-- [ ] 🐛 Remove `Chester` from the game cause lot of bugs
-- [ ] 𝓩𝒮 Fix `Refining` not working on BoP ores
+- [x] 🐀 Rat Ore Doubling can dupe IC2 "Iridium Ore". Removing oreIridium from it wont help
 - [ ] Rebalance TCon `Refining`: Remove x1.75 multiplication but add Fortune accounting
-- [ ] 𝓩𝒮 Refactor `#mixin Mixin` preprocessors
-- [ ] 🌎 Reduce amount of End Islands in overworld
-- [ ] 🔨 Buff Ichorium mining level
-- [ ] ✏️ Make `Pulsating Crystal` require less Biome Essence
-- [ ] ✏️ Fix `thaumadditions:salt_essence` cannot be viewed in HEI since when it not have aspects its create an error
-- [ ] ✏️ Remove `rainmaker's charge` duplicate recipe
-- [ ] ✏️ Add and configure https://legacy.curseforge.com/minecraft/mc-mods/backpack-opener
-- [ ] ✏️ Add https://legacy.curseforge.com/minecraft/texture-packs/ic2-seedbag-display
+- [ ] 𝓩𝒮 Refactor `#mixin` preprocessors into one-line when it short
+- [x] ✏️ Fix `thaumadditions:salt_essence` cannot be viewed in HEI since when it not have aspects its create an error
+- [x] 🟢 Add and configure https://legacy.curseforge.com/minecraft/mc-mods/backpack-opener
+- [ ] 🖼️ Add https://legacy.curseforge.com/minecraft/texture-packs/ic2-seedbag-display
+- [ ] Prevent Timewood Clock to walkaround restrictions by activating it with users
+- [ ] Undo `Fluid Interaction Tweaker` serverside hotfix https://github.com/tttsaurus/Fluid-Interaction-Tweaker/issues/8
+- [ ] Add https://www.curseforge.com/minecraft/mc-mods/patchouli-books
+- [ ] ✏️ Thermionic Fabricator TE machine frame recipe
+- [ ] fix `format.zs` mutating lists `[T]` => `T[]`
+- [ ] ✏️ Completely remove AA crusher since no difference with EU2 one
+- [ ] ✏️ Fix IC2 dusts produced by Scrap Boxes
+- [ ] ✏️ Black Hole Talisman cheaper
 - [ ] 🎣 Fish rework
   * [x] Integrate https://www.curseforge.com/minecraft/mc-mods/customfishing
   * [x] Add `Fish Singularity`.
@@ -31,10 +31,12 @@
 Planned non-urgent changes, or just good ideas:
 
 ### "Performance ⚡"
+- [ ] ⚡ Improve performance of Replicator tick
 - [ ] ⚡ Disallow to connect `Storage Bus` to ISS - can cause 10% TPS strain
 - [ ] ⚡ `OTG` should probably be optional mod when game starting since it laggy
 - [ ] ⚡ Wand of the forest change recipe to Recipe Function
 - [ ] ⚡ Remove automatic IE armor recycling to speed up game load
+- [ ] ⚡ Remove `Chunk Loading Ward` since its make harder to find all chunk loaders on server
 
 ### Difficulty increase
 - Vanilla Chests
@@ -50,6 +52,7 @@ Planned non-urgent changes, or just good ideas:
 - [ ] 🐉 Bestiary book have missed item icons
 - [ ] 📖 Suggest IC2 reactors schemas
 - [ ] 📖 Add note that Mana Enchanter can put Airtight Seal on TCon armor
+- [ ] 📖 Add quest about Troll smashing tools
 
 ### "Battle" expansion
 - [ ] ✏️ Buff EU saber - give it more damage? But better split entities in two.
@@ -141,6 +144,9 @@ Planned non-urgent changes, or just good ideas:
 
 ### Other
 
+- [ ] 📖 Register item subtypes by NBT to JEI for `Gendustry` (there was CT handler for that but i cant find it)
+- [ ] 𝓩𝒮 Fix `Refining` not working on BoP ores
+- [ ] Add feature to clear drawer `Item: 0` when unlocking it https://github.com/jaquadro/StorageDrawers/commit/da9875158ad0fadc190aae437ea2d9e89d616cca
 - [ ] Unmerge Furnace inputs in HEI (reported to HEI dev)
 - [ ] 💧 Add `Fluid Interactions` between gaseous (floating up) and normal fluids
 - [ ] Fix PSI "silk touch falling" turning Netherending Ores into meta-0 ones
