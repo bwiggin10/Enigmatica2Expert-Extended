@@ -6,6 +6,7 @@
  */
 
 #modloaded zenutils ctintegration
+#priority 3000
 #reloadable
 
 import crafttweaker.data.IData;

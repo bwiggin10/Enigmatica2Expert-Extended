@@ -1,23 +1,20 @@
-#reloadable
 #modloaded zenutils ctintegration
 #priority 2000
+#reloadable
 
 import crafttweaker.data.IData;
-import crafttweaker.item.IItemStack;
-import crafttweaker.player.IPlayer;
 import crafttweaker.server.IServer;
-import crafttweaker.world.IWorld;
+import mods.zenutils.StringList;
 import mods.zenutils.command.ZenCommand;
 import mods.zenutils.command.ZenUtilsCommandSender;
-import mods.zenutils.StringList;
-import scripts.do.hand_over_your_items.tellrawItemObj;
 
 zenClass Command {
-  var cmd as ZenCommand;
-  var prefix as string = '';
+  var cmd            as ZenCommand;
+  var prefix         as string = '';
   var subCommandNames as string[] = [];
   var subCommandExecs as [function(ZenCommand,IServer,ZenUtilsCommandSender,string[])IData]
     = [] as [function(ZenCommand,IServer,ZenUtilsCommandSender,string[])IData];
+
   var subCommandDescs as string[] = [];
 
   zenConstructor(name as string) {
@@ -35,13 +32,13 @@ zenClass Command {
     cmd.getCommandUsage = function (sender) {
       var detailed = '';
       for i, key in subCommandNames {
-        detailed ~= '\n§7' ~ key ~ '§8: ' ~ subCommandDescs[i];
+        detailed ~= `\n§7${key}§8: ${subCommandDescs[i]}`;
       }
       val list = mods.zenutils.StaticString.join(subCommandNames, '§8|§7');
-      return prefix ~ '§7/' ~ cmd.name ~ ' §8<§7' ~ list ~ '§8>' ~ detailed;
+      return `${prefix}§7/${cmd.name} §8<§7${list}§8>${detailed}`;
     };
 
-    cmd.tabCompletionGetters = [function(server, sender, pos) {
+    cmd.tabCompletionGetters = [function (server, sender, pos) {
       return StringList.create(subCommandNames);
     }];
 
@@ -53,16 +50,17 @@ zenClass Command {
           if (name != args[0]) continue;
           val exec = subCommandExecs[i];
           val result = exec(command, server, sender, args);
-          if (!isNull(result))
+          if (!isNull(result)) {
             player.sendRichTextMessage(
               crafttweaker.text.ITextComponent.fromData(
                 isNull(prefix) ? result : [prefix] as IData + result
               )
             );
+          }
           return;
         }
       }
-      
+
       mods.zenutils.command.CommandUtils.notifyWrongUsage(command, sender);
     };
 
