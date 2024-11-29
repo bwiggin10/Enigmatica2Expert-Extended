@@ -2,8 +2,7 @@
 #loader mixin
 #sideonly client
 
-#mixin Mixin
-#{targets: net.darkhax.oldjava.OldJavaWarning}
+#mixin {targets: net.darkhax.oldjava.OldJavaWarning}
 zenClass MixinOldJavaWarning {
     #mixin Static
     #mixin Redirect

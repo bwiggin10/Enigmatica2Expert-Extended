@@ -2,8 +2,7 @@
 #loader mixin
 #sideonly client
 
-#mixin Mixin
-#{targets: "li.cil.oc.common.item.UpgradeTank"}
+#mixin {targets: "li.cil.oc.common.item.UpgradeTank"}
 zenClass MixinUpgradeTank {
     #mixin ModifyConstant
     #{

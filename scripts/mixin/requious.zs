@@ -5,8 +5,7 @@ import native.net.minecraftforge.common.capabilities.Capability;
 import native.net.minecraft.util.EnumFacing;
 import mixin.CallbackInfoReturnable;
 
-#mixin Mixin
-#{targets: "requious.tile.TileEntityAssembly"}
+#mixin {targets: "requious.tile.TileEntityAssembly"}
 zenClass MixinTileEntityAssembly {
     #mixin Inject
     #{

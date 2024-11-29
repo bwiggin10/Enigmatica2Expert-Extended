@@ -4,8 +4,7 @@
 import native.java.lang.Integer;
 import native.net.minecraft.world.WorldProvider;
 
-#mixin Mixin
-#{targets: "exnihilocreatio.modules.forestry.registry.HiveRequirements"}
+#mixin {targets: "exnihilocreatio.modules.forestry.registry.HiveRequirements"}
 zenClass MixinHiveRequirements {
     #mixin Shadow
     var dimension as Integer;

@@ -109,8 +109,7 @@ Add antidupe for [Uncrafting Table]
 Now Uncrafting Table mechanic improved - you cant uncraft items that have several recipes with 2+ recipes output with same ID but different tags.
 For example, you cant Uncraft Mekanism Tanks or Cubes, since before fix this was allowed to create Creative Tank from Basic one.
 */
-#mixin Mixin
-#{targets: "twilightforest.inventory.ContainerTFUncrafting"}
+#mixin {targets: "twilightforest.inventory.ContainerTFUncrafting"}
 zenClass MixinContainerTFUncrafting {
     #mixin Static
     #mixin Inject

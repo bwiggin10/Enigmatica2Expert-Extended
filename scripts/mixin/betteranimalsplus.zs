@@ -3,8 +3,7 @@
 
 import native.net.minecraft.entity.Entity;
 
-#mixin Mixin
-#{targets: "its_meow.betteranimalsplus.common.entity.EntitySharkBase"}
+#mixin {targets: "its_meow.betteranimalsplus.common.entity.EntitySharkBase"}
 zenClass MixinEntitySharkBase {
     #mixin Redirect
     #{

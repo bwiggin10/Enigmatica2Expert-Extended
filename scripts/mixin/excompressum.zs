@@ -1,8 +1,7 @@
 #modloaded excompressum
 #loader mixin
 
-#mixin Mixin
-#{targets: "net.blay09.mods.excompressum.tile.TileAutoSieve"}
+#mixin {targets: "net.blay09.mods.excompressum.tile.TileAutoSieve"}
 zenClass MixinTileAutoSieve {
     #mixin ModifyConstant
     #{

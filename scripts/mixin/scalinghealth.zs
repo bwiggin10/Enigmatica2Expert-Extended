@@ -6,8 +6,7 @@ import native.net.silentchaos512.scalinghealth.config.Config;
 import native.net.minecraft.world.World;
 import native.net.minecraft.util.math.BlockPos;
 
-#mixin Mixin
-#{targets: "net.silentchaos512.scalinghealth.event.DifficultyHandler"}
+#mixin {targets: "net.silentchaos512.scalinghealth.event.DifficultyHandler"}
 zenClass MixinDifficultyHandler {
     #mixin Redirect
     #{

@@ -13,8 +13,7 @@ import native.slimeknights.tconstruct.library.utils.TagUtil;
 import native.slimeknights.tconstruct.tools.modifiers.ToolModifier;
 import mixin.CallbackInfo;
 
-#mixin Mixin
-#{targets: "slimeknights.tconstruct.smeltery.TinkerSmeltery"}
+#mixin {targets: "slimeknights.tconstruct.smeltery.TinkerSmeltery"}
 zenClass MixinTinkerSmeltery {
     #mixin Static
     #mixin Redirect
@@ -66,8 +65,7 @@ Now each level adding
 
 So, if your weapon deals 10 damage, on lvl 1 it would be 12 dmg. On level 10 it would be 35 dmd. On level 20 - 120 dmg.
 */
-#mixin Mixin
-#{targets: "slimeknights.tconstruct.tools.modifiers.ModSharpness"}
+#mixin {targets: "slimeknights.tconstruct.tools.modifiers.ModSharpness"}
 zenClass MixinModSharpness {
     #mixin Shadow
     #mixin Final

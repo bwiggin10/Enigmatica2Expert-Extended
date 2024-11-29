@@ -1,8 +1,7 @@
 #modloaded opencomputers
 #loader mixin
 
-#mixin Mixin
-#{targets: "li.cil.oc.integration.opencomputers.DriverUpgradeTank$"}
+#mixin {targets: "li.cil.oc.integration.opencomputers.DriverUpgradeTank$"}
 zenClass MixinDriverUpgradeTank {
     #mixin ModifyConstant
     #{
@@ -14,8 +13,7 @@ zenClass MixinDriverUpgradeTank {
     }
 }
 
-#mixin Mixin
-#{targets: "li.cil.oc.server.component.UpgradeTractorBeam$Common"}
+#mixin {targets: "li.cil.oc.server.component.UpgradeTractorBeam$Common"}
 zenClass MixinUpgradeTractorBeam {
     #mixin Static
     #mixin ModifyConstant

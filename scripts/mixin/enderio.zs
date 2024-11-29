@@ -12,8 +12,7 @@ Registering recipes required iterate over big amounts if registry to
 find what custom recipes could be x3, like when you can smelt 3 cobblestone at once.
 This takes 1-3 seconds on loading time for about ~16 custom recipes.
 */
-#mixin Mixin
-#{targets: "crazypants.enderio.base.recipe.alloysmelter.AlloyRecipeManager"}
+#mixin {targets: "crazypants.enderio.base.recipe.alloysmelter.AlloyRecipeManager"}
 zenClass MixinAlloyRecipeManager {
     #mixin Redirect
     #{
@@ -36,8 +35,7 @@ This is performed by just removing avoiding registering JEI tab if both of this 
 `enableTankFluidInOutJEIRecipes`
 `enableTankMendingJEIRecipes`
 */
-#mixin Mixin
-#{targets: "crazypants.enderio.machines.integration.jei.TankRecipeCategory"}
+#mixin {targets: "crazypants.enderio.machines.integration.jei.TankRecipeCategory"}
 zenClass MixinTankRecipeCategory {
     #mixin Static
     #mixin Redirect

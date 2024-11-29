@@ -1,8 +1,7 @@
 #modloaded cyclicmagic
 #loader mixin
 
-#mixin Mixin
-#{targets: "com.lothrazar.cyclicmagic.block.forester.TileEntityForester"}
+#mixin {targets: "com.lothrazar.cyclicmagic.block.forester.TileEntityForester"}
 zenClass MixinTileEntityForester {
     #mixin Inject
     #{

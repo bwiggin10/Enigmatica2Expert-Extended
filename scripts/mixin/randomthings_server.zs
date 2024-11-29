@@ -6,8 +6,7 @@ import native.net.minecraft.network.NetHandlerPlayServer;
 
 // Fix player stall in the Spectre dimension after teleporting on servers
 // https://github.com/ACGaming/UniversalTweaks/issues/460
-#mixin Mixin
-#{targets: "lumien.randomthings.handler.spectre.SpectreHandler"}
+#mixin {targets: "lumien.randomthings.handler.spectre.SpectreHandler"}
 zenClass SpectreHandlerMixin {
   #mixin Redirect
   #{

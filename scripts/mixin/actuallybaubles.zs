@@ -1,8 +1,7 @@
 #modloaded actuallybaubles
 #loader mixin
 
-#mixin Mixin
-#{targets: "me.jacky1356400.actuallybaubles.ActuallyBaubles"}
+#mixin {targets: "me.jacky1356400.actuallybaubles.ActuallyBaubles"}
 zenClass MixinActuallyBaubles {
     #mixin Static
     #mixin ModifyConstant

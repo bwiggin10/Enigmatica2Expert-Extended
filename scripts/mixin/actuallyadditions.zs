@@ -8,8 +8,7 @@ import native.de.ellpeck.actuallyadditions.api.internal.IAtomicReconstructor;
 import native.de.ellpeck.actuallyadditions.api.ActuallyAdditionsAPI;
 import native.de.ellpeck.actuallyadditions.api.recipe.WeightedOre;
 
-#mixin Mixin
-#{targets: "de.ellpeck.actuallyadditions.mod.items.InitItems"}
+#mixin {targets: "de.ellpeck.actuallyadditions.mod.items.InitItems"}
 zenClass MixinInitItems {
     #mixin Static
     #mixin ModifyConstant
@@ -33,8 +32,7 @@ zenClass MixinInitItems {
     }
 }
 
-#mixin Mixin
-#{targets: "de.ellpeck.actuallyadditions.mod.items.ItemFillingWand"}
+#mixin {targets: "de.ellpeck.actuallyadditions.mod.items.ItemFillingWand"}
 zenClass MixinItemFillWand {
     #mixin ModifyConstant
     #{
@@ -46,8 +44,7 @@ zenClass MixinItemFillWand {
     }
 }
 
-#mixin Mixin
-#{targets: "de.ellpeck.actuallyadditions.mod.items.ItemPotionRing"}
+#mixin {targets: "de.ellpeck.actuallyadditions.mod.items.ItemPotionRing"}
 zenClass MixinItemPotionRing {
     #mixin ModifyConstant
     #{
@@ -63,8 +60,7 @@ zenClass MixinItemPotionRing {
 Convert only End Stone => End ores.
 Convert cost set to `150,000` RF.
 */
-#mixin Mixin
-#{targets: "de.ellpeck.actuallyadditions.mod.items.lens.LensMining"}
+#mixin {targets: "de.ellpeck.actuallyadditions.mod.items.lens.LensMining"}
 zenClass MixinLensMining {
     #mixin Static
     #mixin Redirect
@@ -157,8 +153,7 @@ zenClass MixinLensMining {
     }
 }
 
-#mixin Mixin
-#{targets: "de.ellpeck.actuallyadditions.mod.tile.TileEntityBioReactor"}
+#mixin {targets: "de.ellpeck.actuallyadditions.mod.tile.TileEntityBioReactor"}
 zenClass MixinTileEntityBioReactor {
     #mixin ModifyConstant
     #{
@@ -170,8 +165,7 @@ zenClass MixinTileEntityBioReactor {
     }
 }
 
-#mixin Mixin
-#{targets: "de.ellpeck.actuallyadditions.mod.tile.TileEntityDisplayStand"}
+#mixin {targets: "de.ellpeck.actuallyadditions.mod.tile.TileEntityDisplayStand"}
 zenClass MixinTileEntityDisplayStand {
     #mixin ModifyConstant
     #{
@@ -192,8 +186,7 @@ zenClass MixinTileEntityDisplayStand {
     }
 }
 
-#mixin Mixin
-#{targets: "de.ellpeck.actuallyadditions.mod.items.ItemDrill"}
+#mixin {targets: "de.ellpeck.actuallyadditions.mod.items.ItemDrill"}
 zenClass MixinAAItemDrill {
     #mixin ModifyConstant
     #{ method: "*", constant: { intValue: 4 } }

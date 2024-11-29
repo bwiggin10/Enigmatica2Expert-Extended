@@ -4,8 +4,7 @@
 import mixin.CallbackInfo;
 import mixin.CallbackInfoReturnable;
 
-#mixin Mixin
-#{targets: "vazkii.botania.client.integration.jei.manapool.ManaPoolRecipeWrapper"}
+#mixin {targets: "vazkii.botania.client.integration.jei.manapool.ManaPoolRecipeWrapper"}
 zenClass MixinManaPoolRecipeWrapper {
 
     #mixin Shadow
@@ -25,8 +24,7 @@ zenClass MixinManaPoolRecipeWrapper {
     }
 }
 
-#mixin Mixin
-#{targets: "vazkii.botania.client.integration.jei.runicaltar.RunicAltarRecipeWrapper"}
+#mixin {targets: "vazkii.botania.client.integration.jei.runicaltar.RunicAltarRecipeWrapper"}
 zenClass MixinRunicAltarRecipeWrapper {
 
     #mixin Shadow
@@ -41,8 +39,7 @@ zenClass MixinRunicAltarRecipeWrapper {
     }
 }
 
-#mixin Mixin
-#{targets: "vazkii.botania.common.block.subtile.functional.SubTileOrechidIgnem"}
+#mixin {targets: "vazkii.botania.common.block.subtile.functional.SubTileOrechidIgnem"}
 zenClass MixinSubTileOrechidIgnem {
     #mixin Inject
     #{
@@ -57,8 +54,7 @@ zenClass MixinSubTileOrechidIgnem {
 
 // Fix crash on fighting Gaia II on server
 // https://github.com/Krutoy242/Enigmatica2Expert-Extended/issues/344
-#mixin Mixin
-#{targets: "vazkii.botania.common.entity.EntityDoppleganger"}
+#mixin {targets: "vazkii.botania.common.entity.EntityDoppleganger"}
 zenClass MixinEntityDoppleganger {
     #mixin Inject
     #{

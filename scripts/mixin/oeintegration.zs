@@ -7,8 +7,7 @@ import native.atm.bloodworkxgaming.oeintegration.MainConfig;
 /*
 Make each modifier level require empty slot (was only first)
 */
-#mixin Mixin
-#{targets: "atm.bloodworkxgaming.oeintegration.Handler.IntegrationHandler"}
+#mixin {targets: "atm.bloodworkxgaming.oeintegration.Handler.IntegrationHandler"}
 zenClass MixinIntegrationHandler {
     #mixin Static
     #mixin Redirect
@@ -24,8 +23,7 @@ zenClass MixinIntegrationHandler {
     }
 }
 
-#mixin Mixin
-#{targets: "atm.bloodworkxgaming.oeintegration.Integrations.ExcavateModifier"}
+#mixin {targets: "atm.bloodworkxgaming.oeintegration.Integrations.ExcavateModifier"}
 zenClass MixinExcavateModifier {
     #mixin ModifyConstant
     #{

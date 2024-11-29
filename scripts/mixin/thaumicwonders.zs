@@ -19,8 +19,7 @@ import native.net.minecraft.world.IBlockAccess;
 import native.net.minecraft.world.World;
 import native.net.minecraftforge.oredict.OreDictionary;
 
-#mixin Mixin
-#{targets: "com.verdantartifice.thaumicwonders.common.blocks.devices.BlockMeatyOrb"}
+#mixin {targets: "com.verdantartifice.thaumicwonders.common.blocks.devices.BlockMeatyOrb"}
 zenClass MixinBlockMeatyOrb extends BlockDeviceTW {
 
   // Add redstone control (func_189540_a => neighborChanged)
@@ -42,8 +41,7 @@ zenClass MixinBlockMeatyOrb extends BlockDeviceTW {
   }
 }
 
-#mixin Mixin
-#{targets: "com.verdantartifice.thaumicwonders.common.tiles.devices.TileMeatyOrb"}
+#mixin {targets: "com.verdantartifice.thaumicwonders.common.tiles.devices.TileMeatyOrb"}
 zenClass MixinTileMeatyOrb {
 
   #mixin Redirect
@@ -65,8 +63,7 @@ zenClass MixinTileMeatyOrb {
   }
 }
 
-#mixin Mixin
-#{targets: "com.verdantartifice.thaumicwonders.common.items.catalysts.ItemAlchemistStone"}
+#mixin {targets: "com.verdantartifice.thaumicwonders.common.items.catalysts.ItemAlchemistStone"}
 zenClass MixinItemAlchemistStone {
 
   // Make stone enchantable with Unbreaking and Mending
@@ -107,8 +104,7 @@ zenClass MixinItemAlchemistStone {
   }
 }
 
-#mixin Mixin
-#{targets: "com.verdantartifice.thaumicwonders.common.items.catalysts.ItemAlienistStone"}
+#mixin {targets: "com.verdantartifice.thaumicwonders.common.items.catalysts.ItemAlienistStone"}
 zenClass MixinItemAlienistStone {
 
   // Make stone enchantable with Unbreaking and Mending
@@ -149,8 +145,7 @@ zenClass MixinItemAlienistStone {
   }
 }
 
-#mixin Mixin
-#{targets: "com.verdantartifice.thaumicwonders.common.items.catalysts.ItemTransmuterStone"}
+#mixin {targets: "com.verdantartifice.thaumicwonders.common.items.catalysts.ItemTransmuterStone"}
 zenClass MixinItemTransmuterStone {
 
   // Make stone enchantable with Unbreaking and Mending

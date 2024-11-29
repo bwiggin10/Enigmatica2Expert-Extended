@@ -15,8 +15,7 @@ Those recipes makes sense if modpack doesnt have  HEI.
 But since most of the recipes are changed and was already not actual, I removed them.
 Text on pagest still there, just without 3x3 grid.
 */
-#mixin Mixin
-#{targets: "blusunrize.lib.manual.ManualInstance"}
+#mixin {targets: "blusunrize.lib.manual.ManualInstance"}
 zenClass MixinManualInstance {
     #mixin Redirect
     #{
@@ -31,8 +30,7 @@ zenClass MixinManualInstance {
     }
 }
 
-#mixin Mixin
-#{targets: "blusunrize.lib.manual.ManualPages$Crafting"}
+#mixin {targets: "blusunrize.lib.manual.ManualPages$Crafting"}
 zenClass MixinManualPagesCrafting {
     #mixin Redirect
     #{
@@ -47,8 +45,7 @@ zenClass MixinManualPagesCrafting {
     }
 }
 
-#mixin Mixin
-#{targets: "blusunrize.lib.manual.ManualPages$CraftingMulti"}
+#mixin {targets: "blusunrize.lib.manual.ManualPages$CraftingMulti"}
 zenClass MixinManualPagesCraftingMulti {
     #mixin Redirect
     #{

@@ -4,8 +4,7 @@
 /*
 Make Golden Chicken eat [Native Gold Cluster] to lay x8 [Gold Ingot]
 */
-#mixin Mixin
-#{targets: "lumien.randomthings.entitys.EntityGoldenChicken"}
+#mixin {targets: "lumien.randomthings.entitys.EntityGoldenChicken"}
 zenClass MixinEntityGoldenChicken {
     #mixin ModifyConstant
     #{
@@ -44,8 +43,7 @@ zenClass MixinEntityGoldenChicken {
     }
 }
 
-#mixin Mixin
-#{targets: "lumien.randomthings.handler.DiviningRodHandler"}
+#mixin {targets: "lumien.randomthings.handler.DiviningRodHandler"}
 zenClass MixinDiviningRodHandler {
     #mixin ModifyConstant
     #{

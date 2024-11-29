@@ -7,8 +7,7 @@ import native.net.minecraft.world.DimensionType;
 import native.net.minecraft.world.WorldProvider;
 import native.thaumcraft.api.golems.parts.GolemMaterial;
 
-#mixin Mixin
-#{targets: "thaumcraft.api.golems.parts.GolemMaterial"}
+#mixin {targets: "thaumcraft.api.golems.parts.GolemMaterial"}
 zenClass MixinGolemMaterial {
     #mixin Static
     #mixin Inject
@@ -31,8 +30,7 @@ Now, base chance is 20% and each `Fortune` level increasing it for about 20%.
 Default beneficial drop formula:
 nextInt(15) + fortune > 13
 */
-#mixin Mixin
-#{targets: "thaumcraft.common.blocks.basic.BlockStonePorous"}
+#mixin {targets: "thaumcraft.common.blocks.basic.BlockStonePorous"}
 zenClass MixinBlockStonePorous {
     #mixin ModifyConstant
     #{
@@ -53,8 +51,7 @@ zenClass MixinBlockStonePorous {
     }
 }
 
-#mixin Mixin
-#{targets: "thaumcraft.common.blocks.misc.BlockFluidDeath"}
+#mixin {targets: "thaumcraft.common.blocks.misc.BlockFluidDeath"}
 zenClass MixinBlockFluidDeath {
     #mixin ModifyArg
     #{
@@ -69,8 +66,7 @@ zenClass MixinBlockFluidDeath {
     }
 }
 
-#mixin Mixin
-#{targets: "thaumcraft.common.entities.monster.EntityPech"}
+#mixin {targets: "thaumcraft.common.entities.monster.EntityPech"}
 zenClass MixinEntityPech {
     #mixin ModifyConstant
     #{
@@ -91,8 +87,7 @@ zenClass MixinEntityPech {
     }
 }
 
-#mixin Mixin
-#{targets: "thaumcraft.common.tiles.crafting.TileThaumatoriumTop"}
+#mixin {targets: "thaumcraft.common.tiles.crafting.TileThaumatoriumTop"}
 zenClass MixinTileThaumatoriumTop {
     #mixin Inject
     #{
@@ -107,8 +102,7 @@ zenClass MixinTileThaumatoriumTop {
     }
 }
 
-#mixin Mixin
-#{targets: "thaumcraft.common.tiles.devices.TileLampFertility"}
+#mixin {targets: "thaumcraft.common.tiles.devices.TileLampFertility"}
 zenClass MixinTileLampFertility {
     #mixin ModifyConstant
     #{
@@ -120,8 +114,7 @@ zenClass MixinTileLampFertility {
     }
 }
 
-#mixin Mixin
-#{targets: "thaumcraft.common.tiles.devices.TileMirror"}
+#mixin {targets: "thaumcraft.common.tiles.devices.TileMirror"}
 zenClass MixinTileMirror {
     #mixin ModifyConstant
     #{
@@ -133,8 +126,7 @@ zenClass MixinTileMirror {
     }
 }
 
-#mixin Mixin
-#{targets: "thaumcraft.common.tiles.devices.TileMirrorEssentia"}
+#mixin {targets: "thaumcraft.common.tiles.devices.TileMirrorEssentia"}
 zenClass MixinTileMirrorEssentia {
     #mixin ModifyConstant
     #{
@@ -146,8 +138,7 @@ zenClass MixinTileMirrorEssentia {
     }
 }
 
-#mixin Mixin
-#{targets: "thaumcraft.common.tiles.devices.TileVisGenerator"}
+#mixin {targets: "thaumcraft.common.tiles.devices.TileVisGenerator"}
 zenClass MixinTileVisGenerator {
     #mixin Static
     #mixin ModifyConstant
@@ -181,8 +172,7 @@ zenClass MixinTileVisGenerator {
 /*
 Allow Celestial Notes being possible to get in dimension 3 (skyblock in E2EE)
 */
-#mixin Mixin
-#{targets: "thaumcraft.common.lib.research.ScanSky"}
+#mixin {targets: "thaumcraft.common.lib.research.ScanSky"}
 zenClass MixinScanSky {
     #mixin Redirect
     #{

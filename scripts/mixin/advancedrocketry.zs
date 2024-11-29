@@ -1,8 +1,7 @@
 #modloaded advancedrocketry
 #loader mixin
 
-#mixin Mixin
-#{targets: "zmaster587.advancedRocketry.integration.jei.MachineRecipe"}
+#mixin {targets: "zmaster587.advancedRocketry.integration.jei.MachineRecipe"}
 zenClass MixinMachineRecipe {
     #mixin ModifyConstant
     #{

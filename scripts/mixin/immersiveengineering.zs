@@ -6,8 +6,7 @@ import native.net.minecraft.village.MerchantRecipeList;
 import native.java.util.Random;
 import mixin.CallbackInfo;
 
-#mixin Mixin
-#{targets: "blusunrize.immersiveengineering.common.blocks.metal.TileEntitySilo"}
+#mixin {targets: "blusunrize.immersiveengineering.common.blocks.metal.TileEntitySilo"}
 zenClass MixinTileEntitySilo {
     #mixin Static
     #mixin ModifyConstant
@@ -23,11 +22,11 @@ zenClass MixinTileEntitySilo {
 /*
 Adding core sample trades consume 1-3 seconds load time.
 */
-#mixin Mixin
-#{targets: [
-#   "blusunrize.immersiveengineering.common.util.IEVillagerHandler$OreveinMapForEmeralds",
-#   "blusunrize.immersiveengineering.common.util.IEVillagerHandler"
-#]}
+#mixin
+# {targets: [
+#    "blusunrize.immersiveengineering.common.util.IEVillagerHandler$OreveinMapForEmeralds",
+#    "blusunrize.immersiveengineering.common.util.IEVillagerHandler"
+# ]}
 zenClass MixinIEVillagerHandler {
     #mixin Inject
     #{
@@ -44,8 +43,7 @@ zenClass MixinIEVillagerHandler {
 Attempt to make Liquid Concrete hardening slower.
 Not working for some reason.
 */
-// #mixin Mixin
-// #{targets: "blusunrize.immersiveengineering.common.blocks.BlockIEFluidConcrete"}
+// #mixin {targets: "blusunrize.immersiveengineering.common.blocks.BlockIEFluidConcrete"}
 // zenClass MixinBlockIEFluidConcrete {
 //     #mixin ModifyConstant
 //     #{

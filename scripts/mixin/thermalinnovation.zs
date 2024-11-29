@@ -1,8 +1,7 @@
 #modloaded thermalinnovation
 #loader mixin
 
-#mixin Mixin
-#{targets: "cofh.thermalinnovation.item.ItemDrill"}
+#mixin {targets: "cofh.thermalinnovation.item.ItemDrill"}
 zenClass MixinItemDrill {
     #mixin Static
     #mixin ModifyConstant

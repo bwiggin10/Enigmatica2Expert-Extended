@@ -2,8 +2,7 @@
 #loader mixin
 #sideonly client
 
-#mixin Mixin
-#{targets: "quaternary.botaniatweaks.modules.jei.RecipeWrapperAgglomeration"}
+#mixin {targets: "quaternary.botaniatweaks.modules.jei.RecipeWrapperAgglomeration"}
 zenClass MixinManaPoolRecipeWrapper {
 
     #mixin Shadow

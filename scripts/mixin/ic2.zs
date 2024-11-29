@@ -6,8 +6,7 @@ import native.ic2.api.crops.ICropTile;
 import native.ic2.core.item.tool.EntityMiningLaser;
 import native.ic2.core.crop.cropcard.GenericCropCard;
 
-#mixin Mixin
-#{targets: "ic2.core.block.wiring.TileEntityChargepadBatBox"}
+#mixin {targets: "ic2.core.block.wiring.TileEntityChargepadBatBox"}
 zenClass MixinTileEntityChargePadBatBox {
     #mixin Static
     #mixin ModifyConstant
@@ -20,8 +19,7 @@ zenClass MixinTileEntityChargePadBatBox {
     }
 }
 
-#mixin Mixin
-#{targets: "ic2.core.block.wiring.TileEntityChargepadCESU"}
+#mixin {targets: "ic2.core.block.wiring.TileEntityChargepadCESU"}
 zenClass MixinTileEntityChargePadCESU {
     #mixin Static
     #mixin ModifyConstant
@@ -34,8 +32,7 @@ zenClass MixinTileEntityChargePadCESU {
     }
 }
 
-#mixin Mixin
-#{targets: "ic2.core.block.wiring.TileEntityChargepadMFE"}
+#mixin {targets: "ic2.core.block.wiring.TileEntityChargepadMFE"}
 zenClass MixinTileEntityChargePadMFE {
     #mixin Static
     #mixin ModifyConstant
@@ -48,8 +45,7 @@ zenClass MixinTileEntityChargePadMFE {
     }
 }
 
-#mixin Mixin
-#{targets: "ic2.core.block.wiring.TileEntityChargepadMFSU"}
+#mixin {targets: "ic2.core.block.wiring.TileEntityChargepadMFSU"}
 zenClass MixinTileEntityChargePadMFSU {
     #mixin Static
     #mixin ModifyConstant
@@ -62,8 +58,7 @@ zenClass MixinTileEntityChargePadMFSU {
     }
 }
 
-#mixin Mixin
-#{targets: "ic2.core.block.wiring.TileEntityElectricBatBox"}
+#mixin {targets: "ic2.core.block.wiring.TileEntityElectricBatBox"}
 zenClass MixinTileEntityElectricBatBox {
     #mixin Static
     #mixin ModifyConstant
@@ -76,8 +71,7 @@ zenClass MixinTileEntityElectricBatBox {
     }
 }
 
-#mixin Mixin
-#{targets: "ic2.core.block.wiring.TileEntityElectricCESU"}
+#mixin {targets: "ic2.core.block.wiring.TileEntityElectricCESU"}
 zenClass MixinTileEntityElectricCESU {
     #mixin Static
     #mixin ModifyConstant
@@ -90,8 +84,7 @@ zenClass MixinTileEntityElectricCESU {
     }
 }
 
-#mixin Mixin
-#{targets: "ic2.core.block.wiring.TileEntityElectricMFE"}
+#mixin {targets: "ic2.core.block.wiring.TileEntityElectricMFE"}
 zenClass MixinTileEntityElectricMFE {
     #mixin Static
     #mixin ModifyConstant
@@ -104,8 +97,7 @@ zenClass MixinTileEntityElectricMFE {
     }
 }
 
-#mixin Mixin
-#{targets: "ic2.core.block.wiring.TileEntityElectricMFSU"}
+#mixin {targets: "ic2.core.block.wiring.TileEntityElectricMFSU"}
 zenClass MixinTileEntityElectricMFSU {
     #mixin Static
     #mixin ModifyConstant
@@ -118,8 +110,7 @@ zenClass MixinTileEntityElectricMFSU {
     }
 }
 
-#mixin Mixin
-#{targets: "ic2.core.crop.TileEntityCrop"}
+#mixin {targets: "ic2.core.crop.TileEntityCrop"}
 zenClass MixinTileEntityCrop {
     #mixin Redirect
     #{
@@ -134,8 +125,7 @@ zenClass MixinTileEntityCrop {
     }
 }
 
-#mixin Mixin
-#{targets: "ic2.core.item.tool.ItemCropnalyzer"}
+#mixin {targets: "ic2.core.item.tool.ItemCropnalyzer"}
 zenClass MixinItemCropnalyzer {
     #mixin Redirect
     #{
@@ -150,8 +140,7 @@ zenClass MixinItemCropnalyzer {
     }
 }
 
-#mixin Mixin
-#{targets: "ic2.core.crop.cropcard.CropBaseMetalCommon"}
+#mixin {targets: "ic2.core.crop.cropcard.CropBaseMetalCommon"}
 zenClass MixinCropBaseMetalCommon {
     #mixin ModifyConstant
     #{
@@ -163,8 +152,7 @@ zenClass MixinCropBaseMetalCommon {
     }
 }
 
-#mixin Mixin
-#{targets: "ic2.core.crop.cropcard.CropBaseMetalUncommon"}
+#mixin {targets: "ic2.core.crop.cropcard.CropBaseMetalUncommon"}
 zenClass MixinCropBaseMetalUncommon {
     #mixin ModifyConstant
     #{
@@ -176,8 +164,7 @@ zenClass MixinCropBaseMetalUncommon {
     }
 }
 
-#mixin Mixin
-#{targets: "ic2.core.crop.cropcard.CropBaseMushroom"}
+#mixin {targets: "ic2.core.crop.cropcard.CropBaseMushroom"}
 zenClass MixinCropBaseMushroom {
     #mixin ModifyConstant
     #{
@@ -189,8 +176,7 @@ zenClass MixinCropBaseMushroom {
     }
 }
 
-#mixin Mixin
-#{targets: "ic2.core.crop.cropcard.CropCocoa"}
+#mixin {targets: "ic2.core.crop.cropcard.CropCocoa"}
 zenClass MixinCropCocoa {
     #mixin ModifyConstant
     #{
@@ -202,8 +188,7 @@ zenClass MixinCropCocoa {
     }
 }
 
-#mixin Mixin
-#{targets: "ic2.core.crop.cropcard.CropColorFlower"}
+#mixin {targets: "ic2.core.crop.cropcard.CropColorFlower"}
 zenClass MixinCropColorFlower {
     #mixin ModifyConstant
     #{
@@ -215,8 +200,7 @@ zenClass MixinCropColorFlower {
     }
 }
 
-#mixin Mixin
-#{targets: "ic2.core.crop.cropcard.CropEating"}
+#mixin {targets: "ic2.core.crop.cropcard.CropEating"}
 zenClass MixinCropEating {
     #mixin ModifyConstant
     #{
@@ -228,8 +212,7 @@ zenClass MixinCropEating {
     }
 }
 
-#mixin Mixin
-#{targets: "ic2.core.crop.cropcard.CropHops"}
+#mixin {targets: "ic2.core.crop.cropcard.CropHops"}
 zenClass MixinCropHops {
     #mixin ModifyConstant
     #{
@@ -241,8 +224,7 @@ zenClass MixinCropHops {
     }
 }
 
-#mixin Mixin
-#{targets: "ic2.core.crop.cropcard.CropRedWheat"}
+#mixin {targets: "ic2.core.crop.cropcard.CropRedWheat"}
 zenClass MixinCropRedWheat {
     #mixin ModifyConstant
     #{
@@ -254,8 +236,7 @@ zenClass MixinCropRedWheat {
     }
 }
 
-#mixin Mixin
-#{targets: "ic2.core.crop.cropcard.CropVenomilia"}
+#mixin {targets: "ic2.core.crop.cropcard.CropVenomilia"}
 zenClass MixinCropVenomilia {
     #mixin ModifyConstant
     #{
@@ -267,8 +248,7 @@ zenClass MixinCropVenomilia {
     }
 }
 
-#mixin Mixin
-#{targets: "ic2.core.crop.IC2Crops"}
+#mixin {targets: "ic2.core.crop.IC2Crops"}
 zenClass MixinIC2Crops {
     #mixin Static
     #mixin Redirect
@@ -412,8 +392,7 @@ zenClass MixinIC2Crops {
     }
 }
 
-#mixin Mixin
-#{targets: "ic2.core.item.tfbp.Tfbp$TfbpType"}
+#mixin {targets: "ic2.core.item.tfbp.Tfbp$TfbpType"}
 zenClass MixinTfbpType {
     #mixin Static
     #mixin ModifyConstant
@@ -432,8 +411,7 @@ zenClass MixinTfbpType {
     }
 }
 
-#mixin Mixin
-#{targets: "ic2.core.item.tool.EntityMiningLaser"}
+#mixin {targets: "ic2.core.item.tool.EntityMiningLaser"}
 zenClass MixinEntityMiningLaser {
     #mixin ModifyConstant
     #{
@@ -477,8 +455,7 @@ zenClass MixinEntityMiningLaser {
     }
 }
 
-#mixin Mixin
-#{targets: "ic2.core.item.tool.ItemToolMiningLaser"}
+#mixin {targets: "ic2.core.item.tool.ItemToolMiningLaser"}
 zenClass MixinItemToolMiningLaser {
     #mixin Static
     #mixin ModifyConstant
@@ -555,8 +532,7 @@ zenClass MixinItemToolMiningLaser {
     }
 }
 
-#mixin Mixin
-#{targets: "ic2.core.item.ItemBatteryChargeHotbar"}
+#mixin {targets: "ic2.core.item.ItemBatteryChargeHotbar"}
 zenClass MixinItemBatteryChargeHotbar {
     #mixin Static
     #mixin ModifyArg
@@ -592,8 +568,7 @@ Remove UU-values calculating on game load
 Fix strange bug, when predefined values was rewritten with wrong ones.
 Also, this would remove some small UU recipes, like wooden slabs or buttons.
 */
-#mixin Mixin
-#{targets: "ic2.core.uu.UuIndex"}
+#mixin {targets: "ic2.core.uu.UuIndex"}
 zenClass MixinUuIndex {
     #mixin Overwrite
     function init() as void {
