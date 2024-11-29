@@ -12,6 +12,8 @@
 
 import crafttweaker.block.IBlockState;
 import crafttweaker.item.IItemStack;
+import crafttweaker.world.IWorld;
+import crafttweaker.world.IBlockPos;
 
 static maxRadius as int = scripts.do.portal_spread.config.Config.maxRadius;
 
@@ -121,7 +123,7 @@ static blockRepresentation as IItemStack[string] = {
   'biomesoplenty:blood'         : <forge:bucketfilled>.withTag({ FluidName: 'blood', Amount: 1000 }),
 };
 
-function stateToItem(state as IBlockState) as IItemStack {
+function stateToItem(state as IBlockState, pos as IBlockPos = null, world as IWorld = null) as IItemStack {
   if (
     isNull(state)
     || isNull(state.block)
@@ -130,10 +132,16 @@ function stateToItem(state as IBlockState) as IItemStack {
 
   val defId = state.block.definition.id;
   var item = defId.startsWith('netherendingores:')
-    ? <item:${defId}:${state.block.meta}>
-    : state.block.getItem(null, null, state);
+    || (defId.startsWith('ic2:te') && (isNull(world) || isNull(pos)))
+      ? <item:${defId}:${state.block.meta}>
+      : state.block.getItem(world, pos, state);
   if (isNull(item)) item = blockRepresentation[defId];
   if (isNull(item))
     logger.logWarning('Cannot find item representation for block: ' ~ defId);
   return item;
+}
+
+function blockPosToItem(world as IWorld, pos as IBlockPos) as IItemStack {
+  if (isNull(world) || isNull(pos)) return null;
+  return stateToItem(world.getBlockState(pos), pos, world);
 }
