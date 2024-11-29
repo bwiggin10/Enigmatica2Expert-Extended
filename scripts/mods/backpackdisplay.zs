@@ -95,7 +95,7 @@ addBackDisplay(<pointer:pointer>, function(item) {
   if (isNull(pos)) return null;
   if (!world.isBlockLoaded(pos)) return null;
 
-  val result = scripts.do.portal_spread.utils.stateToItem(world.getBlockState(pos));
+  val result = scripts.do.portal_spread.utils.blockPosToItem(world, pos);
   if (isNull(result)) return null;
   return [result] as IItemStack[];
 });
