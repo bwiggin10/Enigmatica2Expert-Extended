@@ -166,7 +166,7 @@ for log, plank in logPlankFireproof {
 
 // Merge lists to main one
 function merge(list as IItemStack[IItemStack]) as void {
-  for log, plank in logPlankFireproof {
+  for log, plank in list {
     if(isNull(log) || isNull(plank)) continue;
     logPlank[log] = plank;
   }
