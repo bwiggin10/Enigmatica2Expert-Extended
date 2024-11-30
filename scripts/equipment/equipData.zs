@@ -368,6 +368,7 @@ static defaultWeaponMats as int[string]$orderly = {
   'dragonsteel_fire'    : 360,
   'darkwood'            : 370,
   'primal_metal'        : 372,
+  'ichorium'            : 376,
   'mithminite'          : 395,
   'blood_infused_glitch': 424,
   'ma.superium'         : 436,
@@ -385,7 +386,6 @@ static defaultWeaponMats as int[string]$orderly = {
   'red_matter'          : 701,
   'ionite'              : 706,
   'aethium'             : 783,
-  'ichorium'            : 838,
   'chaotic_metal'       : 1052,
   'infinity_metal'      : 20117,
 /**/
