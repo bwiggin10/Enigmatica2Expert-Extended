@@ -194,6 +194,8 @@ for oil in [<liquid:oliveoil>, <liquid:seed.oil>] as ILiquidStack[] {
 
 // Cheaper capsules
 mods.forestry.Carpenter.removeRecipe(<forestry:wood_pulp>);
+mods.forestry.Carpenter.removeRecipe(<forestry:crafting_material:4>);
+mods.forestry.Carpenter.removeRecipe(<forestry:iodine_capsule>);
 scripts.mods.forestry.Carpenter.addRecipe(<forestry:crafting_material:4>, [[<forestry:honeydew>, <ic2:fluid_cell>]], 100, <fluid:water> * 1000);
 scripts.mods.forestry.Carpenter.addRecipe(<forestry:iodine_capsule>, [[<forestry:honey_drop>, <ic2:fluid_cell>]], 100, <fluid:water> * 1000);
 
