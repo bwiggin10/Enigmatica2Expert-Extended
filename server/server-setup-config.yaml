@@ -119,6 +119,7 @@ install:
       - 1085598 # JEI Area Fixer
       - 1121489 # AE2 Crafting Tree - Legacy
       - 1132293 # Backpack Display
+      - 1147522 # Backpack Opener
 
     # The base path where the server should be installed to, ~ for current path
   baseInstallPath: ~
