@@ -622,9 +622,6 @@
 		count: 32
 	},
 	{
-		item: "thaumadditions:chester"
-	},
-	{
 		item: "mekanism:machineblock 1 13"
 	},
 	{
