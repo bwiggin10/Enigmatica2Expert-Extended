@@ -562,7 +562,7 @@ craft.remake(<enderio:item_material:14>, ['pretty',
   '‚ ‚ ‚',
   '‚ B ‚',
   '‚ ‚ ‚'], {
-  'B': <biomesoplenty:biome_essence>, // Biome Essence
+  'B': <nuclearcraft:compound:9>,
   '‚': <ore:nuggetPulsatingIron>, // Pulsating Iron Nugget
 });
 

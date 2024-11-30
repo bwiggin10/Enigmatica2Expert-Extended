@@ -265,7 +265,17 @@ scripts.process.fill(<nuclearcraft:part:11>, <fluid:water> * 2000, <nuclearcraft
 
 // [Dimensional Blend] from [Biome Essence]
 recipes.remove(<nuclearcraft:compound:9>);
-scripts.process.crush(<biomesoplenty:biome_essence>, <nuclearcraft:compound:9>, 'only: eu2Crusher AACrusher IECrusher', [<thermalfoundation:material:66>], [0.25]);
+scripts.process.crush(
+  <biomesoplenty:biome_essence>,
+  <nuclearcraft:compound:9>,
+  'only: eu2Crusher AACrusher IECrusher SAGMill',
+  [
+    <thermalfoundation:material:66>,
+    <nuclearcraft:compound:9>,
+    <nuclearcraft:compound:9>,
+  ],
+  [0.25, 0.25, 0.25],
+  { bonusType: 'MULTIPLY_OUTPUT' });
 
 if (!isNull(loadedMods['immersivetech'])) {
   mods.immersivetechnology.SolarTower.addRecipe(<liquid:sic_vapor> * 1000, <liquid:carbon_dioxide> * 1000, 100);
