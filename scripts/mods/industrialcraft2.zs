@@ -582,8 +582,6 @@ craft.remake(<extrautils2:decorativesolid:7>, ['pretty',
   '⌃': <ore:blockQuartzBlack>, // Black Quartz
 });
 
-<ic2:resource>.displayName = game.localize('e2ee.tile.unsalted_basalt');
-
 // Semifluid generator usages
 function addSemifluidRecipe(fluid as ILiquidStack, eu_t as double) as void {
   scripts.jei.mod.ic2.semifluid(fluid, eu_t);
