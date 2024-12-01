@@ -95,9 +95,10 @@ zenClass MixinBlockTFMagicLogSpecial {
 
         // print('~ leavesCount: '~leavesCount~' logsNaturalCount: '~logsNaturalCount~' logsOtherCount: '~logsOtherCount);
 
-        // Too few leaves and logs - disable clock
+        // Too few leaves and logs - destroy clock
         if (leavesCount < 330 || logsNaturalCount < 30 || logsOtherCount < 30) {
-            world.setBlockState(pos, world.getBlockState(pos).withProperty(BlockLog.LOG_AXIS, EnumAxis.Y));
+            // world.setBlockState(pos, world.getBlockState(pos).withProperty(BlockLog.LOG_AXIS, EnumAxis.Y));
+            world.destroyBlock(pos, true);
             (world as WorldServer).spawnParticle(EnumParticleTypes.SPELL_WITCH,
                 0.5 + pos.x, 0.5 + pos.y, 0.5 + pos.z, 100, 2.0, 2.0, 2.0, 0.02, 0);
         }
