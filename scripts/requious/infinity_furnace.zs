@@ -240,8 +240,8 @@ ${filtered.join('\n')}`
 
 } */
 
-// Total Furnace recipes registered: 919
-// Blacklisted by JEI or manually: 78
+// Total Furnace recipes registered: 918
+// Blacklisted by JEI or manually: 77
 // Filtered by oredict: 150
 infinFurnace(utils.get('actuallyadditions:block_misc', 3), utils.get('actuallyadditions:item_misc', 5));
 blacklist('actuallyadditions:item_dust', 3);
@@ -978,7 +978,6 @@ blacklist('qmd:copernicium', 3);
 blacklist('qmd:copernicium', 4);
 blacklist('qmd:dust', 1);
 blacklist('qmd:dust', 2);
-blacklist('qmd:dust', 3);
 blacklist('qmd:dust', 5);
 blacklist('qmd:dust', 6);
 blacklist('qmd:dust', 7);
