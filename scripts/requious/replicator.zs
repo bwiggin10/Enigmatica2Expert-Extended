@@ -234,7 +234,7 @@ function getReplicateItem(m as MachineContainer, disk as IItemStack) as IItemSta
     || isNull(disk.tag.Pattern.Damage)
   ) return null;
 
-  return <item:${disk.tag.Pattern.id}:${disk.tag.Pattern.Damage}>;
+  return itemUtils.getItem(disk.tag.Pattern.id, disk.tag.Pattern.Damage);
 }
 
 function consumeEnergy(m as MachineContainer, amount as int) as void {
