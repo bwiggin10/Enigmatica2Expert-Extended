@@ -32457,5 +32457,22 @@
       }
     ],
     "dim": "Block Drops"
+  },
+  {
+    "block": "trinity:trinitite:0",
+    "distrib": "0,1.0;255,1.0;",
+    "silktouch": false,
+    "dropsList": [
+      {
+        "itemStack": "trinity:trinitite_shard",
+        "fortunes": {
+          "0": 1,
+          "1": 2,
+          "2": 5,
+          "3": 10
+        }
+      }
+    ],
+    "dim": "Block Drops"
   }
 ]
