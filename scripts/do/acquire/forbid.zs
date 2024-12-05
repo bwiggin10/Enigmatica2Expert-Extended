@@ -56,7 +56,9 @@ zenClass Forbidder {
     if (!futile)
       for stack in stacks {
         scripts.do.acquire.data.values[stack] = amount;
-        stack.addTooltip(`§6+${amount}§e✪`);
+        val isResidual = amount - amount as int > 0.0;
+        val amountStr = isResidual ? amount as string : amount as int;
+        stack.addTooltip(`§6+${amountStr}§e✪`);
         utils.log(`Acquire +${amount}: ${stack.commandString}`);
       }
     return this;
