@@ -38,9 +38,7 @@ zenClass Command {
       return `${prefix}§7/${cmd.name} §8<§7${list}§8>${detailed}`;
     };
 
-    cmd.tabCompletionGetters = [function (server, sender, pos) {
-      return StringList.create(subCommandNames);
-    }];
+    cmd.tabCompletionGetters = [mods.zenutils.command.IGetTabCompletion.fixedValues(subCommandNames)];
 
     cmd.execute = function (command, server, sender, args) {
       val player = mods.zenutils.command.CommandUtils.getCommandSenderAsPlayer(sender);
