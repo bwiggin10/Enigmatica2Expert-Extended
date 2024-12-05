@@ -3,16 +3,9 @@
 #reloadable
 
 import crafttweaker.data.IData;
-import crafttweaker.event.PlayerLoggedInEvent;
-import crafttweaker.item.IItemStack;
 import crafttweaker.player.IPlayer;
-import crafttweaker.world.IBlockPos;
-import crafttweaker.world.IWorld;
-import native.net.minecraft.tileentity.TileEntity;
-import native.net.minecraft.util.math.BlockPos;
 import native.net.minecraft.world.chunk.Chunk;
 import native.net.minecraft.world.gen.ChunkProviderServer;
-import scripts.do.hand_over_your_items.tellrawItemObj;
 
 function show(player as IPlayer) as IData {
   if (player.world.remote) return null;
