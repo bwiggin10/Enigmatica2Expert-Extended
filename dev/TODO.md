@@ -2,20 +2,24 @@
 
 🚧✅❌⚠️ List of priorities:
 
-- [x] 🐀 Rat Ore Doubling can dupe IC2 "Iridium Ore". Removing oreIridium from it wont help
+- [ ] ☢️ Turn on Radiation
+- [ ] 🐀 Rat Ore Doubling can dupe IC2 "Iridium Ore". Removing oreIridium from it wont help
 - [ ] Rebalance TCon `Refining`: Remove x1.75 multiplication but add Fortune accounting
 - [ ] 𝓩𝒮 Refactor `#mixin` preprocessors into one-line when it short
-- [x] ✏️ Fix `thaumadditions:salt_essence` cannot be viewed in HEI since when it not have aspects its create an error
-- [x] 🟢 Add and configure https://legacy.curseforge.com/minecraft/mc-mods/backpack-opener
 - [ ] 🖼️ Add https://legacy.curseforge.com/minecraft/texture-packs/ic2-seedbag-display
-- [ ] Prevent Timewood Clock to walkaround restrictions by activating it with users
 - [ ] Undo `Fluid Interaction Tweaker` serverside hotfix https://github.com/tttsaurus/Fluid-Interaction-Tweaker/issues/8
 - [ ] Add https://www.curseforge.com/minecraft/mc-mods/patchouli-books
-- [ ] ✏️ Thermionic Fabricator TE machine frame recipe
+- [ ] ✏️ Thermionic Fabricator TE machine frame recipe. Revert Forestry mod update
 - [ ] fix `format.zs` mutating lists `[T]` => `T[]`
 - [ ] ✏️ Completely remove AA crusher since no difference with EU2 one
 - [ ] ✏️ Fix IC2 dusts produced by Scrap Boxes
 - [ ] ✏️ Black Hole Talisman cheaper
+- [ ] ✏️ High Oven does not provide x2 of fluid for Osmium Ore
+- [ ] 💧 WitchWater + Lava not working
+- [ ] Rewrite `/particle` commands in Tabaka's code
+- [ ] Industrial Squeezer flip schematic
+- [ ] Cloche add quest with fluids.
+- [ ] Fix OTG crashing on removing Void Preset https://github.com/PG85/OpenTerrainGenerator/blob/c70545f5d838039016d5b27e8c4bada54268051f/common/src/main/java/com/pg85/otg/worldsave/DimensionData.java#L110
 - [ ] 🎣 Fish rework
   * [x] Integrate https://www.curseforge.com/minecraft/mc-mods/customfishing
   * [x] Add `Fish Singularity`.
