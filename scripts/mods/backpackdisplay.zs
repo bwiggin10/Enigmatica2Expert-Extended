@@ -3,7 +3,6 @@
 
 import mods.backpackdisplay.BackpackDisplay.addBackDisplay;
 import crafttweaker.item.IItemStack;
-import crafttweaker.item.IContainerFunction;
 import crafttweaker.item.IIngredient;
 import crafttweaker.block.IBlockDefinition;
 import crafttweaker.world.IWorld;
