@@ -67,16 +67,16 @@
 		uid: "d6b1acb9",
 		type: "item",
 		items: [{
+			ForgeCaps: {
+				Parent: {
+					data: "wallAccelerator",
+					id: "ore"
+				}
+			},
 			id: "itemfilters:filter",
 			tag: {
 				display: {
 					Name: "Any wallAccelerator"
-				}
-			},
-			ForgeCaps: {
-				Parent: {
-					id: "ore",
-					data: "wallAccelerator"
 				}
 			}
 		}],

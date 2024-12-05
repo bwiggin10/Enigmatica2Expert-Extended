@@ -28,16 +28,16 @@
 		uid: "fe310866",
 		type: "item",
 		items: [{
+			ForgeCaps: {
+				Parent: {
+					data: "oreIron",
+					id: "ore"
+				}
+			},
 			id: "itemfilters:filter",
 			tag: {
 				display: {
 					Name: "Any oreIron"
-				}
-			},
-			ForgeCaps: {
-				Parent: {
-					id: "ore",
-					data: "oreIron"
 				}
 			}
 		},

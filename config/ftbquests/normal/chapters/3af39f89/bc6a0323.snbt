@@ -13,7 +13,6 @@
 		type: "item",
 		items: [{
 			id: "thermalexpansion:device",
-			Damage: 3s,
 			tag: {
 				RSControl: 0b,
 				Facing: 3b,
@@ -26,7 +25,8 @@
 					2b,
 					2b
 				]
-			}
+			},
+			Damage: 3s
 		}],
 		ignore_nbt: 1b
 	}],

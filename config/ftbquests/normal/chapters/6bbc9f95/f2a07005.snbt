@@ -74,7 +74,6 @@
 			}
 		},
 		{
-			id: "thaumicaugmentation:augment_caster_rift_energy_storage",
 			ForgeCaps: {
 				Parent: {
 					augment: {},
@@ -82,13 +81,14 @@
 						energy: 0L
 					}
 				}
-			}
+			},
+			id: "thaumicaugmentation:augment_caster_rift_energy_storage"
 		},
 		{
 			id: "thaumicaugmentation:augment_builder_power",
 			tag: {
-				id: "thaumicaugmentation:strength_elemental",
-				aspect: "ignis"
+				aspect: "ignis",
+				id: "thaumicaugmentation:strength_elemental"
 			}
 		}],
 		ignore_damage: true,

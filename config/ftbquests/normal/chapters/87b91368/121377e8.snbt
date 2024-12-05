@@ -13,16 +13,16 @@
 		uid: "2bd3538c",
 		type: "item",
 		items: [{
+			ForgeCaps: {
+				Parent: {
+					data: "dragonsteelIngot",
+					id: "ore"
+				}
+			},
 			id: "itemfilters:filter",
 			tag: {
 				display: {
 					Name: "Any dragonsteelIngot"
-				}
-			},
-			ForgeCaps: {
-				Parent: {
-					id: "ore",
-					data: "dragonsteelIngot"
 				}
 			}
 		}],

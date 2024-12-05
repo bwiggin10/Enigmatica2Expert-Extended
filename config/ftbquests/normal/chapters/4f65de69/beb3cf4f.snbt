@@ -1,6 +1,6 @@
 {
 	title: "{q.getting_started.obelisks.name}",
-	x: 11.1d,
+	x: 11.125d,
 	y: 7.1d,
 	text: [
 		"{q.getting_started.obelisks.desc}"

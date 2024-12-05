@@ -5,11 +5,11 @@
 		item: {
 			id: "minecraft:flint_and_steel",
 			tag: {
+				enchantmentColor: 3887386,
 				ench: [{
-					id: 34,
-					lvl: 3s
-				}],
-				enchantmentColor: 3887386
+					lvl: 3s,
+					id: 34
+				}]
 			}
 		}
 	},

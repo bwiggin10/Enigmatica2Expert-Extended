@@ -159,22 +159,30 @@
 					]
 				},
 				chapters: {
-					chapline0: "",
-					chapline1: "",
-					chapline2: "",
-					chapline3: "",
-					chapline4: "",
-					chapline5: "",
-					chapline6: "",
 					chapline7: "",
-					chapline8: "",
-					chapline9: "",
 					chapline10: "",
-					chapline11: "",
-					chapline12: "",
+					chapline6: "",
+					chapline5: "",
+					chapline4: "",
+					chapline3: "",
+					chapline2: "",
+					chapline1: "",
+					chapline0: "",
+					chapline15: "",
 					chapline13: "",
 					chapline14: "",
-					chapline15: "",
+					chapline11: "",
+					chapline12: "",
+					chapPages: [I;
+						0,
+						0,
+						0,
+						0,
+						0,
+						0,
+						0,
+						0
+					],
 					chapBools: [I;
 						0,
 						0,
@@ -185,16 +193,8 @@
 						0,
 						0
 					],
-					chapPages: [I;
-						0,
-						0,
-						0,
-						0,
-						0,
-						0,
-						0,
-						0
-					]
+					chapline9: "",
+					chapline8: ""
 				},
 				display: {
 					Name: "LostUser programs"

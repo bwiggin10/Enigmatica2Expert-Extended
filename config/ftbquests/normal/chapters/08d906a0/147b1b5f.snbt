@@ -9,21 +9,21 @@
 		uid: "019319dd",
 		type: "item",
 		items: [{
-			id: "exnihilocreatio:crook_tconstruct",
 			ForgeCaps: {
-				"plustic:fruitsalad_cap": {
-					Items: [],
-					Size: 5
-				},
 				"plustic:": {
-					Items: [],
-					Size: 1
+					Size: 1,
+					Items: []
+				},
+				"plustic:fruitsalad_cap": {
+					Size: 5,
+					Items: []
 				},
 				"plustic:musicofthespheres_cap": {
-					Items: [],
-					Size: 1
+					Size: 1,
+					Items: []
 				}
-			}
+			},
+			id: "exnihilocreatio:crook_tconstruct"
 		}],
 		consume_items: true,
 		ignore_damage: true,
@@ -33,9 +33,51 @@
 		uid: "c74fa08a",
 		type: "item",
 		item: {
+			ForgeCaps: {
+				"plustic:": {
+					Size: 1,
+					Items: []
+				},
+				"plustic:fruitsalad_cap": {
+					Size: 5,
+					Items: []
+				},
+				"plustic:musicofthespheres_cap": {
+					Size: 1,
+					Items: []
+				}
+			},
 			id: "exnihilocreatio:crook_tconstruct",
 			tag: {
+				ench: [{
+					lvl: 3s,
+					id: 35s
+				}],
+				StatsOriginal: {
+					AttackSpeedMultiplier: 1.0f,
+					MiningSpeed: 1.5f,
+					FreeModifiers: 3,
+					Durability: 56,
+					HarvestLevel: 0,
+					Attack: 1.5f
+				},
+				Stats: {
+					AttackSpeedMultiplier: 1.0f,
+					MiningSpeed: 1.5f,
+					FreeModifiers: 2,
+					Durability: 56,
+					HarvestLevel: 0,
+					Attack: 1.5f
+				},
+				Special: {
+					Categories: [
+						"aoe",
+						"harvest",
+						"tool"
+					]
+				},
 				TinkerData: {
+					UsedModifiers: 1,
 					Materials: [
 						"wood",
 						"wood",
@@ -46,30 +88,6 @@
 						"toolleveling",
 						"luck",
 						"creative"
-					],
-					UsedModifiers: 1
-				},
-				Stats: {
-					Durability: 56,
-					HarvestLevel: 0,
-					Attack: 1.5f,
-					MiningSpeed: 1.5f,
-					AttackSpeedMultiplier: 1.0f,
-					FreeModifiers: 2
-				},
-				StatsOriginal: {
-					Durability: 56,
-					HarvestLevel: 0,
-					Attack: 1.5f,
-					MiningSpeed: 1.5f,
-					AttackSpeedMultiplier: 1.0f,
-					FreeModifiers: 3
-				},
-				Special: {
-					Categories: [
-						"aoe",
-						"harvest",
-						"tool"
 					]
 				},
 				Modifiers: [{
@@ -84,11 +102,11 @@
 				},
 				{
 					identifier: "luck",
-					color: 2970082,
-					modifierUsed: 1b,
-					level: 3,
 					current: 360,
+					color: 2970082,
 					max: 360,
+					level: 3,
+					modifierUsed: 1b,
 					extraInfo: "359 / 360"
 				},
 				{
@@ -100,11 +118,7 @@
 					"ecological",
 					"toolleveling",
 					"luck"
-				],
-				ench: [{
-					id: 35s,
-					lvl: 3s
-				}]
+				]
 			}
 		}
 	}]

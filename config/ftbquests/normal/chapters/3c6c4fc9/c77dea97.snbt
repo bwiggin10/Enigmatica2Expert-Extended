@@ -90,16 +90,16 @@
 		uid: "3f4e0787",
 		type: "item",
 		items: [{
+			ForgeCaps: {
+				Parent: {
+					data: "wallVacuumChambers",
+					id: "ore"
+				}
+			},
 			id: "itemfilters:filter",
 			tag: {
 				display: {
 					Name: "Any wallVacuumChambers"
-				}
-			},
-			ForgeCaps: {
-				Parent: {
-					id: "ore",
-					data: "wallVacuumChambers"
 				}
 			}
 		}],

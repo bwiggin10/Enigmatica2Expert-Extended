@@ -3,12 +3,12 @@
 	icon: {
 		id: "simple_trophies:trophy",
 		tag: {
+			TrophyVariant: "gold",
 			TrophyColorGreen: 127,
 			TrophyShowsTooltip: 1b,
-			TrophyVariant: "gold",
 			TrophyItem: {
-				Count: 1b,
 				id: "environmentaltech:void_res_miner_cont_5",
+				Count: 1b,
 				Damage: 0s
 			},
 			TrophyColorBlue: 181,
@@ -62,12 +62,12 @@
 		item: {
 			id: "simple_trophies:trophy",
 			tag: {
+				TrophyVariant: "gold",
 				TrophyColorGreen: 127,
 				TrophyShowsTooltip: 1b,
-				TrophyVariant: "gold",
 				TrophyItem: {
-					Count: 1b,
 					id: "environmentaltech:void_res_miner_cont_5",
+					Count: 1b,
 					Damage: 0s
 				},
 				TrophyColorBlue: 181,

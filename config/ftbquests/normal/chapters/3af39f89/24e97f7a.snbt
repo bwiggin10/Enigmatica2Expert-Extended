@@ -3,12 +3,12 @@
 	icon: {
 		id: "simple_trophies:trophy",
 		tag: {
+			TrophyVariant: "gold",
 			TrophyColorGreen: 99,
 			TrophyShowsTooltip: 1b,
-			TrophyVariant: "gold",
 			TrophyItem: {
-				Count: 2b,
 				id: "thermalexpansion:frame",
+				Count: 2b,
 				Damage: 148s
 			},
 			TrophyColorBlue: 88,
@@ -80,12 +80,12 @@
 		item: {
 			id: "simple_trophies:trophy",
 			tag: {
+				TrophyVariant: "gold",
 				TrophyColorGreen: 99,
 				TrophyShowsTooltip: 1b,
-				TrophyVariant: "gold",
 				TrophyItem: {
-					Count: 2b,
 					id: "thermalexpansion:frame",
+					Count: 2b,
 					Damage: 148s
 				},
 				TrophyColorBlue: 88,

@@ -17,15 +17,15 @@
 	{
 		item: {
 			id: "botania:lens",
-			Damage: 2s,
 			tag: {
 				compositeLens: {
-					id: "botania:lens",
-					Count: 1b,
 					tag: {},
+					Count: 1b,
+					id: "botania:lens",
 					Damage: 4s
 				}
-			}
+			},
+			Damage: 2s
 		}
 	},
 	{
@@ -55,25 +55,25 @@
 		icon: {
 			id: "forestry:chipsets",
 			Count: 3,
-			Damage: 2s,
 			tag: {
 				T: 2s,
 				CA.I1: "forestry.machine.speed.boost.2",
 				CA.I2: "forestry.machine.speed.boost.2",
 				CA.I0: "forestry.machine.speed.boost.2",
 				LY: "forestry.machine.upgrade"
-			}
+			},
+			Damage: 2s
 		},
 		item: {
 			id: "forestry:chipsets",
-			Damage: 2s,
 			tag: {
 				T: 2s,
 				CA.I1: "forestry.machine.speed.boost.2",
 				CA.I2: "forestry.machine.speed.boost.2",
 				CA.I0: "forestry.machine.speed.boost.2",
 				LY: "forestry.machine.upgrade"
-			}
+			},
+			Damage: 2s
 		},
 		count: 3
 	},
@@ -327,9 +327,9 @@
 		item_name: "Rare",
 		color: 15444771,
 		drops: {
+			boss: 0,
 			passive: 0,
-			monster: 0,
-			boss: 0
+			monster: 0
 		}
 	}
 }

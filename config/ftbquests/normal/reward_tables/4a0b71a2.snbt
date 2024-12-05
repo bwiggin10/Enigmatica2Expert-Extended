@@ -2,12 +2,34 @@
 	loot_size: 1,
 	rewards: [{
 		item: {
+			ForgeCaps: {
+				"plustic:": {
+					Size: 1,
+					Items: []
+				},
+				"plustic:fruitsalad_cap": {
+					Size: 5,
+					Items: []
+				},
+				"plustic:musicofthespheres_cap": {
+					Size: 1,
+					Items: []
+				}
+			},
 			id: "tcomplement:sledge_hammer",
 			tag: {
 				StatsOriginal: {
 					AttackSpeedMultiplier: 1.0f,
 					MiningSpeed: 6.8f,
 					FreeModifiers: 3,
+					Durability: 631,
+					HarvestLevel: 3,
+					Attack: 3.5f
+				},
+				Stats: {
+					AttackSpeedMultiplier: 1.0f,
+					MiningSpeed: 6.8f,
+					FreeModifiers: 2,
 					Durability: 631,
 					HarvestLevel: 3,
 					Attack: 3.5f
@@ -20,13 +42,15 @@
 						"aoe"
 					]
 				},
-				Stats: {
-					AttackSpeedMultiplier: 1.0f,
-					MiningSpeed: 6.8f,
-					FreeModifiers: 2,
-					Durability: 631,
-					HarvestLevel: 3,
-					Attack: 3.5f
+				TinkerData: {
+					Materials: [
+						"bronze",
+						"bronze",
+						"bronze"
+					],
+					Modifiers: [
+						"toolleveling"
+					]
 				},
 				Modifiers: [{
 					identifier: "dense",
@@ -38,34 +62,10 @@
 					color: 16777215,
 					level: 1
 				}],
-				TinkerData: {
-					Materials: [
-						"bronze",
-						"bronze",
-						"bronze"
-					],
-					Modifiers: [
-						"toolleveling"
-					]
-				},
 				Traits: [
 					"dense",
 					"toolleveling"
 				]
-			},
-			ForgeCaps: {
-				"plustic:fruitsalad_cap": {
-					Items: [],
-					Size: 5
-				},
-				"plustic:": {
-					Items: [],
-					Size: 1
-				},
-				"plustic:musicofthespheres_cap": {
-					Items: [],
-					Size: 1
-				}
 			}
 		}
 	},

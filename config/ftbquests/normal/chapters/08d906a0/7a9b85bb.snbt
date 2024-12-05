@@ -17,10 +17,10 @@
 		type: "item",
 		item: {
 			id: "storagedrawers:basicdrawers",
-			Damage: 1s,
 			tag: {
 				material: "oak"
-			}
+			},
+			Damage: 1s
 		}
 	},
 	{

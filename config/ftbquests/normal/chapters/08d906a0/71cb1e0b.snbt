@@ -10,16 +10,16 @@
 		uid: "c617b60d",
 		type: "item",
 		items: [{
+			ForgeCaps: {
+				Parent: {
+					data: "pebble",
+					id: "ore"
+				}
+			},
 			id: "itemfilters:filter",
 			tag: {
 				display: {
 					Name: "Any pebble"
-				}
-			},
-			ForgeCaps: {
-				Parent: {
-					id: "ore",
-					data: "pebble"
 				}
 			}
 		}],

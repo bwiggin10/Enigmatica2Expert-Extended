@@ -12,6 +12,12 @@
 		uid: "6c38ef3c",
 		type: "item",
 		items: [{
+			ForgeCaps: {
+				Parent: {
+					Size: 18,
+					Items: []
+				}
+			},
 			id: "draconicevolution:draconic_shovel",
 			tag: {
 				Energy: 16000000

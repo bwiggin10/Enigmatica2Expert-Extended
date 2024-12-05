@@ -2,11 +2,11 @@
 	title: "{q.industrialcraft.high_voltage.name}",
 	icon: {
 		id: "ic2:cable",
-		Damage: 3s,
 		tag: {
 			type: 3b,
 			insulation: 3b
-		}
+		},
+		Damage: 3s
 	},
 	x: 0.8333333333333333d,
 	y: 6.166666666666667d,
@@ -21,8 +21,8 @@
 		type: "item",
 		items: [{
 			id: "ic2:te",
-			Damage: 75s,
-			tag: {}
+			tag: {},
+			Damage: 75s
 		}],
 		ignore_nbt: 1b
 	},
@@ -31,11 +31,11 @@
 		type: "item",
 		items: [{
 			id: "ic2:cable",
-			Damage: 3s,
 			tag: {
 				type: 3b,
 				insulation: 3b
-			}
+			},
+			Damage: 3s
 		}],
 		ignore_nbt: 2b
 	}],

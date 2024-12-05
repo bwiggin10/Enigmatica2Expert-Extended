@@ -3,15 +3,15 @@
 	icon: {
 		id: "simple_trophies:trophy",
 		tag: {
+			TrophyVariant: "gold",
 			TrophyColorGreen: 151,
 			TrophyShowsTooltip: 1b,
-			TrophyVariant: "gold",
 			TrophyItem: {
-				Count: 1b,
-				id: "draconicevolution:mob_soul",
 				tag: {
 					EntityName: "minecraft:cow"
 				},
+				id: "draconicevolution:mob_soul",
+				Count: 1b,
 				Damage: 0s
 			},
 			TrophyColorBlue: 140,
@@ -74,15 +74,15 @@
 		item: {
 			id: "simple_trophies:trophy",
 			tag: {
+				TrophyVariant: "gold",
 				TrophyColorGreen: 151,
 				TrophyShowsTooltip: 1b,
-				TrophyVariant: "gold",
 				TrophyItem: {
-					Count: 1b,
-					id: "draconicevolution:mob_soul",
 					tag: {
 						EntityName: "minecraft:cow"
 					},
+					id: "draconicevolution:mob_soul",
+					Count: 1b,
 					Damage: 0s
 				},
 				TrophyColorBlue: 140,

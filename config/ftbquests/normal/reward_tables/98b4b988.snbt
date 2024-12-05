@@ -5,22 +5,17 @@
 		item: {
 			id: "thaumicaugmentation:focus_ancient",
 			tag: {
-				display: {
-					Name: "Cursed Bats"
-				},
 				package: {
-					index: 0,
-					power: 1.0f,
 					complexity: 34,
 					nodes: [{
 						type: "MEDIUM",
 						key: "ROOT"
 					},
 					{
-						type: "MOD",
-						key: "thaumcraft.SCATTER",
+						setting.cone: 360,
 						setting.forks: 10,
-						setting.cone: 360
+						type: "MOD",
+						key: "thaumcraft.SCATTER"
 					},
 					{
 						type: "MEDIUM",
@@ -28,13 +23,18 @@
 						setting.target: 0
 					},
 					{
-						type: "EFFECT",
-						key: "thaumcraft.CURSE",
 						setting.duration: 10,
-						setting.power: 4
-					}]
+						setting.power: 4,
+						type: "EFFECT",
+						key: "thaumcraft.CURSE"
+					}],
+					index: 0,
+					power: 1.0f
 				},
-				color: -9830395
+				color: -9830395,
+				display: {
+					Name: "Cursed Bats"
+				}
 			}
 		}
 	},

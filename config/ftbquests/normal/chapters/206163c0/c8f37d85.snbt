@@ -23,24 +23,24 @@
 		},
 		{
 			id: "forestry:chipsets",
-			Damage: 1s,
 			tag: {
 				T: 1s
-			}
+			},
+			Damage: 1s
 		},
 		{
 			id: "forestry:chipsets",
-			Damage: 2s,
 			tag: {
 				T: 2s
-			}
+			},
+			Damage: 2s
 		},
 		{
 			id: "forestry:chipsets",
-			Damage: 3s,
 			tag: {
 				T: 3s
-			}
+			},
+			Damage: 3s
 		}],
 		ignore_damage: true,
 		ignore_nbt: 1b

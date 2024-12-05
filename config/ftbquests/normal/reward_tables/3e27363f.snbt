@@ -5,30 +5,30 @@
 		item: {
 			id: "thaumcraft:focus_1",
 			tag: {
-				display: {
-					Name: "Block Exchange"
-				},
 				package: {
-					index: 0,
-					power: 1.0f,
 					complexity: 7,
 					nodes: [{
 						type: "MEDIUM",
 						key: "ROOT"
 					},
 					{
+						setting.method: 1,
 						type: "MEDIUM",
-						key: "thaumcraft.PLAN",
-						setting.method: 1
+						key: "thaumcraft.PLAN"
 					},
 					{
+						setting.silk: 1,
 						type: "EFFECT",
 						key: "thaumcraft.EXCHANGE",
-						setting.silk: 1,
 						setting.fortune: 0
-					}]
+					}],
+					index: 0,
+					power: 1.0f
 				},
-				color: -11041961
+				color: -11041961,
+				display: {
+					Name: "Block Exchange"
+				}
 			}
 		}
 	},

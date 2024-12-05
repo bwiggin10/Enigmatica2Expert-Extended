@@ -130,26 +130,26 @@
 				},
 				Items: [{
 					Slot: 0b,
-					id: "rats:rat_upgrade_nonbeliever",
 					Count: 1b,
+					id: "rats:rat_upgrade_nonbeliever",
 					Damage: 0s
 				},
 				{
 					Slot: 1b,
-					id: "rats:rat_upgrade_aristocrat",
 					Count: 1b,
+					id: "rats:rat_upgrade_aristocrat",
 					Damage: 0s
 				},
 				{
 					Slot: 2b,
-					id: "rats:rat_upgrade_speed",
 					Count: 1b,
+					id: "rats:rat_upgrade_speed",
 					Damage: 0s
 				},
 				{
 					Slot: 3b,
-					id: "rats:rat_upgrade_archeologist",
 					Count: 1b,
+					id: "rats:rat_upgrade_archeologist",
 					Damage: 0s
 				}]
 			}
@@ -301,8 +301,8 @@
 			id: "ic2:crystal_memory",
 			tag: {
 				Pattern: {
-					id: "extendedcrafting:material",
 					Count: 1b,
+					id: "extendedcrafting:material",
 					Damage: 13s
 				}
 			}
@@ -313,8 +313,8 @@
 			id: "ic2:crystal_memory",
 			tag: {
 				Pattern: {
-					id: "draconicevolution:draconium_capacitor",
 					Count: 1b,
+					id: "draconicevolution:draconium_capacitor",
 					Damage: 1s
 				}
 			}
@@ -330,6 +330,12 @@
 	},
 	{
 		item: {
+			ForgeCaps: {
+				Parent: {
+					Size: 18,
+					Items: []
+				}
+			},
 			id: "draconicevolution:draconic_shovel",
 			tag: {
 				DEUpgrades: {
@@ -350,10 +356,10 @@
 	{
 		item: {
 			id: "psicosts:psi_cell",
-			Damage: 3s,
 			tag: {
 				PsioCharge: 2560000
-			}
+			},
+			Damage: 3s
 		}
 	},
 	{
@@ -365,23 +371,23 @@
 		icon: {
 			id: "mekanism:basicblock2",
 			Count: 4,
-			Damage: 3s,
 			tag: {
 				tier: 3,
 				mekData: {
 					energyStored: 5.12E11d
 				}
-			}
+			},
+			Damage: 3s
 		},
 		item: {
 			id: "mekanism:basicblock2",
-			Damage: 3s,
 			tag: {
 				tier: 3,
 				mekData: {
 					energyStored: 5.12E11d
 				}
-			}
+			},
+			Damage: 3s
 		},
 		count: 4
 	},
@@ -413,9 +419,9 @@
 		color: 10693183,
 		glow: true,
 		drops: {
+			boss: 0,
 			passive: 0,
-			monster: 0,
-			boss: 0
+			monster: 0
 		}
 	}
 }

@@ -1,6 +1,20 @@
 {
 	title: "{q.getting_started.laser_gun.name}",
 	icon: {
+		ForgeCaps: {
+			"plustic:": {
+				Size: 1,
+				Items: []
+			},
+			"plustic:fruitsalad_cap": {
+				Size: 5,
+				Items: []
+			},
+			"plustic:musicofthespheres_cap": {
+				Size: 1,
+				Items: []
+			}
+		},
 		id: "plustic:laser_gun",
 		tag: {}
 	},

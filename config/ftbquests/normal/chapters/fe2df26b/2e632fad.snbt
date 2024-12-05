@@ -17,8 +17,8 @@
 		item: {
 			id: "appliedenergistics2:entropy_manipulator",
 			tag: {
-				internalCurrentPower: 200000.0d,
-				internalMaxPower: 200000.0d
+				internalMaxPower: 200000.0d,
+				internalCurrentPower: 200000.0d
 			}
 		}
 	}]

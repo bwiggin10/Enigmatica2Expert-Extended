@@ -10,16 +10,16 @@
 		uid: "0e31c667",
 		type: "item",
 		items: [{
+			ForgeCaps: {
+				Parent: {
+					data: "treeLeaves",
+					id: "ore"
+				}
+			},
 			id: "itemfilters:filter",
 			tag: {
 				display: {
 					Name: "Any treeLeaves"
-				}
-			},
-			ForgeCaps: {
-				Parent: {
-					id: "ore",
-					data: "treeLeaves"
 				}
 			}
 		}],

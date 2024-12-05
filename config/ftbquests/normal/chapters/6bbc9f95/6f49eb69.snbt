@@ -1,10 +1,10 @@
 {
 	title: "{q.thaumcraft.impetus.name}",
 	icon: {
-		id: "thaumicaugmentation:impetus_linker",
 		ForgeCaps: {
 			Parent: {}
-		}
+		},
+		id: "thaumicaugmentation:impetus_linker"
 	},
 	x: 15.0d,
 	y: -0.5d,
@@ -19,10 +19,10 @@
 		uid: "b6389674",
 		type: "item",
 		items: [{
-			id: "thaumicaugmentation:impetus_linker",
 			ForgeCaps: {
 				Parent: {}
-			}
+			},
+			id: "thaumicaugmentation:impetus_linker"
 		}]
 	},
 	{

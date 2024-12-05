@@ -27,10 +27,10 @@
 		},
 		{
 			id: "mekanism:machineblock2",
-			Damage: 11s,
 			tag: {
 				tier: 0
-			}
+			},
+			Damage: 11s
 		},
 		{
 			item: "tconstruct:seared_tank 1 1"
@@ -85,8 +85,8 @@
 		},
 		{
 			id: "ic2:te",
-			Damage: 131s,
-			tag: {}
+			tag: {},
+			Damage: 131s
 		},
 		{
 			item: "enderstorage:ender_storage 1 1"

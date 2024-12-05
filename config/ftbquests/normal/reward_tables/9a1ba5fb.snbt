@@ -7,6 +7,20 @@
 	},
 	{
 		item: {
+			ForgeCaps: {
+				"plustic:": {
+					Size: 1,
+					Items: []
+				},
+				"plustic:fruitsalad_cap": {
+					Size: 5,
+					Items: []
+				},
+				"plustic:musicofthespheres_cap": {
+					Size: 1,
+					Items: []
+				}
+			},
 			id: "tconstruct:rapier",
 			tag: {
 				StatsOriginal: {
@@ -17,12 +31,6 @@
 					HarvestLevel: 1,
 					Attack: 1.5f
 				},
-				Special: {
-					Categories: [
-						"weapon",
-						"tool"
-					]
-				},
 				Stats: {
 					AttackSpeedMultiplier: 1.0f,
 					MiningSpeed: 3.0f,
@@ -30,6 +38,22 @@
 					Durability: 429,
 					HarvestLevel: 1,
 					Attack: 1.5f
+				},
+				Special: {
+					Categories: [
+						"weapon",
+						"tool"
+					]
+				},
+				TinkerData: {
+					Materials: [
+						"cheese",
+						"cheese",
+						"cheese"
+					],
+					Modifiers: [
+						"toolleveling"
+					]
 				},
 				Modifiers: [{
 					identifier: "ratty",
@@ -46,16 +70,6 @@
 					color: 16777215,
 					level: 1
 				}],
-				TinkerData: {
-					Materials: [
-						"cheese",
-						"cheese",
-						"cheese"
-					],
-					Modifiers: [
-						"toolleveling"
-					]
-				},
 				Traits: [
 					"ratty",
 					"tasty",

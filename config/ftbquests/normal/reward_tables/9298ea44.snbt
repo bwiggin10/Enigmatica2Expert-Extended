@@ -21,11 +21,11 @@
 			id: "ic2:crop_seed_bag",
 			tag: {
 				owner: "ic2",
-				id: "spidernip",
+				scan: 4b,
 				growth: 1b,
-				gain: 1b,
+				id: "spidernip",
 				resistance: 1b,
-				scan: 4b
+				gain: 1b
 			}
 		}
 	}]

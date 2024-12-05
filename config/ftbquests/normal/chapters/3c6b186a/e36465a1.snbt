@@ -20,8 +20,8 @@
 		type: "item",
 		items: [{
 			id: "ic2:te",
-			Damage: 73s,
-			tag: {}
+			tag: {},
+			Damage: 73s
 		}],
 		ignore_nbt: 1b
 	},

@@ -16,16 +16,16 @@
 		title: "Reactor Fuels",
 		icon: "nuclearcraft:fuel_uranium 1 9",
 		items: [{
+			ForgeCaps: {
+				Parent: {
+					data: "fuelReactor",
+					id: "ore"
+				}
+			},
 			id: "itemfilters:filter",
 			tag: {
 				display: {
 					Name: "Any fuelReactor"
-				}
-			},
-			ForgeCaps: {
-				Parent: {
-					id: "ore",
-					data: "fuelReactor"
 				}
 			}
 		}],

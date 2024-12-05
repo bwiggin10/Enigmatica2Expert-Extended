@@ -15,11 +15,11 @@
 			tag: {
 				astralsorcery: {
 					enhanced: 1b,
+					selected_upgrade: 1,
 					upgrades: [
 						0,
 						1
-					],
-					selected_upgrade: 1
+					]
 				}
 			}
 		}],

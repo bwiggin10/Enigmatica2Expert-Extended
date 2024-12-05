@@ -1,6 +1,5 @@
 {
 	icon: {
-		id: "thaumicaugmentation:impulse_cannon",
 		ForgeCaps: {
 			Parent: {
 				augments: {
@@ -10,7 +9,8 @@
 					energy: 0L
 				}
 			}
-		}
+		},
+		id: "thaumicaugmentation:impulse_cannon"
 	},
 	x: 17.0d,
 	y: 0.5d,
@@ -24,7 +24,6 @@
 		uid: "9c3e58ed",
 		type: "item",
 		items: [{
-			id: "thaumicaugmentation:impulse_cannon",
 			ForgeCaps: {
 				Parent: {
 					augments: {
@@ -34,7 +33,8 @@
 						energy: 0L
 					}
 				}
-			}
+			},
+			id: "thaumicaugmentation:impulse_cannon"
 		}],
 		ignore_nbt: 1b
 	},

@@ -12,7 +12,6 @@
 		type: "item",
 		items: [{
 			id: "bloodmagic:sacrificial_dagger",
-			Damage: 1s,
 			tag: {
 				ench: [{
 					lvl: 0L,
@@ -20,7 +19,8 @@
 				}],
 				HideFlags: 1L,
 				sacrifice: 0b
-			}
+			},
+			Damage: 1s
 		}],
 		ignore_nbt: 1b
 	}],

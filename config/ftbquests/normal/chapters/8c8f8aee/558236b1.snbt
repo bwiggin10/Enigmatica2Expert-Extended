@@ -3,12 +3,12 @@
 	icon: {
 		id: "simple_trophies:trophy",
 		tag: {
+			TrophyVariant: "gold",
 			TrophyColorGreen: 57,
 			TrophyShowsTooltip: 1b,
-			TrophyVariant: "gold",
 			TrophyItem: {
-				Count: 1b,
 				id: "actuallyadditions:block_giant_chest_large",
+				Count: 1b,
 				Damage: 0s
 			},
 			TrophyColorBlue: 46,
@@ -73,12 +73,12 @@
 		item: {
 			id: "simple_trophies:trophy",
 			tag: {
+				TrophyVariant: "gold",
 				TrophyColorGreen: 57,
 				TrophyShowsTooltip: 1b,
-				TrophyVariant: "gold",
 				TrophyItem: {
-					Count: 1b,
 					id: "actuallyadditions:block_giant_chest_large",
+					Count: 1b,
 					Damage: 0s
 				},
 				TrophyColorBlue: 46,

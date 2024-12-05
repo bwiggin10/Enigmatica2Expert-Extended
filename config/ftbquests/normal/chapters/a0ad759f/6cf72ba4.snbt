@@ -3,16 +3,16 @@
 	icon: {
 		id: "simple_trophies:trophy",
 		tag: {
+			TrophyColorGreen: 205,
+			TrophyVariant: "gold",
 			TrophyItem: {
-				id: "opencomputers:robot",
 				Count: 1,
+				id: "opencomputers:robot",
 				Damage: 0s
 			},
-			TrophyName: "§fComputer Master Trophy§r",
-			TrophyColorRed: 65,
-			TrophyColorGreen: 205,
 			TrophyColorBlue: 52,
-			TrophyVariant: "gold"
+			TrophyColorRed: 65,
+			TrophyName: "§fComputer Master Trophy§r"
 		}
 	},
 	x: 15.0d,
@@ -78,17 +78,17 @@
 		item: {
 			id: "simple_trophies:trophy",
 			tag: {
+				TrophyVariant: "gold",
+				TrophyColorGreen: 205,
+				TrophyShowsTooltip: 1b,
 				TrophyItem: {
-					id: "opencomputers:robot",
 					Count: 1,
+					id: "opencomputers:robot",
 					Damage: 0s
 				},
-				TrophyName: "§fComputer Master Trophy§r",
-				TrophyColorRed: 65,
-				TrophyColorGreen: 205,
 				TrophyColorBlue: 52,
-				TrophyVariant: "gold",
-				TrophyShowsTooltip: 1b
+				TrophyColorRed: 65,
+				TrophyName: "§fComputer Master Trophy§r"
 			}
 		}
 	},

@@ -3,12 +3,12 @@
 		id: "danknull:danknull_dock",
 		tag: {
 			BlockEntityTag: {
-				id: "danknull:danknull_dock",
 				DankNullStack: {
-					id: "danknull:dank_null_0",
 					Count: 1,
+					id: "danknull:dank_null_0",
 					Damage: 0s
-				}
+				},
+				id: "danknull:danknull_dock"
 			}
 		}
 	},
@@ -27,12 +27,12 @@
 			id: "danknull:danknull_dock",
 			tag: {
 				BlockEntityTag: {
-					id: "danknull:danknull_dock",
 					DankNullStack: {
-						id: "danknull:dank_null_0",
 						Count: 1,
+						id: "danknull:dank_null_0",
 						Damage: 0s
-					}
+					},
+					id: "danknull:danknull_dock"
 				}
 			}
 		},

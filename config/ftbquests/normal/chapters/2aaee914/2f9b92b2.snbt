@@ -12,10 +12,10 @@
 		type: "item",
 		items: [{
 			id: "mekanism:machineblock2",
-			Damage: 4s,
 			tag: {
 				mekData: {}
-			}
+			},
+			Damage: 4s
 		}],
 		ignore_nbt: 1b
 	}],

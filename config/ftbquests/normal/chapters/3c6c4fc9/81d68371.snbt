@@ -48,16 +48,16 @@
 		uid: "cbcf5d0a",
 		type: "item",
 		items: [{
+			ForgeCaps: {
+				Parent: {
+					data: "wallTargetChamber",
+					id: "ore"
+				}
+			},
 			id: "itemfilters:filter",
 			tag: {
 				display: {
 					Name: "Any wallTargetChamber"
-				}
-			},
-			ForgeCaps: {
-				Parent: {
-					id: "ore",
-					data: "wallTargetChamber"
 				}
 			}
 		}],

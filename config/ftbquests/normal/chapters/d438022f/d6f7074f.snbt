@@ -3,12 +3,12 @@
 	icon: {
 		id: "simple_trophies:trophy",
 		tag: {
+			TrophyVariant: "gold",
 			TrophyColorGreen: 38,
 			TrophyShowsTooltip: 1b,
-			TrophyVariant: "gold",
 			TrophyItem: {
-				Count: 1b,
 				id: "openblocks:hang_glider",
+				Count: 1b,
 				Damage: 0s
 			},
 			TrophyColorBlue: 35,
@@ -120,12 +120,12 @@
 		item: {
 			id: "simple_trophies:trophy",
 			tag: {
+				TrophyVariant: "gold",
 				TrophyColorGreen: 38,
 				TrophyShowsTooltip: 1b,
-				TrophyVariant: "gold",
 				TrophyItem: {
-					Count: 1b,
 					id: "openblocks:hang_glider",
+					Count: 1b,
 					Damage: 0s
 				},
 				TrophyColorBlue: 35,

@@ -2,7 +2,6 @@
 	title: "{q.thermal_expansion.name}",
 	icon: {
 		id: "thermalexpansion:machine",
-		Damage: 3s,
 		tag: {
 			RSControl: 0b,
 			Facing: 3b,
@@ -16,7 +15,8 @@
 				2b,
 				2b
 			]
-		}
+		},
+		Damage: 3s
 	},
 	description: [
 		"{q.thermal_expansion.desc}"

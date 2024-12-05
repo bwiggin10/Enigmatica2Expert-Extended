@@ -1,8 +1,8 @@
 {
 	icon: {
 		id: "mekanism:machineblock",
-		Damage: 11s,
-		tag: {}
+		tag: {},
+		Damage: 11s
 	},
 	x: 2.8d,
 	y: 10.5d,
@@ -17,10 +17,10 @@
 		type: "item",
 		items: [{
 			id: "mekanism:machineblock",
-			Damage: 11s,
 			tag: {
 				mekData: {}
-			}
+			},
+			Damage: 11s
 		}],
 		count: 2L,
 		ignore_damage: true,

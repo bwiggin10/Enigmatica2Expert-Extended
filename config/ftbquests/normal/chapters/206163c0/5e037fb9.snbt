@@ -3,12 +3,12 @@
 	icon: {
 		id: "simple_trophies:trophy",
 		tag: {
+			TrophyVariant: "gold",
 			TrophyColorGreen: 143,
 			TrophyShowsTooltip: 1b,
-			TrophyVariant: "gold",
 			TrophyItem: {
-				Count: 1b,
 				id: "forestry:bee_queen_ge",
+				Count: 1b,
 				Damage: 0s
 			},
 			TrophyColorBlue: 39,
@@ -66,12 +66,12 @@
 		item: {
 			id: "simple_trophies:trophy",
 			tag: {
+				TrophyVariant: "gold",
 				TrophyColorGreen: 143,
 				TrophyShowsTooltip: 1b,
-				TrophyVariant: "gold",
 				TrophyItem: {
-					Count: 1b,
 					id: "forestry:bee_queen_ge",
+					Count: 1b,
 					Damage: 0s
 				},
 				TrophyColorBlue: 39,

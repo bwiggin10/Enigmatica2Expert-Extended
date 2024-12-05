@@ -1,6 +1,14 @@
 {
 	title: "{q.nuclearcraft_overh.hev_armor.name}",
-	icon: "qmd:chest_hev",
+	icon: {
+		id: "qmd:chest_hev",
+		tag: {
+			energyStorage: {
+				capacity: 1000000L,
+				energy: 0L
+			}
+		}
+	},
 	x: 18.6d,
 	y: 8.5d,
 	text: [
@@ -17,8 +25,8 @@
 			id: "qmd:helm_hev",
 			tag: {
 				energyStorage: {
-					energy: 0L,
-					capacity: 1000000L
+					capacity: 1000000L,
+					energy: 0L
 				}
 			}
 		}],
@@ -32,8 +40,8 @@
 			id: "qmd:chest_hev",
 			tag: {
 				energyStorage: {
-					energy: 0L,
-					capacity: 1000000L
+					capacity: 1000000L,
+					energy: 0L
 				}
 			}
 		}],
@@ -47,8 +55,8 @@
 			id: "qmd:legs_hev",
 			tag: {
 				energyStorage: {
-					energy: 0L,
-					capacity: 1000000L
+					capacity: 1000000L,
+					energy: 0L
 				}
 			}
 		}],
@@ -62,8 +70,8 @@
 			id: "qmd:boots_hev",
 			tag: {
 				energyStorage: {
-					energy: 0L,
-					capacity: 1000000L
+					capacity: 1000000L,
+					energy: 0L
 				}
 			}
 		}],

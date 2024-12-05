@@ -18,16 +18,16 @@
 		type: "item",
 		disable_toast: true,
 		items: [{
+			ForgeCaps: {
+				Parent: {
+					data: "oreCobalt",
+					id: "ore"
+				}
+			},
 			id: "itemfilters:filter",
 			tag: {
 				display: {
 					Name: "Any oreCobalt"
-				}
-			},
-			ForgeCaps: {
-				Parent: {
-					id: "ore",
-					data: "oreCobalt"
 				}
 			}
 		}]
@@ -37,16 +37,16 @@
 		type: "item",
 		disable_toast: true,
 		items: [{
+			ForgeCaps: {
+				Parent: {
+					data: "oreArdite",
+					id: "ore"
+				}
+			},
 			id: "itemfilters:filter",
 			tag: {
 				display: {
 					Name: "Any oreArdite"
-				}
-			},
-			ForgeCaps: {
-				Parent: {
-					id: "ore",
-					data: "oreArdite"
 				}
 			}
 		}]

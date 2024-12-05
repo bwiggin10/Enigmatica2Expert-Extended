@@ -1,8 +1,8 @@
 {
 	title: "{q.extra_utilities.generators_bottom_.name}",
 	icon: {
-		id: "minecraft:air",
 		Count: 0,
+		id: "minecraft:air",
 		Damage: 0s
 	},
 	disable_toast: true,

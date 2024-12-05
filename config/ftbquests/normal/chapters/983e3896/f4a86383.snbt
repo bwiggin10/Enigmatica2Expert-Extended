@@ -3,17 +3,17 @@
 	icon: {
 		id: "simple_trophies:trophy",
 		tag: {
+			TrophyVariant: "gold",
 			TrophyColorGreen: 240,
 			TrophyShowsTooltip: 1b,
-			TrophyVariant: "gold",
 			TrophyItem: {
-				Count: 1b,
-				id: "astralsorcery:blockcelestialcollectorcrystal",
 				tag: {
 					astralsorcery: {
 						collectorType: 1
 					}
 				},
+				id: "astralsorcery:blockcelestialcollectorcrystal",
+				Count: 1b,
 				Damage: 0s
 			},
 			TrophyColorBlue: 240,
@@ -64,17 +64,17 @@
 		item: {
 			id: "simple_trophies:trophy",
 			tag: {
+				TrophyVariant: "gold",
 				TrophyColorGreen: 240,
 				TrophyShowsTooltip: 1b,
-				TrophyVariant: "gold",
 				TrophyItem: {
-					Count: 1b,
-					id: "astralsorcery:blockcelestialcollectorcrystal",
 					tag: {
 						astralsorcery: {
 							collectorType: 1
 						}
 					},
+					id: "astralsorcery:blockcelestialcollectorcrystal",
+					Count: 1b,
 					Damage: 0s
 				},
 				TrophyColorBlue: 240,

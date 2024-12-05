@@ -13,16 +13,16 @@
 		uid: "b54ff04b",
 		type: "item",
 		items: [{
+			ForgeCaps: {
+				Parent: {
+					data: "runeBlood",
+					id: "ore"
+				}
+			},
 			id: "itemfilters:filter",
 			tag: {
 				display: {
 					Name: "Any runeBlood"
-				}
-			},
-			ForgeCaps: {
-				Parent: {
-					id: "ore",
-					data: "runeBlood"
 				}
 			}
 		}],

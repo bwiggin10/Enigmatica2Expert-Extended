@@ -18,8 +18,8 @@
 				Profile_0: {
 					bowFireArrow: 0b,
 					bowZoomModifier: 0,
-					bowArrowSpeedModifier: 0,
 					bowShockPower: 0.0d,
+					bowArrowSpeedModifier: 0,
 					bowAutoFire: 0b,
 					bowExplosionPower: 0.0d,
 					bowArrowDamage: 2.0d

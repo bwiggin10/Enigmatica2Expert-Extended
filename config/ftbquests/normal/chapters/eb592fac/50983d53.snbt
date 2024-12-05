@@ -16,8 +16,8 @@
 			id: "ic2:crystal_memory",
 			tag: {
 				Pattern: {
-					id: "rftools:shape_card",
 					Count: 1b,
+					id: "rftools:shape_card",
 					Damage: 0s
 				}
 			}

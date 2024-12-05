@@ -16,8 +16,8 @@
 			id: "ic2:crystal_memory",
 			tag: {
 				Pattern: {
-					id: "teslacorelib:base_addon",
 					Count: 1b,
+					id: "teslacorelib:base_addon",
 					Damage: 0s
 				}
 			}

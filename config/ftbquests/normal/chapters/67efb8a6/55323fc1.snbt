@@ -3,12 +3,12 @@
 	icon: {
 		id: "simple_trophies:trophy",
 		tag: {
+			TrophyVariant: "gold",
 			TrophyColorGreen: 128,
 			TrophyShowsTooltip: 1b,
-			TrophyVariant: "gold",
 			TrophyItem: {
-				Count: 1b,
 				id: "draconicevolution:reactor_core",
+				Count: 1b,
 				Damage: 0s
 			},
 			TrophyColorBlue: 43,
@@ -67,12 +67,12 @@
 		item: {
 			id: "simple_trophies:trophy",
 			tag: {
+				TrophyVariant: "gold",
 				TrophyColorGreen: 128,
 				TrophyShowsTooltip: 1b,
-				TrophyVariant: "gold",
 				TrophyItem: {
-					Count: 1b,
 					id: "draconicevolution:reactor_core",
+					Count: 1b,
 					Damage: 0s
 				},
 				TrophyColorBlue: 43,

@@ -3,19 +3,19 @@
 	rewards: [{
 		item: {
 			id: "mekanism:basicblock2",
-			Damage: 4s,
 			tag: {
 				tier: 3
-			}
+			},
+			Damage: 4s
 		}
 	},
 	{
 		item: {
 			id: "mekanism:basicblock2",
-			Damage: 3s,
 			tag: {
 				tier: 2
-			}
+			},
+			Damage: 3s
 		}
 	}]
 }

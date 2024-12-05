@@ -3,12 +3,12 @@
 	icon: {
 		id: "simple_trophies:trophy",
 		tag: {
+			TrophyVariant: "gold",
 			TrophyColorGreen: 118,
 			TrophyShowsTooltip: 1b,
-			TrophyVariant: "gold",
 			TrophyItem: {
-				Count: 1b,
 				id: "rftools:infused_diamond",
+				Count: 1b,
 				Damage: 0s
 			},
 			TrophyColorBlue: 151,
@@ -59,12 +59,12 @@
 		item: {
 			id: "simple_trophies:trophy",
 			tag: {
+				TrophyVariant: "gold",
 				TrophyColorGreen: 118,
 				TrophyShowsTooltip: 1b,
-				TrophyVariant: "gold",
 				TrophyItem: {
-					Count: 1b,
 					id: "rftools:infused_diamond",
+					Count: 1b,
 					Damage: 0s
 				},
 				TrophyColorBlue: 151,

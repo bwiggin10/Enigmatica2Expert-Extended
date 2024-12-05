@@ -1,8 +1,21 @@
 {
 	title: "{q.getting_started.harder_branch_mining.name}",
 	icon: {
+		ForgeCaps: {
+			"plustic:": {
+				Size: 1,
+				Items: []
+			},
+			"plustic:fruitsalad_cap": {
+				Size: 5,
+				Items: []
+			},
+			"plustic:musicofthespheres_cap": {
+				Size: 1,
+				Items: []
+			}
+		},
 		id: "tconstruct:pickaxe",
-		Damage: 1s,
 		tag: {
 			StatsOriginal: {
 				AttackSpeedMultiplier: 1.0f,
@@ -12,13 +25,6 @@
 				HarvestLevel: 0,
 				Attack: 2.25f
 			},
-			Special: {
-				Categories: [
-					"aoe",
-					"tool",
-					"harvest"
-				]
-			},
 			Stats: {
 				AttackSpeedMultiplier: 1.0f,
 				MiningSpeed: 1.5f,
@@ -27,6 +33,23 @@
 				HarvestLevel: 0,
 				Attack: 2.25f,
 				Broken: 1b
+			},
+			Special: {
+				Categories: [
+					"aoe",
+					"tool",
+					"harvest"
+				]
+			},
+			TinkerData: {
+				Materials: [
+					"stone",
+					"stone",
+					"stone"
+				],
+				Modifiers: [
+					"toolleveling"
+				]
 			},
 			Modifiers: [{
 				identifier: "cheap",
@@ -45,22 +68,13 @@
 				bonus_modifiers: 0,
 				xp: 1
 			}],
-			TinkerData: {
-				Materials: [
-					"stone",
-					"stone",
-					"stone"
-				],
-				Modifiers: [
-					"toolleveling"
-				]
-			},
 			Traits: [
 				"cheap",
 				"cheapskate",
 				"toolleveling"
 			]
-		}
+		},
+		Damage: 1s
 	},
 	x: 3.625d,
 	y: 1.0d,

@@ -3,9 +3,9 @@
 	icon: {
 		id: "simple_trophies:trophy",
 		tag: {
+			TrophyVariant: "gold",
 			TrophyColorGreen: 48,
 			TrophyShowsTooltip: 1b,
-			TrophyVariant: "gold",
 			TrophyItem: {
 				ForgeCaps: {
 					Parent: {
@@ -13,18 +13,18 @@
 						Items: []
 					}
 				},
-				Count: 1b,
-				id: "immersiveengineering:railgun",
 				tag: {
 					"IE:Shader": {
-						Count: 1b,
-						id: "immersiveengineering:shader",
 						tag: {
 							shader_name: "The Kindled"
 						},
+						id: "immersiveengineering:shader",
+						Count: 1b,
 						Damage: 0s
 					}
 				},
+				id: "immersiveengineering:railgun",
+				Count: 1b,
 				Damage: 0s
 			},
 			TrophyColorBlue: 35,
@@ -91,9 +91,9 @@
 		item: {
 			id: "simple_trophies:trophy",
 			tag: {
+				TrophyVariant: "gold",
 				TrophyColorGreen: 48,
 				TrophyShowsTooltip: 1b,
-				TrophyVariant: "gold",
 				TrophyItem: {
 					ForgeCaps: {
 						Parent: {
@@ -101,18 +101,18 @@
 							Items: []
 						}
 					},
-					Count: 1b,
-					id: "immersiveengineering:railgun",
 					tag: {
 						"IE:Shader": {
-							Count: 1b,
-							id: "immersiveengineering:shader",
 							tag: {
 								shader_name: "The Kindled"
 							},
+							id: "immersiveengineering:shader",
+							Count: 1b,
 							Damage: 0s
 						}
 					},
+					id: "immersiveengineering:railgun",
+					Count: 1b,
 					Damage: 0s
 				},
 				TrophyColorBlue: 35,

@@ -3,12 +3,12 @@
 	icon: {
 		id: "simple_trophies:trophy",
 		tag: {
+			TrophyVariant: "gold",
 			TrophyColorGreen: 222,
 			TrophyShowsTooltip: 1b,
-			TrophyVariant: "gold",
 			TrophyItem: {
-				Count: 1b,
 				id: "libvulpes:elitemotor",
+				Count: 1b,
 				Damage: 0s
 			},
 			TrophyColorBlue: 146,
@@ -68,12 +68,12 @@
 		item: {
 			id: "simple_trophies:trophy",
 			tag: {
+				TrophyVariant: "gold",
 				TrophyColorGreen: 222,
 				TrophyShowsTooltip: 1b,
-				TrophyVariant: "gold",
 				TrophyItem: {
-					Count: 1b,
 					id: "libvulpes:elitemotor",
+					Count: 1b,
 					Damage: 0s
 				},
 				TrophyColorBlue: 146,

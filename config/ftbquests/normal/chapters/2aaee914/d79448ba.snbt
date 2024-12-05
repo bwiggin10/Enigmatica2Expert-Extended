@@ -3,15 +3,15 @@
 	icon: {
 		id: "simple_trophies:trophy",
 		tag: {
+			TrophyVariant: "gold",
 			TrophyColorGreen: 88,
 			TrophyShowsTooltip: 1b,
-			TrophyVariant: "gold",
 			TrophyItem: {
-				Count: 1b,
-				id: "mekanism:energycube",
 				tag: {
 					tier: 3
 				},
+				id: "mekanism:energycube",
+				Count: 1b,
 				Damage: 0s
 			},
 			TrophyColorBlue: 171,
@@ -82,15 +82,15 @@
 		item: {
 			id: "simple_trophies:trophy",
 			tag: {
+				TrophyVariant: "gold",
 				TrophyColorGreen: 88,
 				TrophyShowsTooltip: 1b,
-				TrophyVariant: "gold",
 				TrophyItem: {
-					Count: 1b,
-					id: "mekanism:energycube",
 					tag: {
 						tier: 3
 					},
+					id: "mekanism:energycube",
+					Count: 1b,
 					Damage: 0s
 				},
 				TrophyColorBlue: 171,

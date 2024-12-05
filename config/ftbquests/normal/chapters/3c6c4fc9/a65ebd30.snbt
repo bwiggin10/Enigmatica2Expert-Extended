@@ -3,12 +3,12 @@
 	icon: {
 		id: "simple_trophies:trophy",
 		tag: {
+			TrophyVariant: "gold",
 			TrophyColorGreen: 207,
 			TrophyShowsTooltip: 1b,
-			TrophyVariant: "gold",
 			TrophyItem: {
-				Count: 1b,
 				id: "nuclearcraft:rtg_plutonium",
+				Count: 1b,
 				Damage: 0s
 			},
 			TrophyColorBlue: 42,
@@ -67,12 +67,12 @@
 		item: {
 			id: "simple_trophies:trophy",
 			tag: {
+				TrophyVariant: "gold",
 				TrophyColorGreen: 207,
 				TrophyShowsTooltip: 1b,
-				TrophyVariant: "gold",
 				TrophyItem: {
-					Count: 1b,
 					id: "nuclearcraft:rtg_plutonium",
+					Count: 1b,
 					Damage: 0s
 				},
 				TrophyColorBlue: 42,

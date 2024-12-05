@@ -28,8 +28,12 @@
 		item: {
 			id: "nuclearcraft:voltaic_pile_basic",
 			tag: {
-				capacity: 1600000,
 				maxTransfer: 80000,
+				energyStorage: {
+					capacity: 1600000L,
+					energy: 0L
+				},
+				capacity: 1600000,
 				energy: 0
 			}
 		}

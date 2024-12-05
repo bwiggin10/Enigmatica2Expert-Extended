@@ -3,12 +3,12 @@
 	icon: {
 		id: "simple_trophies:trophy",
 		tag: {
+			TrophyVariant: "gold",
 			TrophyColorGreen: 129,
 			TrophyShowsTooltip: 1b,
-			TrophyVariant: "gold",
 			TrophyItem: {
-				Count: 1b,
 				id: "industrialforegoing:infinity_drill",
+				Count: 1b,
 				Damage: 0s
 			},
 			TrophyColorBlue: 152,
@@ -64,12 +64,12 @@
 		item: {
 			id: "simple_trophies:trophy",
 			tag: {
+				TrophyVariant: "gold",
 				TrophyColorGreen: 129,
 				TrophyShowsTooltip: 1b,
-				TrophyVariant: "gold",
 				TrophyItem: {
-					Count: 1b,
 					id: "industrialforegoing:infinity_drill",
+					Count: 1b,
 					Damage: 0s
 				},
 				TrophyColorBlue: 152,

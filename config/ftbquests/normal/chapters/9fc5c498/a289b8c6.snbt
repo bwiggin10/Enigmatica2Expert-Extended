@@ -3,12 +3,12 @@
 	icon: {
 		id: "simple_trophies:trophy",
 		tag: {
+			TrophyVariant: "gold",
 			TrophyColorGreen: 38,
 			TrophyShowsTooltip: 1b,
-			TrophyVariant: "gold",
 			TrophyItem: {
-				Count: 1b,
 				id: "enderio:block_enhanced_sag_mill",
+				Count: 1b,
 				Damage: 0s
 			},
 			TrophyColorBlue: 86,
@@ -58,12 +58,12 @@
 		item: {
 			id: "simple_trophies:trophy",
 			tag: {
+				TrophyVariant: "gold",
 				TrophyColorGreen: 38,
 				TrophyShowsTooltip: 1b,
-				TrophyVariant: "gold",
 				TrophyItem: {
-					Count: 1b,
 					id: "enderio:block_enhanced_sag_mill",
+					Count: 1b,
 					Damage: 0s
 				},
 				TrophyColorBlue: 86,

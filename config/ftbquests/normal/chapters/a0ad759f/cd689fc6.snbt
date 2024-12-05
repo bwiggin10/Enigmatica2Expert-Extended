@@ -1,21 +1,21 @@
 {
 	title: "{q.computers.mining_robot.name}",
 	icon: {
-		id: "tconstruct:hammer",
 		ForgeCaps: {
-			"plustic:fruitsalad_cap": {
-				Items: [],
-				Size: 5
-			},
 			"plustic:": {
-				Items: [],
-				Size: 1
+				Size: 1,
+				Items: []
+			},
+			"plustic:fruitsalad_cap": {
+				Size: 5,
+				Items: []
 			},
 			"plustic:musicofthespheres_cap": {
-				Items: [],
-				Size: 1
+				Size: 1,
+				Items: []
 			}
-		}
+		},
+		id: "tconstruct:hammer"
 	},
 	x: 17.2d,
 	y: 4.1d,
@@ -29,22 +29,22 @@
 		uid: "4ff56b29",
 		type: "item",
 		items: [{
-			id: "tconstruct:hammer",
-			Damage: 1032s,
 			ForgeCaps: {
-				"plustic:fruitsalad_cap": {
-					Items: [],
-					Size: 5
-				},
 				"plustic:": {
-					Items: [],
-					Size: 1
+					Size: 1,
+					Items: []
+				},
+				"plustic:fruitsalad_cap": {
+					Size: 5,
+					Items: []
 				},
 				"plustic:musicofthespheres_cap": {
-					Items: [],
-					Size: 1
+					Size: 1,
+					Items: []
 				}
-			}
+			},
+			id: "tconstruct:hammer",
+			Damage: 1032s
 		}],
 		ignore_damage: true,
 		ignore_nbt: 1b

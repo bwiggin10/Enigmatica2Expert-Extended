@@ -22,10 +22,10 @@
 		type: "item",
 		items: [{
 			id: "thaumadditions:vis_scribing_tools",
-			Damage: 150s,
 			tag: {
 				tc.charge: 0
-			}
+			},
+			Damage: 150s
 		}],
 		ignore_damage: true,
 		ignore_nbt: 1b
@@ -35,8 +35,8 @@
 		type: "item",
 		items: [{
 			id: "botania:manainkwell",
-			Damage: 150s,
-			tag: {}
+			tag: {},
+			Damage: 150s
 		}],
 		ignore_damage: true,
 		ignore_nbt: 1b

@@ -9,21 +9,21 @@
 		uid: "44020ba1",
 		type: "item",
 		items: [{
-			id: "tcomplement:sledge_hammer",
 			ForgeCaps: {
-				"plustic:fruitsalad_cap": {
-					Items: [],
-					Size: 5
-				},
 				"plustic:": {
-					Items: [],
-					Size: 1
+					Size: 1,
+					Items: []
+				},
+				"plustic:fruitsalad_cap": {
+					Size: 5,
+					Items: []
 				},
 				"plustic:musicofthespheres_cap": {
-					Items: [],
-					Size: 1
+					Size: 1,
+					Items: []
 				}
-			}
+			},
+			id: "tcomplement:sledge_hammer"
 		}],
 		ignore_damage: true,
 		ignore_nbt: 1b

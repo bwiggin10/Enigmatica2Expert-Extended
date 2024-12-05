@@ -19,8 +19,8 @@
 			id: "rustic:elixir",
 			tag: {
 				ElixirEffects: [{
-					Effect: "minecraft:haste",
 					Duration: 9600,
+					Effect: "minecraft:haste",
 					Amplifier: 3
 				}]
 			}

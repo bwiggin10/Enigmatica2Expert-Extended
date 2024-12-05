@@ -18,8 +18,8 @@
 		type: "item",
 		items: [{
 			id: "ic2:jetpack_electric",
-			Damage: 26s,
-			tag: {}
+			tag: {},
+			Damage: 26s
 		},
 		{
 			id: "ic2:jetpack_electric",

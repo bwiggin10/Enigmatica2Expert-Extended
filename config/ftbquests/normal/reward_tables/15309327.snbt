@@ -212,14 +212,20 @@
 	},
 	{
 		item: {
+			ForgeCaps: {
+				Parent: {
+					Size: 1,
+					Items: []
+				}
+			},
 			id: "immersiveengineering:railgun",
 			tag: {
 				"IE:Shader": {
-					id: "immersiveengineering:shader",
-					Count: 1b,
 					tag: {
 						shader_name: "Hollow"
 					},
+					Count: 1b,
+					id: "immersiveengineering:shader",
 					Damage: 0s
 				},
 				upgrades: {
@@ -232,14 +238,20 @@
 	},
 	{
 		item: {
+			ForgeCaps: {
+				Parent: {
+					Size: 1,
+					Items: []
+				}
+			},
 			id: "immersiveengineering:chemthrower",
 			tag: {
 				"IE:Shader": {
-					id: "immersiveengineering:shader",
-					Count: 1b,
 					tag: {
 						shader_name: "Dominator"
 					},
+					Count: 1b,
+					id: "immersiveengineering:shader",
 					Damage: 0s
 				},
 				Fluid: {
@@ -255,14 +267,20 @@
 	},
 	{
 		item: {
+			ForgeCaps: {
+				Parent: {
+					Size: 21,
+					Items: []
+				}
+			},
 			id: "immersiveengineering:revolver",
 			tag: {
 				"IE:Shader": {
-					id: "immersiveengineering:shader",
-					Count: 1b,
 					tag: {
 						shader_name: "Microshark"
 					},
+					Count: 1b,
+					id: "immersiveengineering:shader",
 					Damage: 0s
 				},
 				upgrades: {
@@ -270,12 +288,6 @@
 					bullets: 6
 				},
 				bullets: []
-			},
-			ForgeCaps: {
-				Parent: {
-					Items: [],
-					Size: 21
-				}
 			}
 		}
 	},
@@ -358,9 +370,9 @@
 		item_name: "Uncommon",
 		color: 8103344,
 		drops: {
+			boss: 0,
 			passive: 0,
-			monster: 0,
-			boss: 0
+			monster: 0
 		}
 	}
 }

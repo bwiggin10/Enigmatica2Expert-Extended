@@ -321,9 +321,9 @@
 		string_id: "materials",
 		color: 2686988,
 		drops: {
+			boss: 0,
 			passive: 0,
-			monster: 0,
-			boss: 0
+			monster: 0
 		}
 	}
 }

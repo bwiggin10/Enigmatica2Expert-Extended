@@ -77,50 +77,50 @@
 		},
 		{
 			id: "ic2:te",
-			Damage: 68s,
-			tag: {}
+			tag: {},
+			Damage: 68s
 		},
 		{
 			id: "ic2:te",
-			Damage: 69s,
-			tag: {}
+			tag: {},
+			Damage: 69s
 		},
 		{
 			id: "ic2:te",
-			Damage: 70s,
-			tag: {}
+			tag: {},
+			Damage: 70s
 		},
 		{
 			id: "ic2:te",
-			Damage: 71s,
-			tag: {}
+			tag: {},
+			Damage: 71s
 		},
 		{
 			id: "mekanism:machineblock",
-			Damage: 14s,
 			tag: {
 				mekData: {}
-			}
+			},
+			Damage: 14s
 		},
 		{
 			id: "ic2:charging_re_battery",
-			Damage: 26s,
-			tag: {}
+			tag: {},
+			Damage: 26s
 		},
 		{
 			id: "ic2:advanced_charging_re_battery",
-			Damage: 26s,
-			tag: {}
+			tag: {},
+			Damage: 26s
 		},
 		{
 			id: "ic2:charging_energy_crystal",
-			Damage: 26s,
-			tag: {}
+			tag: {},
+			Damage: 26s
 		},
 		{
 			id: "ic2:charging_lapotron_crystal",
-			Damage: 26s,
-			tag: {}
+			tag: {},
+			Damage: 26s
 		},
 		{
 			id: "thermalexpansion:capacitor",
@@ -130,31 +130,31 @@
 		},
 		{
 			id: "thermalexpansion:capacitor",
-			Damage: 1s,
 			tag: {
 				Energy: 2000000
-			}
+			},
+			Damage: 1s
 		},
 		{
 			id: "thermalexpansion:capacitor",
-			Damage: 2s,
 			tag: {
 				Energy: 4500000
-			}
+			},
+			Damage: 2s
 		},
 		{
 			id: "thermalexpansion:capacitor",
-			Damage: 3s,
 			tag: {
 				Energy: 8000000
-			}
+			},
+			Damage: 3s
 		},
 		{
 			id: "thermalexpansion:capacitor",
-			Damage: 4s,
 			tag: {
 				Energy: 12500000
-			}
+			},
+			Damage: 4s
 		},
 		{
 			id: "randomthings:spectrecharger",
@@ -164,17 +164,17 @@
 		},
 		{
 			id: "randomthings:spectrecharger",
-			Damage: 1s,
 			tag: {
 				options: {}
-			}
+			},
+			Damage: 1s
 		},
 		{
 			id: "randomthings:spectrecharger",
-			Damage: 2s,
 			tag: {
 				options: {}
-			}
+			},
+			Damage: 2s
 		},
 		{
 			item: "appliedenergistics2:charger"

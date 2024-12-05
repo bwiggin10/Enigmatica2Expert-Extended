@@ -23,16 +23,16 @@
 			id: "forestry:research_note",
 			tag: {
 				res: {
-					Name: "Gkiritol",
-					Id: "9fed2c30-d8ec-4c92-a209-ad93f94f8f79"
+					Id: "9fed2c30-d8ec-4c92-a209-ad93f94f8f79",
+					Name: "Gkiritol"
 				},
-				TYP: 1b,
 				INN: {
-					ROT: "rootBees",
+					RST: "forestry.speciesCommon",
 					AL0: "forestry.speciesMeadows",
-					AL1: "forestry.speciesModest",
-					RST: "forestry.speciesCommon"
-				}
+					ROT: "rootBees",
+					AL1: "forestry.speciesModest"
+				},
+				TYP: 1b
 			}
 		}
 	},

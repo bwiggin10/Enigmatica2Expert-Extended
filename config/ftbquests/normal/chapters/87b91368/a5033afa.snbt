@@ -4,13 +4,13 @@
 		id: "rats:rat_nugget_ore",
 		tag: {
 			OreItem: {
-				Count: 1b,
 				id: "thermalfoundation:ore",
+				Count: 1b,
 				Damage: 4s
 			},
 			IngotItem: {
-				Count: 1b,
 				id: "thermalfoundation:material",
+				Count: 1b,
 				Damage: 132s
 			}
 		}

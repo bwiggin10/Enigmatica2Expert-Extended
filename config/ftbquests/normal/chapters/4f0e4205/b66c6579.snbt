@@ -3,12 +3,12 @@
 	icon: {
 		id: "simple_trophies:trophy",
 		tag: {
+			TrophyVariant: "gold",
 			TrophyColorGreen: 209,
 			TrophyShowsTooltip: 1b,
-			TrophyVariant: "gold",
 			TrophyItem: {
-				Count: 1b,
 				id: "twilightforest:miniature_structure",
+				Count: 1b,
 				Damage: 0s
 			},
 			TrophyColorBlue: 0,
@@ -50,12 +50,12 @@
 		item: {
 			id: "simple_trophies:trophy",
 			tag: {
+				TrophyVariant: "gold",
 				TrophyColorGreen: 209,
 				TrophyShowsTooltip: 1b,
-				TrophyVariant: "gold",
 				TrophyItem: {
-					Count: 1b,
 					id: "twilightforest:miniature_structure",
+					Count: 1b,
 					Damage: 0s
 				},
 				TrophyColorBlue: 0,

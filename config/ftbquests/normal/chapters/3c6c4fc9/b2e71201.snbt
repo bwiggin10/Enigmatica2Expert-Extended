@@ -56,21 +56,7 @@
 		item: {
 			id: "littletiles:multitiles",
 			tag: {
-				grid: 1,
-				size: [I;
-					3,
-					4,
-					3
-				],
-				min: [I;
-					0,
-					0,
-					0
-				],
 				tiles: [{
-					tile: {
-						block: "minecraft:gold_block"
-					},
 					boxes: [
 						[I;
 							0,
@@ -168,7 +154,10 @@
 							4,
 							2
 						]
-					]
+					],
+					tile: {
+						block: "minecraft:gold_block"
+					}
 				},
 				{
 					bBox: [I;
@@ -184,9 +173,6 @@
 					}
 				},
 				{
-					tile: {
-						block: "trinity:thermonuclear_core_pu239:1"
-					},
 					boxes: [
 						[I;
 							1,
@@ -212,12 +198,26 @@
 							4,
 							2
 						]
-					]
+					],
+					tile: {
+						block: "trinity:thermonuclear_core_pu239:1"
+					}
 				}],
-				count: 16,
+				min: [I;
+					0,
+					0,
+					0
+				],
+				size: [I;
+					3,
+					4,
+					3
+				],
+				grid: 1,
 				display: {
 					Name: "Salted Uranium-235 Thermonuclear Fission Bomb"
-				}
+				},
+				count: 16
 			}
 		}
 	}]

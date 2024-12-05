@@ -13,16 +13,16 @@
 		uid: "dc1dda9a",
 		type: "item",
 		items: [{
+			ForgeCaps: {
+				Parent: {
+					data: "myrmexEgg",
+					id: "ore"
+				}
+			},
 			id: "itemfilters:filter",
 			tag: {
 				display: {
 					Name: "Any myrmexEgg"
-				}
-			},
-			ForgeCaps: {
-				Parent: {
-					id: "ore",
-					data: "myrmexEgg"
 				}
 			}
 		}],

@@ -5,8 +5,8 @@
 			id: "rustic:cabinet",
 			tag: {
 				material: {
-					Count: 1b,
 					id: "forestry:planks.1",
+					Count: 1b,
 					Damage: 7s
 				}
 			}
@@ -18,8 +18,8 @@
 			id: "rustic:cabinet",
 			tag: {
 				material: {
-					Count: 1b,
 					id: "extrautils2:ironwood_planks",
+					Count: 1b,
 					Damage: 0s
 				}
 			}
@@ -31,8 +31,8 @@
 			id: "rustic:cabinet",
 			tag: {
 				material: {
-					Count: 1b,
 					id: "chisel:planks-dark-oak",
+					Count: 1b,
 					Damage: 5s
 				}
 			}
@@ -44,8 +44,8 @@
 			id: "rustic:cabinet",
 			tag: {
 				material: {
-					Count: 1b,
 					id: "forestry:planks.fireproof.1",
+					Count: 1b,
 					Damage: 8s
 				}
 			}

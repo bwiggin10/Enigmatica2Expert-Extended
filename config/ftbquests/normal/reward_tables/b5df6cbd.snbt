@@ -2,6 +2,20 @@
 	loot_size: 1,
 	rewards: [{
 		item: {
+			ForgeCaps: {
+				"plustic:": {
+					Size: 1,
+					Items: []
+				},
+				"plustic:fruitsalad_cap": {
+					Size: 5,
+					Items: []
+				},
+				"plustic:musicofthespheres_cap": {
+					Size: 1,
+					Items: []
+				}
+			},
 			id: "tconstruct:broadsword",
 			tag: {
 				StatsOriginal: {
@@ -11,6 +25,14 @@
 					Durability: 711,
 					HarvestLevel: 10,
 					Attack: 6.8f
+				},
+				Stats: {
+					AttackSpeedMultiplier: 1.0f,
+					MiningSpeed: 6.1609993f,
+					FreeModifiers: 2,
+					Durability: 733,
+					HarvestLevel: 10,
+					Attack: 6.915003f
 				},
 				Special: {
 					Categories: [
@@ -32,13 +54,15 @@
 						speed: 1.9039981f
 					}
 				},
-				Stats: {
-					AttackSpeedMultiplier: 1.0f,
-					MiningSpeed: 6.1609993f,
-					FreeModifiers: 2,
-					Durability: 733,
-					HarvestLevel: 10,
-					Attack: 6.915003f
+				TinkerData: {
+					Materials: [
+						"iridium",
+						"iridium",
+						"iridium"
+					],
+					Modifiers: [
+						"toolleveling"
+					]
 				},
 				Modifiers: [{
 					identifier: "dense",
@@ -55,16 +79,6 @@
 					color: 16777215,
 					level: 1
 				}],
-				TinkerData: {
-					Materials: [
-						"iridium",
-						"iridium",
-						"iridium"
-					],
-					Modifiers: [
-						"toolleveling"
-					]
-				},
 				Traits: [
 					"dense",
 					"alien",

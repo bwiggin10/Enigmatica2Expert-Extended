@@ -14,6 +14,12 @@
 		uid: "eda3e3f2",
 		type: "item",
 		items: [{
+			ForgeCaps: {
+				Parent: {
+					Size: 27,
+					Items: []
+				}
+			},
 			id: "draconicevolution:draconic_staff_of_power",
 			tag: {
 				Energy: 48000000

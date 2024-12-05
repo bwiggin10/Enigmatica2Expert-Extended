@@ -13,8 +13,8 @@
 		type: "item",
 		items: [{
 			id: "draconicevolution:draconium_capacitor",
-			Damage: 2s,
-			tag: {}
+			tag: {},
+			Damage: 2s
 		}],
 		ignore_nbt: 1b
 	}],

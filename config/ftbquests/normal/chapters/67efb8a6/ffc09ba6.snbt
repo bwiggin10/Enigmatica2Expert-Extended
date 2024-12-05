@@ -12,15 +12,15 @@
 		uid: "a60a11ff",
 		type: "item",
 		items: [{
+			ForgeCaps: {
+				Parent: {
+					Size: 9,
+					Items: []
+				}
+			},
 			id: "draconicevolution:wyvern_pick",
 			tag: {
 				Energy: 2000000
-			},
-			ForgeCaps: {
-				Parent: {
-					Items: [],
-					Size: 9
-				}
 			}
 		}],
 		ignore_nbt: 1b

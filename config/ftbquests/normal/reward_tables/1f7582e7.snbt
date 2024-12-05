@@ -6,8 +6,8 @@
 	{
 		item: {
 			id: "ic2:te",
-			Damage: 75s,
-			tag: {}
+			tag: {},
+			Damage: 75s
 		}
 	},
 	{

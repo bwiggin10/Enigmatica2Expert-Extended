@@ -1,6 +1,6 @@
 {
 	x: 0.5d,
-	y: 3.9999999999999996d,
+	y: 3.0d,
 	text: [
 		"{q.advanced_rocketry.suit_workstation.desc}"
 	],

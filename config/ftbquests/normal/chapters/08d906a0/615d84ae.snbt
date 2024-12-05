@@ -1,14 +1,14 @@
 {
 	icon: {
 		id: "tconstruct:tooltables",
-		Damage: 2s,
 		tag: {
 			textureBlock: {
-				id: "minecraft:log",
 				Count: 1,
+				id: "minecraft:log",
 				Damage: 0s
 			}
-		}
+		},
+		Damage: 2s
 	},
 	x: 4.6d,
 	y: 1.5d,

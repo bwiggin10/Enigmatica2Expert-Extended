@@ -12,6 +12,12 @@
 		uid: "88715f37",
 		type: "item",
 		items: [{
+			ForgeCaps: {
+				Parent: {
+					Size: 18,
+					Items: []
+				}
+			},
 			id: "draconicevolution:draconic_axe",
 			tag: {
 				Energy: 16000000

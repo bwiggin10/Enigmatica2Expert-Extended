@@ -5,6 +5,10 @@
 			id: "nuclearcraft:lithium_ion_battery_elite",
 			tag: {
 				maxTransfer: 102400000,
+				energyStorage: {
+					capacity: 2048000000L,
+					energy: 0L
+				},
 				capacity: 2048000000,
 				energy: 0
 			}

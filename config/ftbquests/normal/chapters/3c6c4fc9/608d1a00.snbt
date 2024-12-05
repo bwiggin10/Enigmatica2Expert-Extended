@@ -50,16 +50,16 @@
 		uid: "2cd5177b",
 		type: "item",
 		items: [{
+			ForgeCaps: {
+				Parent: {
+					data: "wallReactor",
+					id: "ore"
+				}
+			},
 			id: "itemfilters:filter",
 			tag: {
 				display: {
 					Name: "Any wallReactor"
-				}
-			},
-			ForgeCaps: {
-				Parent: {
-					id: "ore",
-					data: "wallReactor"
 				}
 			}
 		}],

@@ -13,16 +13,16 @@
 		uid: "0cc3f30c",
 		type: "item",
 		items: [{
+			ForgeCaps: {
+				Parent: {
+					data: "eyeOfDragon",
+					id: "ore"
+				}
+			},
 			id: "itemfilters:filter",
 			tag: {
 				display: {
 					Name: "Any eyeOfDragon"
-				}
-			},
-			ForgeCaps: {
-				Parent: {
-					id: "ore",
-					data: "eyeOfDragon"
 				}
 			}
 		}],

@@ -14,16 +14,16 @@
 		title: "Fuel Waste",
 		icon: "nuclearcraft:depleted_fuel_uranium 1 9",
 		items: [{
+			ForgeCaps: {
+				Parent: {
+					data: "depletedFuelReactor",
+					id: "ore"
+				}
+			},
 			id: "itemfilters:filter",
 			tag: {
 				display: {
 					Name: "Any depletedFuelReactor"
-				}
-			},
-			ForgeCaps: {
-				Parent: {
-					id: "ore",
-					data: "depletedFuelReactor"
 				}
 			}
 		}]

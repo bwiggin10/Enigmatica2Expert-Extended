@@ -14,13 +14,13 @@
 	{
 		item: {
 			id: "extrautils2:drum",
-			Damage: 2s,
 			tag: {
 				Fluid: {
 					FluidName: "biofuel",
 					Amount: 4096000
 				}
-			}
+			},
+			Damage: 2s
 		}
 	}]
 }

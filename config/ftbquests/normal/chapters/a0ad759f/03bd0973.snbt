@@ -19,12 +19,12 @@
 		type: "item",
 		item: {
 			id: "opencomputers:upgrade",
-			Damage: 15s,
 			tag: {
 				"oc:data": {
 					"oc:xp": 25650
 				}
-			}
+			},
+			Damage: 15s
 		}
 	}]
 }

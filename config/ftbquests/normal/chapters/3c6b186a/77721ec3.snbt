@@ -18,8 +18,8 @@
 		type: "item",
 		items: [{
 			id: "ic2:mining_laser",
-			Damage: 26s,
-			tag: {}
+			tag: {},
+			Damage: 26s
 		}],
 		ignore_nbt: 1b
 	}],

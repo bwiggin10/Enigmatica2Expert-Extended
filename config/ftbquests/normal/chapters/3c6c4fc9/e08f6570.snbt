@@ -15,12 +15,12 @@
 			id: "nuclearcraft:lithium_ion_battery_basic",
 			tag: {
 				maxTransfer: 1600000,
-				capacity: 32000000,
-				energy: 0,
 				energyStorage: {
-					energy: 0L,
-					capacity: 32000000L
-				}
+					capacity: 32000000L,
+					energy: 0L
+				},
+				capacity: 32000000,
+				energy: 0
 			}
 		}],
 		ignore_nbt: 1b

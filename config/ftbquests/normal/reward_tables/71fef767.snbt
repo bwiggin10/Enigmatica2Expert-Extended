@@ -4,17 +4,17 @@
 		icon: {
 			id: "immersiveengineering:bullet",
 			Count: 64,
-			Damage: 2s,
 			tag: {
 				bullet: "silver"
-			}
+			},
+			Damage: 2s
 		},
 		item: {
 			id: "immersiveengineering:bullet",
-			Damage: 2s,
 			tag: {
 				bullet: "silver"
-			}
+			},
+			Damage: 2s
 		},
 		count: 64
 	},
