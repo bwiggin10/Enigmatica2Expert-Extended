@@ -8,7 +8,7 @@ zenClass MixinTileEntityBrewingBarrel {
     #mixin ModifyVariable
     #{
     #    method: "func_73660_a",
-    #    at: {value: "STORE", ordinal = 0},
+    #    at: {value: "STORE", ordinal: 0},
     #    slice: {from: {value: "NEW", target: "(Lnet/minecraft/item/Item;)Lnet/minecraft/item/ItemStack;", ordinal: 1}},
     #    index: 5
     #}
@@ -22,7 +22,7 @@ zenClass MixinTileEntityBrewingBarrel {
     #mixin ModifyVariable
     #{
     #    method: "func_73660_a",
-    #    at: {value: "STORE", ordinal = 0},
+    #    at: {value: "STORE", ordinal: 0},
     #    slice: {from: {value: "NEW", target: "(Lnet/minecraft/item/Item;)Lnet/minecraft/item/ItemStack;", ordinal: 3}},
     #    index: 5
     #}
@@ -36,7 +36,7 @@ zenClass MixinTileEntityBrewingBarrel {
     #mixin ModifyVariable
     #{
     #    method: "func_73660_a",
-    #    at: {value: "STORE", ordinal = 0},
+    #    at: {value: "STORE", ordinal: 0},
     #    slice: {from: {value: "NEW", target: "(Lnet/minecraft/item/Item;)Lnet/minecraft/item/ItemStack;", ordinal: 4}},
     #    index: 5
     #}
@@ -50,7 +50,7 @@ zenClass MixinTileEntityBrewingBarrel {
     #mixin ModifyVariable
     #{
     #    method: "func_73660_a",
-    #    at: {value: "STORE", ordinal = 0},
+    #    at: {value: "STORE", ordinal: 0},
     #    slice: {from: {value: "NEW", target: "(Lnet/minecraft/item/Item;)Lnet/minecraft/item/ItemStack;", ordinal: 7}},
     #    index: 5
     #}
@@ -64,7 +64,7 @@ zenClass MixinTileEntityBrewingBarrel {
     #mixin ModifyVariable
     #{
     #    method: "func_73660_a",
-    #    at: {value: "STORE", ordinal = 0},
+    #    at: {value: "STORE", ordinal: 0},
     #    slice: {from: {value: "NEW", target: "(Lnet/minecraft/item/Item;)Lnet/minecraft/item/ItemStack;", ordinal: 9}},
     #    index: 5
     #}
