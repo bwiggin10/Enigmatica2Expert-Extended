@@ -218,6 +218,15 @@ ScrapBox.addDrop(<forestry:chipsets:1>.withTag({ T: 1 as short }), 0.09f);
 ScrapBox.addDrop(<forestry:chipsets:2>.withTag({ T: 2 as short }), 0.06f);
 ScrapBox.addDrop(<forestry:chipsets:3>.withTag({ T: 3 as short }), 0.015f);
 
+// Add scraps removed by mixin
+ScrapBox.addDrop(<thermalfoundation:material:768>, 0.8f);
+ScrapBox.addDrop(<thermalfoundation:material:64>, 0.8f);
+ScrapBox.addDrop(<thermalfoundation:material:65>, 0.8f);
+ScrapBox.addDrop(<thermalfoundation:material>, 0.7f);
+ScrapBox.addDrop(<thermalfoundation:material:1>, 0.7f);
+ScrapBox.addDrop(<thermalfoundation:ore>, 0.7f);
+ScrapBox.addDrop(<thermalfoundation:ore:1>, 0.7f);
+
 // Energy crystal compat
 scripts.process.compress(<ic2:dust:6> * 9, <ic2:energy_crystal:27>, 'except: compressor');
 

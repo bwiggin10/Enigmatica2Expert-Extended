@@ -5,6 +5,8 @@ import native.ic2.api.crops.CropCard;
 import native.ic2.api.crops.ICropTile;
 import native.ic2.core.item.tool.EntityMiningLaser;
 import native.ic2.core.crop.cropcard.GenericCropCard;
+import native.ic2.core.recipe.ScrapboxRecipeManager;
+import native.net.minecraft.item.ItemStack;
 
 #mixin {targets: "ic2.core.block.wiring.TileEntityChargepadBatBox"}
 zenClass MixinTileEntityChargePadBatBox {
@@ -461,5 +463,25 @@ zenClass MixinUuIndex {
     #mixin Overwrite
     function init() as void {
         // NO-OP
+    }
+}
+
+
+#mixin {targets: "ic2.core.recipe.ScrapboxRecipeManager"}
+zenClass MixinScrapboxRecipeManager {
+    #mixin Redirect
+    #{
+    #   method: "addBuiltinDrops",
+    #   at: {
+    #       value: "INVOKE",
+    #       target: "Lic2/core/recipe/ScrapboxRecipeManager;addDrop(Lnet/minecraft/item/ItemStack;F)V"
+    #   }
+    #}
+    function removeWrongOutput(manager as ScrapboxRecipeManager, item as ItemStack, chance as float) as void {
+        if (item.item.registryName.namespace == 'ic2' && (
+            item.item.registryName.path == 'dust'
+            || item.item.registryName.path == 'resource'
+        )) return;
+        manager.addDrop(item, chance);
     }
 }
