@@ -290,7 +290,7 @@ val Po = <contenttweaker:ore_phosphor>;
 val Pn = <contenttweaker:nugget_phosphor>;
 recipes.addShapeless('ingot phosphor', PH, [Pn, Pn, Pn, Pn, Pn, Pn, Pn, Pn, Pn]);
 recipes.addShapeless('nuggets phosphor', Pn * 9, [PH]);
-scripts.process.crush(<ore:blockApatite>, Po, 'only: AACrusher MekEnrichment', [Pn], [0.05]);
+scripts.process.crush(<ore:blockApatite>, Po, 'only: eu2crusher MekEnrichment', [Pn], [0.05]);
 mods.ic2.ThermalCentrifuge.addRecipe([Po * 9, Pn * 4], <forestry:resource_storage> * 9);
 
 // Phosphor Benefication

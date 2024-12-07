@@ -173,3 +173,16 @@ zenClass MixinAAItemDrill {
         return 7;
     }
 }
+
+/*
+Remove Crusher since its whole functionality copied with EU2 crusher
+that actually better since can be upgraded
+*/
+#mixin {targets: "de.ellpeck.actuallyadditions.mod.crafting.CrusherCrafting"}
+zenClass MixinCrusherCrafting {
+    #mixin Static
+    #mixin Overwrite
+    function init() as void {
+        // NO-OP
+    }
+}

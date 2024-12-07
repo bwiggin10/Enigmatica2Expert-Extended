@@ -1094,7 +1094,6 @@ static values as int[int][string] = {
   'mekanism:energytablet'                    : { 0: 8321 },
   'cyclicmagic:melter'                       : { 0: 8858 },
   'botania:blazeblock'                       : { 0: 9000 },
-  'actuallyadditions:block_grinder'          : { 0: 9040 },
   'computercraft:computer'                   : { 16384: 9392 },
   'bloodmagic:slate'                         : { 0: 10587, 1: 13333, 2: 13377, 3: 13448, 4: 48312 },
   'rftools:endergenic'                       : { 0: 11137 },

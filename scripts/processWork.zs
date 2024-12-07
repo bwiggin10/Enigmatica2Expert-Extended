@@ -252,7 +252,7 @@ function workEx(machineNameAnyCase as string, exceptionsAnyCase as string,
     }
 
     if (machineName == 'eu2crusher') {
-      // mods.extrautils2.Crusher.add(IItemStack output, IItemStack input, @Optional IItemStack secondaryOutput, @Optional float secondaryChance);
+      if (strict) { mods.extrautils2.Crusher.remove(outputItem0); }
 
       for ii in inputIngr0.itemArray {
         if (haveExtra) {
@@ -260,26 +260,6 @@ function workEx(machineNameAnyCase as string, exceptionsAnyCase as string,
         }
         else {
           mods.extrautils2.Crusher.add(outputItem0, ii);
-        }
-      }
-      return machineName;
-    }
-
-    if (machineName == 'aacrusher') {
-      if (strict) { mods.actuallyadditions.Crusher.removeRecipe(outputItem0); }
-      // mods.actuallyadditions.Crusher.addRecipe(IItemStack output, IItemStack input, @Optional IItemStack outputSecondary, @Optional int outputSecondaryChance);
-
-      if (inputIngr0.amount != 1) {
-        return info(machineNameAnyCase, getItemName(inputIngr0.itemArray[0]),
-          'received work, but this machine can only work with 1 item as input');
-      }
-
-      for ii in inputIngr0.itemArray {
-        if (haveExtra) {
-          mods.actuallyadditions.Crusher.addRecipe(outputItem0, ii, extra[0], defaultChance0_int(extraChance, 100));
-        }
-        else {
-          mods.actuallyadditions.Crusher.addRecipe(outputItem0, ii);
         }
       }
       return machineName;

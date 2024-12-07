@@ -299,7 +299,7 @@ recipes.addShaped(<enderio:block_niard>, [
   [<ore:ingotFakeIron>, <ore:barsIron>, <ore:ingotFakeIron>]]);
 
 // Compat of nano glowstone
-scripts.process.crush(<enderio:item_material:76>, <enderio:block_holier_fog> * 2, 'only: Macerator AACrusher AEGrinder crushingBlock',
+scripts.process.crush(<enderio:item_material:76>, <enderio:block_holier_fog> * 2, 'only: Macerator eu2crusher AEGrinder crushingBlock',
   [<enderio:block_holier_fog> * 2, <minecraft:clay_ball>, <minecraft:glowstone_dust>], [0.6f, 0.1f, 0.1f]);
 
 // Compunent for nano-glowstone compat
@@ -945,16 +945,16 @@ mods.thaumcraft.Infusion.registerRecipe(
   }).spiral(1));
 
 // [Grains of Prescience] from [Prescient Crystal]
-scripts.process.crush(<ore:itemPrecientCrystal>, <enderio:item_material:34>, 'only: eu2Crusher AACrusher');
+scripts.process.crush(<ore:itemPrecientCrystal>, <enderio:item_material:34>, 'only: eu2Crusher');
 
 // [Grains of Vibrancy] from [Vibrant Crystal]
-scripts.process.crush(<ore:itemVibrantCrystal>, <enderio:item_material:35>, 'only: eu2Crusher AACrusher');
+scripts.process.crush(<ore:itemVibrantCrystal>, <enderio:item_material:35>, 'only: eu2Crusher');
 
 // [Grains of Piezallity] from [Pulsating Crystal]
-scripts.process.crush(<ore:itemPulsatingCrystal>, <enderio:item_material:36>, 'only: eu2Crusher AACrusher');
+scripts.process.crush(<ore:itemPulsatingCrystal>, <enderio:item_material:36>, 'only: eu2Crusher');
 
 // [Grains of the End] from [Ender Crystal]
-scripts.process.crush(<ore:itemEnderCrystal>, <enderio:item_material:37>, 'only: eu2Crusher AACrusher');
+scripts.process.crush(<ore:itemEnderCrystal>, <enderio:item_material:37>, 'only: eu2Crusher');
 
 // The Vat early alternatives
 function addBrewAlt(fluid as ILiquidStack, ingrs as IIngredient[], output as string, extraIngr as IIngredient = null) as void {
