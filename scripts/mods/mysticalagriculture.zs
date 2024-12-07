@@ -743,6 +743,7 @@ function remakeBlock(recName as string, output as IBlockState, ingrs as IIngredi
 
 function makeSmelt(recName as string, output as ILiquidStack, ingrs as IIngredient[]) as void {
   mods.tconstruct.Melting.addRecipe(output, ingrs[0]);
+  mods.thermalexpansion.Crucible.addRecipe(output, ingrs[0].items[0], 1000);
 }
 
 function remakeSimple(recName as string, output as IIngredient, ingrs as IIngredient[]) as void {
