@@ -44,12 +44,7 @@ zenClass MixinTinkerSmeltery {
     }
 
     #mixin Static
-    #mixin Inject
-    #{
-    #    method: "registerRecipeOredictMelting",
-    #    at: {value: "HEAD"},
-    #    cancellable: true
-    #}
+    #mixin Inject {method: "registerRecipeOredictMelting", at: {value: "HEAD"}, cancellable: true}
     function disableRecipeOredictMelting(ci as CallbackInfo) as void {
         ci.cancel();
     }

@@ -113,12 +113,7 @@ For example, you cant Uncraft Mekanism Tanks or Cubes, since before fix this was
 #mixin {targets: "twilightforest.inventory.ContainerTFUncrafting"}
 zenClass MixinContainerTFUncrafting {
     #mixin Static
-    #mixin Inject
-    #{
-    #    method: "getRecipesFor",
-    #    at: {value: "RETURN"},
-    #    cancellable: true
-    #}
+    #mixin Inject {method: "getRecipesFor", at: {value: "RETURN"}, cancellable: true}
     function filterRecipes(item as ItemStack, cir as CallbackInfoReturnable) as void {
         val recipes as IRecipe[] = cir.getReturnValue() as IRecipe[];
         val recipeMap as [IRecipe][string] = {};

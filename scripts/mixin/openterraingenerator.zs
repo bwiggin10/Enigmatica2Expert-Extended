@@ -40,12 +40,7 @@ zenClass MixinDimensionData {
 #mixin {targets: "com.pg85.otg.configuration.dimensions.DimensionsConfig"}
 zenClass MixinDimensionsConfig {
   #mixin Static
-  #mixin ModifyVariable
-  #{
-  #    method: "loadFromFile",
-  #    at: { value: "STORE" },
-  #    name: "presetsConfig"
-  #}
+  #mixin ModifyVariable {method: "loadFromFile", at: { value: "STORE" }, name: "presetsConfig"}
   function removeVoidConfigData(presetsConfig as DimensionsConfig) as DimensionsConfig {
     // Remove void dimensions from world-local "Config.yaml" file
     if (isNull(presetsConfig)) return null;

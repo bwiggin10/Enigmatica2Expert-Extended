@@ -8,20 +8,12 @@ import native.cofh.thermalexpansion.util.managers.machine.SmelterManager;
 #mixin {targets: "cofh.thermalexpansion.block.dynamo.TileDynamoNumismatic"}
 zenClass MixinTileDynamoNumismatic {
     #mixin Static
-    #mixin ModifyConstant
-    #{
-    #    method: "config",
-    #    constant: {intValue: 1000}
-    #}
+    #mixin ModifyConstant {method: "config", constant: {intValue: 1000}}
     function modifyBaseEnergy0(value as int) as int {
         return 2000;
     }
 
-    #mixin ModifyConstant
-    #{
-    #    method: "installAugmentToSlot",
-    #    constant: {intValue: 4}
-    #}
+    #mixin ModifyConstant {method: "installAugmentToSlot", constant: {intValue: 4}}
     function modifyBaseEnergy1(value as int) as int {
         return 2;
     }

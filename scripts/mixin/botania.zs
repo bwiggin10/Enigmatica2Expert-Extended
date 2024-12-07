@@ -11,12 +11,7 @@ zenClass MixinManaPoolRecipeWrapper {
     #mixin Final
     var mana as int;
 
-    #mixin Inject
-    #{
-    #    method: "getTooltipStrings",
-    #    at: {value: "HEAD"},
-    #    cancellable: true
-    #}
+    #mixin Inject {method: "getTooltipStrings", at: {value: "HEAD"}, cancellable: true}
     function showManaNumericalValue(mouseX as int, mouseY as int, cir as CallbackInfoReturnable) as void {
         if (mouseX > 20 && mouseX < 125 && mouseY > 50 && mouseY < 54) {
             cir.setReturnValue([mana ~ " mana"] as [string]);
@@ -41,12 +36,7 @@ zenClass MixinRunicAltarRecipeWrapper {
 
 #mixin {targets: "vazkii.botania.common.block.subtile.functional.SubTileOrechidIgnem"}
 zenClass MixinSubTileOrechidIgnem {
-    #mixin Inject
-    #{
-    #    method: "canOperate",
-    #    at: {value: "HEAD"},
-    #    cancellable: true
-    #}
+    #mixin Inject {method: "canOperate", at: {value: "HEAD"}, cancellable: true}
     function showManaNumericalValue(cir as CallbackInfoReturnable) as void {
         cir.setReturnValue(true);
     }

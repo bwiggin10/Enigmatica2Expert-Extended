@@ -25,11 +25,7 @@ zenClass MixinIntegrationHandler {
 
 #mixin {targets: "atm.bloodworkxgaming.oeintegration.Integrations.ExcavateModifier"}
 zenClass MixinExcavateModifier {
-    #mixin ModifyConstant
-    #{
-    #    method: "<init>",
-    #    constant: {intValue: 1, ordinal: 1}
-    #}
+    #mixin ModifyConstant {method: "<init>", constant: {intValue: 1, ordinal: 1}}
     function fixArgOrder0(value as int) as int {
         return MainConfig.maxTinkersModifersCount;
     }

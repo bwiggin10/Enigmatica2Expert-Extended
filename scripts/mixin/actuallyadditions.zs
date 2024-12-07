@@ -34,11 +34,7 @@ zenClass MixinInitItems {
 
 #mixin {targets: "de.ellpeck.actuallyadditions.mod.items.ItemFillingWand"}
 zenClass MixinItemFillWand {
-    #mixin ModifyConstant
-    #{
-    #    method: "func_77663_a",
-    #    constant: {intValue: 1500}
-    #}
+    #mixin ModifyConstant {method: "func_77663_a", constant: {intValue: 1500}}
     function lessEnergyConsumption(value as int) as int {
         return 100;
     }
@@ -46,11 +42,7 @@ zenClass MixinItemFillWand {
 
 #mixin {targets: "de.ellpeck.actuallyadditions.mod.items.ItemPotionRing"}
 zenClass MixinItemPotionRing {
-    #mixin ModifyConstant
-    #{
-    #    method: "func_77663_a",
-    #    constant: {longValue: 10}
-    #}
+    #mixin ModifyConstant {method: "func_77663_a", constant: {longValue: 10}}
     function lessFrequency(value as long) as long {
         return 1000L;
     }
@@ -155,11 +147,7 @@ zenClass MixinLensMining {
 
 #mixin {targets: "de.ellpeck.actuallyadditions.mod.tile.TileEntityBioReactor"}
 zenClass MixinTileEntityBioReactor {
-    #mixin ModifyConstant
-    #{
-    #    method: "updateEntity",
-    #    constant: {intValue: 2}
-    #}
+    #mixin ModifyConstant {method: "updateEntity", constant: {intValue: 2}}
     function buffPowerGeneration(value as int) as int {
         return 4; // producePerTick = (amount * 4)²
     }
@@ -167,20 +155,12 @@ zenClass MixinTileEntityBioReactor {
 
 #mixin {targets: "de.ellpeck.actuallyadditions.mod.tile.TileEntityDisplayStand"}
 zenClass MixinTileEntityDisplayStand {
-    #mixin ModifyConstant
-    #{
-    #    method: "<init>",
-    #    constant: {intValue: 80000}
-    #}
+    #mixin ModifyConstant {method: "<init>", constant: {intValue: 80000}}
     function buffCapacity(value as int) as int {
         return 320000;
     }
 
-    #mixin ModifyConstant
-    #{
-    #    method: "<init>",
-    #    constant: {intValue: 1000}
-    #}
+    #mixin ModifyConstant {method: "<init>", constant: {intValue: 1000}}
     function buffTransferRate(value as int) as int {
         return 2000;
     }
@@ -188,8 +168,7 @@ zenClass MixinTileEntityDisplayStand {
 
 #mixin {targets: "de.ellpeck.actuallyadditions.mod.items.ItemDrill"}
 zenClass MixinAAItemDrill {
-    #mixin ModifyConstant
-    #{ method: "*", constant: { intValue: 4 } }
+    #mixin ModifyConstant {method: "*", constant: { intValue: 4 }}
     function increaseMiningLevel(value as int) as int {
         return 7;
     }

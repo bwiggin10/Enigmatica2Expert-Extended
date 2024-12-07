@@ -47,11 +47,7 @@ zenClass MixinFermenterRecipeManager {
 #mixin {targets: "forestry.factory.tiles.TileRaintank"}
 zenClass MixinTileRainTank {
     #mixin Static
-    #mixin ModifyConstant
-    #{
-    #    method: "<clinit>",
-    #    constant: {intValue: 10}
-    #}
+    #mixin ModifyConstant {method: "<clinit>", constant: {intValue: 10}}
     function increaseCapacity(value as int) as int {
         return 30000;
     }

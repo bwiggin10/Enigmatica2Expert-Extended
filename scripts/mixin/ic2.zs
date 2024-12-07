@@ -9,11 +9,7 @@ import native.ic2.core.crop.cropcard.GenericCropCard;
 #mixin {targets: "ic2.core.block.wiring.TileEntityChargepadBatBox"}
 zenClass MixinTileEntityChargePadBatBox {
     #mixin Static
-    #mixin ModifyConstant
-    #{
-    #    method: "<init>",
-    #    constant: {intValue: 40000}
-    #}
+    #mixin ModifyConstant {method: "<init>", constant: {intValue: 40000}}
     function buffEnergy(value as int) as int {
         return 160000;
     }
@@ -22,11 +18,7 @@ zenClass MixinTileEntityChargePadBatBox {
 #mixin {targets: "ic2.core.block.wiring.TileEntityChargepadCESU"}
 zenClass MixinTileEntityChargePadCESU {
     #mixin Static
-    #mixin ModifyConstant
-    #{
-    #    method: "<init>",
-    #    constant: {intValue: 300000}
-    #}
+    #mixin ModifyConstant {method: "<init>", constant: {intValue: 300000}}
     function buffEnergy(value as int) as int {
         return 600000;
     }
@@ -35,11 +27,7 @@ zenClass MixinTileEntityChargePadCESU {
 #mixin {targets: "ic2.core.block.wiring.TileEntityChargepadMFE"}
 zenClass MixinTileEntityChargePadMFE {
     #mixin Static
-    #mixin ModifyConstant
-    #{
-    #    method: "<init>",
-    #    constant: {intValue: 4000000}
-    #}
+    #mixin ModifyConstant {method: "<init>", constant: {intValue: 4000000}}
     function buffEnergy(value as int) as int {
         return 8000000;
     }
@@ -48,11 +36,7 @@ zenClass MixinTileEntityChargePadMFE {
 #mixin {targets: "ic2.core.block.wiring.TileEntityChargepadMFSU"}
 zenClass MixinTileEntityChargePadMFSU {
     #mixin Static
-    #mixin ModifyConstant
-    #{
-    #    method: "<init>",
-    #    constant: {intValue: 40000000}
-    #}
+    #mixin ModifyConstant {method: "<init>", constant: {intValue: 40000000}}
     function buffEnergy(value as int) as int {
         return 80000000;
     }
@@ -61,11 +45,7 @@ zenClass MixinTileEntityChargePadMFSU {
 #mixin {targets: "ic2.core.block.wiring.TileEntityElectricBatBox"}
 zenClass MixinTileEntityElectricBatBox {
     #mixin Static
-    #mixin ModifyConstant
-    #{
-    #    method: "<init>",
-    #    constant: {intValue: 40000}
-    #}
+    #mixin ModifyConstant {method: "<init>", constant: {intValue: 40000}}
     function buffEnergy(value as int) as int {
         return 160000;
     }
@@ -74,11 +54,7 @@ zenClass MixinTileEntityElectricBatBox {
 #mixin {targets: "ic2.core.block.wiring.TileEntityElectricCESU"}
 zenClass MixinTileEntityElectricCESU {
     #mixin Static
-    #mixin ModifyConstant
-    #{
-    #    method: "<init>",
-    #    constant: {intValue: 300000}
-    #}
+    #mixin ModifyConstant {method: "<init>", constant: {intValue: 300000}}
     function buffEnergy(value as int) as int {
         return 600000;
     }
@@ -87,11 +63,7 @@ zenClass MixinTileEntityElectricCESU {
 #mixin {targets: "ic2.core.block.wiring.TileEntityElectricMFE"}
 zenClass MixinTileEntityElectricMFE {
     #mixin Static
-    #mixin ModifyConstant
-    #{
-    #    method: "<init>",
-    #    constant: {intValue: 4000000}
-    #}
+    #mixin ModifyConstant {method: "<init>", constant: {intValue: 4000000}}
     function buffEnergy(value as int) as int {
         return 8000000;
     }
@@ -100,11 +72,7 @@ zenClass MixinTileEntityElectricMFE {
 #mixin {targets: "ic2.core.block.wiring.TileEntityElectricMFSU"}
 zenClass MixinTileEntityElectricMFSU {
     #mixin Static
-    #mixin ModifyConstant
-    #{
-    #    method: "<init>",
-    #    constant: {intValue: 40000000}
-    #}
+    #mixin ModifyConstant {method: "<init>", constant: {intValue: 40000000}}
     function buffEnergy(value as int) as int {
         return 80000000;
     }
@@ -142,11 +110,7 @@ zenClass MixinItemCropnalyzer {
 
 #mixin {targets: "ic2.core.crop.cropcard.CropBaseMetalCommon"}
 zenClass MixinCropBaseMetalCommon {
-    #mixin ModifyConstant
-    #{
-    #    method: "getGrowthDuration",
-    #    constant: [{intValue: 2000}, {intValue: 800}]
-    #}
+    #mixin ModifyConstant {method: "getGrowthDuration", constant: [{intValue: 2000}, {intValue: 800}]}
     function growFaster(value as int) as int {
         return value / 5;
     }
@@ -154,11 +118,7 @@ zenClass MixinCropBaseMetalCommon {
 
 #mixin {targets: "ic2.core.crop.cropcard.CropBaseMetalUncommon"}
 zenClass MixinCropBaseMetalUncommon {
-    #mixin ModifyConstant
-    #{
-    #    method: "getGrowthDuration",
-    #    constant: [{intValue: 2200}, {intValue: 750}]
-    #}
+    #mixin ModifyConstant {method: "getGrowthDuration", constant: [{intValue: 2200}, {intValue: 750}]}
     function growFaster(value as int) as int {
         return value / 5;
     }
@@ -166,11 +126,7 @@ zenClass MixinCropBaseMetalUncommon {
 
 #mixin {targets: "ic2.core.crop.cropcard.CropBaseMushroom"}
 zenClass MixinCropBaseMushroom {
-    #mixin ModifyConstant
-    #{
-    #    method: "getGrowthDuration",
-    #    constant: {intValue: 200}
-    #}
+    #mixin ModifyConstant {method: "getGrowthDuration", constant: {intValue: 200}}
     function growFaster(value as int) as int {
         return value / 2;
     }
@@ -178,11 +134,7 @@ zenClass MixinCropBaseMushroom {
 
 #mixin {targets: "ic2.core.crop.cropcard.CropCocoa"}
 zenClass MixinCropCocoa {
-    #mixin ModifyConstant
-    #{
-    #    method: "getGrowthDuration",
-    #    constant: [{intValue: 900}, {intValue: 400}]
-    #}
+    #mixin ModifyConstant {method: "getGrowthDuration", constant: [{intValue: 900}, {intValue: 400}]}
     function growFaster(value as int) as int {
         return value / 5;
     }
@@ -190,11 +142,7 @@ zenClass MixinCropCocoa {
 
 #mixin {targets: "ic2.core.crop.cropcard.CropColorFlower"}
 zenClass MixinCropColorFlower {
-    #mixin ModifyConstant
-    #{
-    #    method: "getGrowthDuration",
-    #    constant: [{intValue: 600}, {intValue: 400}]
-    #}
+    #mixin ModifyConstant {method: "getGrowthDuration", constant: [{intValue: 600}, {intValue: 400}]}
     function growFaster(value as int) as int {
         return value / 2;
     }
@@ -202,11 +150,7 @@ zenClass MixinCropColorFlower {
 
 #mixin {targets: "ic2.core.crop.cropcard.CropEating"}
 zenClass MixinCropEating {
-    #mixin ModifyConstant
-    #{
-    #    method: "getGrowthDuration",
-    #    constant: {floatValue: 1.0}
-    #}
+    #mixin ModifyConstant {method: "getGrowthDuration", constant: {floatValue: 1.0}}
     function growFaster(value as float) as float {
         return 0.2f;
     }
@@ -214,11 +158,7 @@ zenClass MixinCropEating {
 
 #mixin {targets: "ic2.core.crop.cropcard.CropHops"}
 zenClass MixinCropHops {
-    #mixin ModifyConstant
-    #{
-    #    method: "getGrowthDuration",
-    #    constant: {intValue: 600}
-    #}
+    #mixin ModifyConstant {method: "getGrowthDuration", constant: {intValue: 600}}
     function growFaster(value as int) as int {
         return 100;
     }
@@ -226,11 +166,7 @@ zenClass MixinCropHops {
 
 #mixin {targets: "ic2.core.crop.cropcard.CropRedWheat"}
 zenClass MixinCropRedWheat {
-    #mixin ModifyConstant
-    #{
-    #    method: "getGrowthDuration",
-    #    constant: {intValue: 600}
-    #}
+    #mixin ModifyConstant {method: "getGrowthDuration", constant: {intValue: 600}}
     function growFaster(value as int) as int {
         return 200;
     }
@@ -238,11 +174,7 @@ zenClass MixinCropRedWheat {
 
 #mixin {targets: "ic2.core.crop.cropcard.CropVenomilia"}
 zenClass MixinCropVenomilia {
-    #mixin ModifyConstant
-    #{
-    #    method: "getGrowthDuration",
-    #    constant: [{intValue: 600}, {intValue: 400}]
-    #}
+    #mixin ModifyConstant {method: "getGrowthDuration", constant: [{intValue: 600}, {intValue: 400}]}
     function growFaster(value as int) as int {
         return value / 4;
     }
@@ -413,29 +345,17 @@ zenClass MixinTfbpType {
 
 #mixin {targets: "ic2.core.item.tool.EntityMiningLaser"}
 zenClass MixinEntityMiningLaser {
-    #mixin ModifyConstant
-    #{
-    #    method: "explode",
-    #    constant: {"floatValue": 5.0}
-    #}
+    #mixin ModifyConstant {method: "explode", constant: {"floatValue": 5.0}}
     function modifyExplodeValue0(value as float) as float {
         return 3.5f;
     }
 
-    #mixin ModifyConstant
-    #{
-    #    method: "explode",
-    #    constant: {"floatValue": 0.85}
-    #}
+    #mixin ModifyConstant {method: "explode", constant: {"floatValue": 0.85}}
     function modifyExplodeValue1(value as float) as float {
         return 1.0f;
     }
 
-    #mixin ModifyConstant
-    #{
-    #    method: "explode",
-    #    constant: {"floatValue": 0.55}
-    #}
+    #mixin ModifyConstant {method: "explode", constant: {"floatValue": 0.55}}
     function modifyExplodeValue2(value as float) as float {
         return 0.0f;
     }
@@ -458,75 +378,43 @@ zenClass MixinEntityMiningLaser {
 #mixin {targets: "ic2.core.item.tool.ItemToolMiningLaser"}
 zenClass MixinItemToolMiningLaser {
     #mixin Static
-    #mixin ModifyConstant
-    #{
-    #    method: "<init>",
-    #    constant: {"intValue": 300000}
-    #}
+    #mixin ModifyConstant {method: "<init>", constant: {"intValue": 300000}}
     function increaseMaxCharge(value as int) as int {
         return 20000000;
     }
 
     #mixin Static
-    #mixin ModifyConstant
-    #{
-    #    method: "<init>",
-    #    constant: {"intValue": 512}
-    #}
+    #mixin ModifyConstant {method: "<init>", constant: {"intValue": 512}}
     function increaseTransferLimit(value as int) as int {
         return 10000000;
     }
     
-    #mixin ModifyConstant
-    #{
-    #    method: "func_77659_a",
-    #    constant: {"intValue": 1250}
-    #}
+    #mixin ModifyConstant {method: "func_77659_a", constant: {"intValue": 1250}}
     function increaseEnergyConsumption0(value as int) as int {
         return 20000;
     }
 
-    #mixin ModifyConstant
-    #{
-    #    method: "func_77659_a",
-    #    constant: {"intValue": 100}
-    #}
+    #mixin ModifyConstant {method: "func_77659_a", constant: {"intValue": 100}}
     function increaseEnergyConsumption1(value as int) as int {
         return 5000;
     }
 
-    #mixin ModifyConstant
-    #{
-    #    method: "func_77659_a",
-    #    constant: {"intValue": 5000}
-    #}
+    #mixin ModifyConstant {method: "func_77659_a", constant: {"intValue": 5000}}
     function increaseEnergyConsumption2(value as int) as int {
         return 30000;
     }
 
-    #mixin ModifyConstant
-    #{
-    #    method: "func_77659_a",
-    #    constant: {"intValue": 2500}
-    #}
+    #mixin ModifyConstant {method: "func_77659_a", constant: {"intValue": 2500}}
     function increaseEnergyConsumption3(value as int) as int {
         return 30000;
     }
 
-    #mixin ModifyConstant
-    #{
-    #    method: "func_77659_a",
-    #    constant: {"intValue": 10000}
-    #}
+    #mixin ModifyConstant {method: "func_77659_a", constant: {"intValue": 10000}}
     function increaseEnergyConsumption4(value as int) as int {
         return 500000;
     }
 
-    #mixin ModifyConstant
-    #{
-    #    method: "func_77659_a",
-    #    constant: {"intValue": 7500}
-    #}
+    #mixin ModifyConstant {method: "func_77659_a", constant: {"intValue": 7500}}
     function increaseEnergyConsumption5(value as int) as int {
         return 0;
     }
