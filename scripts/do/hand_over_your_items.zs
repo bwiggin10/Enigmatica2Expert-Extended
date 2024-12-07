@@ -57,6 +57,11 @@ function broadcastMsg(langCode as string, sender as IPlayer, receiver as IPlayer
   }]));
 }
 
+function getTranslationKey(item as IItemStack) as string {
+  if (item.definition.owner == 'ic2') return item.native.translationKey as string;
+  return item.name ~'.name';
+}
+
 function tellrawItem(item as IItemStack, color as string = null, showName as bool = true) as IData {
   val data = [
     {
@@ -71,7 +76,7 @@ function tellrawItem(item as IItemStack, color as string = null, showName as boo
           // So you needs Quark to get the icon
           text: '§f   '
         } + (!showName ? {} :
-          {extra: [(item.hasDisplayName ? item.tag.display.Name : {translate: item.name ~'.name'})]}
+          {extra: [(item.hasDisplayName ? item.tag.display.Name : {translate: getTranslationKey(item)})]}
         )
       ]
     }
