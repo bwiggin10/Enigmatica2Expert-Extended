@@ -666,6 +666,13 @@ craft.make(<quark:slime_bucket>, ['pretty',
   '~': <minecraft:bucket>,                  // Bucket
 });
 
+// [Mystical String] from [Industrial Hemp Fiber][+1]
+craft.remake(<mysticalagriculture:crafting:23>, [
+  'PHP'], {
+  'P': <ore:shardProsperity>, // Prosperity Shard
+  'H': <ore:fiberHemp>,       // Industrial Hemp Fiber
+});
+
 // "Purification" or [Prosperity Shard Shard] into pure shards
 scripts.do.expire_in_block.set(<tconstruct:shard>.withTag({ Material: 'ma.prosperity' }),  { 'cyclicmagic:fire_dark': <mysticalagriculture:crafting:5> });
 
