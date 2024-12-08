@@ -253,7 +253,7 @@ mods.mekanism.enrichment.addRecipe(<rats:raw_plastic> * 16, <mekanism:polyethene
 
 // Rat tube from HDPE
 recipes.remove(<rats:rat_tube_white>);
-mods.immersiveengineering.MetalPress.addRecipe(<mekanism:polyethene:1>, <mekanism:polyethene> * 2, <immersiveengineering:mold:2>, 4000, 1);
+mods.immersiveengineering.MetalPress.addRecipe(<mekanism:polyethene:1>, <mekanism:polyethene>, <immersiveengineering:mold:2>, 4000);
 furnace.addRecipe(<rats:rat_tube_white>, <mekanism:polyethene:1>);
 
 // Alternative rat diamond uses
