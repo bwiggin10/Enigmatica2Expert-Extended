@@ -21,10 +21,10 @@
 		uid: "5189b5f6",
 		type: "item",
 		item: {
-			id: "ftbquests:lootcrate",
 			tag: {
 				type: "uncommon"
-			}
+			},
+			id: "ftbquests:lootcrate"
 		}
 	}]
 }

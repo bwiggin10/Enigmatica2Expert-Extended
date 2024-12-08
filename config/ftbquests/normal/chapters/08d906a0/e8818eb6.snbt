@@ -7,7 +7,7 @@
 		"07e0ed8d",
 		"cbc64098"
 	],
-	optional: true,
+	optional: 1b,
 	tasks: [{
 		uid: "abdf9030",
 		type: "item",
@@ -43,16 +43,16 @@
 		items: [{
 			ForgeCaps: {
 				Parent: {
-					data: "logWood",
-					id: "ore"
+					id: "ore",
+					data: "logWood"
 				}
 			},
-			id: "itemfilters:filter",
 			tag: {
 				display: {
 					Name: "Any logWood"
 				}
-			}
+			},
+			id: "itemfilters:filter"
 		}],
 		count: 4L
 	}],

@@ -11,29 +11,29 @@
 		uid: "533a8854",
 		type: "item",
 		items: [{
-			id: "astralsorcery:itemskyresonator",
 			tag: {
 				astralsorcery: {
-					enhanced: 1b,
 					selected_upgrade: 1,
 					upgrades: [
 						0,
 						1
-					]
+					],
+					enhanced: 1b
 				}
-			}
+			},
+			id: "astralsorcery:itemskyresonator"
 		}],
-		ignore_damage: true,
+		ignore_damage: 1b,
 		ignore_nbt: 1b
 	}],
 	rewards: [{
 		uid: "1909cf89",
 		type: "item",
 		item: {
-			id: "ftbquests:lootcrate",
 			tag: {
 				type: "common"
-			}
+			},
+			id: "ftbquests:lootcrate"
 		}
 	}]
 }

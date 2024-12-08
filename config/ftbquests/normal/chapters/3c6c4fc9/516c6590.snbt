@@ -59,19 +59,19 @@
 		items: [{
 			ForgeCaps: {
 				Parent: {
-					data: "wallTurbine",
-					id: "ore"
+					id: "ore",
+					data: "wallTurbine"
 				}
 			},
-			id: "itemfilters:filter",
 			tag: {
 				display: {
 					Name: "Any wallTurbine"
 				}
-			}
+			},
+			id: "itemfilters:filter"
 		}],
 		count: 47L,
-		only_from_crafting: false
+		only_from_crafting: 0b
 	}],
 	rewards: [{
 		uid: "8d38866d",

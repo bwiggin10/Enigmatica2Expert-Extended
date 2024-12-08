@@ -1,9 +1,9 @@
 {
 	icon: {
-		id: "draconicevolution:mob_soul",
 		tag: {
 			EntityName: "quark:foxhound"
-		}
+		},
+		id: "draconicevolution:mob_soul"
 	},
 	x: 3.4d,
 	y: -4.8d,
@@ -13,16 +13,16 @@
 	dependencies: [
 		"dcb947b4"
 	],
-	or_tasks: true,
+	or_tasks: 1b,
 	tasks: [{
 		uid: "002a7d1c",
 		type: "interaction",
 		title: "Interact with Foxhound",
 		icon: {
-			id: "draconicevolution:mob_soul",
 			tag: {
 				EntityName: "quark:foxhound"
-			}
+			},
+			id: "draconicevolution:mob_soul"
 		},
 		match_type: "entity_id",
 		match: "quark:foxhound"
@@ -38,7 +38,7 @@
 	{
 		uid: "b55a9047",
 		type: "item",
-		disable_toast: true,
+		disable_toast: 1b,
 		items: [{
 			item: "minecraft:furnace"
 		},
@@ -112,10 +112,10 @@
 		type: "custom",
 		title: "{e2ee.quest.food}",
 		icon: {
-			id: "ftbquests:lootcrate",
 			tag: {
 				type: "food"
-			}
+			},
+			id: "ftbquests:lootcrate"
 		},
 		tags: [
 			"loot"

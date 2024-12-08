@@ -2,53 +2,53 @@
 	loot_size: 1,
 	rewards: [{
 		item: {
-			id: "rustic:cabinet",
 			tag: {
 				material: {
-					id: "forestry:planks.1",
+					Damage: 7s,
 					Count: 1b,
-					Damage: 7s
+					id: "forestry:planks.1"
 				}
-			}
+			},
+			id: "rustic:cabinet"
 		},
 		count: 4
 	},
 	{
 		item: {
-			id: "rustic:cabinet",
 			tag: {
 				material: {
-					id: "extrautils2:ironwood_planks",
+					Damage: 0s,
 					Count: 1b,
-					Damage: 0s
+					id: "extrautils2:ironwood_planks"
 				}
-			}
+			},
+			id: "rustic:cabinet"
 		},
 		count: 4
 	},
 	{
 		item: {
-			id: "rustic:cabinet",
 			tag: {
 				material: {
-					id: "chisel:planks-dark-oak",
+					Damage: 5s,
 					Count: 1b,
-					Damage: 5s
+					id: "chisel:planks-dark-oak"
 				}
-			}
+			},
+			id: "rustic:cabinet"
 		},
 		count: 4
 	},
 	{
 		item: {
-			id: "rustic:cabinet",
 			tag: {
 				material: {
-					id: "forestry:planks.fireproof.1",
+					Damage: 8s,
 					Count: 1b,
-					Damage: 8s
+					id: "forestry:planks.fireproof.1"
 				}
-			}
+			},
+			id: "rustic:cabinet"
 		},
 		count: 4
 	}]

@@ -15,16 +15,16 @@
 		items: [{
 			ForgeCaps: {
 				Parent: {
-					data: "foodCheese",
-					id: "ore"
+					id: "ore",
+					data: "foodCheese"
 				}
 			},
-			id: "itemfilters:filter",
 			tag: {
 				display: {
 					Name: "Any foodCheese"
 				}
-			}
+			},
+			id: "itemfilters:filter"
 		}],
 		ignore_nbt: 1b
 	}],

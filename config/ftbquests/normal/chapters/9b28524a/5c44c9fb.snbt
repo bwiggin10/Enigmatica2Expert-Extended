@@ -1,8 +1,12 @@
 {
 	title: "{q.blood_magic.ritual_of_magnetism.name}",
 	icon: {
-		id: "littletiles:multitiles",
 		tag: {
+			size: [I;
+				5,
+				3,
+				5
+			],
 			tiles: [{
 				boxes: [
 					[I;
@@ -165,19 +169,15 @@
 					block: "bloodmagic:ritual_stone"
 				}
 			}],
+			count: 17,
+			grid: 1,
 			min: [I;
 				0,
 				0,
 				0
-			],
-			size: [I;
-				5,
-				3,
-				5
-			],
-			grid: 1,
-			count: 17
-		}
+			]
+		},
+		id: "littletiles:multitiles"
 	},
 	x: 8.0d,
 	y: -1.4d,

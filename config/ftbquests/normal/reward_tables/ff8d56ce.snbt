@@ -2,16 +2,16 @@
 	loot_size: 1,
 	rewards: [{
 		item: {
-			id: "nuclearcraft:lithium_ion_battery_elite",
 			tag: {
+				capacity: 2048000000,
+				energy: 0,
 				maxTransfer: 102400000,
 				energyStorage: {
 					capacity: 2048000000L,
 					energy: 0L
-				},
-				capacity: 2048000000,
-				energy: 0
-			}
+				}
+			},
+			id: "nuclearcraft:lithium_ion_battery_elite"
 		},
 		count: 2
 	},

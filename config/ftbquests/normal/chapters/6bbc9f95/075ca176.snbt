@@ -21,7 +21,7 @@
 	{
 		uid: "24087c43",
 		type: "item",
-		disable_toast: true,
+		disable_toast: 1b,
 		items: [{
 			item: "minecraft:furnace"
 		},

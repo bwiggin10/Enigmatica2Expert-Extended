@@ -1,26 +1,26 @@
 {
 	title: "{q.computers.the_chapter_is_com.name}",
 	icon: {
-		id: "simple_trophies:trophy",
 		tag: {
-			TrophyColorGreen: 205,
-			TrophyVariant: "gold",
-			TrophyItem: {
-				Count: 1,
-				id: "opencomputers:robot",
-				Damage: 0s
-			},
-			TrophyColorBlue: 52,
+			TrophyName: "§fComputer Master Trophy§r",
 			TrophyColorRed: 65,
-			TrophyName: "§fComputer Master Trophy§r"
-		}
+			TrophyColorGreen: 205,
+			TrophyColorBlue: 52,
+			TrophyItem: {
+				Damage: 0s,
+				id: "opencomputers:robot",
+				Count: 1
+			},
+			TrophyVariant: "gold"
+		},
+		id: "simple_trophies:trophy"
 	},
 	x: 15.0d,
 	y: 7.5d,
 	text: [
 		"{q.computers.the_chapter_is_com.desc}"
 	],
-	hide_dependency_lines: true,
+	hide_dependency_lines: 1b,
 	dependencies: [
 		"941b1d99",
 		"a1906a54",
@@ -73,23 +73,23 @@
 	rewards: [{
 		uid: "b07c23cd",
 		type: "item",
-		team_reward: true,
+		team_reward: 1b,
 		auto: "enabled",
 		item: {
-			id: "simple_trophies:trophy",
 			tag: {
+				TrophyColorRed: 65,
+				TrophyColorBlue: 52,
 				TrophyVariant: "gold",
 				TrophyColorGreen: 205,
 				TrophyShowsTooltip: 1b,
 				TrophyItem: {
-					Count: 1,
+					Damage: 0s,
 					id: "opencomputers:robot",
-					Damage: 0s
+					Count: 1
 				},
-				TrophyColorBlue: 52,
-				TrophyColorRed: 65,
 				TrophyName: "§fComputer Master Trophy§r"
-			}
+			},
+			id: "simple_trophies:trophy"
 		}
 	},
 	{

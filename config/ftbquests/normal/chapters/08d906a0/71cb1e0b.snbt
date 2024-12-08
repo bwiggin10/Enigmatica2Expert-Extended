@@ -5,23 +5,23 @@
 		"0991db53",
 		"055089ff"
 	],
-	optional: true,
+	optional: 1b,
 	tasks: [{
 		uid: "c617b60d",
 		type: "item",
 		items: [{
 			ForgeCaps: {
 				Parent: {
-					data: "pebble",
-					id: "ore"
+					id: "ore",
+					data: "pebble"
 				}
 			},
-			id: "itemfilters:filter",
 			tag: {
 				display: {
 					Name: "Any pebble"
 				}
-			}
+			},
+			id: "itemfilters:filter"
 		}],
 		count: 4L
 	}],
