@@ -29,6 +29,7 @@ import mods.zenutils.DataUpdateOperation.REMOVE;
 import mods.zenutils.DataUpdateOperation.BUMP;
 import crafttweaker.entity.AttributeModifier;
 import native.net.minecraft.util.EnumParticleTypes;
+import native.net.minecraft.world.WorldServer;
 
 function entityEyeHeight(entity as IEntity) as double{
     return entity.y+entity.eyeHeight;
@@ -152,9 +153,9 @@ equilibrium_Trait.afterHit = function(trait, tool, attacker, target, damageDealt
   if (attacker.world.isRemote()) return; // world is remote
   if (target.health <= 0 && wasHit){
     attacker.world.addVis(attacker.position, (target.maxHealth / 2.0f) as float); // release vis
-    server.commandManager.executeCommandSilent(server, "/particle endRod "~target.x~" "~entityEyeHeight(target)~" "~target.z~" 5 1 5 0 50");
-    playSound("botania:blacklotus", target);
-  } 
+    (attacker.world.native as WorldServer).spawnParticle(EnumParticleTypes.END_ROD, target.x, entityEyeHeight(target), target.z, 50, 5, 1, 5, 0, 0);
+    playSound('botania:blacklotus', target);
+  }
 };
 equilibrium_Trait.register();
 
@@ -634,16 +635,16 @@ researcherTrait.onHit = function (trait, tool, attacker, target, damage, isCriti
 };
 
 function makeWitchPatricles(data as IData, entity as IEntity, i as int) as void {
-  server.commandManager.executeCommandSilent(server, "/particle witchMagic "
-  ~((data.x*(20 - i)+entity.x*i) / 20)~" "
-  ~((data.y*(20 - i)+(entity.y+entity.eyeHeight)*i) / 20 + 3.0*sin(3.14*i / 20))~" "
-  ~((data.z*(20 - i)+entity.z*i) / 20)~
-  " 0 0 0 0 1");
+  (entity.world.native as WorldServer).spawnParticle(EnumParticleTypes.SPELL_WITCH,
+    (data.x * (20 - i) + entity.x * i) / 20,
+    (data.y * (20 - i) + (entity.y + entity.eyeHeight) * i) / 20 + 3.0 * sin(3.14 * i / 20),
+    (data.z * (20 - i) + entity.z * i) / 20,
+    1, 0, 0, 0, 0, 0);
 }
 
 function fluxStikeMechanic(target as IEntityLivingBase, damage as float) as void {
-  server.commandManager.executeCommandSilent(server, "/particle witchMagic "~target.x~" "~(target.y+target.eyeHeight)~" "~target.z~" .6 .6 .6 2 100");
-  playSound("thaumcraft:wandfail", target);
+  (target.world.native as WorldServer).spawnParticle(EnumParticleTypes.SPELL_WITCH, target.x, (target.y + target.eyeHeight), target.z, 100, 0.6, 0.6, 0.6, 2.0, 0);
+  playSound('thaumcraft:wandfail', target);
   val world = target.world;
   val entitiesList = world.getEntities();
   val particleCount = 20;
@@ -667,20 +668,25 @@ function fluxStikeMechanic(target as IEntityLivingBase, damage as float) as void
       if(!isNull(entity)){val k=2*particleCount/5;
       for i in k to k+4{makeWitchPatricles(context.data, entity, i);}
       }
-    }).sleep(5).run(function(world, context){
-      if(!isNull(entity)){val k=3*particleCount/5;
-      for i in k to k+4{makeWitchPatricles(context.data, entity, i);}
-    }
-    }).sleep(5).run(function(world, context){
-      if(!isNull(entity)){val k=4*particleCount/5;
-      for i in k to k+4{makeWitchPatricles(context.data, entity, i);}
-    }
-    }).sleep(5).run(function(world, context){
-      if(!isNull(entity)){val k=5*particleCount/5;
-      for i in k to k+4{makeWitchPatricles(context.data, entity, i);}
-    }
-    }).sleep(5).run(function(world, context){
-      if(!isNull(entity))server.commandManager.executeCommandSilent(server, "/particle witchMagic "~entity.x~" "~(entity.y+entity.eyeHeight)~" "~entity.z~" 0 0 0 3 20");
+    }).sleep(5).run(function (world, context) {
+      if (!isNull(entity)) {
+        val k = 3 * particleCount / 5;
+        for i in k .. k + 4 { makeWitchPatricles(context.data, entity, i); }
+      }
+    }).sleep(5).run(function (world, context) {
+      if (!isNull(entity)) {
+        val k = 4 * particleCount / 5;
+        for i in k .. k + 4 { makeWitchPatricles(context.data, entity, i); }
+      }
+    }).sleep(5).run(function (world, context) {
+      if (!isNull(entity)) {
+        val k = 5 * particleCount / 5;
+        for i in k .. k + 4 { makeWitchPatricles(context.data, entity, i); }
+      }
+    }).sleep(5).run(function (world, context) {
+      if (!isNull(entity)) {
+        (world.native as WorldServer).spawnParticle(EnumParticleTypes.SPELL_WITCH, entity.x, (entity.y + entity.eyeHeight), entity.z, 20, 0, 0, 0, 3, 0);
+      }
     }).sleep(1).run(function(world, context){
       if(!isNull(entity))entity.attackEntityFrom(MAGIC, damage);
     })
