@@ -3,9 +3,20 @@
 
 import mixin.CallbackInfo;
 import mixin.CallbackInfoReturnable;
+import native.java.util.ArrayList;
+import native.net.minecraft.item.ItemStack;
 import native.net.minecraft.world.DimensionType;
 import native.net.minecraft.world.WorldProvider;
 import native.thaumcraft.api.golems.parts.GolemMaterial;
+
+#mixin {targets: "thaumcraft.common.lib.crafting.ThaumcraftCraftingManager"}
+zenClass MixinThaumcraftCraftingManager {
+    #mixin Static
+    #mixin Inject {method: "generateTagsFromRecipes", at: {value: "HEAD"}, cancellable: true}
+    function skipGenerateAspectsFromRecipes(stack as ItemStack, history as ArrayList, cir as CallbackInfoReturnable) as void {
+        cir.cancel();
+    }
+}
 
 #mixin {targets: "thaumcraft.api.golems.parts.GolemMaterial"}
 zenClass MixinGolemMaterial {
