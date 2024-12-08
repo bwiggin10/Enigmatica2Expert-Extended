@@ -626,6 +626,7 @@ q.immersive_engineer.metal_press.desc=金属冲压机是一个 3x1x3 的多方�
 q.immersive_engineer.concrete_sheet.desc=要获得§6混凝土板§r，向地面浇筑§b液态混凝土§r，并等待它扩散并硬化。
 q.immersive_engineer.radiator_block.desc=这个方块用于多方块结构。
 q.immersive_engineer.graphite_electrode.desc=电弧炉需要 3 个才能运行。\n\n具有§5不毁§r的配方。
+q.immersive_engineer.garden_cloche.desc=花园玻璃罩在使用普通水时效果被削弱。建议使用§6模组流体§r和§6肥料§r以获得更好的结果。可在HEI中查看支持的流体列表。
 q.immersive_engineer.excavator.name=斗轮式挖掘机
 q.immersive_engineer.excavator.desc=8x3x7 的多方块结构。\n用于从区块矿脉中提取资源。\n\n使用岩芯钻井可以寻找有矿石的区块。
 q.immersive_engineer.portable_drill.desc=探查区块中的矿物和资源。\n钻井通过右键使用，每次操作消耗 100,000 RF。

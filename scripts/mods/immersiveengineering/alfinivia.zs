@@ -47,14 +47,14 @@ function addLiquidFertilizer(fluid as ILiquidStack, mult as float) {
   scripts.jei.mod.immersiveengineering.addGardenClocheFluid(fluid, mult);
 }
 
-addLiquidFertilizer(<liquid:water>                , 0.20f);
-addLiquidFertilizer(<liquid:meat>                 , 0.40f);
-addLiquidFertilizer(<liquid:sewage>               , 0.43f);
-addLiquidFertilizer(<liquid:for.honey>            , 0.45f);
-addLiquidFertilizer(<liquid:short.mead>           , 0.50f);
-addLiquidFertilizer(<liquid:lifeessence>          , 0.55f);
-addLiquidFertilizer(<liquid:nutrient_distillation>, 0.65f);
-addLiquidFertilizer(<liquid:vapor_of_levity>      , 0.80f);
+addLiquidFertilizer(<liquid:water>                , 0.20);
+addLiquidFertilizer(<liquid:meat>                 , 0.40);
+addLiquidFertilizer(<liquid:sewage>               , 0.45);
+addLiquidFertilizer(<liquid:for.honey>            , 0.50);
+addLiquidFertilizer(<liquid:short.mead>           , 0.60);
+addLiquidFertilizer(<liquid:lifeessence>          , 0.65);
+addLiquidFertilizer(<liquid:nutrient_distillation>, 1.20);
+addLiquidFertilizer(<liquid:vapor_of_levity>      , 2.00);
 
 // *======= Chemical Thrower liquids =======*
 

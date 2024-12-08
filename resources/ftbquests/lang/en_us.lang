@@ -626,6 +626,7 @@ q.immersive_engineer.metal_press.desc=The Metal Press is a 3x1x3 multi-block. It
 q.immersive_engineer.concrete_sheet.desc=To get §6Concrete Sheets§r, pour §bLiquid Concrete§r onto the ground and wait until it spreads and hardens.
 q.immersive_engineer.radiator_block.desc=This block is used for some Multiblock machines.
 q.immersive_engineer.graphite_electrode.desc=Arc Furnace needs 3 of them to function.\n\nHas an §5Unbreakable§r recipe.
+q.immersive_engineer.garden_cloche.desc=Garden Cloche's efficiency with plain Water has been reduced. Use §6modded fluids§r and §6fertilizers§r for better results. Check HEI for a list of supported fluids.
 q.immersive_engineer.excavator.name=Excavator
 q.immersive_engineer.excavator.desc=The Excavator is an 8x3x7 multi-block.\nIt is used to extract Mineral Deposits from chunks.\n\nUse Drill to find chunks with Ore.
 q.immersive_engineer.portable_drill.desc=Probe chunks for minerals and reservoirs.\nThe drill is used by right-clicking and consumes 100,000 RF per operation

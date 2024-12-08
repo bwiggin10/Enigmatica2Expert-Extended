@@ -216,7 +216,7 @@ recipes.addShaped('Heavy Engineering Block',
 recipes.remove(<immersiveengineering:metal_device1:13>);
 scripts.mods.forestry.ThermionicFabricator.addCast(<immersiveengineering:metal_device1:13>,
   [[null, <extrautils2:suncrystal>, null],
-    [null, <advancedrocketry:basalt>, null],
+    [null, <ore:plateConcrete>, null],
     [<ore:plankTreatedWood>, <immersiveengineering:metal_decoration0:5>, <ore:plankTreatedWood>]],
   <liquid:glass> * 4000);
 
