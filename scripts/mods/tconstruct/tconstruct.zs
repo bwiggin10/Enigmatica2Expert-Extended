@@ -141,6 +141,7 @@ recipes.addShaped('TiC Complement',
 
 // Large Plates in Immersive Engineering Metal Press
 val pressPlates = {
+  advanced_alloy  : <ore:plateAdvancedAlloy> * 9,
   xu_demonic_metal: <extrautils2:simpledecorative:1>,
   lead            : <thermalfoundation:storage:3>,
   iron            : <minecraft:iron_block>,
@@ -157,7 +158,9 @@ val pressPlates = {
   neutronium      : <ore:blockCosmicNeutronium>,
 } as IIngredient[string];
 for out, inp in pressPlates {
-  mods.immersiveengineering.MetalPress.addRecipe(<tconstruct:large_plate>.withTag({ Material: out }), inp, <immersiveengineering:mold>, 16000, inp.amount);
+  mods.immersiveengineering.MetalPress.addRecipe(
+    <tconstruct:large_plate>.withTag({ Material: out }),
+    inp, <immersiveengineering:mold>, 16000);
 }
 
 scripts.process.compress(<ore:blockQuartzBlack>, <tconstruct:large_plate>.withTag({ Material: 'black_quartz' }), 'only: Compactor');
