@@ -876,6 +876,18 @@ function workEx(machineNameAnyCase as string, exceptionsAnyCase as string,
         return machineName;
       }
     }
+
+    if (machineName == 'arcrystallizer') {
+      val b = mods.advancedrocketry.RecipeTweaker.forMachine('Crystallizer').builder();
+      if (!isNull(inputItems)) for o in inputItems { b.input(o); }
+      if (!isNull(inputLiquids)) for o in inputLiquids { b.input(o); }
+      if (!isNull(outputItems)) for o in outputItems { b.outputs(o); }
+      if (!isNull(outputLiquids)) for o in outputLiquids { b.outputs(o); }
+      b.power(getOptionEnergy(options, 40000));
+      b.timeRequired(getOptionTime(options, 10));
+      b.build();
+      return machineName;
+    }
   }
 
   // ONE item to one gas

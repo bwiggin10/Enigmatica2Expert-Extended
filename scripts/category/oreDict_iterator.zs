@@ -37,7 +37,11 @@ for ore_entry in oreDict {
       val asBlock = item.asBlock();
       if (isNull(asBlock) || asBlock.definition.id == 'minecraft:air') continue;
       val oreBlockState = asBlock.definition.getStateFromMeta(item.damage);
-      scripts.do.burnt_in_fluid.add(ore_entry.itemArray[0].definition.id, oreBlockState, 'stone', 1.0 / 3.0);
+      val baseChance = 1.0 / 3.0;
+      scripts.do.burnt_in_fluid.add(ore_entry.itemArray[0].definition.id, oreBlockState, 'stone', baseChance);
+      scripts.processWork.work(['ARCrystallizer'], null,
+        [ore_entry * ((1.0 / baseChance) as int * 8)], [<liquid:ic2construction_foam> * 8000],
+        [item * 8], null, null, null);
       break;
     }
     continue;
