@@ -3,25 +3,15 @@
 🚧✅❌⚠️ List of priorities:
 
 - [ ] ☢️ Turn on Radiation
-- [ ] 🐀 Rat Ore Doubling can dupe IC2 "Iridium Ore". Removing oreIridium from it wont help
-- [ ] Rebalance TCon `Refining`: Remove x1.75 multiplication but add Fortune accounting
-- [ ] 𝓩𝒮 Refactor `#mixin` preprocessors into one-line when it short
-- [ ] 🖼️ Add https://legacy.curseforge.com/minecraft/texture-packs/ic2-seedbag-display
-- [ ] Undo `Fluid Interaction Tweaker` serverside hotfix https://github.com/tttsaurus/Fluid-Interaction-Tweaker/issues/8
 - [ ] Add https://www.curseforge.com/minecraft/mc-mods/patchouli-books
-- [ ] ✏️ Thermionic Fabricator TE machine frame recipe. Revert Forestry mod update
 - [ ] fix `format.zs` mutating lists `[T]` => `T[]`
-- [ ] ✏️ Completely remove AA crusher since no difference with EU2 one
-- [ ] ✏️ Fix IC2 dusts produced by Scrap Boxes
-- [ ] ✏️ Black Hole Talisman cheaper
-- [ ] ✏️ High Oven does not provide x2 of fluid for Osmium Ore
-- [ ] 💧 WitchWater + Lava not working
-- [ ] Rewrite `/particle` commands in Tabaka's code
-- [ ] Industrial Squeezer flip schematic
-- [ ] Cloche add quest with fluids.
-- [ ] Fix OTG crashing on removing Void Preset https://github.com/PG85/OpenTerrainGenerator/blob/c70545f5d838039016d5b27e8c4bada54268051f/common/src/main/java/com/pg85/otg/worldsave/DimensionData.java#L110
+- [ ] Fix `/perf chunks` not correct with position of blocks https://i.imgur.com/ktLcvSn.png
+- [ ] Fix ThW stones still repearable
+- [ ] Resistance Modifier fix uncraftable
+- [ ] fix AEadditions crash on update
+- [ ] Nerf SagMill output of Dirty ore
 - [ ] 🎣 Fish rework
-  * [x] Integrate https://www.curseforge.com/minecraft/mc-mods/customfishing
+  * [ ] 🟢 Add and Integrate https://www.curseforge.com/minecraft/mc-mods/customfishing
   * [x] Add `Fish Singularity`.
   * [ ] All fish usages lower.
   * [ ] All automated fishing options way harder to make sense of manual fishing.
@@ -35,7 +25,7 @@
 Planned non-urgent changes, or just good ideas:
 
 ### "Performance ⚡"
-- [ ] ⚡ Improve performance of Replicator tick
+- [ ] ⚡ Improve performance of Replicator tick with crystal and other requirments
 - [ ] ⚡ Disallow to connect `Storage Bus` to ISS - can cause 10% TPS strain
 - [ ] ⚡ `OTG` should probably be optional mod when game starting since it laggy
 - [ ] ⚡ Wand of the forest change recipe to Recipe Function
@@ -148,6 +138,10 @@ Planned non-urgent changes, or just good ideas:
 
 ### Other
 
+- [ ] ✏️ `High Oven` does not provide x2 of fluid for Osmium Ore
+- [ ] 🖼️ Add via mixins: https://legacy.curseforge.com/minecraft/texture-packs/ic2-seedbag-display
+- [ ] Rebalance TCon `Refining`: Remove x1.75 multiplication but add Fortune accounting
+- [ ] 🐀 Rat Ore Doubling can dupe IC2 "Iridium Ore". Removing oreIridium from it wont help.
 - [ ] 📖 Register item subtypes by NBT to JEI for `Gendustry` (there was CT handler for that but i cant find it)
 - [ ] 𝓩𝒮 Fix `Refining` not working on BoP ores
 - [ ] Add feature to clear drawer `Item: 0` when unlocking it https://github.com/jaquadro/StorageDrawers/commit/da9875158ad0fadc190aae437ea2d9e89d616cca
