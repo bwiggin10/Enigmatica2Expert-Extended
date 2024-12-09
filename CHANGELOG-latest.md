@@ -1,61 +1,54 @@
-# v1.50.0 (2024-12-05)
+# v1.51.0 (2024-12-09)
+
 ## Mods changes
-### 🟢 Added Mods
+
+### 🔴 Removed Mods
 
 Icon | Summary | Reason
 ----:|:--------|:-------
-<img src="https://media.forgecdn.net/avatars/thumbnails/195/574/30/30/636879999102676331.png"            > |                               [**Sonomagy**](https://www.curseforge.com/minecraft/texture-packs/sonomagy)               <sup><sub>Sonomagy TC6 v1.6.zip                            </sub></sup><br>Sound enhancements for Thaumcraft 4, 5 and 6. The same sounds but much, much better. | Cool improved sournds.
+<img src="https://media.forgecdn.net/avatars/thumbnails/1068/994/30/30/638603711520444197.jpg"           > |                          [**CustomFishing**](https://www.curseforge.com/minecraft/mc-mods/customfishing)                <sup><sub>customfishing-0.1.2.jar                          </sub></sup><br>CustomFishing is a CraftTweaker addon that allows users to add fishing conditions using scripts. For example, you can set a 50% chance of catching an apple when fishing in lava. | This mod making unable to fish in vanilla water.
 -----------
 
-### 🟡 Updated Mods
 
-⚠️ Downgrade of Forestry here is important since its fixed progression-blocking bug making ![](https://github.com/Krutoy242/mc-icons/raw/master/i/thermalexpansion/frame__0.png "Machine Frame") uncraftable.
 
-Icon | Summary | Old / New
-----:|:--------|:---------
-<img src="https://media.forgecdn.net/avatars/thumbnails/5/961/30/30/635351438467975270.png"              > |                               [**Forestry**](https://www.curseforge.com/minecraft/mc-mods/forestry)                    | <nobr>forestry_1.12.2-5.8.2.424</nobr><br><nobr>forestry_1.12.2-5.8.2.423</nobr>
-<img src="https://media.forgecdn.net/avatars/thumbnails/159/374/30/30/636658415780463602.png"            > |                          [**CraftPresence**](https://www.curseforge.com/minecraft/mc-mods/craftpresence)               | <nobr>CraftPresence-2.5.2+1.12.2-forge</nobr><br><nobr>CraftPresence-2.5.2+1.12.2-forge</nobr>
-<img src="https://media.forgecdn.net/avatars/thumbnails/292/428/30/30/637325593905195388.png"            > |                              [**Zen Utils**](https://www.curseforge.com/minecraft/mc-mods/zenutil)                     | <nobr>zenutils-1.21.3</nobr><br><nobr>zenutils-1.21.4</nobr>
-<img src="https://media.forgecdn.net/avatars/thumbnails/1047/367/30/30/638575733030598020.png"           > |                                 [**UniLib**](https://www.curseforge.com/minecraft/mc-mods/unilib)                      | <nobr>UniLib-1.0.4+1.12.2-forge</nobr><br><nobr>UniLib-1.0.4+1.12.2-forge</nobr>
-<img src="https://media.forgecdn.net/avatars/thumbnails/1039/486/30/30/638565026830206762.png"           > |[**The Twilight Forest - Deforestation Edition**](https://www.curseforge.com/minecraft/mc-mods/the-twilight-forest-deforestation-edition)| <nobr>twilightforest-1.12.2-3.11.2000</nobr><br><nobr>twilightforest-1.12.2-3.12</nobr>
-<img src="https://media.forgecdn.net/avatars/thumbnails/1040/449/30/30/638566423721005726.png"           > |                            [**StellarCore**](https://www.curseforge.com/minecraft/mc-mods/stellarcore)                 | <nobr>StellarCore-1.5.20</nobr><br><nobr>StellarCore-1.5.21</nobr>
-<img src="https://media.forgecdn.net/avatars/thumbnails/1057/908/30/30/638588800856609371.png"           > |       [**MiniEffects-Legacy Extended Life**](https://www.curseforge.com/minecraft/mc-mods/minieffects-legacy-extended-life)| <nobr>minieffects-2.1.0</nobr><br><nobr>minieffects-2.2.0</nobr>
-<img src="https://media.forgecdn.net/avatars/thumbnails/1109/618/30/30/638660579625539174.png"           > |                       [**Backpack Display**](https://www.curseforge.com/minecraft/mc-mods/backpack-display)            | <nobr>backpackdisplay-1.4</nobr><br><nobr>backpackdisplay-1.6.0</nobr>
-<img src="https://media.forgecdn.net/avatars/thumbnails/1124/518/30/30/638681479315906754.png"           > |                        [**Backpack Opener**](https://www.curseforge.com/minecraft/mc-mods/backpack-opener)             | <nobr>bpopener-1.0</nobr><br><nobr>bpopener-1.0.1</nobr>
------------
+## ⚡ Performance Improvements
+
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/bbe52f5ec26e2e0872f7ed74b4dc7c1535ac5659)⚡Rewrite custom particle events for ![](https://github.com/Krutoy242/mc-icons/raw/master/i/thaumadditions/mithminite_scythe__0__46769d22.png "Mithminite Scythe")
+  > Improve particle performance when using Scythe and remove log printing for every particle event.
+  > 
+  > Related: 2ce55bfae16bbc8b3014f54c3df0c892b91d5e3c
 
 ## 🐛 Fixes
 
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/04b358829c1c30d7df49a5cb60f9da7201d420dd)☢️Fix ![](https://github.com/Krutoy242/mc-icons/raw/master/i/trinity/trinitite__0.png "Trinitite-covered Sand") harvest level
-  > > Contributed by [oneandonlyflexo](theoneandonlyflexo@gmail.com)
-  >
-  > Fix Trinity blocks have tool type "Pickaxe" instead of "pickaxe"
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/3af34ed1c7353b1580439cbbfbc5b2ba3a1cd489)☢️Fix Trinity Bombs cant destroy surroundings on explode
-  > Related https://github.com/NovaEngineering-Source/StellarCore/issues/30
-* <img src="https://i.imgur.com/lUQU8zy.png" align=right> [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/afac7fff3c7491e0802753dc9f2a7d02d79465f2)✈️improve `/perf` command
-  > `/perf chunks` now show information about loaded chunks in all worlds.
-  > That will help server owners to find constantly loaded chunks.
-
-#### Info
-
-* <img src="https://i.imgur.com/TxSGZ4Z.png" align=right> [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/dca7bb6b830025226386ff9f6e9a6b9b59afe996)⭐Remove `.0` residue on acquire tooltip
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/e1f29e8a2dcb5bd317857d9ac417ffb23919ac31)🌍Fix Nether Portal can't be lit in Dim3 (skyblock)
   > 
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/7859669f0bcf73eec8d80a3e9457e484da3a9da1)📝Add HEI entry about ![](https://github.com/Krutoy242/mc-icons/raw/master/i/trinity/trinitite_shard__0__59733133.png "Trinitite Shard") drop rate
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/c0733032ee9ba4eefa7640d3d357b89e0149bc60)💥Fix crash with ![](https://github.com/Krutoy242/mc-icons/raw/master/i/aeadditions/fluidfiller__0.png "ME Fluid Auto Filler")
+  > Disable StellarCore config option `AsyncItemStackCapabilityInit` and enable CensoredASM option `delayItemStackCapabilityInit` instead.
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/66505777ccfe3bc5df99e0bffcd925261c4d6230)🧤Improve Item display in chat for IC2 items and blocks when hand over items
   > 
 
-#### Quest
+#### Recipes
 
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/59b4e3225bbcf485565e796f06e1191167947df2)📖Add note that ![](https://github.com/Krutoy242/mc-icons/raw/master/i/opencomputers/robot__0.png "Generic Robot") can trade Myrmexes
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/e0d18b6663978e3efc6215fd4ecb3ba1faa7ff7d)✏️![](https://github.com/Krutoy242/mc-icons/raw/master/i/tconstruct/large_plate__0__11923773.png "Advanced Alloy Large Plate") add ![](https://github.com/Krutoy242/mc-icons/raw/master/i/immersiveengineering/metal_multiblock__0.png "Metal Press") recipe
+  > Fix https://github.com/Krutoy242/Enigmatica2Expert-Extended/issues/441
+* <img src="https://i.imgur.com/ZsphzVc.png" align=right> [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/1afab2ccf6152cbafb7a7a5175c2ff71793b57d5)✏️![](https://github.com/Krutoy242/mc-icons/raw/master/i/botania/blackholetalisman__0__f62.png "Black Hole Talisman") cheaper
   > 
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/abb0a4409cb0487f94fcb612eff46840fa944d04)📖Changed something in quests
-  > I made some kind of improvment and forgot what i did, but since StellarCore rewrite all NBT tag order, all the quests become marked as changed.
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/0849f76cb03659e649dc1c801a638a8255329f30)📖Fix ![](https://github.com/Krutoy242/mc-icons/raw/master/i/trinity/trinitite_shard__0__59733133.png "Trinitite Shard") quest desc
+* <img src="https://i.imgur.com/Zo7SRUB.png" align=right> [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/357c818ca43c5c339e943fc78cc08450437ce814)✏️![](https://github.com/Krutoy242/mc-icons/raw/master/i/immersiveengineering/metal_device1__13.png "Garden Cloche") buff
+  > Now recipe does not require ![](https://github.com/Krutoy242/mc-icons/raw/master/i/advancedrocketry/basalt__0.png "Basalt Sediment") and high-tech fluids can buff Cloche speed up to x16 times (about 1 growth / sec).
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/95d2113828b04ddaefdbaf359f4c6edd4be00aed)✏️![](https://github.com/Krutoy242/mc-icons/raw/master/i/thermalfoundation/material__162.png "Invar Ingot") not consumed second ![](https://github.com/Krutoy242/mc-icons/raw/master/i/minecraft/iron_ingot__0.png "Iron Ingot") in ![](https://github.com/Krutoy242/mc-icons/raw/master/i/immersiveengineering/metal_multiblock__13.png "Arc Furnace")
+  > 
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/7a2a947792a4df95dfccc6cb01bb4ef820d87a80)✏️![](https://github.com/Krutoy242/mc-icons/raw/master/i/environmentaltech/modifier_resistance__0.png "Resistance Modifier") fix uncraftable sometimes
+  > 
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/d555b9e2e8095ac71cc714f0eb4f433ce7afaa34)✏️![](https://github.com/Krutoy242/mc-icons/raw/master/i/randomthings/ingredient__12.png "Spectre String")![](https://github.com/Krutoy242/mc-icons/raw/master/i/mysticalagriculture/crafting__23.png "Mystical String")![](https://github.com/Krutoy242/mc-icons/raw/master/i/randomthings/spectrecoil_normal__0.png "Spectre Coil") cheaper
+  > 
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/3d1555d659c8ba7246e01e1161fd70001523303e)✏️Add ![](https://github.com/Krutoy242/mc-icons/raw/master/i/thermalexpansion/machine__6__1b7c6a95.png "Magma Crucible (Basic)") rec for ![](https://github.com/Krutoy242/mc-icons/raw/master/i/mysticalagriculture/quicksilver_essence__0.png "Quicksilver Essence") and [Sky Stone Essence]
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/5263e019bd15fde802f0406d8157c24d40c31b41)✏️replace wrong IC2 dusts/ores from ![](https://github.com/Krutoy242/mc-icons/raw/master/i/ic2/crafting__24.png "Scrap Box")
   > 
 
 #### Tweaks
 
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/cda161ef94815da880f0aab38ecf6eaa2bf1036c)🧧TE machine set redstone control tier to `0`
-  > 
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/0ebcdb62902e8fb43b6027246e8f3b243e06aac1)⚙Remove ![](https://github.com/Krutoy242/mc-icons/raw/master/i/actuallyadditions/block_grinder__0.png "Crusher")
+  > Remove Crusher since its whole functionality copied with EU2 crusher that actually better since can be upgraded.
 
 
 
