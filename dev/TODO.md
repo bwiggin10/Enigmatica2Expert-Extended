@@ -2,14 +2,14 @@
 
 🚧✅❌⚠️ List of priorities:
 
-- [ ] ☢️ Turn on Radiation
 - [ ] Add https://www.curseforge.com/minecraft/mc-mods/patchouli-books
 - [ ] fix `format.zs` mutating lists `[T]` => `T[]`
 - [ ] Fix `/perf chunks` not correct with position of blocks https://i.imgur.com/ktLcvSn.png
-- [ ] Fix ThW stones still repearable
-- [ ] Resistance Modifier fix uncraftable
-- [ ] fix AEadditions crash on update
-- [ ] Nerf SagMill output of Dirty ore
+- [ ] Speed up Dragon Forge
+- [ ] `Benitoite`, `Anglesite` fix benefication
+- [ ] `Flux Anodizers` should output more ore when working with Netherending Ores
+- [ ] Iron Ore => Transmute to Gold => Portal to Nether Iron => Two ore
+- [ ] Botania Mushrooms drop as petals unless shears
 - [ ] 🎣 Fish rework
   * [ ] 🟢 Add and Integrate https://www.curseforge.com/minecraft/mc-mods/customfishing
   * [x] Add `Fish Singularity`.
@@ -86,6 +86,7 @@ Planned non-urgent changes, or just good ideas:
 - [ ] 🔨 Ironwood Add material. Drop Armor from mobs on hit
 
 ### "Nuclear☢️" expansion
+- [ ] ☢️ Turn on Radiation
 - [ ] ✏️ Add QMD alt source of Oxidised Ferric Sand (to make alternative for Asteroid mining)
 - [ ] 📖 add Note that QMD multiblocks need `Liquid Helium` Cooler
 - [ ] ✏️ Draconic Metals made in QMD multiblocks
@@ -113,9 +114,14 @@ Planned non-urgent changes, or just good ideas:
 - [ ] ✏️ Add new crafting mechanic - melting blocks in world that cant be harvested, such as `Rock Crystal Ore, Swolen/Fibrous Taint, Vis Crystal, Grass Path, Porous stone, Antimatter, TF Tree Cores, TF Thorns, Trollstein, Foam, Block Mushrooms, Rat Hole`
 
 ### "Multiplayer" expansion
-
 - [ ] 💬 Chat names should have special unicode symbols to show Conflux level and "accomplishments" (including Discord support)
-- [ ] 💬 Add messages "Player killex xxx mobs! WOW" with respective loot box reward. Ideas: Mined blocks, Jumps, Death. Table with more ideas: https://www.reddit.com/r/feedthememes/comments/jk9rag/the_political_compass_but_its_types_of_ftb_players/. Probably need to reward a player with a banners.
+- [ ] 💬 `Accomplishments` ⚜✳✴❇ mechanic:
+  * Add messages "Player killex xxx mobs! WOW" based on spectacular stats.
+  * Rewards for this "Accomplishments" should be not related to game progression.
+  * Probably need to reward a player with a IE banners since they are rare and purely cosmetical.
+  * Rewards could give some "multiplayer enchancing" status, like badges or skins.
+  * Ideas for goals: Mined blocks, Jumps, Deaths.
+  * Table with more ideas: https://www.reddit.com/r/feedthememes/comments/jk9rag/the_political_compass_but_its_types_of_ftb_players/
 
 ### Mods
 - [ ] 🟢 Find how to work with Modrinth and install https://modrinth.com/mod/hit-indication
@@ -152,7 +158,6 @@ Planned non-urgent changes, or just good ideas:
 - [ ] 📀 Concrete make hardening slower for servers. Source code of concrete https://github.com/BluSunrize/ImmersiveEngineering/blob/master/src/main/java/blusunrize/immersiveengineering/common/blocks/BlockIEFluidConcrete.java#L51-L191
 - [ ] 🦊 Transormation powder turn `Fox` into `Foxhound`
 - [ ] 🟢 Integrate `villager-contracts`
-- [ ] 🕰️ Make Timewood Clock function unstackable
 - [ ] ✨ Idea: `Experiment 115` farm. You need to grow cakes to full for using them in recipe.
 - [ ] ✨ Idea: reaching 1000 difficulty opening supreme power, instantly advance player to endgame powers
 - [ ] ✏️ Rethink EnderIO `Fluid Tank` recipe since glass cant be poured with iron after cast
@@ -276,15 +281,11 @@ Planned non-urgent changes, or just good ideas:
 - [ ] 🔄 Fix Custom Animals drops non-cooked meat
 - [ ] 🔨 ![](https://git.io/JnzzI "Glitch Infused Ingot") add material. Ability: drop matter from mobs
 - [ ] 🔨 Add armor trait that speed up gain for `Time In Bottle`
-- [ ] ⛏️ Mining levels rework. There is too much mining levels.
-  > * [ ] Higher Mining level Ore should spawn lower
-  > * [ ] Remove Excess Mining levels:
-  >   1. Collapse first 7 tiers in 5, as in vanilla. (Flint, Iron, Redstone, Obsidian, Cobalt)
-  >   2. Collapse last 7 tiers into 3. (Osgloglas, Enderium/Titanium, Supremium).
 
 ### Mods to remove for "Lite" version
 
-- `Libnine`: `Fluid Drawers`
+- `Libnine`
+- `Fluid Drawers`
 
 ---
 
@@ -349,9 +350,12 @@ Items that should have more uses:
   > But ???
 - No Tech
 - No base
-  > Cant stay in same chunk for long time
+  > Cant stay in same chunk for long time. Can be featured with increasing Radiation in this chunk
 - Speedrunning item
   > Item that can replace many other items inrecipes but only if you play fast enough
+- No GUIs
+  > Turn E2EE into opposite of GregTech, where 50% of your game you staring into GUI screens
+  > Possible reward - whenever picking up item for the first time - get second copy of this item
 
 ## Player data reset
 

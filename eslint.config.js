@@ -12,6 +12,7 @@ export default antfu({
     'style/no-multi-spaces'        : 'off',
     'style/type-annotation-spacing': 'off',
     'antfu/if-newline'             : 'off',
+    'style/object-curly-spacing'   : 'off',
     'style/comma-dangle'           : [
       'error',
       {
