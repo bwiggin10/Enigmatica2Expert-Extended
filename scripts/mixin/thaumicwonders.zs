@@ -18,6 +18,7 @@ import native.net.minecraft.util.NonNullList;
 import native.net.minecraft.world.IBlockAccess;
 import native.net.minecraft.world.World;
 import native.net.minecraftforge.oredict.OreDictionary;
+import mixin.CallbackInfo;
 
 #mixin {targets: "com.verdantartifice.thaumicwonders.common.blocks.devices.BlockMeatyOrb"}
 zenClass MixinBlockMeatyOrb extends BlockDeviceTW {
@@ -65,6 +66,10 @@ zenClass MixinTileMeatyOrb {
 
 #mixin {targets: "com.verdantartifice.thaumicwonders.common.items.catalysts.ItemAlchemistStone"}
 zenClass MixinItemAlchemistStone {
+  #mixin Inject {method: "<init>", at: {value: "TAIL"}}
+  function noRepair(ci as CallbackInfo) as void {
+    this0.setNoRepair();
+  }
 
   // Make stone enchantable with Unbreaking and Mending
   #mixin Overwrite
@@ -106,6 +111,10 @@ zenClass MixinItemAlchemistStone {
 
 #mixin {targets: "com.verdantartifice.thaumicwonders.common.items.catalysts.ItemAlienistStone"}
 zenClass MixinItemAlienistStone {
+  #mixin Inject {method: "<init>", at: {value: "TAIL"}}
+  function noRepair(ci as CallbackInfo) as void {
+    this0.setNoRepair();
+  }
 
   // Make stone enchantable with Unbreaking and Mending
   #mixin Overwrite
@@ -147,6 +156,10 @@ zenClass MixinItemAlienistStone {
 
 #mixin {targets: "com.verdantartifice.thaumicwonders.common.items.catalysts.ItemTransmuterStone"}
 zenClass MixinItemTransmuterStone {
+  #mixin Inject {method: "<init>", at: {value: "TAIL"}}
+  function noRepair(ci as CallbackInfo) as void {
+    this0.setNoRepair();
+  }
 
   // Make stone enchantable with Unbreaking and Mending
   #mixin Overwrite
