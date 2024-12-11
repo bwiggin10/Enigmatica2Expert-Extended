@@ -74,7 +74,7 @@ recipes.addShaped('Nullifier',
     [<ore:ingotTin>, <ore:ingotTin>, <ore:ingotTin>]]);
 
 // Igneous Extruder
-recipes.remove(<thermalexpansion:machine:15>);
+recipes.removeByRecipeName("thermalexpansion:machine_15");
 recipes.addShaped('Igneous Extruder',
   <thermalexpansion:machine:15>,
   [[null, <ore:blockGlass>, null],
@@ -137,7 +137,7 @@ craft.remake(<thermalfoundation:material:1028> * 2, ['pretty',
 });
 
 // Centrifugal Seperator
-recipes.remove(<thermalexpansion:machine:10>);
+recipes.removeByRecipeName("thermalexpansion:machine_10");
 recipes.addShaped('Centrifugal Seperator',
   <thermalexpansion:machine:10>,
   [[null, <forestry:centrifuge>, null],
@@ -145,7 +145,7 @@ recipes.addShaped('Centrifugal Seperator',
     [<ore:gearCopper>, <thermalfoundation:material:513>, <ore:gearCopper>]]);
 
 // Sawmill
-recipes.remove(<thermalexpansion:machine:2>);
+recipes.removeByRecipeName("thermalexpansion:machine_2");
 recipes.addShaped('Sawmill',
   <thermalexpansion:machine:2>,
   [[null, <mekanism:machineblock2:5>, null],
@@ -212,7 +212,7 @@ mods.thermalexpansion.Transposer.addFillRecipe(<thermalfoundation:material:166>,
 mods.thermalexpansion.InductionSmelter.addRecipe(<nuclearcraft:alloy:8> * 4, <thermalfoundation:material:130>, <thermalfoundation:material:129> * 3, 20000);
 
 // Hardened Cell Frame
-mods.actuallyadditions.Empowerer.addRecipe(<thermalexpansion:frame:129>, <thermalexpansion:frame:128>, <immersiveengineering:material:2>, <thermalfoundation:material:354>, <thermalfoundation:material:290>, <mekanism:basicblock:8>, 2500000, 200, [0.25, 0.25, 0.29]);
+mods.actuallyadditions.Empowerer.addRecipe(<thermalexpansion:frame:129>, <thermalexpansion:frame:128>, <immersiveengineering:material:2>, <immersiveengineering:stone_device:3>, <thermalfoundation:material:290>, <mekanism:basicblock:8>, 2500000, 200, [0.25, 0.25, 0.29]);
 
 // Dynamo harder recipes
 function remakeDynamo(item as IItemStack, oreName as string) {
@@ -310,11 +310,23 @@ recipes.addShapeless('Carminite cheap recipe', <twilightforest:carminite> * 2, [
 
 //####################################
 
+// [Hardened Upgrade Kit] from [Bronze Gear][+3]
+craft.remake(<thermalfoundation:upgrade>, ['pretty',
+  'C ▬ C',
+  '▬ ¤ ▬',
+  '♥ ▬ ♥'], {
+  'C': <ore:plateConcrete>, // Concrete Sheet
+  '▬': <ore:ingotInvar>, // Invar Ingot
+  '¤': <ore:gearBronze>, // Bronze Gear
+  '♥': <ore:dustRedstone>, // Redstone
+});
+
 // [Reinforced_Upgrade_Kit] from [Iridium_Gear][+2]
 craft.remake(<thermalfoundation:upgrade:1>, ['pretty',
-  '  ▬  ',
+  'C ▬ C',
   '▬ I ▬',
   '□ ▬ □'], {
+  'C': <ore:plateConcrete>, // Concrete Sheet
   '□': <ore:blockGlassHardened>, // Hardened Copper Glass
   'I': <ore:gearIridium>, // Iridium Gear
   '▬': <ore:ingotLumium>, // Lumium Ingot
@@ -322,9 +334,10 @@ craft.remake(<thermalfoundation:upgrade:1>, ['pretty',
 
 // [Signalum_Upgrade_Kit] from [Lumium_Gear][+2]
 craft.remake(<thermalfoundation:upgrade:2>, ['pretty',
-  '  ▬  ',
+  'C ▬ C',
   '▬ L ▬',
   'E ▬ E'], {
+  'C': <ore:plateConcrete>, // Concrete Sheet
   'E': <ore:plateElite>, // Elite Plating
   '▬': <ore:ingotSignalum>, // Signalum Ingot
   'L': <ore:gearLumium>, // Lumium Gear
@@ -332,9 +345,10 @@ craft.remake(<thermalfoundation:upgrade:2>, ['pretty',
 
 // [Resonant_Upgrade_Kit] from [Signalum_Gear][+2]
 craft.remake(<thermalfoundation:upgrade:3>, ['pretty',
-  '  ▬  ',
+  'C ▬ C',
   '▬ S ▬',
   '☼ ▬ ☼'], {
+  'C': <ore:plateConcrete>, // Concrete Sheet
   'S': <ore:gearSignalum>, // Signalum Gear
   '▬': <ore:ingotEnderium>, // Enderium Ingot
   '☼': <ore:crystalEnder>, // Resonant Clathrate
@@ -655,22 +669,22 @@ mods.thermalexpansion.Enchanter.addRecipe(
 );
 
 // [Pulverizer (Basic)] from [Machine Frame][+5]
-recipes.removeShaped(<thermalexpansion:machine:1>);
-craft.remake(<thermalexpansion:machine:1>, ['pretty',
+recipes.removeByRecipeName("thermalexpansion:machine_1");
+craft.make(<thermalexpansion:machine:1>, ['pretty',
   's C s',
   '□ ◙ □',
   '¤ ♥ ¤'], {
   '□': <tconstruct:large_plate>.withTag({ Material: 'flint' }), // Flint Large Plate
   's': <ore:gearEmerald>,
-  'C': <actuallyadditions:block_grinder> | <actuallyadditions:block_grinder_double>, // Crusher
+  'C': <actuallyadditions:item_misc:8>,
   '¤': <ore:gearElectrum>, // Electrum Gear
   '♥': <thermalfoundation:material:513>, // Redstone Reception Coil
   '◙': <thermalexpansion:frame>, // Machine Frame
 });
 
 // [Phytogenic Insolator (Basic)] from [Machine Frame][+5]
-recipes.removeShaped(<thermalexpansion:machine:4>);
-craft.remake(<thermalexpansion:machine:4>, ['pretty',
+recipes.removeByRecipeName("thermalexpansion:machine_4");
+craft.make(<thermalexpansion:machine:4>, ['pretty',
   'B A B',
   '□ ◙ □',
   '¤ ♥ ¤'], {
@@ -683,8 +697,8 @@ craft.remake(<thermalexpansion:machine:4>, ['pretty',
 });
 
 // [Induction Smelter (Basic)] from [Machine Frame][+5]
-recipes.removeShaped(<thermalexpansion:machine:3>);
-craft.remake(<thermalexpansion:machine:3>, ['pretty',
+recipes.removeByRecipeName("thermalexpansion:machine_3");
+craft.make(<thermalexpansion:machine:3>, ['pretty',
   'R I R',
   '□ ◙ □',
   '¤ ♥ ¤'], {
@@ -697,8 +711,8 @@ craft.remake(<thermalexpansion:machine:3>, ['pretty',
 });
 
 // [Fluid Transposer (Basic)] from [Machine Frame][+5]
-recipes.removeShaped(<thermalexpansion:machine:8>);
-craft.remake(<thermalexpansion:machine:8>, ['pretty',
+recipes.removeByRecipeName("thermalexpansion:machine_8");
+craft.make(<thermalexpansion:machine:8>, ['pretty',
   'B C B',
   '⌃ ◙ ⌃',
   '¤ ♥ ¤'], {
@@ -711,8 +725,8 @@ craft.remake(<thermalexpansion:machine:8>, ['pretty',
 });
 
 // [Magma Crucible (Basic)] from [Machine Frame][+5]
-recipes.removeShaped(<thermalexpansion:machine:6>);
-craft.remake(<thermalexpansion:machine:6>, ['pretty',
+recipes.removeByRecipeName("thermalexpansion:machine_6");
+craft.make(<thermalexpansion:machine:6>, ['pretty',
   '▬ S ▬',
   '□ ◙ □',
   '¤ ♥ ¤'], {

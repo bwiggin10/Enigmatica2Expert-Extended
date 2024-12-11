@@ -10,6 +10,9 @@ Purge(<mctsmelteryio:upgrade:3>);
 <mctsmelteryio:upgrade:4>.maxStackSize = 16;
 <mctsmelteryio:upgrade:6>.maxStackSize = 64;
 
+// This change doesnt work
+// <mctsmelteryio:machine>.asBlock().definition.setHarvestLevel('pickaxe', 0);
+
 // Ice balls
 scripts.process.mash(<biomesoplenty:hard_ice>, utils.tryCatch('mctsmelteryio:iceball', <iceandfire:dragon_ice>) * 8, 'No Exceptions');
 
@@ -53,17 +56,10 @@ craft.remake(<mctsmelteryio:machine:1>, ['pretty',
   '□ i □'], {
   '□': <ore:blockSeared>,        // Seared Stone
   'C': <tconstruct:casting>,     // Casting Table
-  'S': <mctsmelteryio:machine:3>,
+  'S': <tconstruct:smeltery_io>,
   'i': <ore:ice>,                 // Ice
 });
 
 // Same as drain just not disconnects from Conduits
-// [Advanced Seared Drain]
-recipes.remove(<tconstruct:smeltery_io>);
-recipes.addShapeless(<tconstruct:smeltery_io>, [<mctsmelteryio:machine:3>]);
-craft.remake(<mctsmelteryio:machine:3>, ['pretty',
-  '-   -',
-  '-   -',
-  '-   -'], {
-  '-': <ore:ingotBrickSeared>,
-});
+recipes.remove(<mctsmelteryio:machine:3>);
+recipes.addShapeless(<mctsmelteryio:machine:3>, [<tconstruct:smeltery_io>]);

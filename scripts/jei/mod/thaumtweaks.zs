@@ -1,5 +1,5 @@
 #ignoreBracketErrors
-#modloaded thaumtweaks
+#modloaded thaumtweaks requious
 #priority 950
 
 import crafttweaker.item.IItemStack;
@@ -181,7 +181,7 @@ COMMON: [[
     <mysticalagriculture:supremium_apple>,
     <tinkersaddons:modifier_item:3>,
     <thaumcraft:curio:3> * 6,
-    utils.get('thaumadditions:zeith_fur', 0, 3),
+    <thaumadditions:zeith_fur> * 3,
     <minecraft:totem_of_undying> * 3,
     <thaumadditions:jar_eldritch>,
 ]]

@@ -29,9 +29,6 @@ fluidDict(['distwater', 'ic2distilled_water']);
 fluidDict(['tritium','liquidtritium']);
 fluidDict(['liquidfusionfuel','deuterium-tritium_mixture']);
 
-FluidDictionary.add('ic2steam', 'steam', 0.1);
-FluidDictionary.add('steam', 'ic2steam', 10);
-
 // Protein Reactor, additional entires
 for item in <ore:listAllmeatraw>.items {
   ProteinReactor.add(item);
@@ -87,7 +84,7 @@ mods.immersiveengineering.MetalPress.addRecipe(<thermalfoundation:material:26>, 
 recipes.removeByRecipeName('industrialforegoing:black_hole_tank');
 recipes.addShapedMirrored('Black Hole Tank', <industrialforegoing:black_hole_tank>,
   [[<ore:sheetSteel>, <mekanism:plasticblock:8>, <ore:sheetSteel>],
-    [<extrautils2:drum:3>, utils.reuse(<botania:blackholetalisman>), <extrautils2:drum:3>],
+    [<extrautils2:drum:3>, <botania:manaresource:5>, <extrautils2:drum:3>],
     [<ore:sheetSteel>, <mekanism:plasticblock:8>, <ore:sheetSteel>]]);
 
 // [Black Hole Unit] from [Machine Case][+4]

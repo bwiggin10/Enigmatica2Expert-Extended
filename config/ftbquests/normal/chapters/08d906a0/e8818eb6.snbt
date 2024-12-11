@@ -4,9 +4,10 @@
 	y: 0.0d,
 	dependencies: [
 		"0627d66e",
+		"07e0ed8d",
 		"cbc64098"
 	],
-	optional: true,
+	optional: 1b,
 	tasks: [{
 		uid: "abdf9030",
 		type: "item",
@@ -35,10 +36,29 @@
 			item: "ic2:refractory_bricks"
 		}],
 		count: 24L
+	},
+	{
+		uid: "21ff2be0",
+		type: "item",
+		items: [{
+			ForgeCaps: {
+				Parent: {
+					id: "ore",
+					data: "logWood"
+				}
+			},
+			tag: {
+				display: {
+					Name: "Any logWood"
+				}
+			},
+			id: "itemfilters:filter"
+		}],
+		count: 4L
 	}],
 	rewards: [{
 		uid: "c9194a14",
 		type: "item",
-		item: "immersivetech:metal_barrel 1 2"
+		item: "enderio:block_tank"
 	}]
 }

@@ -4,32 +4,27 @@
     "refillDmgThreshold": 1,
     "enableHotbarSwap": true,
     "sortSound": "minecraft:ui.button.click",
-    "buttonColor": "#ffffffff",
-    "_comment": "By setting the chance below to 0 you agree to have no humor and that you are boring."
+    "buttonColor": "#ffffffff"
   },
   "ItemSortRules": [
     {
-      "name": "count",
+      "name": "mod",
       "inverted": false
     },
     {
-      "name": "block_type",
+      "name": "material",
       "inverted": false
-    },
-    {
-      "name": "hunger",
-      "inverted": true
-    },
-    {
-      "name": "saturation",
-      "inverted": true
     },
     {
       "name": "ore_prefix",
       "inverted": false
     },
     {
-      "name": "material",
+      "name": "id",
+      "inverted": false
+    },
+    {
+      "name": "meta",
       "inverted": false
     },
     {
@@ -38,18 +33,6 @@
     },
     {
       "name": "nbt_rules",
-      "inverted": false
-    },
-    {
-      "name": "mod",
-      "inverted": false
-    },
-    {
-      "name": "meta",
-      "inverted": false
-    },
-    {
-      "name": "id",
       "inverted": false
     }
   ],

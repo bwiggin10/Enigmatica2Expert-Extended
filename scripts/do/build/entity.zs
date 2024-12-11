@@ -19,6 +19,7 @@ import crafttweaker.util.Position3f;
 import crafttweaker.block.IBlock;
 import crafttweaker.world.IBlockPos;
 import crafttweaker.world.IWorld;
+import native.net.minecraft.util.EnumParticleTypes;
 
 zenClass MobBuild {
   // Static data
@@ -131,13 +132,14 @@ zenClass MobBuild {
       // Break blocks and spawn entity
       iterVolume(pos, face, function (need as IItemStack, p as IBlockPos) as bool {
         world.destroyBlock(p, false);
-        utils.spawnParticles(world, 'snowballpoof', 0.5 + p.x, 0.5 + p.y, 0.5 + p.z, 0.5, 0.5, 0.5, 0, 10);
+        (world.native as native.net.minecraft.world.WorldServer)
+          .spawnParticle(EnumParticleTypes.SNOWBALL, 0.5 + p.x, 0.5 + p.y, 0.5 + p.z, 10, 0.5, 0.5, 0.5, 0.0, 0);
         return true;
       });
 
       val r = rotate(face, offset.x, offset.z);
       val truePos = Position3f.create(r[0] + pos.x + shiftX, offset.y + pos.y + shiftY, r[1] + pos.z + shiftZ);
-      utils.executeCommandSilent(server, '/summon ' ~ entity.id ~ ' ' ~ truePos.x ~ ' ' ~ truePos.y ~ ' ' ~ (truePos.z - 0.1) ~ ' {Rotation:[' ~ (face * 90 - 180) ~ 'f,0f]}');
+      utils.spawnGenericCreature(world, entity.id, truePos.x, truePos.y, truePos.z - 0.1, face);
 
       spawnFnc(world, truePos);
 

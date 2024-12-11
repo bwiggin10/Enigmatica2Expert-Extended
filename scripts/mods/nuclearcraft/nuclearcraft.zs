@@ -4,6 +4,9 @@ import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 import crafttweaker.liquid.ILiquidStack;
 
+// Use Cyclic's Ender Pouch instead
+Purge(<nuclearcraft:portable_ender_chest>);
+
 // Define new moderators
 // (IIngredient block, int fluxFactor, double efficiency)
 mods.nuclearcraft.FissionModerator.add(<twilightforest:aurora_block>, 26, 1.05);
@@ -25,13 +28,32 @@ recipes.addShapeless('Plutonium conversion', <nuclearcraft:plutonium:5> * 2, [<i
 utils.compact(<nuclearcraft:ingot:14>, <nuclearcraft:ingot_block:14>);
 utils.compact(<nuclearcraft:ingot:15>, <nuclearcraft:ingot_block:15>);
 
-// Remove Manganese ingot (and oxide) tooltip about smelting 3 times since its misleading
-<nuclearcraft:ingot:11>.removeTooltipLine(1);
-<nuclearcraft:ingot:14>.removeTooltipLine(1);
+// This recipe was only available in Arc Furnace
+furnace.addRecipe(<nuclearcraft:ingot:14>, <nuclearcraft:dust:14>, 0.5);
 
 // ------------------------------------------------------------------
 // Recipes and integrations
 // ------------------------------------------------------------------
+
+// [Machine Chassis] from [Tough Alloy Ingot][+2]
+craft.remake(<nuclearcraft:part:10>, ['pretty',
+  'C ⌂ C',
+  '⌂ ▬ ⌂',
+  'C ⌂ C'], {
+  'C': <ore:plateConcrete>, // Concrete Sheet
+  '⌂': <ic2:casing:5>, // Steel Item Casing
+  '▬': <ore:ingotTough>, // Tough Alloy Ingot
+});
+
+// [Steel Chassis] from [Bronze Item Casing][+2]
+craft.remake(<nuclearcraft:part:12>, ['pretty',
+  '⌂ ▬ ⌂',
+  '▬ B ▬',
+  '⌂ ▬ ⌂'], {
+  '⌂': <ic2:casing:5>,   // Steel Item Casing
+  '▬': <ore:ingotTough>, // Tough Alloy Ingot
+  'B': <ic2:casing>,     // Bronze Item Casing
+});
 
 // [Basic Plating]*4 from [Graphite Block][+2]
 craft.remake(<nuclearcraft:part> * 4, ['pretty',
@@ -221,6 +243,7 @@ craft.make(<nuclearcraft:compound:2>, ['pretty',
 furnace.addRecipe(<nuclearcraft:ingot:8>, <minecraft:coal:*>);
 
 // Coal casted into graphite block
+mods.tconstruct.Casting.removeBasinRecipe(<minecraft:coal_block>);
 mods.tconstruct.Casting.removeBasinRecipe(<nuclearcraft:ingot_block:8>);
 mods.tconstruct.Casting.addBasinRecipe(<nuclearcraft:ingot_block:8>, null, <liquid:coal>, 900);
 mods.thermalexpansion.Crucible.addRecipe(<liquid:coal> * 900, <nuclearcraft:ingot_block:8>, 2000);
@@ -242,7 +265,17 @@ scripts.process.fill(<nuclearcraft:part:11>, <fluid:water> * 2000, <nuclearcraft
 
 // [Dimensional Blend] from [Biome Essence]
 recipes.remove(<nuclearcraft:compound:9>);
-scripts.process.crush(<biomesoplenty:biome_essence>, <nuclearcraft:compound:9>, 'only: eu2Crusher AACrusher IECrusher', [<thermalfoundation:material:66>], [0.25]);
+scripts.process.crush(
+  <biomesoplenty:biome_essence>,
+  <nuclearcraft:compound:9>,
+  'only: eu2Crusher IECrusher SAGMill',
+  [
+    <thermalfoundation:material:66>,
+    <nuclearcraft:compound:9>,
+    <nuclearcraft:compound:9>,
+  ],
+  [0.25, 0.25, 0.25],
+  { bonusType: 'MULTIPLY_OUTPUT' });
 
 if (!isNull(loadedMods['immersivetech'])) {
   mods.immersivetechnology.SolarTower.addRecipe(<liquid:sic_vapor> * 1000, <liquid:carbon_dioxide> * 1000, 100);
@@ -501,27 +534,6 @@ scripts.process.electrolyze(<fluid:nitric_oxide> * 100, [<fluid:nitrogen> * 500,
 // ------------------------------------------------------------
 // Remove worthless recipes
 // ------------------------------------------------------------
-
-// Common resources
-Purge(<nuclearcraft:alloy>).ores([<ore:ingotBronze>]);
-Purge(<nuclearcraft:alloy:5>).ores([<ore:ingotSteel>]);
-Purge(<nuclearcraft:dust>).ores([<ore:dustCopper>]);
-Purge(<nuclearcraft:dust:1>).ores([<ore:dustTin>]);
-Purge(<nuclearcraft:dust:2>).ores([<ore:dustLead>]);
-Purge(<nuclearcraft:dust:4>).ores([<ore:dustUranium>]);
-Purge(<nuclearcraft:gem_dust>).ores([<ore:dustDiamond>]);
-Purge(<nuclearcraft:gem_dust:2>);
-Purge(<nuclearcraft:gem_dust:3>).ores([<ore:dustObsidian>]);
-Purge(<nuclearcraft:gem_dust:6>).ores([<ore:dustSulfur>, <ore:dustSulphur>]);
-Purge(<nuclearcraft:gem:6>);
-Purge(<nuclearcraft:ingot>).ores([<ore:ingotCopper>]);
-Purge(<nuclearcraft:ingot:1>).ores([<ore:ingotTin>]);
-Purge(<nuclearcraft:ingot:2>).ores([<ore:ingotLead>]);
-Purge(<nuclearcraft:ingot:4>).ores([<ore:ingotUranium>]);
-Purge(<nuclearcraft:ore>);
-Purge(<nuclearcraft:ore:1>);
-Purge(<nuclearcraft:ore:2>);
-Purge(<nuclearcraft:ore:4>);
 
 // Unimplemented multiblocks
 Purge(<nuclearcraft:heat_exchanger_controller>);
@@ -866,20 +878,17 @@ for fluid in [
 // ------------------------------------------------------------
 mods.nuclearcraft.HeatExchanger.removeAllRecipes();
 
-val waterRequired = {
-  water             : { high_pressure_steam: 100 },
-  condensate_water  : { preheated_water: 10 },
-  preheated_water   : { high_pressure_steam: 50 },
-  ic2hot_water      : { high_pressure_steam: 30 },
-  hot_spring_water  : { high_pressure_steam: 20 },
-  ic2distilled_water: { high_pressure_steam: 25 },
-  distwater         : { high_pressure_steam: 25 },
-} as int[string][string];
-
-for coolant, cooling in coolants {
-  val cold = game.getLiquid(coolant + '_nak');
-  val hot = game.getLiquid(coolant + '_nak_hot');
-  for fluid, tuple in waterRequired {
+function coolDown(hot as ILiquidStack, cold as ILiquidStack, cooling as int) as void {
+  if (isNull(hot) || isNull(cold)) return;
+  for fluid, tuple in {
+    water             : { high_pressure_steam: 100 },
+    condensate_water  : { preheated_water: 10 },
+    preheated_water   : { high_pressure_steam: 50 },
+    ic2hot_water      : { high_pressure_steam: 30 },
+    hot_spring_water  : { high_pressure_steam: 20 },
+    ic2distilled_water: { high_pressure_steam: 25 },
+    distwater         : { high_pressure_steam: 25 },
+  } as int[string][string] {
     for output, amount in tuple {
       mods.immersivetechnology.HeatExchanger.addRecipe(
         cold * amount, game.getLiquid(output) * (400 * cooling),
@@ -888,6 +897,13 @@ for coolant, cooling in coolants {
       );
     }
   }
+}
+
+// Special case for non-mixed fluid
+coolDown(<fluid:nak_hot>, <fluid:nak>, 55);
+
+for coolant, cooling in coolants {
+  coolDown(game.getLiquid(coolant + '_nak_hot'), game.getLiquid(coolant + '_nak'), cooling);
 }
 
 // ------------------------------------------------------------

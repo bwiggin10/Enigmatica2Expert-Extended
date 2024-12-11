@@ -1,5 +1,5 @@
 #reloadable
-#modloaded zenutils
+#modloaded zenutils ctintegration
 #priority -1800
 
 import crafttweaker.world.IWorld;
@@ -11,7 +11,7 @@ import scripts.do.acquire.data.formatDouble;
 import scripts.do.acquire.data.sendAcquireMessage;
 
 val cmd = mods.zenutils.command.ZenCommand.create('acquire');
-cmd.requiredPermissionLevel = 1;
+cmd.requiredPermissionLevel = 0;
 
 cmd.getCommandUsage = function (sender) {
   return '§6═§e⭐§6═ §7/acquire §8<§7info§8>'

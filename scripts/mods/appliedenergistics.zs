@@ -38,8 +38,8 @@ craft.remake(<appliedenergistics2:portable_cell>, ['pretty',
 function newCellRecipe(input as IIngredient, output as IItemStack) {
   recipes.remove(output);
   recipes.addShaped(output,
-    [[<appliedenergistics2:quartz_glass>, <ore:dustRedstone>, <appliedenergistics2:quartz_glass>],
-      [<ore:dustRedstone>, input, <ore:dustRedstone>],
+    [[<appliedenergistics2:quartz_glass>, <ore:plateConcrete>, <appliedenergistics2:quartz_glass>],
+      [<ore:plateConcrete>, input, <ore:plateConcrete>],
       [<ore:plateIron>, <ironchest:iron_chest>, <ore:plateIron>]]);
   if (!isNull(input)) {
     recipes.addShapeless(output, [<appliedenergistics2:material:39>, input]);
@@ -129,13 +129,16 @@ craft.remake(<appliedenergistics2:energy_acceptor>, ['pretty',
   'E': <appliedenergistics2:material:24>, // Engineering Processor
 });
 
-// Inscriber
-recipes.remove(<appliedenergistics2:inscriber>);
-recipes.addShapedMirrored('Inscriber',
-  <appliedenergistics2:inscriber>,
-  [[<ic2:resource:11>, <minecraft:sticky_piston>, <ic2:resource:11>],
-    [<appliedenergistics2:fluix_block>, null, <teslacorelib:machine_case>],
-    [<ic2:resource:11>, <minecraft:sticky_piston>, <ic2:resource:11>]]);
+// [Inscriber] from [Fluix Block][+3]
+craft.remake(<appliedenergistics2:inscriber>, ['pretty',
+  'C P C',
+  '■   M',
+  'C P C'], {
+  'C': <ore:plateConcrete>, // Concrete Sheet
+  'P': <minecraft:sticky_piston>,             // Sticky Piston
+  '■': <appliedenergistics2:fluix_block>,     // Fluix Block
+  'M': <teslacorelib:machine_case>,           // Machine Case
+});
 
 // Presses with TE Compactor, press mode
 mods.thermalexpansion.Compactor.addPressRecipe(<appliedenergistics2:material:13>, <appliedenergistics2:quartz_block>, 50000);
@@ -170,11 +173,10 @@ else {
 
   // [ME Controller] from [Industrial Machine Chassis][+4]
   craft.remake(controller, ['pretty',
-    'C I C',
+    'C A C',
     'Ϟ M Ϟ',
     'C A C'], {
     'C': <contenttweaker:compressed_crushed_skystone>, // Compressed Crushed Skystone
-    'I': <enderio:block_inventory_panel>, // Inventory Panel
     'Ϟ': <appliedenergistics2:energy_acceptor>, // Energy Acceptor
     'M': <ore:itemMachineChassi>, // Industrial Machine Chassis
     'A': <appliedenergistics2:material:28>, // Advanced Card
@@ -308,7 +310,7 @@ craft.make(<appliedenergistics2:interface>, ['pretty',
   '▬ ■ ▬'], {
   'A': <appliedenergistics2:material:44>, // Annihilation Core
   'F': <appliedenergistics2:material:43>, // Formation Core
-  '■': <ore:blockGlass>, // Glass
+  '■': <ore:plateConcrete>,
   '▬': <ore:ingotTungsten>, // Tungsten Ingot
 });
 
@@ -625,7 +627,20 @@ for i, inputs in storCompIngrs {
 // ---------------------------------
 
 // Clear singularity tags
-recipes.addShapeless('Clear singularity tags', <appliedenergistics2:material:48> * 2, [<ore:singularityEntangled>, <ore:singularityEntangled>]);
+recipes.addHiddenShapeless(
+  'singularity_tag_clearing',
+  <appliedenergistics2:material:48> * 2,
+  [<ore:singularityEntangled>, <ore:singularityEntangled>]
+);
+// and JEI recipe hint for it, it's added at both server and client to prevent strange data syncing issue
+recipes.addShapeless(
+  'dummy_singularity_tag_clearing',
+  <appliedenergistics2:material:48> * 2,
+  [
+    <appliedenergistics2:material:48>.withTag({freq: 1234567890 as long}),
+    <appliedenergistics2:material:48>.withTag({freq: 9876543210 as long})
+  ]
+);
 
 // [ME Crafting Terminal] from [ME Terminal][+3]
 craft.remake(<appliedenergistics2:part:360>, ['pretty',

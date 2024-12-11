@@ -666,6 +666,13 @@ craft.make(<quark:slime_bucket>, ['pretty',
   '~': <minecraft:bucket>,                  // Bucket
 });
 
+// [Mystical String] from [Industrial Hemp Fiber][+1]
+craft.remake(<mysticalagriculture:crafting:23>, [
+  'PHP'], {
+  'P': <ore:shardProsperity>, // Prosperity Shard
+  'H': <ore:fiberHemp>,       // Industrial Hemp Fiber
+});
+
 // "Purification" or [Prosperity Shard Shard] into pure shards
 scripts.do.expire_in_block.set(<tconstruct:shard>.withTag({ Material: 'ma.prosperity' }),  { 'cyclicmagic:fire_dark': <mysticalagriculture:crafting:5> });
 
@@ -743,6 +750,7 @@ function remakeBlock(recName as string, output as IBlockState, ingrs as IIngredi
 
 function makeSmelt(recName as string, output as ILiquidStack, ingrs as IIngredient[]) as void {
   mods.tconstruct.Melting.addRecipe(output, ingrs[0]);
+  mods.thermalexpansion.Crucible.addRecipe(output, ingrs[0].items[0], 1000);
 }
 
 function remakeSimple(recName as string, output as IIngredient, ingrs as IIngredient[]) as void {

@@ -289,7 +289,15 @@ addItems(<ore:stoneMarble>, [<quark:world_stone_bricks:4>, <quark:marble:1>]);
 add(<ore:stoneGranite>, <quark:world_stone_bricks>);
 add(<ore:stoneDiorite>, <quark:world_stone_bricks:1>);
 add(<ore:stoneAndesite>, <quark:world_stone_bricks:2>);
-add(<ore:stoneBasalt>, <quark:world_stone_bricks:3>);
+addItems(<ore:stoneBasalt>, [
+  <quark:world_stone_bricks:3>,
+  <cathedral:basalt_block_carved>,
+  <cathedral:basalt_block_carved:1>,
+  <cathedral:basalt_block_carved:2>,
+  <cathedral:basalt_block_carved:3>,
+  <cathedral:basalt_block_carved:4>,
+  <cathedral:basalt_block_carved:5>,
+]);
 
 addItems(<ore:blockBricks>, [
   <minecraft:brick_block>,
@@ -300,10 +308,13 @@ addItems(<ore:blockBricks>, [
 
 addItems(<ore:slabBasalt>, [
   <quark:stone_basalt_slab>,
-  <environmentalmaterials:basalt_slab>,
-  <environmentalmaterials:basalt_paver_slab>,
-  <environmentalmaterials:basalt_brick_slab>,
-  <environmentalmaterials:basalt_tile_slab>,
+  <cathedral:basalt_slab_carved>,
+  <cathedral:basalt_slab_carved:1>,
+  <cathedral:basalt_slab_carved:2>,
+  <cathedral:basalt_slab_carved:3>,
+  <cathedral:basalt_slab_carved:4>,
+  <cathedral:basalt_slab_carved:5>,
+  <cathedral:basalt_slab_carved:6>,
 ]);
 
 addItems(<ore:grassTall>, [
@@ -568,6 +579,9 @@ addItems(<ore:blockDimensional>, [
   <rftoolsdim:dimensional_small_blocks>,
 ]);
 
+// Remove wildcarded but keep original
+remove(<ore:oreDimensionalShard>, <rftools:dimensional_shard_ore:*>);
+
 // Remove conflicst
 remove(<ore:blockGlassWhite>, <enderio:block_fused_glass>);
 
@@ -672,6 +686,8 @@ add(<ore:gemXorcite>, <endreborn:death_essence>);
 add(<ore:oreTungsten>, <endreborn:block_wolframium_ore>);
 add(<ore:nuggetTungsten>, <endreborn:wolframium_nugget>);
 add(<ore:blockTungsten>, <endreborn:block_wolframium>);
+add(<ore:slabConcrete>, <immersiveengineering:stone_decoration_slab:5>);
+add(<ore:plateConcrete>, <immersiveengineering:stone_device:3>);
 
 // Add missed leaves
 addItems(<ore:treeLeaves>, [<exnihilocreatio:block_infested_leaves>, <exnihilocreatio:block_infesting_leaves>]);
@@ -811,6 +827,9 @@ addItems(<ore:wallTurbine>, [
 //#################
 // QMD
 //#################
+
+add(<ore:ingotMercury>, <thaumcraft:quicksilver>);
+add(<ore:nuggetMercury>, <thaumcraft:nugget:5>);
 
 // Accelerators
 addItems(<ore:wallAccelerator>, [

@@ -27,7 +27,7 @@ events.onEntityLivingUseItem(function(e as crafttweaker.event.EntityLivingUseIte
 
 val cellIngrs = {
   '⌃': <appliedenergistics2:quartz_glass>, // Quartz Glass
-  '♥': <ore:dustRedstone>, // Redstone
+  '♥': <ore:plateConcrete>,
   '□': <ore:plateIron>, // Iron Plate
   'I': <ironchest:iron_chest>, // Iron Chest
   '1': <thaumicenergistics:essentia_component_1k>, // 1k ME Essentia Storage Component
@@ -72,7 +72,7 @@ craft.make(<thaumicenergistics:essentia_cell_64k>, ['pretty',
 mods.thaumcraft.Infusion.removeRecipe(<thaumicenergistics:infusion_provider>);
 mods.thaumcraft.Infusion.registerRecipe(
   'infusion_provider', // Name
-  'INFUSION', // Research
+  'INFUSIONPROVIDER', // Research
   <thaumicenergistics:infusion_provider>, // Output
   7, // Instability
   [<aspect:fabrico> * 100, Aspect.imperium * 100, <aspect:praecantatio> * 100],
@@ -102,3 +102,21 @@ craft.remake(<thaumicenergistics:essentia_cell_creative>, ['pretty',
   'S': <threng:material:14>, // Speculative Processor
   'M': <appliedenergistics2:material:39>, // ME Storage Housing
 });
+
+// [Arcane Crafting Terminal] from [ME Terminal][+3]
+mods.thaumcraft.ArcaneWorkbench.removeRecipe(<thaumicenergistics:arcane_terminal>);
+mods.thaumcraft.ArcaneWorkbench.registerShapedRecipe(
+  "arcane_terminal", # Name
+  "ARCANETERMINAL", # Research
+  50, # Vis cost
+  [],
+  <thaumicenergistics:arcane_terminal>, # Output
+  Grid(['pretty',
+  '  N  ',
+  '¤ M ¤',
+  '  A  '], {
+  'N': <thermallogistics:manager>,     // Network Manager
+  '¤': <ore:gearVibrant>,              // Vibrant Bimetal Gear
+  'M': <appliedenergistics2:part:380>, // ME Terminal
+  'A': <thaumcraft:arcane_workbench>,  // Arcane Workbench
+}).shaped());

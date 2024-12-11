@@ -1,4 +1,4 @@
-#modloaded cyclicmagic
+#modloaded cyclicmagic guideapi
 
 import crafttweaker.item.IItemStack;
 import mods.cyclicmagic.Hydrator;
@@ -84,11 +84,11 @@ craft.remake(<cyclicmagic:storage_bag>, ['pretty',
 
 // [Ender Orb] from [Molten Demon Metal Bucket][+1]
 recipes.remove(<cyclicmagic:ender_pearl_reuse>);
-mods.tconstruct.Casting.addTableRecipe(<cyclicmagic:ender_pearl_reuse>, <endreborn:item_advanced_ender_pearl>, <liquid:xu_demonic_metal>, 144 * 4, true);
+mods.tconstruct.Casting.addTableRecipe(<cyclicmagic:ender_pearl_reuse>, <endreborn:item_advanced_ender_pearl>, <liquid:xu_demonic_metal>, 144 * 4, true, 20);
 
 // [Ender Orb Translocator] from [Molten Lapis Bucket][+1]
 recipes.remove(<cyclicmagic:ender_pearl_mounted>);
-mods.tconstruct.Casting.addTableRecipe(<cyclicmagic:ender_pearl_mounted>, <endreborn:item_advanced_ender_pearl>, <liquid:lapis>, 666 * 4, true);
+mods.tconstruct.Casting.addTableRecipe(<cyclicmagic:ender_pearl_mounted>, <endreborn:item_advanced_ender_pearl>, <liquid:lapis>, 666 * 4, true, 20);
 
 // Soul stone as T3 crafting ingredient
 recipes.remove(<cyclicmagic:soulstone>);
@@ -220,13 +220,6 @@ for i, l in packagerList {
 */
 
 Hydrator.addRecipe(<thermalexpansion:florb>.withTag({ Fluid: 'water' }), [<thermalexpansion:florb>], 1000);
-
-// Concrete
-val concreteArr = [<minecraft:clay_ball>, <minecraft:gravel>] as IItemStack[];
-Hydrator.addRecipe(<immersiveengineering:stone_decoration:5> * 4, concreteArr + (<minecraft:sand> * 2), 500);
-for it in <ore:itemSlag>.items {
-  Hydrator.addRecipe(<immersiveengineering:stone_decoration:5> * 6, concreteArr + (it * 2), 500);
-}
 
 // Asphalt Concrete
 for bit in <ore:bitumen>.items {
