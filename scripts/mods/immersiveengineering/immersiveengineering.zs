@@ -257,6 +257,7 @@ mods.immersiveengineering.Crusher.addRecipe(<exnihilocreatio:block_dust> * 9, <o
 val electrodeTag = { Unbreakable: 1, display: { Lore: ['Reinforced with Titanium Iridium Alloy'], Name: 'Unbreakable Graphite Electrode' } } as crafttweaker.data.IData;
 val electrodeItem = <immersiveengineering:graphite_electrode>.withTag(electrodeTag);
 mods.thermalexpansion.InductionSmelter.addRecipe(electrodeItem, <immersiveengineering:graphite_electrode>, <advancedrocketry:productingot:1> * 4, 25000);
+mods.thermalexpansion.InductionSmelter.addRecipe(electrodeItem, <immersiveengineering:graphite_electrode>.withTag({graphDmg: 0}), <advancedrocketry:productingot:1> * 4, 25000);
 mods.jei.JEI.addItem(electrodeItem);
 mods.jei.JEI.addDescription(electrodeItem, 'Reinforced Graphite Eletrode. Repaired Graphite Electrodes are insufficient for this process');
 
