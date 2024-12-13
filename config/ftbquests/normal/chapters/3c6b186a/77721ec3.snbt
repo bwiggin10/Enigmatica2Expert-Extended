@@ -21,6 +21,7 @@
 			Damage: 26s,
 			id: "ic2:mining_laser"
 		}],
+		ignore_damage: 1b,
 		ignore_nbt: 1b
 	}],
 	rewards: [{
