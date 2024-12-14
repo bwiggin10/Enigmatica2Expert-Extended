@@ -340,6 +340,7 @@ val fake_iron_variations =
 solution([<ore:dustBedrock>, fake_iron_variations], [<liquid:iron> * 72], [<liquid:construction_alloy> * 216], [0.5, 1, 2700], 'only: highoven');
 solution([<ore:dustBedrock>, <ore:dustEndstone>, <ore:nuggetTungsten>], [<liquid:dark_steel> * 144], [<liquid:end_steel> * 144], [0.5, 1, 1, 5500], 'only: highoven');
 solution([<ore:dustBedrock>, <ore:dustRedstone>], [<liquid:iron> * 144], [<liquid:conductive_iron> * 144], [0.5, 1, 4200], 'only: highoven');
+solution([<ore:dustBedrock>, <ore:dustEnderEye>], [<liquid:iron> * 144], [<liquid:pulsating_iron> * 144], [0.5, 1, 0.25, 8200], 'only: highoven');
 
 // Fake iron -> Steel
 mods.mekanism.infuser.addRecipe('CARBON', 10, <enderio:item_alloy_ingot:9>, <mekanism:enrichediron>);
@@ -358,7 +359,6 @@ solution([ox, <ore:itemSilicon>], [<liquid:steel> * 144], [<liquid:electrical_st
 solution([ox, <ore:dustEnergetic>], [<liquid:gold> * 144], [<liquid:energetic_alloy> * 144], [0.5, 1, 0.25, 5400], 'only: highoven');
 solution([ox, <extendedcrafting:material:49>], [<liquid:energetic_alloy> * 144], [<liquid:vibrant_alloy> * 144], [0.5, 1, 0.25, 8100], 'only: highoven');
 solution([ox, <ore:dustRedstone>], [<liquid:tin> * 144], [<liquid:redstone_alloy> * 144], [0.5, 1, 0.25, 5400], 'only: highoven');
-solution([ox, <ore:dustEnderEye>], [<liquid:iron> * 144], [<liquid:pulsating_iron> * 144], [0.5, 1, 0.25, 8200], 'only: highoven');
 
 // Induction Smelter Energetic alloy recipe
 scripts.process.alloy([<ore:ingotGold>, <ore:dustEnergetic>], <enderio:item_alloy_ingot:1>, 'only: Induction');
