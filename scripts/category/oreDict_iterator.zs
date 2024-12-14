@@ -7,11 +7,6 @@ import crafttweaker.item.IIngredient;
 import scripts.category.magicProcessing.magicProcessing;
 import scripts.process.beneficiate;
 
-static benOpts as IData = {
-  exceptions       : 'Pulverizer StarlightInfuser',
-  meltingExceptions: scripts.vars.meltingExceptions,
-} as IData;
-
 function getOreName(name as string, part as string) as string {
   if (name.matches(part ~ '[A-Z]\\w+')) return name.substring(part.length);
   return null;
@@ -125,6 +120,12 @@ for ore_entry in oreDict {
   }
 }
 
+
+// static benOpts as IData = {
+//   exceptions       : 'Pulverizer StarlightInfuser',
+//   meltingExceptions: scripts.vars.meltingExceptions,
+// } as IData;
+// 
 // for ore_name, outputs in {
 // /*Inject_js!!!!!!!{
 // val clusters = Object.entries(getByOreKind('cluster')).filter(([base])=>!['Yellorium','Aluminum'].includes(base))
