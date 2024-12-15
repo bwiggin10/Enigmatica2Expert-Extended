@@ -8,23 +8,27 @@
   },
   "ItemSortRules": [
     {
-      "name": "mod",
+      "name": "count",
       "inverted": false
     },
     {
-      "name": "material",
+      "name": "block_type",
       "inverted": false
+    },
+    {
+      "name": "hunger",
+      "inverted": true
+    },
+    {
+      "name": "saturation",
+      "inverted": true
     },
     {
       "name": "ore_prefix",
       "inverted": false
     },
     {
-      "name": "id",
-      "inverted": false
-    },
-    {
-      "name": "meta",
+      "name": "material",
       "inverted": false
     },
     {
@@ -33,6 +37,18 @@
     },
     {
       "name": "nbt_rules",
+      "inverted": false
+    },
+    {
+      "name": "mod",
+      "inverted": false
+    },
+    {
+      "name": "meta",
+      "inverted": false
+    },
+    {
+      "name": "id",
       "inverted": false
     }
   ],
