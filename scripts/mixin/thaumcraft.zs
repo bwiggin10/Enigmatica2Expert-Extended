@@ -4,10 +4,15 @@
 import mixin.CallbackInfo;
 import mixin.CallbackInfoReturnable;
 import native.java.util.ArrayList;
+import native.net.minecraft.init.SoundEvents;
 import native.net.minecraft.item.ItemStack;
+import native.net.minecraft.util.SoundCategory;
 import native.net.minecraft.world.DimensionType;
 import native.net.minecraft.world.WorldProvider;
+import native.net.minecraftforge.event.world.BlockEvent.HarvestDropsEvent;
 import native.thaumcraft.api.golems.parts.GolemMaterial;
+import native.thaumcraft.common.lib.enchantment.EnumInfusionEnchantment;
+import native.thaumcraft.common.lib.utils.Utils;
 
 #mixin {targets: "thaumcraft.common.lib.crafting.ThaumcraftCraftingManager"}
 zenClass MixinThaumcraftCraftingManager {
@@ -149,3 +154,31 @@ zenClass MixinScanSky {
         return provider.getDimensionType();
     }
 }
+
+/*
+#mixin {targets: "thaumcraft.common.lib.events.ToolEvents"}
+zenClass MixinToolEvents {
+    #mixin Static
+    #mixin Overwrite
+    function doRefining(event as HarvestDropsEvent, heldItem as ItemStack) as void {
+        val level = EnumInfusionEnchantment.getInfusionEnchantmentLevel(heldItem, EnumInfusionEnchantment.REFINING);
+        val chance = 0.5f * level;
+        var b = false;
+
+        for i, is in event.drops {        
+            val cluster = Utils.findSpecialMiningResult(is, chance, event.world.rand);
+            if (!is.isItemEqual(cluster)) {
+                if (level >= 3 && event.world.rand.nextFloat() > 1.0f / (level - 1)) {
+                    cluster.count = cluster.count * 2;
+                }
+                (event.drops as ItemStack[])[i] = cluster;
+                b = true;
+            }
+        }
+
+        if (b) {
+            event.world.playSound(null, event.getPos(), SoundEvents.ENTITY_EXPERIENCE_ORB_PICKUP, SoundCategory.PLAYERS, 0.2F, 0.7F + event.world.rand.nextFloat() * 0.2F);
+        }
+    }
+}
+*/

@@ -114,14 +114,6 @@
 		item: "testdummy:dummy"
 	},
 	{
-		item: {
-			tag: {
-				energy: 500000
-			},
-			id: "scannable:scanner"
-		}
-	},
-	{
 		icon: "scannable:module_blank 8",
 		item: "scannable:module_blank",
 		count: 8

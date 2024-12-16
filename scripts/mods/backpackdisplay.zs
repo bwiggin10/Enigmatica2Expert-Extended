@@ -7,6 +7,7 @@ import crafttweaker.item.IIngredient;
 import crafttweaker.block.IBlockDefinition;
 import crafttweaker.world.IWorld;
 import native.net.minecraft.util.math.BlockPos;
+import crafttweaker.data.IData;
 
 function addSingularity(item as IItemStack) as void {
   if (isNull(item)) return;
@@ -76,6 +77,16 @@ addBackDisplay(<thermalexpansion:morb>, function(item) {
   return [<entity:${item.tag.id}>.asSoul()] as IItemStack[];
 });
 
+addBackDisplay(<industrialforegoing:mob_imprisonment_tool>, function(item) {
+  if (isNull(item.tag) || isNull(item.tag.entity)) return null;
+  return [<entity:${item.tag.entity}>.asSoul()] as IItemStack[];
+});
+
+addBackDisplay(<enderio:item_soul_vial>, function(item) {
+  if (isNull(item.tag) || isNull(item.tag.entityId)) return null;
+  return [<entity:${item.tag.entityId}>.asSoul()] as IItemStack[];
+});
+
 /*
 Point to a block
 */
@@ -110,4 +121,55 @@ addBackDisplay(<rftoolsdim:material_absorber>, function(item) {
     || isNull(item.tag.absorbing)
   ) return null;
   return [<item:${item.tag.block}:${item.tag.meta}> * (1028 - item.tag.absorbing.asInt())] as IItemStack[];
+});
+
+/*
+Scannable
+*/
+static blockHolderTag as function(IData)IItemStack
+= function(itemTag as IData) as IItemStack {
+  if (
+    isNull(itemTag)
+    || isNull(itemTag.block)
+    || isNull(itemTag.meta)
+  ) return null;
+  return <item:${itemTag.block}:${itemTag.meta}>;
+};
+
+addBackDisplay(<scannable:module_block>, function(item) {
+  val result = blockHolderTag(item.tag);
+  if (isNull(result)) return null;
+  return [result] as IItemStack[];
+});
+
+addBackDisplay(<scannable:scanner>, function(item) {
+  if (
+    isNull(item.tag)
+    || isNull(item.tag.items)
+    || isNull(item.tag.items.Items)
+  ) return null;
+
+  // Count items
+  var length = 0;
+  for i, it in item.tag.items.Items.asList() {
+    length += 1;
+    if (!isNull(blockHolderTag(it.tag))) length += 1;
+  }
+
+  if (length < 1) return null;
+
+  // Build result
+  var k = 0;
+  val result = arrayOf(length, null as IItemStack) as IItemStack[];
+  for it in item.tag.items.Items.asList() {
+    result[k] = IItemStack.fromData(it);
+    k += 1;
+    val additional = blockHolderTag(it.tag);
+    if (!isNull(additional)) {
+      result[k] = additional;
+      k += 1;
+    }
+  }
+
+  return result;
 });

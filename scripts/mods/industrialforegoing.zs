@@ -28,6 +28,7 @@ fluidDict(['liquiddeuterium', 'deuterium']);
 fluidDict(['distwater', 'ic2distilled_water']);
 fluidDict(['tritium','liquidtritium']);
 fluidDict(['liquidfusionfuel','deuterium-tritium_mixture']);
+fluidDict(['liquidhydrogen','hydrogen']);
 
 // Protein Reactor, additional entires
 for item in <ore:listAllmeatraw>.items {
