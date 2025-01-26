@@ -24,6 +24,10 @@ Purge(<iceandfire:armor_silver_metal_boots>);
 <iceandfire:podium:4>.removeAspects(<aspect:desiderium>);
 <iceandfire:podium:5>.removeAspects(<aspect:desiderium>);
 
+// Myrmex Resin
+recipes.addShapeless(<iceandfire:myrmex_desert_resin>, [<iceandfire:myrmex_jungle_resin>]);
+recipes.addShapeless(<iceandfire:myrmex_jungle_resin>, [<iceandfire:myrmex_desert_resin>]);
+
 // Disk Platter / Iron Chain Link
 craft.remake(<iceandfire:chain_link> * 2, ['AAA', 'A A', 'AAA'], {
   A: <ore:nuggetIron>,
