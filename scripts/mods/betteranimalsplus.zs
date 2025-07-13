@@ -32,7 +32,6 @@ scripts.jei.crafting_hints.addInsOutCatl(
 <entity:betteranimalsplus:zotzpyre>.addDrop(<harvestcraft:hardenedleatheritem> % 70, 1, 3);
 <entity:betteranimalsplus:zotzpyre>.addPlayerOnlyDrop(<harvestcraft:netherwingsitem>, 1, 3);
 <entity:betteranimalsplus:badger>.addDrop(<randomthings:fertilizeddirt>, 1, 2);
-<entity:betteranimalsplus:badger>.addPlayerOnlyDrop(<twilightforest:uberous_soil>, 1, 4);
 <entity:betteranimalsplus:bobbit_worm>.addPlayerOnlyDrop(<iceandfire:sea_serpent_scales_bronze> % 20, 1, 1);
 <entity:betteranimalsplus:badger>.addDrop(<rats:garbage_pile>, 1, 3);
 <entity:betteranimalsplus:feralwolf>.addDrop(<betteranimalsplus:wolf_pelt_timber>, 1, 3);

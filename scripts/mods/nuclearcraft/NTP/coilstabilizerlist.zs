@@ -41,7 +41,7 @@ static StabilizerInfoList as [StabilizerInfo] = [
 static LiquidStabilizerInfoList as [LiquidStabilizerInfo] =[
 	LiquidStabilizerInfo("corium",<liquid:corium>,1.25,"one toughstabilizer coil"),
 	LiquidStabilizerInfo("liquidhelium",<liquid:liquid_helium>,1.35,"one extremealloystabilizer coil"),
-	LiquidStabilizerInfo("liquidnitrogen",<liquid:liquid_nitrogen>,1.40,"one liquidheliumtabilizer coil || one invarmagnet coil"),
+	LiquidStabilizerInfo("liquidnitrogen",<liquid:liquid_nitrogen>,1.40,"one liquidheliumstabilizer coil || one invarmagnet coil"),
 	LiquidStabilizerInfo("cryotheum",<liquid:cryotheum>,1.95,"one tungstencarbidestabilizer coil")
 ];
 	

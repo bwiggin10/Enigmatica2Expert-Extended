@@ -4,14 +4,13 @@ import crafttweaker.data.IData;
 import crafttweaker.item.IItemStack;
 
 scripts.lib.dropt.addDrop(<advancedrocketry:geode>, <thermalfoundation:geode>);
+scripts.lib.dropt.addDrop(<advancedrocketry:vitrifiedsand>, <qmd:isotope:5>);
+<advancedrocketry:geode>.asBlock().definition.resistance = 160;
+<advancedrocketry:vitrifiedsand>.asBlock().definition.resistance = 160;
+<advancedrocketry:crystal>.asBlock().definition.resistance = 20;
 
 // Rename basalt as it not oredicted and have different uses
 <advancedrocketry:basalt>.displayName = game.localize('e2ee.tile.basalt_sediment');
-
-// -----------------------------------------------------------------
-// Purge concrete to use IE one instead
-// -----------------------------------------------------------------
-Purge(<advancedrocketry:concrete>).ores([<ore:concrete>]);
 
 // [Rocket Assembling Machine] from [Machine Structure][+4]
 craft.remake(<advancedrocketry:rocketbuilder>, ['pretty',
@@ -45,7 +44,7 @@ craft.reshapeless(<advancedrocketry:landingpad>, 'LT', {
 scripts.jei.crafting_hints.addInsOutCatl(
   [<minecraft:cobblestone> | <minecraft:gravel>],
   <advancedrocketry:basalt>,
-  <advancedrocketry:launchpad>.withLore(['§6§lRocket burn blocks'])
+  <advancedrocketry:rocketmotor>.withLore(['§6§lRocket burn blocks'])
 );
 
 // Airtight Seal Enchant
@@ -64,14 +63,6 @@ recipes.addShaped('HeatProof Brick',
   [[<minecraft:brick_block>, <immersiveengineering:stone_decoration:2>, <minecraft:brick_block>],
     [<minecraft:brick_block>, <ore:slimecrystalMagma>, <minecraft:brick_block>],
     [<minecraft:brick_block>, <minecraft:nether_brick>, <minecraft:brick_block>]]);
-
-// Elite Motor
-recipes.remove(<libvulpes:elitemotor>);
-recipes.addShapedMirrored('Elite Motor',
-  <libvulpes:elitemotor>,
-  [[<ore:gemDilithium>, <ore:coilTitanium>, <ore:plateIridium>],
-    [<ore:gemDilithium>, <ore:gearDiamond>, <ore:plateIridium>],
-    [<ore:gemDilithium>, <ore:coilTitanium>, <ore:plateIridium>]]);
 
 // Machine Structure
 recipes.remove(<libvulpes:structuremachine>);
@@ -106,31 +97,6 @@ recipes.addShapedMirrored('Control Circuit Board',
     [<ore:circuitElite>, <immersiveengineering:metal_decoration0>, <ore:circuitElite>]]);
 
 // *======= Remove & Hide =======*
-Purge(<libvulpes:productdust:1>).ores([<ore:dustIron>]).furn();
-Purge(<libvulpes:productdust:2>).ores([<ore:dustGold>]).furn();
-Purge(<libvulpes:productdust:3>).ores([<ore:dustSilicon>]).furn();
-Purge(<libvulpes:productdust:4>).ores([<ore:dustCopper>]).furn();
-Purge(<libvulpes:productdust:5>).ores([<ore:dustTin>]).furn();
-Purge(<libvulpes:productdust:6>).ores([<ore:dustSteel>]).furn();
-Purge(<libvulpes:productdust:9>).ores([<ore:dustAluminum>, <ore:dustAluminium>]).furn();
-Purge(<libvulpes:productdust:10>).ores([<ore:dustIridium>]).furn();
-Purge(<libvulpes:productingot:4>).ores([<ore:ingotCopper>]).furn();
-Purge(<libvulpes:productingot:5>).ores([<ore:ingotTin>]).furn();
-Purge(<libvulpes:productingot:6>).ores([<ore:ingotSteel>]).furn();
-Purge(<libvulpes:productingot:9>).ores([<ore:ingotAluminum>, <ore:ingotAluminium>]).furn();
-Purge(<libvulpes:productingot:10>).ores([<ore:ingotIridium>]).furn();
-Purge(<libvulpes:productnugget:4>).ores([<ore:nuggetCopper>]).furn();
-Purge(<libvulpes:productnugget:5>).ores([<ore:nuggetTin>]).furn();
-Purge(<libvulpes:productnugget:6>).ores([<ore:nuggetSteel>]).furn();
-Purge(<libvulpes:productnugget:9>).ores([<ore:nuggetAluminum>, <ore:nuggetAluminium>]).furn();
-Purge(<libvulpes:productnugget:10>).ores([<ore:nuggetIridium>]).furn();
-Purge(<libvulpes:ore0:4>).furn();
-Purge(<libvulpes:ore0:5>).furn();
-Purge(<libvulpes:ore0:9>).ores([<ore:oreAluminium>]).furn();
-Purge(<libvulpes:ore0:10>).ores([<ore:oreIridium>]).furn();
-Purge(<libvulpes:productrod:1>).ores([<ore:stickIron>]).furn();
-Purge(<libvulpes:productrod:6>).ores([<ore:stickSteel>]).furn();
-
 val recipesToRemove = [
 
   <advancedrocketry:productrod>,
@@ -186,7 +152,7 @@ for tier, alienCrystal in alienCrystals {
     // Antideutron reaction
     mods.qmd.target_chamber.addRecipe(
       input, null,
-      (<particle:antideuteron> * 1000000) ^ pow(2, tier - 1),
+      (<particle:antideuteron> * 100000) ^ pow(2, tier - 1),
       evt_crystal, null,
       <particle:pion_minus> * 4, <particle:pion_naught> * 4, <particle:pion_plus> * 4,
       10000000 * pow(2, tier), 1, 2090000 * (tier + 1)
@@ -251,6 +217,77 @@ scripts.process.alloy([<ore:ingotIridium>, <ore:ingotOsmium>], <ore:ingotOsmirid
 scripts.process.alloy([<ore:blockDiamond>, <ore:blockRedstone> * 5], <ore:blockCrystalFlux>.firstItem, 'only: AdvRockArc');
 scripts.process.alloy([<ore:ingotMagnesium> * 3, <ore:ingotBoron> * 6], <ore:ingotMagnesiumDiboride>.firstItem * 9, 'only: AdvRockArc');
 scripts.process.alloy([<ore:dustBorax>, <ore:itemSalt> * 4, <ore:plateCarbon>], <ore:ingotTitanium>.firstItem, 'only: AdvRockArc');
+
+craft.remake(<libvulpes:motor>, ['pretty',
+  '  ■',
+  '╱ E',
+  '  ■'], {
+  '■': <ore:coilCopper>,
+  '╱': <ore:stickSteel>,
+  'E': <ic2:crafting:6>,
+});
+
+craft.remake(<libvulpes:advancedmotor>, ['pretty',
+  '  G',
+  '╱ ■',
+  '  G'], {
+  'G': <ore:coilGold>,
+  '╱': <ore:stickTitaniumIridium>,
+  '■': <ore:blockMotor>,
+});
+
+craft.make(<libvulpes:advancedmotor>, ['pretty',
+  '  G ■',
+  '/ ╱ E',
+  '  G ■'], {
+  'G': <ore:coilGold>,
+  '■': <ore:coilCopper>,
+  '/': <ore:stickTitaniumIridium>,
+  '╱': <ore:stickSteel>,
+  'E': <ic2:crafting:6>,
+});
+
+craft.remake(<libvulpes:enhancedmotor>, ['pretty',
+  '  ■',
+  '◊ ▄',
+  '  ■'], {
+  '■': <ore:coilTitanium>,
+  '◊': <ore:gemDilithium>,
+  '▄': <ore:blockMotor>,
+});
+
+craft.make(<libvulpes:enhancedmotor>, ['pretty',
+  '▄ G ■',
+  '◊ ╱ E',
+  '▄ G ■'], {
+  '▄': <ore:coilTitanium>,
+  'G': <ore:coilGold>,
+  '■': <ore:coilCopper>,
+  '◊': <ore:gemDilithium>,
+  '╱': <ore:stickTitaniumIridium>,
+  'E': <ic2:crafting:6>,
+});
+
+craft.remake(<libvulpes:elitemotor>, ['pretty',
+  '  ■',
+  '/ ▄',
+  '  ■'], {
+  '■': <ore:coilIridium>,
+  '/': <redstonerepository:material:6>,
+  '▄': <ore:blockMotor>,
+});
+
+craft.make(<libvulpes:elitemotor>, ['pretty',
+  '■ ▄ G',
+  '/ ◊ E',
+  '■ ▄ G'], {
+  '■': <ore:coilIridium>,
+  '▄': <ore:coilTitanium>,
+  'G': <ore:coilGold>,
+  '/': <redstonerepository:material:6>,
+  '◊': <ore:gemDilithium>,
+  'E': <ic2:crafting:6>,
+});
 
 // [Space Suit Helmet] from [Glass][+3]
 recipes.removeShaped(<advancedrocketry:spacehelmet>);

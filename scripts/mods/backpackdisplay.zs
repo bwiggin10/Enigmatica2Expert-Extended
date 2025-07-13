@@ -1,5 +1,6 @@
 #modloaded backpackdisplay
 #sideonly client
+#reloadable
 
 import mods.backpackdisplay.BackpackDisplay.addBackDisplay;
 import crafttweaker.item.IItemStack;
@@ -26,8 +27,9 @@ function addSingularity(item as IItemStack) as void {
   });
 }
 
-addSingularity(<contenttweaker:woodweave_singularity:*>);
-addSingularity(<contenttweaker:fish_singularity:*>);
+for id in scripts.lib.crossscript.getList('singularIDs') {
+  addSingularity(<item:contenttweaker:${id}_singularity:*>);
+}
 
 // -----------------------------------------------------------------------------------
 
@@ -172,4 +174,41 @@ addBackDisplay(<scannable:scanner>, function(item) {
   }
 
   return result;
+});
+
+/*
+Ender Letter
+*/
+addBackDisplay(<randomthings:enderletter>, function(item) {
+  if (
+    isNull(item.tag)
+    || isNull(item.tag.EnderLetterContent)
+  ) return null;
+
+  // Count items
+  var length = 0;
+  for i in 0 .. 9 {
+    val it = item.tag.EnderLetterContent.memberGet('slot'~i);
+    if (isNull(it) || isNull(it.id)) continue;
+    length += 1;
+  }
+
+  var k = 0;
+  val result = arrayOf(length, null as IItemStack) as IItemStack[];
+  for i in 0 .. 9 {
+    val it = item.tag.EnderLetterContent.memberGet('slot'~i);
+    if (isNull(it) || isNull(it.id)) continue;
+    result[k] = IItemStack.fromData(it);
+    k += 1;
+  }
+
+  return result;
+});
+
+/*
+Rubble
+*/
+addBackDisplay(<my_precious:rubble>, function(item) {
+  if (isNull(item.tag) || isNull(item.tag.StoredItem)) return null;
+  return [IItemStack.fromData(item.tag.StoredItem)] as IItemStack[];
 });

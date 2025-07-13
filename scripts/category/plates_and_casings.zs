@@ -51,15 +51,6 @@ for oreName, plate in platesData {
     MetalPress.addRecipe(plate, ingot, <immersiveengineering:mold>, 125, 1);
 }
 
-Purge(<ic2:plate>).ores([<ore:plateBronze>]);
-Purge(<ic2:plate:1>).ores([<ore:plateCopper>]);
-Purge(<ic2:plate:2>).ores([<ore:plateGold>]);
-Purge(<ic2:plate:3>).ores([<ore:plateIron>]);
-Purge(<ic2:plate:5>).ores([<ore:plateLead>]);
-Purge(<ic2:plate:7>).ores([<ore:plateSteel>]);
-Purge(<ic2:plate:8>).ores([<ore:plateTin>]);
-Purge(<thaumcraft:plate:1>).ores([<ore:plateIron>]);
-
 for plate, ores in {
   <immersiveengineering:metal:30>: [<ore:plateCopper>],
   <immersiveengineering:metal:31>: [<ore:plateAluminum>, <ore:plateAluminium>],

@@ -1,4 +1,4 @@
-#modloaded ftbquests
+#modloaded ftbquests gamestages
 #reloadable
 #priority -2000
 
@@ -47,7 +47,7 @@ events.onCustomReward(function (e as mods.zenutils.ftbq.CustomRewardEvent) {
   /**
   * Conflux rewards
   */
-  for k in 'i ii iii iv'.split(' ') {
+  for k in 'i ii iii iv v'.split(' ') {
     if (e.reward.tags has 'conflux_' ~ k) {
       e.player.addGameStage('conflux_' ~ k);
       server.commandManager.executeCommandSilent(server,
@@ -61,12 +61,13 @@ events.onCustomReward(function (e as mods.zenutils.ftbq.CustomRewardEvent) {
     }
   }
 
-  /*
-    Regexp to replace all loot chest rewards:
-
-rewards: \[\{\n\s+uid: "(\w+)",\s+type: "item",\s+item: \{\s+id: "ftbquests:lootcrate",\s+tag: \{\s+type: "(\w+)"(?:\s+\}){3}\]
-
-rewards: [{
+/*Inject_js{
+globSync('config/ftbquests/normal/chapters/*'+'/*.snbt')
+    .forEach((f) => {
+      const text = loadText(f)
+      const replaced = text.replace(
+        /rewards: \[\{\n\s+uid: "(\w+)",\s+type: "item",\s+item: \{\s+id: "ftbquests:lootcrate",\s+tag: \{\s+type: "(\w+)"(?:\s+(?:\},?|count: \d+)){3,4}\]/g,
+      `rewards: [{
 		uid: "$1",
 		type: "custom",
 		title: "{e2ee.quest.$2}",
@@ -80,16 +81,21 @@ rewards: [{
 		tags: [
 			"loot"
 		]
-	}]
-
-  */
+	}]`
+      )
+      if (text !== replaced) saveText(replaced, f)
+    })
+return "// Done!"
+}*/
+// Done!
+/**/
 
   /**
   * Give loot crates based on player's difficulty level
   */
   if (e.reward.tags has 'loot') {
     val amount = e.reward.icon.amount;
-    val diff = e.player.difficulty;
+    val diff = scripts.lib.mod.scalinghealth.getPlayerDimDifficulty(e.player.getUUID(), e.player.world.dimension);
     e.player.give(e.reward.icon * (
       diff < 1.0 ? amount + 1 // Mostly zero difficulty +1 chest
       : diff > 1000 ? max(1, amount - 1) // max difficulty -1 chest
@@ -124,12 +130,18 @@ events.onCustomTask(function (e as mods.zenutils.ftbq.CustomTaskEvent) {
       ) ? 0 : 1;
     };
   }
+  if (e.task.hasTag('omnipotence')) {
+    e.checkTimer = 10;
+    e.checker = function (player, currentProgress) {
+      return player.difficulty >= 1000 ? 1 : 0;
+    };
+  }
 });
 
 events.onPlayerLoggedIn(function (e as crafttweaker.event.PlayerLoggedInEvent) {
   if (e.player.world.remote) return;
 
-  for k in 'i ii iii iv'.split(' ') {
+  for k in 'i ii iii iv v'.split(' ') {
     val conflux = 'conflux_' ~ k;
     if (e.player.hasGameStage(conflux))
       server.commandManager.executeCommandSilent(server,

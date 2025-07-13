@@ -9,6 +9,7 @@ export default antfu({
 
     // Override @antfu rules to my personal prefferences
     'style/key-spacing'            : ['error', { align: 'colon' }],
+    'style/no-extra-parens'        : ['error', 'all', {nestedBinaryExpressions: false, nestedConditionalExpressions: false }],
     'style/no-multi-spaces'        : 'off',
     'style/type-annotation-spacing': 'off',
     'antfu/if-newline'             : 'off',
@@ -35,7 +36,6 @@ export default antfu({
     'unused-imports/no-unused-vars'   : 'error',
 
     'perfectionist/sort-array-includes'  : 'error',
-    'perfectionist/sort-astro-attributes': 'error',
     // 'perfectionist/sort-classes'         : 'error',
     'perfectionist/sort-enums'           : 'error',
     'perfectionist/sort-exports'         : 'error',
@@ -62,9 +62,7 @@ export default antfu({
     'perfectionist/sort-named-imports'    : 'error',
     'perfectionist/sort-object-types'     : 'error',
     // 'perfectionist/sort-objects': 'error',
-    'perfectionist/sort-svelte-attributes': 'error',
     'perfectionist/sort-union-types'      : 'error',
-    'perfectionist/sort-vue-attributes'   : 'error',
   },
 }, {
   files: ['**/*.md'],

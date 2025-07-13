@@ -70,6 +70,8 @@ val alloyTiers = [
   [<ore:ingotStellarAlloy>         , <ore:itemPrecientPowder>    , <ore:ingotUUMatter>]        ,
 ] as IOreDictEntry[][];
 
+val ALLOY_RESULT_AMOUNT = 2;
+
 for i, list in alloyTiers {
   if (list.length < 3) continue;
 
@@ -77,14 +79,14 @@ for i, list in alloyTiers {
     list[1],
     alloyTiers[i - 1][0],
     list[2]
-  ], list[0].firstItem, 'AdvRockArc');
+  ], list[0].firstItem * ALLOY_RESULT_AMOUNT, 'AdvRockArc');
 
   val outBlock = getBlockOrNine(list[0]);
   scripts.process.alloy([
     getBlockOrNine(list[1]),
     getBlockOrNine(alloyTiers[i - 1][0]),
     getBlockOrNine(list[2]),
-  ], outBlock.items[0] * outBlock.amount, 'only: AdvRockArc');
+  ], outBlock.items[0] * (outBlock.amount * ALLOY_RESULT_AMOUNT), 'only: AdvRockArc');
 }
 
 // [Stellar Energy Conduit]*8 from [Infinity Reagent][+2]

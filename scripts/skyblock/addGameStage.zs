@@ -6,7 +6,7 @@ import crafttweaker.data.IData;
 import crafttweaker.player.IPlayer;
 
 events.onPlayerLoggedIn(function (e as crafttweaker.event.PlayerLoggedInEvent) {
-  if (e.player.world.isRemote()) return;
+  if (e.player.world.remote) return;
 
   val data as IData = e.player.data.enigmatica;
   val logCount = (!isNull(data) && !isNull(data.logCount)) ? data.logCount.asInt() + 1 : 1;
@@ -20,8 +20,12 @@ events.onPlayerLoggedIn(function (e as crafttweaker.event.PlayerLoggedInEvent) {
 });
 
 function onFirstLogin(e as crafttweaker.event.PlayerLoggedInEvent) as void {
-  if (e.player.world.worldType == 'voidworld' && e.player.world.dimension == 3 && !e.player.hasGameStage('skyblock')) {
+  if (e.player.hasGameStage('skyblock') || e.player.hasGameStage('overworld')) return;
+
+  if (e.player.world.worldType == 'voidworld' && e.player.world.dimension == 3) {
     grant(e.player);
+  } else {
+    e.player.addGameStage('overworld');
   }
 }
 

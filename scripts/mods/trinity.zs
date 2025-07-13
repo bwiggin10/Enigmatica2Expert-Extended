@@ -25,7 +25,6 @@ craft.make(<rats:contaminated_food> * 64, [
 
 // Non-tech alt
 # [Vitrified Sand] from [Oxidized Ferric Sand][+6]
-mods.thaumcraft.Infusion.removeRecipe(<advancedrocketry:vitrifiedsand>);
 mods.thaumcraft.Infusion.registerRecipe(
   "vitrifiedsand", # Name
   "INFUSION", # Research

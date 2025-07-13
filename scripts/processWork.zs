@@ -253,7 +253,7 @@ function workEx(machineNameAnyCase as string, exceptionsAnyCase as string,
     }
 
     if (machineName == 'eu2crusher') {
-      if (strict) { mods.extrautils2.Crusher.remove(outputItem0); }
+      if (strict) { mods.extrautils2.Crusher.remove(inputIngr0.itemArray[0]); }
 
       for ii in inputIngr0.itemArray {
         if (haveExtra) {
@@ -586,6 +586,16 @@ function workEx(machineNameAnyCase as string, exceptionsAnyCase as string,
 
     if (machineName == 'advrockcutter') {
       val b = mods.advancedrocketry.RecipeTweaker.forMachine('CuttingMachine').builder();
+      for o in inputItems { b.input(o); }
+      for o in outputItems { b.outputs(o); }
+      b.power(getOptionEnergy(options, 100000));
+      b.timeRequired(getOptionTime(options, 5));
+      b.build();
+      return machineName;
+    }
+
+    if (machineName == 'advrocklathe') {
+      val b = mods.advancedrocketry.RecipeTweaker.forMachine('Lathe').builder();
       for o in inputItems { b.input(o); }
       for o in outputItems { b.outputs(o); }
       b.power(getOptionEnergy(options, 100000));

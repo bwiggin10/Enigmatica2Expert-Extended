@@ -58,6 +58,7 @@ Mana generations numbers:
 50 -> 258377
 51 -> 297066
 */
+#modloaded randomtweaker botania
 #loader contenttweaker
 
 import crafttweaker.block.IBlock;
@@ -73,7 +74,7 @@ campanimia.maxMana = 300000;
 campanimia.passiveFlower = false;
 campanimia.range = 1;
 campanimia.onUpdate = function (subtile, world, pos) {
-  if (world.isRemote()) return;
+  if (world.remote) return;
   if (world.worldInfo.worldTotalTime % 20 != 7) return;
   val cruciblesPos = getCruciblesPos(world, pos);
   if (cruciblesPos.length == 0) return;
@@ -103,6 +104,7 @@ function getCruciblesPos(world as IWorld, posFlower as IBlockPos) as IBlockPos[]
       || isNull(block.data)
       || isNull(block.data.id)
       || block.data.id != 'thaumcraft:tilecrucible'
+      || isNull(block.data.Amount)
       || block.data.Amount < 100
       || block.data.Heat != 200
       || block.data.Aspects.length == 0) {

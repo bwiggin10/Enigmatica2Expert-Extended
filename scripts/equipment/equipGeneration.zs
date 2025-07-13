@@ -305,7 +305,7 @@ function getGroup(entity as string) as IData {
 }
 
 function onSpawnEvent(e as crafttweaker.event.EntityJoinWorldEvent) as void {
-  if (e.world.isRemote() || !(e.entity instanceof IEntityLivingBase)) return;
+  if (e.world.remote || !(e.entity instanceof IEntityLivingBase)) return;
   val entity as IEntityLivingBase = e.entity;
 
   if (isNull(e.entity.definition) || isNull(e.entity.definition.id)) return;

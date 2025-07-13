@@ -1,4 +1,4 @@
-#modloaded jei
+#modloaded jei requious
 #priority 10
 
 import crafttweaker.entity.IEntityItem;
@@ -24,7 +24,7 @@ function set(input as IIngredient, blockID_output as IItemStack[string]) as void
 }
 
 events.onItemExpire(function (e as crafttweaker.event.ItemExpireEvent) {
-  if (e.entity.world.isRemote()) return; // Remote world
+  if (e.entity.world.remote) return; // Remote world
   if (isNull(e.item) || isNull(e.item.item)) return; // No item
 
   val item = e.item.item.anyAmount();

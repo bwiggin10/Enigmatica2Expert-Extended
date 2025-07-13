@@ -7,6 +7,7 @@ It does 3 things
 - removes entries with crafting table recipes (since it's not working correctly)
 */
 
+#modloaded randomtweaker botania
 import mods.botania.Lexicon;
 
 //////////////////////
@@ -87,7 +88,6 @@ Lexicon.addPetalPage('botania.page.jikanacea1', 'botania.entry.jikanacea', 1, [<
 Lexicon.addRecipeMapping(<botania:specialflower>.withTag({type: 'jikanacea'}), 'botania.entry.jikanacea', 0);
 
 Lexicon.addEntry('botania.entry.echinacenko', 'botania.category.functionalFlowers', <botania:specialflower>.withTag({type: 'echinacenko'}));
-Lexicon.setEntryKnowledgeType('botania.entry.echinacenko', 'alfheim');
 Lexicon.addTextPage('botania.page.echinacenko0', 'botania.entry.echinacenko', 0);
 Lexicon.addPetalPage('botania.page.echinacenko1', 'botania.entry.echinacenko', 1, [<botania:specialflower>.withTag({type: 'echinacenko'})], [[
   <quark:rune:2>,
@@ -162,7 +162,7 @@ Lexicon.addRunePage('botania.page.runeAltar9', 'botania.entry.runeAltar', 11, [<
 Lexicon.addRunePage('botania.page.runeAltar10', 'botania.entry.runeAltar', 12, [<botania:rune:6>],
   [[<ore:runeFireB>, <ore:runeAirB>, <ore:quicksilver>, <minecraft:deadbush>, <ore:stoneMetamorphic>]], [10000]);
 Lexicon.addRunePage('botania.page.runeAltar11', 'botania.entry.runeAltar', 13, [<botania:rune:7>],
-  [[<ore:runeWaterB>, <ore:runeEarthB>, utils.tryCatch('mctsmelteryio:iceball', <iceandfire:dragon_ice>), <astralsorcery:itemusabledust>, <ore:blockSalt>]], [10000]);
+  [[<ore:runeWaterB>, <ore:runeEarthB>, <mctsmelteryio:iceball> ?? <iceandfire:dragon_ice>, <astralsorcery:itemusabledust>, <ore:blockSalt>]], [10000]);
 Lexicon.addRunePage('botania.page.runeAltar12', 'botania.entry.runeAltar', 14, [<botania:rune:8>],
   [[<ore:manaPearl>, <ore:powderMana>, <ore:quartzMana>, <ore:manaDiamond>, <ore:clothManaweave>]], [20000]);
 Lexicon.addRunePage('botania.page.runeAltar13', 'botania.entry.runeAltar', 15, [<botania:rune:9>],

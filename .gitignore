@@ -116,4 +116,8 @@ config/JustEnoughCalculation/record.json
 config/opencomputers/default.recipes
 config/opencomputers/gregtech.recipes
 config/opencomputers/hardmode.recipes
-config/jade.cfg
+config/advRocketry/weights.json
+config/creativecore.json
+config/ometweaks/modules.cfg
+config/relauncher.json
+config/nuclearcraft.ncpf.json

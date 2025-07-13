@@ -131,7 +131,7 @@ craft.remake(<appliedenergistics2:molecular_assembler>, ['pretty',
 recipes.remove(<appliedenergistics2:grindstone>);
 recipes.addShapedMirrored('Grindstone',
   <appliedenergistics2:grindstone>,
-  [[<appliedenergistics2:smooth_sky_stone_block>, <ore:gearWood>, <appliedenergistics2:smooth_sky_stone_block>],
+  [[<appliedenergistics2:smooth_sky_stone_block>, <ore:gearStone>, <appliedenergistics2:smooth_sky_stone_block>],
     [<ore:crystalCertusQuartz>, <appliedenergistics2:smooth_sky_stone_block>, <ore:crystalCertusQuartz>],
     [<appliedenergistics2:sky_stone_block>, <ore:crystalCertusQuartz>, <appliedenergistics2:sky_stone_block>]]);
 
@@ -493,6 +493,13 @@ regrind(<nuclearcraft:ingot:10>                 , <nuclearcraft:dust:10>);
 regrind(<nuclearcraft:ingot:11>                 , <nuclearcraft:dust:11>);
 regrind(<nuclearcraft:ingot:14>                 , <nuclearcraft:dust:14>);
 regrind(<nuclearcraft:ingot:15>                 , <nuclearcraft:dust:15>);
+regrind(<nuclearcraft:ingot2:1>                 , <nuclearcraft:dust2:1>);
+regrind(<nuclearcraft:ingot2:2>                 , <nuclearcraft:dust2:2>);
+regrind(<nuclearcraft:ingot2:3>                 , <nuclearcraft:dust2:3>);
+regrind(<nuclearcraft:ingot2:4>                 , <nuclearcraft:dust2:4>);
+regrind(<nuclearcraft:ingot2:5>                 , <nuclearcraft:dust2:5>);
+regrind(<nuclearcraft:ingot2:6>                 , <nuclearcraft:dust2:6>);
+regrind(<nuclearcraft:ingot2>                   , <nuclearcraft:dust2>);
 regrind(<psi:material:1>                        , <psi:material>);
 regrind(<qmd:ingot:1>                           , <qmd:dust:1>);
 regrind(<qmd:ingot:2>                           , <qmd:dust:2>);
@@ -648,7 +655,7 @@ for i, inputs in storCompIngrs {
 recipes.addHiddenShapeless(
   'singularity_tag_clearing',
   <appliedenergistics2:material:48> * 2,
-  [<ore:singularityEntangled>, <ore:singularityEntangled>]
+  [<ore:itemEntangled>, <ore:itemEntangled>]
 );
 // and JEI recipe hint for it, it's added at both server and client to prevent strange data syncing issue
 recipes.addShapeless(

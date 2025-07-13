@@ -1,4 +1,4 @@
-#modloaded rats
+#modloaded rats requious
 
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
@@ -7,7 +7,7 @@ import crafttweaker.item.IItemStack;
 // Deny this by costom event
 events.onAllowDespawn(function (e as crafttweaker.event.EntityLivingSpawnEvent) {
   if (
-    e.world.isRemote()
+    e.world.remote
     || !(e.entity instanceof crafttweaker.entity.IEntityAnimal)
     || e.entityLivingBase.definition.id != 'rats:rat'
   ) return;
@@ -157,9 +157,9 @@ remake('rat_upgrade_archeologist', <rats:rat_upgrade_archeologist>, [
   [<rats:marbled_cheese_raw>, <ore:hatArcheologist>, <rats:marbled_cheese_raw>],
   [<ore:boneDragon>, <rats:rat_upgrade_basic_ratlantean>, <ore:boneDragon>],
   [
-    utils.tryCatch('littletiles:hammer', <redstonearsenal:tool.pickaxe_flux>).anyDamage(),
+    (<littletiles:hammer> ?? <redstonearsenal:tool.pickaxe_flux>).anyDamage(),
     <ore:tokenOrIdolFlag>,
-    utils.tryCatch('littletiles:saw', <redstonearsenal:tool.hammer_flux>).anyDamage(),
+    (<littletiles:saw> ?? <redstonearsenal:tool.hammer_flux>).anyDamage(),
   ],
 ]);
 
@@ -450,7 +450,7 @@ craft.make(<rats:plague_essence>, ['pretty',
   'B C B'], {
   'B': <ore:paperBlack>,                         // Black Paper
   'C': <contenttweaker:compressed_garbage_pile>, // Compressed Garbage Pile
-  'A': utils.tryCatch('betteranimalsplus:antler', <minecraft:rabbit_hide>), // Antler
+  'A': <betteranimalsplus:antler> ?? <minecraft:rabbit_hide>, // Antler
 });
 
 // Peaceful alt
@@ -481,5 +481,5 @@ craft.make(<rats:plague_scythe>, ["pretty",
   "P M P",
   "P P P"], {
   "P": <rats:plague_essence>,              # Plague Essence
-  "M": utils.tryCatch('thaumadditions:mithminite_scythe', <draconicevolution:wyvern_sword>), # Mithminite Scythe
+  "M": <thaumadditions:mithminite_scythe> ?? <draconicevolution:wyvern_sword>, # Mithminite Scythe
 });

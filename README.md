@@ -320,15 +320,29 @@ Some screenshots of new worldgen:
 
 ## Recommendations
 
+### Mods
+
 <img alt="Dark mode screenshot" src="https://i.imgur.com/208PcOt.png" align=right>
 
 - [**A Dark Mode**](https://www.curseforge.com/minecraft/texture-packs/minecraft-dark-mode-mod-support) - Almost 100% dark mode.
 
 - [**Entity Culling**](https://www.curseforge.com/minecraft/mc-mods/entity-culling)+[**RenderLib**](https://www.curseforge.com/minecraft/mc-mods/renderlib) - increase performance, but can cause crashes on some machines
 
-- [**Dynamic Surroundings**](https://www.curseforge.com/minecraft/mc-mods/dynamic-surroundings) - better sounds and environmental, but increaing load time and lower FPS a bit
+- [**Dynamic Surroundings**](https://www.curseforge.com/minecraft/mc-mods/dynamic-surroundings)+[**OreLib**](https://www.curseforge.com/minecraft/mc-mods/orelib) - better sounds and environmental, but increasing load time and lower FPS a bit
 
 - [**Fluidlogged API**](https://modrinth.com/mod/fluidlogged-api) - adds basic fluidlogging, widely configured for `E2E-E`. Its not included by default since causing slight TPS consumption [[1]](https://github.com/jbredwards/Fluidlogged-API/issues/184)[[2]](https://github.com/jbredwards/Fluidlogged-API/issues/182).
+
+### Shaders
+
+1. Optifine must be installed.
+
+2. Add shader, for example, [Complementary Unbound](https://www.curseforge.com/minecraft/shaders/complementary-unbound).
+
+3. Configure your MC configs:
+    - `config/astralsorcery.cfg` add `0` line after line `S:weakSkyRenders <`.
+    - `config/advRocketry/advancedRocketry.cfg` set `PlanetSkyOverride` and `StationSkyOverride` to `false`.
+    - `config/brandon3055/DraconicEvolution.cfg` set `useShaders` and `useCrystalShaders` to `false`
+    - `config/botania.cfg` set `shaders.enabled` to `false`
 
 -----------------
 
@@ -428,6 +442,8 @@ Some of the changes from the `Extended` version [[1]](https://github.com/Enigmat
 ### Migrate to Java 22 (Recommended)
 
 [![Migrate to Java 22](https://img.youtube.com/vi/bXXuKDeFGsQ/0.jpg)](https://www.youtube.com/embed/bXXuKDeFGsQ)
+
+[Also text guide on E2EE Discord server](https://discord.com/channels/911676461050642432/1215301438297735168).
 
 ### Modpack Review (English)
 

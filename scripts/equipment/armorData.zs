@@ -1,13 +1,7 @@
-# ######################################################################
-#
-# This file automatically generated from equipmentParse.js
-#
-# ######################################################################
+#priority 10
 
 import crafttweaker.data.IData;
 import crafttweaker.item.IItemStack;
-
-#priority 10
 
 static armorStaged as IData[string] = 
 {
@@ -252,7 +246,7 @@ static armorStaged as IData[string] =
       {id:"twilightforest:arctic_chestplate"},
       {id:"twilightforest:arctic_leggings"},
       {id:"twilightforest:arctic_boots"},
-      {id:"twilightforest:ice_sword"},
+      {id:"iceandfire:dread_sword"},
       {id:"twilightforest:knightmetal_shield"}
   ]},
   armor_ironwood:{

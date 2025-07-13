@@ -116,7 +116,7 @@ recipes.addShaped('Luminous Crafting Table - RecipeAction', <astralsorcery:block
   'A': <thaumcraft:arcane_workbench>, // Arcane Workbench
 }).shaped(), null, function (out, cInfo, player) {
   if (isNull(player)) return;
-  if (player.world.isRemote()) return;
+  if (player.world.remote) return;
   val server = player.server;
   server.commandManager.executeCommandSilent(server, '/astralsorcery research ' ~ player.name ~ ' BASIC_CRAFT');
 });

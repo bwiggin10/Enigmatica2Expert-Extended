@@ -169,6 +169,17 @@ mods.thaumcraft.Infusion.registerRecipe(
     'D': <cyclicmagic:dice>, // Dice
   }).spiral(1));
 
+for relic in [
+  <botania:infinitefruit>,
+  <botania:kingkey>,
+  <botania:flugeleye>,
+  <botania:lokiring>,
+  <botania:odinring>,
+  <botania:thorring>,
+] as IItemStack[] {
+  recipes.addShapeless(relic, [relic.anyDamage().reuse(), <botania:dice>]);
+}
+
 // Livingrock
 mods.botania.PureDaisy.removeRecipe(<botania:livingrock>);
 mods.botania.PureDaisy.addRecipe(<thaumcraft:stone_arcane>, <botania:livingrock>);
@@ -306,7 +317,7 @@ function remakeRune(rune as IItemStack, ingrList as IIngredient[], mana as int) 
 /* Spring */  remakeRune(<botania:rune:4>,     [<ore:runeWaterB>, <ore:runeFireB>, <astralsorcery:blockinfusedwood>, <ore:flower>, <ore:nitor>], 10000);
 /* Summer */  remakeRune(<botania:rune:5>,     [<ore:runeEarthB>, <ore:runeAirB>, <ore:treeSapling>, <ore:nuggetBrass>, <ore:livingwood>], 10000);
 /* Autumn */  remakeRune(<botania:rune:6>,     [<ore:runeFireB>, <ore:runeAirB>, <ore:quicksilver>, <minecraft:deadbush>, <ore:stoneMetamorphic>], 10000);
-/* Winter */  remakeRune(<botania:rune:7>,     [<ore:runeWaterB>, <ore:runeEarthB>, utils.tryCatch('mctsmelteryio:iceball', <iceandfire:dragon_ice>), <astralsorcery:itemusabledust>, <ore:blockSalt>], 10000);
+/* Winter */  remakeRune(<botania:rune:7>,     [<ore:runeWaterB>, <ore:runeEarthB>, <mctsmelteryio:iceball> ?? <iceandfire:dragon_ice>, <astralsorcery:itemusabledust>, <ore:blockSalt>], 10000);
 /* Mana */    remakeRune(<botania:rune:8>,     [<ore:manaPearl>, <ore:powderMana>, <ore:quartzMana>, <ore:manaDiamond>, <ore:clothManaweave>], 20000);
 /* Lust */    remakeRune(<botania:rune:9>,     [<ore:manaDiamond>, <ore:manaDiamond>, <botania:rune:5>, <botania:rune:5>, <botania:rune:3>, <botania:rune:3>], 25000);
 /* Gluttony */remakeRune(<botania:rune:10>,    [<ore:manaDiamond>, <ore:manaDiamond>, <botania:rune:7>, <botania:rune:7>, <botania:rune:1>, <botania:rune:1>], 25000);
@@ -425,6 +436,10 @@ craft.make(<botania:blackholetalisman>, ['pretty',
 // [Dilithium Crystal] from [Dilithium Dust]
 mods.botania.ManaInfusion.addInfusion(<libvulpes:productgem>, <ore:dustDilithium>, 10000);
 
+// 🚒 Inworld crafting
+recipes.remove(<botania:bifrostperm>);
+furnace.addRecipe(<botania:bifrostperm>, <botania:bifrost>, 1.0);
+
 // ////////////////////////////////////////////////////////////////
 // Rods rework
 // ////////////////////////////////////////////////////////////////
@@ -467,66 +482,74 @@ mods.botania.Apothecary.addRecipe(<botania:specialflower>.withTag({type: "campan
 <botania:rune:2>,
 <botania:rune:3>,
 <botania:rune>,
-<quark:rune:14>,
-<quark:rune:2>,
-<quark:rune:4>,
+<botania:petal:14>,
+<botania:petal:2>,
+<botania:petal:4>,
 ]);
+recipes.addShapeless(<botania:floatingspecialflower>.withTag({type: "campanimia"}), [<botania:specialflower>.withTag({type: "campanimia"}), <botania:floatingspecialflower:*>]);
 
 mods.botania.Apothecary.addRecipe(<botania:specialflower>.withTag({type: "nuclianthus"}), [
-<quark:rune:5>,
-<quark:rune:4>,
-<quark:rune:4>,
-<quark:rune:1>,
-<botania:manaresource:1>,
+<botania:petal:13>,
+<botania:petal:4>,
+<botania:petal:4>,
+<botania:petal:1>,
+<botania:manaresource:8>,
 <botania:rune:6>,
 <botania:rune:6>,
 ]);
+recipes.addShapeless(<botania:floatingspecialflower>.withTag({type: "nuclianthus"}), [<botania:specialflower>.withTag({type: "nuclianthus"}), <botania:floatingspecialflower:*>]);
 
 mods.botania.Apothecary.addRecipe(<botania:specialflower>.withTag({type: "rokku_eryngium"}), [
 <botania:manaresource:5>,
 <botania:manaresource:9>,
 <botania:rune:11>,
 <botania:rune:12>,
-<quark:rune:11>,
-<quark:rune>,
-<quark:rune>,
+<botania:petal:11>,
+<botania:petal>,
+<botania:petal>,
 ]);
+recipes.addShapeless(<botania:floatingspecialflower>.withTag({type: "rokku_eryngium"}), [<botania:specialflower>.withTag({type: "rokku_eryngium"}), <botania:floatingspecialflower:*>]);
 
 mods.botania.Apothecary.addRecipe(<botania:specialflower>.withTag({type: "jikanacea"}), [
 <astralsorcery:itemcraftingcomponent:4>,
 <botania:rune:14>,
 <botania:rune:9>,
-<quark:rune:2>,
-<quark:rune:4>,
-<quark:rune:4>,
+<botania:petal:2>,
+<botania:petal:4>,
+<botania:petal:4>,
 <thaumicaugmentation:material:5>,
+<botania:manaresource:9>,
 ]);
+recipes.addShapeless(<botania:floatingspecialflower>.withTag({type: "jikanacea"}), [<botania:specialflower>.withTag({type: "jikanacea"}), <botania:floatingspecialflower:*>]);
 
 mods.botania.Apothecary.addRecipe(<botania:specialflower>.withTag({type: "echinacenko"}), [
-<quark:rune:2>,
-<quark:rune:2>,
-<quark:rune:5>,
+<botania:petal:2>,
+<botania:petal:2>,
+<botania:petal:5>,
 <botania:rune:10>,
 <botania:rune:12>,
 <botania:manaresource:1>,
 ]);
+recipes.addShapeless(<botania:floatingspecialflower>.withTag({type: "echinacenko"}), [<botania:specialflower>.withTag({type: "echinacenko"}), <botania:floatingspecialflower:*>]);
 
 mods.botania.Apothecary.addRecipe(<botania:specialflower>.withTag({type: "antirrhift"}), [
 <botania:manaresource:8>,
 <botania:rune:15>,
-<quark:rune:2>,
-<quark:rune>,
-<quark:rune>,
+<botania:petal:2>,
+<botania:petal>,
+<botania:petal>,
 <thaumicaugmentation:material:5>,
 <thaumicaugmentation:material:5>,
 ]);
+recipes.addShapeless(<botania:floatingspecialflower>.withTag({type: "antirrhift"}), [<botania:specialflower>.withTag({type: "antirrhift"}), <botania:floatingspecialflower:*>]);
 
 mods.botania.Apothecary.addRecipe(<botania:specialflower>.withTag({type: "amuileria_kaerunea"}), [
 <botania:manaresource:9>,
 <botania:rune:8>,
 <minecraft:end_rod>,
-<quark:rune:3>,
-<quark:rune:3>,
-<quark:rune:4>,
-<quark:rune>,
+<botania:petal:3>,
+<botania:petal:3>,
+<botania:petal:4>,
+<botania:petal>,
 ]);
+recipes.addShapeless(<botania:floatingspecialflower>.withTag({type: "amuileria_kaerunea"}), [<botania:specialflower>.withTag({type: "amuileria_kaerunea"}), <botania:floatingspecialflower:*>]);

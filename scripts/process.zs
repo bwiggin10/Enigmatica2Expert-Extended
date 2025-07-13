@@ -133,9 +133,9 @@ function mash(input as IIngredient, output as IItemStack, exceptions as string =
 
 // Alloy two or more metals into one
 // [📦+] → 📦
-function alloy(input as IIngredient[], output as IItemStack, exceptions as string = null) {
+function alloy(input as IIngredient[], output as IItemStack, exceptions as string = null, extra as IItemStack[] = null, extraChance as float[] = null, opts as IData = null) {
   work(['alloyFurnace', 'induction', 'alloySmelter', 'ArcFurnace', 'AdvRockArc', 'kiln'],
-    exceptions, input, null, [output], null, null, null);
+    exceptions, input, null, [output], null, extra, extraChance, opts);
 }
 
 // Takes plant or seed and grow it
@@ -276,12 +276,12 @@ function beneficiate(
     }
 
     // All crushing methods except sag mill
-    crush(input, dustOrGem, `${exceptions} macerator thermalCentrifuge crushingBlock SAGMill`, extraList, extraChances, { bonusType: 'MULTIPLY_OUTPUT' });
+    crush(input, dustOrGem, `${exceptions} macerator thermalCentrifuge crushingBlock SAGMill`, extraList, extraChances);
 
     // Sag mill separately since work too fast and too much output
     val sagmillChances = floatArrayOf(extraChances.length, 1.0f);
     for i, chance in extraChances { sagmillChances[i] = chance / 2.0f; }
-    crush(input, dustOrGem * (3.0 / 4 * dustOrGem.amount) as int, `${exceptions} only: SAGMill`, extraList, sagmillChances, { bonusType: 'MULTIPLY_OUTPUT' });
+    crush(input, dustOrGem * (3.0 / 4 * dustOrGem.amount) as int, 'only: SAGMill', extraList, sagmillChances, { bonusType: 'MULTIPLY_OUTPUT' });
 
     if (extraList.length >= 3) {
       workEx('massspectrometer', null, [input], null, [

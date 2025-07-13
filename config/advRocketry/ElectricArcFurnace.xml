@@ -78,7 +78,7 @@
 	<Recipe timeRequired="10" power="40000">
 		<input>
 			<oreDict>ingotBrass 4</oreDict>
-			<oreDict>blockProsperity 2</oreDict>
+			<oreDict>shardProsperity 2</oreDict>
 			<oreDict>nuggetManasteel 2</oreDict>
 			<oreDict>dustAstralStarmetal 2</oreDict>
 		</input>

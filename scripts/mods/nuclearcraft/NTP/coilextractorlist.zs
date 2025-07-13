@@ -8,7 +8,7 @@ static ExtractorInfoList as [ExtractorInfo] = [
 
 	ExtractorInfo("Redstone",0.80, "one lapisconverter coil || one diamondconverter coil"),
 	ExtractorInfo("Aluminium",0.90, "one emeraldconverter coil || one prismarineconverter coil || one redstoneextractor coil"),
-	ExtractorInfo("Copper",1.00, "one arsenicconverter coil || one carobiiteconverter coil || one aluminiumextractor coil"),
+	ExtractorInfo("Copper",1.00, "one arsenicconverter coil || one carobbiiteconverter coil || one aluminiumextractor coil"),
 	ExtractorInfo("Gold",1.10, "one fluoriteconverter coil || one rhodochrositeconverter coil || one copperextractor coil"),
 	ExtractorInfo("Beryllium",1.20, "one zirconiumconverter coil || one villiaumiteconverter coil || one goldextractor coil"),
 	ExtractorInfo("Graphite",1.30, "one glowstoneconverter coil || one quartzconverter coil || one berylliumextractor coil"),

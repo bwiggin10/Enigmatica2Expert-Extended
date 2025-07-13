@@ -4,6 +4,8 @@ import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
 import crafttweaker.liquid.ILiquidStack;
 
+<blockstate:nuclearcraft:ore>.block.definition.hardness = 24; // Harvest level defined in mod config
+
 // Use Cyclic's Ender Pouch instead
 Purge(<nuclearcraft:portable_ender_chest>);
 
@@ -181,7 +183,7 @@ craft.remake(<nuclearcraft:upgrade>, ['pretty',
   'T ⌂ T'], {
   'T': <ic2:nuclear:5>,         // Tiny Pile of Uranium 235
   '⌂': <ic2:casing>,            // Bronze Item Casing
-  'B': utils.tryCatch('mctsmelteryio:upgrade', <mekanism:speedupgrade>),
+  'B': <mctsmelteryio:upgrade> ?? <mekanism:speedupgrade>,
 });
 
 // [Energy Upgrade] from [Base Upgrade][+2]
@@ -191,7 +193,7 @@ craft.remake(<nuclearcraft:upgrade:1>, ['pretty',
   'T ⌂ T'], {
   'T': <ic2:nuclear:5>,         // Tiny Pile of Uranium 235
   '⌂': <ic2:casing:5>,          // Steel Item Casing
-  'B': utils.tryCatch('mctsmelteryio:upgrade', <mekanism:energyupgrade>),
+  'B': <mctsmelteryio:upgrade> ?? <mekanism:energyupgrade>,
 });
 
 // Uranium RTG should require [Advanced Plating] instead of Basic
@@ -226,8 +228,8 @@ craft.remake(<nuclearcraft:ingot_former>, ['pretty',
   'S c S',
   '□ C □'], {
   '□': <ore:plateAdvanced>,       // Advanced Plating
-  'C': utils.tryCatch('mctsmelteryio:machine', 1, <forestry:wax_cast:*>), // Casting Machine
-  'S': utils.tryCatch('mctsmelteryio:upgrade', 4, <tconstruct:materials:12>), // Slot Size Upgrade 4
+  'C': <mctsmelteryio:machine:1> ?? <forestry:wax_cast:*>, // Casting Machine
+  'S': <mctsmelteryio:upgrade:4> ?? <tconstruct:materials:12>, // Slot Size Upgrade 4
   'c': <ore:chassis>,             // Machine Chassis
 });
 
@@ -377,7 +379,6 @@ else {
 
 // Sic-Sic ingots
 scripts.process.fill(<exnihilocreatio:item_mesh:2>, <fluid:sic_vapor> * 1000, <nuclearcraft:part:13> * 4, 'only: NCInfuser Transposer');
-scripts.process.alloy([<ore:bouleSilicon>, <ore:fiberSiliconCarbide>], <nuclearcraft:alloy:14>, 'only: advrockarc');
 
 // Unify Silicon
 <ore:itemSilicon>.remove(<nuclearcraft:gem:6>);
@@ -420,7 +421,21 @@ for i, output in compressed {
 // Decay generator as crafting method
 // mods.nuclearcraft.DecayGenerator.addRecipe(IIngredient blockInput, IIngredient blockOutput, double meanLifetime, double power, double radiation);
 mods.nuclearcraft.DecayGenerator.addRecipe(<contenttweaker:terrestrial_artifact_block>, <environmentaltech:litherite>  , 100.0, 8000000.0, 0.1);
-mods.nuclearcraft.DecayGenerator.addRecipe(<environmentaltech:litherite>             , <actuallyadditions:block_misc:6>,  50.0,  400000.0, 0.1);
+
+val decayEvt = [
+  <actuallyadditions:block_misc:6>,
+  <environmentaltech:litherite>,
+  <environmentaltech:erodium>,
+  <environmentaltech:kyronite>,
+  <environmentaltech:pladium>,
+  <environmentaltech:ionite>,
+  <environmentaltech:aethium>,
+] as IItemStack[];
+
+for i, item in decayEvt {
+  if (i == 0) continue;
+  mods.nuclearcraft.DecayGenerator.addRecipe(item, decayEvt[i - 1], 40.0 + 10.0 * i, 300000.0 + 100000.0 * i, 0.1 * i);
+}
 
 // Supercooled Ice compat
 scripts.process.fill(<ore:ice>, <fluid:liquid_helium> * 50, <nuclearcraft:supercold_ice>, 'only: Transposer');
@@ -600,6 +615,8 @@ scripts.process.compress(<ore:dustVilliaumite>  , <nuclearcraft:gem:3>); // [Vil
 scripts.process.compress(<ore:dustCarobbiite>   , <nuclearcraft:gem:4>); // [Carobbiite]
 scripts.process.compress(<ore:dustStrontium90> * 9, <qmd:strontium_90_block>); // [Strontium-90 Block]
 scripts.process.compress(<ore:dustWitherite>    , <trinity:gem_witherite>); // [Witherite]
+scripts.process.compress(<ore:dustSteel>, <ore:sinteredSteel>.firstItem);
+scripts.process.compress(<ore:dustZirconia>, <ore:sinteredZirconia>.firstItem);
 
 // ------------------------------------------------------------
 // Fluid Extractor replacement
@@ -631,14 +648,10 @@ Purge(<nuclearcraft:heat_exchanger_controller>);
 Purge(<nuclearcraft:condenser_controller>);
 Purge(<nuclearcraft:heat_exchanger_casing>);
 Purge(<nuclearcraft:heat_exchanger_glass>);
-Purge(<nuclearcraft:heat_exchanger_vent>);
 Purge(<nuclearcraft:heat_exchanger_tube_copper>);
 Purge(<nuclearcraft:heat_exchanger_tube_hard_carbon>);
 Purge(<nuclearcraft:heat_exchanger_tube_thermoconducting>);
 Purge(<nuclearcraft:heat_exchanger_computer_port>);
-Purge(<nuclearcraft:condenser_tube_copper>);
-Purge(<nuclearcraft:condenser_tube_hard_carbon>);
-Purge(<nuclearcraft:condenser_tube_thermoconducting>);
 
 // Alloy furnace meant to be only for blocks
 // Remove all ingot and nugget recipes that have blocks
@@ -1081,3 +1094,21 @@ for inputs, output in {
   scripts.process.alloy(inputs, output, 'only: ArcFurnace Kiln');
   scripts.process.alloy([inputs[0] * (inputs[0].amount * 9), inputs[1] * (inputs[1].amount * 9)], output * (output.amount * 9), 'only: AdvRockArc');
 }
+
+// Wasteland portals spawn in BoP worlds
+// but not in OTG ones, so there is the recipe
+mods.thaumcraft.Infusion.registerRecipe(
+  "wasteland_portal", # Name
+  "INFUSION", # Research
+  <nuclearcraft:wasteland_portal>, # Output
+  1, # Instability
+  [<aspect:perditio> * 40, Aspect.exitium * 40],
+  <trinity:solid_trinitite>, # Central Item
+  Grid(["pretty",
+  "s Q s",
+  "P   P",
+  "s Q s"], {
+  "s": <ore:compressed2xSand>,
+  "Q": <nuclearcraft:wasteland_earth>,
+  "P": <thaumcraft:stone_porous>,
+}).spiral(1));

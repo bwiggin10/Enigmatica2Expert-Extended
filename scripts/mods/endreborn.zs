@@ -244,4 +244,12 @@ craft.shapeless(<endreborn:item_ingot_wolframium>, '‚‚‚‚‚‚‚‚‚'
   '‚': <jaopca:item_nuggettungsten>,
 });
 
+// For some reason this not working
+for i, oreName in 'clusterTungsten dirtyGemAstralStarmetal oreTungsten'.split(' ') {
+  val input = oreDict[oreName].firstItem;
+  val wrong = <jaopca:item_nuggettungsten>;
+  val correct = <endreborn:wolframium_nugget> % 33;
+  mods.thaumcraft.SmeltingBonus.removeSmeltingBonus(input, wrong);
+  mods.thaumcraft.SmeltingBonus.addSmeltingBonus(input, correct);
+}
 // ----------------------------------------------------------------------------

@@ -73,7 +73,7 @@ recipes.addShapedMirrored('Dimlet Workbench',
   <rftoolsdim:dimlet_workbench>,
   [[<vaultopic:vice>, <rftoolsdim:dimlet_base>, <vaultopic:vice>],
     [<rftools:crafter3>.anyDamage(), <thermalexpansion:frame:148>, <rftools:crafter3>.anyDamage()],
-    [<vaultopic:vice>, utils.tryCatch(itemUtils.getItem('rftoolscontrol:workbench', 32767), <rftools:crafter3:*>), <vaultopic:vice>]]);
+    [<vaultopic:vice>, <rftoolscontrol:workbench:*> ?? <rftools:crafter3:*>, <vaultopic:vice>]]);
 
 // [Dimension Enscriber] from [Dimension Enscriber Prototype][+3]
 craft.remake(<rftoolsdim:dimension_enscriber>, ['pretty',

@@ -1,4 +1,5 @@
 #modloaded integrateddynamics
+#ignoreBracketErrors
 
 /*
 # Aluminum / Osmium Squeezer Compatibility
@@ -99,7 +100,7 @@ craft.remake(<integrateddynamics:energy_battery>.withTag({ energy: 0, capacity: 
   '□ ♥ □',
   '□ ◘ □'], {
   '♥': <additionalcompression:dustredstone_compressed:1>,
-  '□': utils.tryCatch(utils.get('openblocks:tank', 0, 1, { tank: { FluidName: 'menrilresin', Amount: 24000 } }), Bucket('menrilresin')),
+  '□': <openblocks:tank>.withTag({tank: { FluidName: 'menrilresin', Amount: 24000 }}) ?? Bucket('menrilresin'),
   '◘': <integrateddynamics:crystalized_chorus_block>, // Block of Crystalized Chorus
 });
 
@@ -167,9 +168,7 @@ scripts.process.fill(<ore:blockGlass>, <fluid:menrilresin> * 1000, <integratedte
 scripts.process.fill(<ore:blockGlass>, <fluid:liquidchorus> * 1000, <integratedterminals:chorus_glass>, 'except: Casting DryingBasin MechanicalDryingBasin', true);
 
 // Fix torch have black-purple texture on cycling ingredients
-// [Menril Stone Torch] from [Menril Berries][+1]
 recipes.removeByRecipeName("integrateddynamics:menril_torch_stone");
-craft.shapeless(<integrateddynamics:menril_torch_stone> * 4, '/A', {
-  '/': <ore:stickStone>,
-  'A': <integrateddynamics:menril_berries>,
-});
+recipes.addShapeless('integrateddynamics:on_the_dynamics_of_integration',
+  <integrateddynamics:menril_torch_stone> * 4,
+  [<ore:stickStone>,<integrateddynamics:menril_berries>]);

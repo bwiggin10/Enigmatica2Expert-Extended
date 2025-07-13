@@ -139,7 +139,7 @@
     {
       "item": "thaumicaugmentation:research_notes",
       "type": "text",
-      "text": "$(li)Press \"§lR§r\" or \"§lU§r\" while hovering over an item in the §2Patchouli§r book to view its recipes.",
+      "text": "$(li)Press \"§lR§r\" or \"§lU§r\" while hovering over an item in the §2Patchouli§r book to view its recipes.$(li)You can §6deconstruct TCon tools§r by placing them into output slot.",
       "title": "Tips"
     }
   ]

@@ -1,0 +1,23 @@
+             ,Total Power   ,Trats Value ,Modifier      ,BonusAmmo  
+reed         ,        -7.50 ,       -20  ,         1.5  ,        10 
+blaze        ,        28.60 ,        20  ,         0.80 ,         3 
+tnt          ,        29.50 ,        20  ,         0.95 ,         0 
+ice          ,        34.50 ,        25  ,         0.95 ,         0 
+amber        ,        36    ,        25  ,         1    ,         5 
+endrod       ,        47.20 ,        40  ,         0.70 ,         1 
+wood         ,        50    ,        40  ,         1    ,         0 
+treatedwood  ,        52    ,        40  ,         1.20 ,         0 
+fierymetal   ,        53    ,        45  ,         0.80 ,         0 
+heavy        ,        60    ,        60  ,         0.20 ,       -10 
+polyethylene ,        60.10 ,        45  ,         0.75 ,        38 
+fusewood     ,        68.30 ,        55  ,         1.25 ,         4 
+nagascale    ,        73    ,        55  ,         1.40 ,        20 
+darkwood     ,        77    ,        65  ,         1    ,        10 
+endorium     ,        80    ,        65  ,         1.40 ,         5 
+bone         ,        90    ,        80  ,         0.90 ,         5 
+dreamwood    ,        97.50 ,        80  ,         1.25 ,        25 
+bloodwood    ,       100    ,        85  ,         1.50 ,         0 
+livingwood   ,       100    ,        90  ,         1    ,         0 
+dragonbone   ,       103.40 ,        90  ,         1.30 ,         2 
+ghostwood    ,       111.40 ,       100  ,         0.90 ,        12 
+steeleaf     ,       118    ,       110  ,         0.60 ,        10 

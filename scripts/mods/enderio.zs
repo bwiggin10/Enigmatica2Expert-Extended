@@ -163,14 +163,13 @@ scripts.mods.extendedcrafting_engineering.remakeAlted(
   '¤': <ore:gearEnderium>,
 });
 
-// [End Steel Chassis] from [Quartzburnt][+2]
-craft.remake(<enderio:item_material:66>, ['pretty',
-  'E ◊ E',
+craft.remake(<enderio:item_material:66> * 2, ['pretty',
+  '▬ ◊ ▬',
   '◊ Q ◊',
-  'E ◊ E'], {
-  'E': <enderio:block_end_iron_bars>, // End Steel Bars
-  '◊': <ore:gemXorcite>, // Xorcite Shard
-  'Q': <extrautils2:decorativesolid:7>, // Quartzburnt
+  '▬ ◊ ▬'], {
+  '▬': <ore:ingotEndSteel>,
+  '◊': <ore:gemXorcite>,
+  'Q': <extrautils2:decorativesolid:7>,
 });
 
 // [Basic Capacitor] from [Redstone Conductance Coil][+3]
@@ -518,6 +517,30 @@ craft.reshapeless(<enderio:item_dark_steel_upgrade:1>.withTag({ 'enderio:dsu': '
     '*': <ore:itemPulsatingCrystal>, // Pulsating Crystal
   });
 
+craft.reshapeless(<enderio:item_dark_steel_upgrade:1>.withTag({"enderio:dsu": "enderio:inv"}), 'ABC', {
+  A: <enderio:item_dark_steel_upgrade>,
+  B: <quark:custom_chest:4>,
+  C: <ore:gearStone>,
+});
+
+craft.reshapeless(<enderio:item_dark_steel_upgrade:1>.withTag({"enderio:dsu": "enderio:jumpboost1"}), 'ABC', {
+  A: <enderio:item_dark_steel_upgrade>,
+  B: <minecraft:piston>,
+  C: <ore:gearStone>,
+});
+
+craft.reshapeless(<enderio:item_dark_steel_upgrade:1>.withTag({"enderio:dsu": "enderio:speedboost1"}), 'ABC', {
+  A: <enderio:item_dark_steel_upgrade>,
+  B: <minecraft:sugar>,
+  C: <ore:gearStone>,
+});
+
+craft.reshapeless(<enderio:item_dark_steel_upgrade:1>.withTag({"enderio:dsu": "enderio:tnt"}), 'ABC', {
+  A: <enderio:item_dark_steel_upgrade>,
+  B: <ic2:dynamite>,
+  C: <ore:gearStone>,
+});
+
 // Add recipe to use in some AA crafts
 // [Organic Brown Dye] from [Crushed Black Quartz][+3]
 mods.rt.RandomThingsTweaker.addImbuingRecipe(
@@ -786,7 +809,7 @@ for block, result in {
   <mekanism:basicblock:8>         : { <enderio:item_material:2>: 16 },
 
   <libvulpes:structuremachine>    : { <enderio:item_material:68>: 10 },
-  <appliedenergistics2:controller>: { <enderio:item_material:68>: 16 },
+  <appliedenergistics2:controller>: { <enderio:item_material:68>: 64 },
 } as int[IItemStack][IItemStack] {
   for output, amount in result {
     mods.inworldcrafting.ExplosionCrafting.explodeBlockRecipe(output * amount, block);

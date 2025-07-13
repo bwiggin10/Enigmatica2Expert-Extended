@@ -1,4 +1,12 @@
-#modloaded jei
+/*
+
+Recipe and mechanics to enrich potion power, time and
+combine their effects.
+
+*/
+
+#modloaded jei thaumcraft
+#norun
 
 import crafttweaker.data.IData;
 import crafttweaker.item.IIngredient;
@@ -6,7 +14,7 @@ import crafttweaker.item.IItemStack;
 import crafttweaker.recipes.IRecipeFunction;
 
 // Sadly, i didnt find dynamic solution to convert Potion_Name -> EffectName -> EffectId
-/* Inject_js{
+/* Inject_js!{
   const potionsRegnameTag = getCSV('config/tellme/potions-csv.csv')
 .map(l=>[l['Registry name'], l['ID']])
 

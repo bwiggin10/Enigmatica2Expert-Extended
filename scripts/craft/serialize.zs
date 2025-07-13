@@ -1,3 +1,6 @@
+#priority 5000
+#reloadable
+
 import crafttweaker.block.IBlock;
 import crafttweaker.item.IIngredient;
 import crafttweaker.item.IItemStack;
@@ -5,11 +8,6 @@ import crafttweaker.item.WeightedItemStack;
 import crafttweaker.liquid.ILiquidDefinition;
 import crafttweaker.liquid.ILiquidStack;
 import crafttweaker.oredict.IOreDictEntry;
-
-#priority 5000
-
-#reloadable
-
 
 zenClass Serialize {
 	zenConstructor() { }
@@ -142,7 +140,8 @@ zenClass Serialize {
           if(s_line.length < 50) maxLength = max(maxLength, s_line.length);
         } else {
           val fancyPad = repeat(isDense ? 0 : maxLength - s_line.length);
-          val displayName = ingr.itemArray[0].displayName;
+          val displayName = ingr.itemArray.length > 0 && !isNull(ingr.itemArray[0])
+            ? ingr.itemArray[0].displayName : 'null';
           val comment = (style has "names")
             ? fancyPad ~ comment_start ~ displayName ~ comment_end
             : "";

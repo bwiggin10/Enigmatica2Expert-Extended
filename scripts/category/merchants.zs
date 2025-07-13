@@ -17,7 +17,7 @@ val merchData = {
   'minecraft:farmer': {
     fisherman: {
       5: [
-        [E, <mysticalagriculture:crafting:5> * 4, <mysticalagriculture:crafting:16>],
+        [E, <mysticalagriculture:crafting:5>, <mysticalagriculture:crafting:16>],
         [E * 64, <botania:manaresource:5>, <botania:overgrowthseed>],
         [E * 8, <botania:grassseeds>],
         [<mysticalagriculture:tier1_inferium_seeds>, E],

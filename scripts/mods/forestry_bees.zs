@@ -193,7 +193,7 @@ reprocessComb(<forestry:bee_combs:4>, [
   g['🟡'] % 80,  // Beeswax
   g['💛'] % 70,  // Honey Drop
   <forestry:pollen:1> % 20,     // Crystalline Pollen Cluster
-  utils.tryCatch('mctsmelteryio:iceball', <iceandfire:dragon_ice>) % 80, // Iceball
+  (<mctsmelteryio:iceball> ?? <iceandfire:dragon_ice>) % 80, // Iceball
 ]);
 
 // [Dripping_Comb]

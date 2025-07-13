@@ -1,4 +1,4 @@
-#modloaded quark
+#modloaded quark harvestcraft
 
 import crafttweaker.item.IItemStack;
 
