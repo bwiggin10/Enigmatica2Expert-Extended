@@ -32,25 +32,25 @@ return `${pairs
   .map(([name, mj_mb]) => `  ${name.replace(/"/g,"'").padEnd(16)}: ${Math.max(1, Math.round(common / Number(mj_mb)))},`)
   .join('\n')}\n};\nval rfProduced = ${common * 10};`
 } */
-  gasoline        : 6667,
-  canolaoil       : 3333,
-  refinedcanolaoil: 1667,
-  oil             : 1333,
-  biomass         : 1111,
-  biodiesel       : 833,
-  crystaloil      : 833,
-  ic2biogas       : 667,
-  diesel          : 476,
-  'bio.ethanol'   : 370,
-  biofuel         : 370,
-  refined_oil     : 351,
-  rocket_fuel     : 351,
-  refined_fuel    : 317,
-  empoweredoil    : 278,
-  fire_water      : 278,
-  ethene          : 208,
-  liquidethene    : 208,
-  syngas          : 167,
+  gasoline        : 3333,
+  canolaoil       : 1667,
+  refinedcanolaoil: 833,
+  oil             : 667,
+  biomass         : 556,
+  biodiesel       : 417,
+  crystaloil      : 417,
+  ic2biogas       : 333,
+  diesel          : 238,
+  'bio.ethanol'   : 185,
+  biofuel         : 185,
+  refined_oil     : 175,
+  rocket_fuel     : 175,
+  refined_fuel    : 159,
+  empoweredoil    : 139,
+  fire_water      : 139,
+  ethene          : 104,
+  liquidethene    : 104,
+  syngas          : 83,
   rocketfuel      : 1,
   perfect_fuel    : 1,
 };
@@ -70,7 +70,7 @@ for name, amount in turbineFuel {
     continue;
   }
   x.addJEIRecipe(AssemblyRecipe.create(function (container) {
-    container.addEnergyOutput('energy_out', name == 'perfect_fuel' ? 100000000 : rfProduced, 0);
+    container.addEnergyOutput('energy_out', name == 'perfect_fuel' ? 200000000 : rfProduced, 0);
   }).requireFluid('liquid_input', liq * amount));
 }
 

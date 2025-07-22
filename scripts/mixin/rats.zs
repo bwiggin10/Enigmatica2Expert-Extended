@@ -21,6 +21,6 @@ zenClass MixinEntityRat {
     #mixin ModifyConstant {method: "tryGemcutter", constant: {intValue: 100}}
     function taskSpeedUpUpgrade2(v as int) as int { return this0.hasUpgrade(RAT_UPGRADE_SPEED) ? v/20 : v/4; }
 
-    #mixin ModifyConstant {method: "tryEnchanting", constant: {intValue: 1000}}
-    function taskSpeedUpUpgrade3(v as int) as int { return this0.hasUpgrade(RAT_UPGRADE_SPEED) ? v/20 : v/4; }
+    // #mixin ModifyConstant {method: "tryEnchanting", constant: {intValue: 1000}}
+    // function taskSpeedUpUpgrade3(v as int) as int { return this0.hasUpgrade(RAT_UPGRADE_SPEED) ? v/20 : v/4; }
 }

@@ -26,6 +26,7 @@ zenClass Op {
 
   function grant(player as IPlayer) as void {
     for fnc in onGrantList { fnc(player); }
+    applyAttributes(player);
     effect(player);
   }
 
@@ -35,6 +36,7 @@ zenClass Op {
 
   function revoke(player as IPlayer) as void {
     for fnc in onRevokeList { fnc(player); }
+    removeAttributes(player);
   }
 
   function isPlayerOmnipotent(player as IPlayer) as bool {
@@ -57,9 +59,41 @@ zenClass Op {
     return false;
   }
 
+  // Register attribute to automatically operate with it on events
+  var attributeIDs as [string] = [] as [string];
+  var attributeUUIDs as [string] = [] as [string];
+  var attributeVals as [float] = [] as [float];
+  var attributeOps as [int] = [] as [int];
+  function regAttribute(id as string, uuid as string, value as float, operator as int = 0) as void {
+    attributeIDs.add(id);
+    attributeUUIDs.add(uuid);
+    attributeVals.add(value);
+    attributeOps.add(operator);
+  }
+
+  // Should be called on Player clone event
+  function applyAttributes(player as IPlayer) as void {
+    for i, id in attributeIDs {
+      scripts.do.omnipotence.utils.setAttribute(
+        player,
+        id,
+        attributeUUIDs[i],
+        attributeVals[i],
+        attributeOps[i]);
+    }
+  }
+
   // ///////////////////////////////////////////////////////////////////////////////////////
   // Private
   // ///////////////////////////////////////////////////////////////////////////////////////
+  function removeAttributes(player as IPlayer) as void {
+    for i, id in attributeIDs {
+      scripts.do.omnipotence.utils.remAttribute(
+        player,
+        id,
+        attributeUUIDs[i]);
+    }
+  }
 
   function effect(player as IPlayer) as void {
     if (!player.world.remote) {
@@ -89,21 +123,3 @@ zenClass Op {
   val prevHasOmnipotence as bool[IPlayer] = {};
 }
 static op as Op = Op();
-
-events.register(function (e as crafttweaker.event.PlayerTickEvent) {
-  if (e.phase != 'END' || e.player.world.provider.worldTime % 10 != 0) return;
-
-  val player = e.player;
-  
-  if (op.isPendingOmnipotentce(player))
-    op.grant(player);
-  else if (op.isPlayerOmnipotent(player))
-    op.tick(player);
-});
-
-events.register(function (e as crafttweaker.event.PlayerBreakSpeedEvent) {
-  val player = e.player;
-  if (isNull(player) || isNull(player.world) || isNull(e.block) || isNull(e.block.definition)) return;
-  if (!isNull(player.currentItem) || !op.isPlayerOmnipotent(player)) return;
-  e.newSpeed = 12.0f * e.block.definition.hardness + 1.0;
-}, mods.zenutils.EventPriority.low());

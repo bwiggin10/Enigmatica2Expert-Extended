@@ -449,7 +449,7 @@ for profession, pList in merchData {
           '[' ~ items[1].displayName ~ ']',
           '[' ~ ((items.length > 2 && !isNull(items[2])) ? items[2].displayName : '') ~ ']',
           level,
-        ]);
+        ] as string[]);
         if (items.length > 2 && !isNull(items[2]))
           addTrade(profession, career, items[0], items[1], items[2], level);
         else if (items.length > 1)

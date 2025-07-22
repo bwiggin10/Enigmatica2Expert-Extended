@@ -1,4 +1,19 @@
 {
+<<<<<<<< HEAD:config/ftbquests/normal/chapters/d438022f/c713ba33.snbt
+	x: -3.1d,
+	y: 21.3d,
+	text: [
+		"{q.utils.villager_contract.desc}"
+	],
+	dependencies: [
+		"a6a64aad"
+	],
+	tasks: [{
+		uid: "8109d671",
+		type: "item",
+		items: [{
+			item: "villagercontracts:contract"
+========
 	title: "{q.botania.rod_of_the_bifrost.name}",
 	x: 10.927050983124841d,
 	y: 1.1468304511145395d,
@@ -13,8 +28,28 @@
 		type: "item",
 		items: [{
 			item: "botania:rainbowrod"
+>>>>>>>> upstream/master:config/ftbquests/normal/chapters/6c29cdf5/58e87f08.snbt
 		}],
 		ignore_damage: 1b,
 		ignore_nbt: 1b
+	}],
+	rewards: [{
+<<<<<<<< HEAD:config/ftbquests/normal/chapters/d438022f/c713ba33.snbt
+		uid: "7f1a6eb5",
+========
+		uid: "0bd4c100",
+>>>>>>>> upstream/master:config/ftbquests/normal/chapters/6c29cdf5/58e87f08.snbt
+		type: "custom",
+		title: "{e2ee.quest.common}",
+		icon: {
+			id: "ftbquests:lootcrate",
+			Count: 2,
+			tag: {
+				type: "common"
+			}
+		},
+		tags: [
+			"loot"
+		]
 	}]
 }

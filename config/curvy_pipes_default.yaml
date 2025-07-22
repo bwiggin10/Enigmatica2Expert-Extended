@@ -37,7 +37,7 @@ pipe_types:
   - { key: curvy.energy.large, meta: 13, name: Large Energy Pipe, texture: curvy_pipes:blocks/energy_pipe, diameter: 0.8, variant: { Energy: { rate: 1E6 } } }
   - { key: curvy.energy.huge, meta: 14, name: Huge Energy Pipe, texture: curvy_pipes:blocks/energy_pipe, diameter: 1.6, variant: { Energy: { rate: 10E6 } } }
 
-# Applied Energistics 2 integration (izgnored if AE2 is not installed)
+# Applied Energistics 2 integration (ignored if AE2 is not installed)
 ae2:
   # Automatically generate curvy variants of ME glass/covered/smart/dense covered/dense smart cables
   # and quartz fiber. No new items will be added. Instead, the curvy variants can be placed using the
@@ -78,18 +78,18 @@ recipes:
     type: forge:ore_shaped
     key: { A: { type: forge:ore_dict, ore: dustRedstone }, B: { type: forge:ore_dict, ore: stone } }
     pattern: [ ' A ', 'ABA', ' A ' ]
-  item_t2s: { result: { count: 1, item: pipe, data: 1 }, type: minecraft:crafting_shapeless, ingredients: [ &tf { item: pipe, data: 0 }, *tf, *tf, *tf ] }
-  item_s2m: { result: { count: 1, item: pipe, data: 2 }, type: minecraft:crafting_shapeless, ingredients: [ &sf { item: pipe, data: 1 }, *sf, *sf, *sf ] }
-  item_m2l: { result: { count: 1, item: pipe, data: 3 }, type: minecraft:crafting_shapeless, ingredients: [ &mf { item: pipe, data: 2 }, *mf, *mf, *mf ] }
-  item_l2h: { result: { count: 1, item: pipe, data: 4 }, type: minecraft:crafting_shapeless, ingredients: [ &lf { item: pipe, data: 3 }, *lf, *lf, *lf ] }
+  item_t2s: { result: { count: 1, item: pipe, data: 1 }, type: minecraft:crafting_shapeless, ingredients: [ &ti { item: pipe, data: 0 }, *ti, *ti, *ti ] }
+  item_s2m: { result: { count: 1, item: pipe, data: 2 }, type: minecraft:crafting_shapeless, ingredients: [ &si { item: pipe, data: 1 }, *si, *si, *si ] }
+  item_m2l: { result: { count: 1, item: pipe, data: 3 }, type: minecraft:crafting_shapeless, ingredients: [ &mi { item: pipe, data: 2 }, *mi, *mi, *mi ] }
+  item_l2h: { result: { count: 1, item: pipe, data: 4 }, type: minecraft:crafting_shapeless, ingredients: [ &li { item: pipe, data: 3 }, *li, *li, *li ] }
   item_h2l: { result: { count: 4, item: pipe, data: 3 }, type: minecraft:crafting_shapeless, ingredients: [ { item: pipe, data: 4 } ] }
   item_l2m: { result: { count: 4, item: pipe, data: 2 }, type: minecraft:crafting_shapeless, ingredients: [ { item: pipe, data: 3 } ] }
   item_m2s: { result: { count: 4, item: pipe, data: 1 }, type: minecraft:crafting_shapeless, ingredients: [ { item: pipe, data: 2 } ] }
   item_s2t: { result: { count: 4, item: pipe, data: 0 }, type: minecraft:crafting_shapeless, ingredients: [ { item: pipe, data: 1 } ] }
-  fluid_t2s: { result: { count: 1, item: pipe, data: 6 }, type: minecraft:crafting_shapeless, ingredients: [ &ti { item: pipe, data: 5 }, *ti, *ti, *ti ] }
-  fluid_s2m: { result: { count: 1, item: pipe, data: 7 }, type: minecraft:crafting_shapeless, ingredients: [ &si { item: pipe, data: 6 }, *si, *si, *si ] }
-  fluid_m2l: { result: { count: 1, item: pipe, data: 8 }, type: minecraft:crafting_shapeless, ingredients: [ &mi { item: pipe, data: 7 }, *mi, *mi, *mi ] }
-  fluid_l2h: { result: { count: 1, item: pipe, data: 9 }, type: minecraft:crafting_shapeless, ingredients: [ &li { item: pipe, data: 8 }, *li, *li, *li ] }
+  fluid_t2s: { result: { count: 1, item: pipe, data: 6 }, type: minecraft:crafting_shapeless, ingredients: [ &tf { item: pipe, data: 5 }, *tf, *tf, *tf ] }
+  fluid_s2m: { result: { count: 1, item: pipe, data: 7 }, type: minecraft:crafting_shapeless, ingredients: [ &sf { item: pipe, data: 6 }, *sf, *sf, *sf ] }
+  fluid_m2l: { result: { count: 1, item: pipe, data: 8 }, type: minecraft:crafting_shapeless, ingredients: [ &mf { item: pipe, data: 7 }, *mf, *mf, *mf ] }
+  fluid_l2h: { result: { count: 1, item: pipe, data: 9 }, type: minecraft:crafting_shapeless, ingredients: [ &lf { item: pipe, data: 8 }, *lf, *lf, *lf ] }
   fluid_h2l: { result: { count: 4, item: pipe, data: 8 }, type: minecraft:crafting_shapeless, ingredients: [ { item: pipe, data: 9 } ] }
   fluid_l2m: { result: { count: 4, item: pipe, data: 7 }, type: minecraft:crafting_shapeless, ingredients: [ { item: pipe, data: 8 } ] }
   fluid_m2s: { result: { count: 4, item: pipe, data: 6 }, type: minecraft:crafting_shapeless, ingredients: [ { item: pipe, data: 7 } ] }

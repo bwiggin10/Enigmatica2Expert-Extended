@@ -3,6 +3,7 @@
 #priority -2000
 
 import crafttweaker.player.IPlayer;
+import crafttweaker.data.IData;
 
 function formatPlayTime(player as IPlayer) as string {
   val t = player.readStat(mods.zenutils.PlayerStat.getBasicStat('stat.playOneMinute')) as double;
@@ -18,30 +19,39 @@ function formatPlayTime(player as IPlayer) as string {
   ).trim();
 }
 
-function notifyEveryone(player as IPlayer, langCode as string, titleCode as string) as string {
-  server.commandManager.executeCommandSilent(server,
-    // '/tellraw @a [{"translate":"'~langCode~'","with":["'~player.name~'",{"translate":"'~titleCode~'"},"'~formatPlayTime(player)~'"]}]')
-    '/say ' ~ mods.zenutils.I18n.format(
-      game.localize(langCode),
-      player.name,
-      titleCode,
-      formatPlayTime(player)
-    )
-  );
-}
+// function notifyEveryone(player as IPlayer, langCode as string, titleCode as string) as string {
+//   server.commandManager.executeCommandSilent(server,
+//     // '/tellraw @a [{"translate":"'~langCode~'","with":["'~player.name~'",{"translate":"'~titleCode~'"},"'~formatPlayTime(player)~'"]}]')
+//     '/say ' ~ mods.zenutils.I18n.format(
+//       langCode,
+//       player.name,
+//       titleCode,
+//       formatPlayTime(player)
+//     )
+//   );
+// }
 
 events.onCustomReward(function (e as mods.zenutils.ftbq.CustomRewardEvent) {
   /**
   * Endorse player with message to whole server as its finished chapter
   */
   if (e.reward.tags has 'chapcomplete') {
-    // notifyEveryone(e.player, 'e2ee.chapter_complete', e.reward.quest.chapter.titleText.formattedText);
-    server.commandManager.executeCommandSilent(server,
-      '/say §l' ~ e.player.name
-      ~ '§r has fully completed the §n'
-      ~ e.reward.quest.chapter.titleText.formattedText.replaceAll('q\\.(.+)\\.name','$1')
-      ~ '§r chapter after §l' ~ formatPlayTime(e.player) ~ '§r of play!§r ```Congrats!```'
+    val chapterName = utils.toUpperCamelCase(
+      e.reward.quest.chapter.titleText.formattedText.replaceAll('q\\.(.+)\\.name','$1')
     );
+    val data as IData = {
+      text: "## `", color: "dark_gray", extra: [
+        {text: e.player.name, color: "aqua"},
+        "` ",
+        {text: "has fully completed the", color: "gray"},
+        " __**",
+        {text: chapterName, underlined: true, color: "yellow"},
+        "**__ ",
+        {text: "chapter after ", color: "gray"},
+        {text: formatPlayTime(e.player), color: "gold"},
+        " of play! ```Congrats!```"
+    ]};
+    server.commandManager.executeCommandSilent(server, '/tellraw @a ' ~ data.toJson());
   }
 
   /**
@@ -55,9 +65,19 @@ events.onCustomReward(function (e as mods.zenutils.ftbq.CustomRewardEvent) {
       );
 
       // notifyEveryone(e.player, 'e2ee.player_achieved', e.reward.quest.titleText.formattedText);
-      server.commandManager.executeCommandSilent(server,
-        '/say §l' ~ e.player.name ~ '§r achieved §nConflux §n' ~ k.toUpperCase() ~ '§r after §l' ~ formatPlayTime(e.player) ~ '§r of play!§r'
-      );
+      val data as IData = {
+        text: "### `", color: "dark_gray", extra: [
+          {text: e.player.name, color: "aqua"},
+          "` ",
+          {text: "achieved", color: "gray"},
+          " __",
+          {text: 'Conflux ' ~ k.toUpperCase(), underlined: true, color: "gray"},
+          "__ ",
+          {text: "after ", color: "gray"},
+          {text: formatPlayTime(e.player), color: "gold"},
+          " of play! ```Congrats!```"
+      ]};
+      server.commandManager.executeCommandSilent(server, '/tellraw @a ' ~ data.toJson());
     }
   }
 

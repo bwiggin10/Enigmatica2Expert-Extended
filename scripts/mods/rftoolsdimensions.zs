@@ -43,6 +43,23 @@ scripts.jei.crafting_hints.addInsOutsCatl(
 
 // *======= Recipes =======*
 
+// Fix recipes that wrong in original rftoolsdim
+recipes.removeByRecipeName('rftoolsdim:known_dimlet_4_alt_alt');
+recipes.removeByRecipeName('rftoolsdim:known_dimlet_4_alt');
+recipes.removeByRecipeName('rftoolsdim:known_dimlet_4');
+recipes.addShaped('rftoolsdim_known_dimlet_4_alt_alt_fix', <rftoolsdim:known_dimlet:4>.withTag({dkey: "normal.night"}), [
+  [null, <minecraft:redstone>, null],
+  [<minecraft:redstone>, <minecraft:coal>, <minecraft:redstone>],
+  [<minecraft:paper>, <minecraft:paper>, <minecraft:paper>]]);
+recipes.addShaped('rftoolsdim_known_dimlet_4_alt_fix', <rftoolsdim:known_dimlet:4>.withTag({dkey: "normal.day"}), [
+  [null, <minecraft:redstone>, null],
+  [<minecraft:redstone>, <minecraft:glowstone_dust>, <minecraft:redstone>],
+  [<rftoolsdim:dimlet_template>, <rftoolsdim:dimlet_template>, <rftoolsdim:dimlet_template>]]);
+recipes.addShaped('rftoolsdim_known_dimlet_4_fix', <rftoolsdim:known_dimlet:4>.withTag({dkey: "normal"}), [
+  [null, <minecraft:redstone>, null],
+  [<minecraft:redstone>, <minecraft:feather>, <minecraft:redstone>],
+  [<rftoolsdim:dimlet_template>, <rftoolsdim:dimlet_template>, <rftoolsdim:dimlet_template>]]);
+
 // [Dimension Builder] from [Basic Fusion Crafting Injector][+8]
 craft.remake(<rftoolsdim:dimension_builder>, ['pretty',
   'A i E',

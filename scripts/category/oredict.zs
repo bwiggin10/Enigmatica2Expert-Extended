@@ -28,6 +28,13 @@ function removeItems(ore as IOreDictEntry, items as IItemStack[]) as void {
 }
 // *===========================================*
 
+addItems(<ore:itemJar>, [
+  <twilightforest:firefly_jar>,
+  <thaumcraft:jar_normal>,
+  <biomesoplenty:jar_empty>,
+  <iceandfire:jar_empty>,
+]);
+
 // Oredicts for pressure plates
 addItems(<ore:pressurePlateWood>, [
   <twilightforest:twilight_oak_plate>,
@@ -732,11 +739,9 @@ add(<ore:blockFlesh>, <thaumcraft:flesh_block>);
 
 // Make draconic ore Nether/End variants like all other Nether/End ores
 removeItems(<ore:oreDraconium>, [
-  <draconicevolution:draconium_ore>,
   <draconicevolution:draconium_ore:1>,
   <draconicevolution:draconium_ore:2>,
 ]);
-add(<ore:oreDraconium>, <draconicevolution:draconium_ore>);
 add(<ore:oreNetherDraconium>, <draconicevolution:draconium_ore:1>);
 add(<ore:oreEndDraconium>, <draconicevolution:draconium_ore:2>);
 

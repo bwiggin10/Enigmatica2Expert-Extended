@@ -176,154 +176,131 @@ mods.extendedcrafting.TableCrafting.addShapeless(
 /**/
   ]);
 
-val armorIngrs = {
+val gearIngrs = {
   '▬': <ore:ingotCosmicNeutronium>,
   '-': <ore:ingotInfinity>,
   'I': <avaritia:resource:5>,
-  'M': <avaritia:matter_cluster:*>,
-  'r': <draconicevolution:draconic_helm:*>,
-  'c': <draconicevolution:draconic_chest:*>,
-  'D': <draconicevolution:draconic_legs:*>,
+  'B': <avaritia:matter_cluster:*>,
+  'c': <draconicevolution:draconic_helm:*>,
+  'R': <extrautils2:decorativesolid:8>,
+  'D': <draconicevolution:draconic_chest:*>,
+  'r': <draconicevolution:draconic_legs:*>,
   'a': <draconicevolution:draconic_boots:*>,
+  '*': <ore:blockCrystalMatrix>,
+  'Σ': <draconicevolution:draconic_staff_of_power:*>,
+  '■': <ore:blockRockwool>,
+  '⌀': <draconicevolution:draconic_bow:*>,
+  '♀': <draconicevolution:draconic_pick:*>,
+  '☻': <draconicevolution:draconic_axe:*>,
+  '▄': <ore:blockInfinity>,
+  '○': <draconicevolution:draconic_shovel:*>,
+  '●': <draconicevolution:draconic_hoe:*>,
 } as IIngredient[string];
 
 craft.remake(<avaritia:infinity_helmet>, ['pretty',
   '    ▬ ▬ ▬ ▬ ▬  ',
   '  ▬ - - - - - ▬',
-  '  ▬   I M I   ▬',
-  '  ▬ - - r - - ▬',
+  '  ▬   I B I   ▬',
+  '  ▬ - - c - - ▬',
   '  ▬ - - - - - ▬',
-  '  ▬ -   -   - ▬'], armorIngrs
+  '  ▬ R   -   R ▬'], gearIngrs
 );
 craft.remake(<avaritia:infinity_chestplate>, ['pretty',
   '  ▬ ▬       ▬ ▬  ',
   '▬ ▬ ▬       ▬ ▬ ▬',
   '▬ ▬ ▬       ▬ ▬ ▬',
-  '  ▬ - - M - - ▬  ',
+  '  ▬ R - B - R ▬  ',
   '  ▬ - - - - - ▬  ',
-  '  ▬ - - c - - ▬  ',
+  '  ▬ - - D - - ▬  ',
   '  ▬ - - - - - ▬  ',
   '  ▬ - - - - - ▬  ',
-  '    ▬ ▬ ▬ ▬ ▬    '], armorIngrs
+  '    ▬ ▬ ▬ ▬ ▬    '], gearIngrs
 );
 craft.remake(<avaritia:infinity_pants>, ['pretty',
   '▬ ▬ ▬ ▬ ▬ ▬ ▬ ▬ ▬',
-  '▬ - - - D - - - ▬',
-  '▬ - ▬ M ▬ M ▬ - ▬',
+  '▬ - - - r - - - ▬',
+  '▬ - ▬ B ▬ B ▬ - ▬',
   '▬ - ▬       ▬ - ▬',
   '▬ I ▬       ▬ I ▬',
   '▬ - ▬       ▬ - ▬',
   '▬ - ▬       ▬ - ▬',
-  '▬ - ▬       ▬ - ▬',
-  '▬ ▬ ▬       ▬ ▬ ▬'], armorIngrs
+  '▬ R ▬       ▬ R ▬',
+  '▬ ▬ ▬       ▬ ▬ ▬'], gearIngrs
 );
 craft.remake(<avaritia:infinity_boots>, ['pretty',
   '  ▬ ▬ ▬   ▬ ▬ ▬  ',
-  '  ▬ - ▬   ▬ - ▬  ',
+  '  ▬ R ▬   ▬ R ▬  ',
   '  ▬ - ▬   ▬ - ▬  ',
   '▬ ▬ - ▬   ▬ - ▬ ▬',
-  '▬ - - ▬ M ▬ - - ▬',
-  '▬ ▬ ▬ ▬ a ▬ ▬ ▬ ▬'], armorIngrs
+  '▬ - - ▬ B ▬ - - ▬',
+  '▬ ▬ ▬ ▬ a ▬ ▬ ▬ ▬'], gearIngrs
 );
-
-// Neutronium Ingot
-val ni = <ore:ingotCosmicNeutronium>;
-// Infinity Catalyst
-val ic = <avaritia:resource:5>;
-// Infinity Ingot
-val ii = <ore:ingotInfinity>;
-// Crystal Matrix
-val cm = <ore:blockCrystalMatrix>;
-
-// Infinity Sword
-mods.extendedcrafting.TableCrafting.addShaped(0,
-  <avaritia:infinity_sword>,
-  [
-    [null, null, null, null, null, null, null, ii, ii],
-    [null, null, null, null, null, null, ii, ii, ii],
-    [null, null, null, null, null, ii, ii, ii, null],
-    [null, null, null, null, ii, ii, ii, null, null],
-    [null, cm, null, ii, ii, ii, null, null, null],
-    [null, null, cm, <draconicevolution:draconic_staff_of_power>.anyDamage(), ii, null, null, null, null],
-    [null, null, ni, cm, null, null, null, null, null],
-    [null, ni, null, null, cm, null, null, null, null],
-    [ic, null, null, null, null, null, null, null, null],
-  ]);
-
-// Infinity Bow
-mods.extendedcrafting.TableCrafting.addShaped(0,
-  <avaritia:infinity_bow>,
-  [
-    [null, null, null, ii, ii, null, null, null, null],
-    [null, null, ii, null, <ore:blockRockwool>, null, null, null, null],
-    [null, ii, null, null, <ore:blockRockwool>, null, null, null, null],
-    [ii, null, null, null, <ore:blockRockwool>, null, null, null, null],
-    [<draconicevolution:draconic_bow>.anyDamage(), null, null, null, <ore:blockRockwool>, null, null, null, null],
-    [ii, null, null, null, <ore:blockRockwool>, null, null, null, null],
-    [null, ii, null, null, <ore:blockRockwool>, null, null, null, null],
-    [null, null, ii, null, <ore:blockRockwool>, null, null, null, null],
-    [null, null, null, ii, ii, null, null, null, null],
-  ]);
-
-// Infinity Pickaxe
-mods.extendedcrafting.TableCrafting.addShaped(0,
-  <avaritia:infinity_pickaxe>.withTag({ ench: [{ lvl: 10 as short, id: 35 as short }] }),
-  [
-    [null, ii, ii, ii, ii, ii, ii, ii, null],
-    [ii, ii, ii, ii, cm, ii, ii, ii, ii],
-    [ii, ii, null, null, <draconicevolution:draconic_pick>.anyDamage(), null, null, ii, ii],
-    [null, null, null, null, ni, null, null, null, null],
-    [null, null, null, null, ni, null, null, null, null],
-    [null, null, null, null, ni, null, null, null, null],
-    [null, null, null, null, ni, null, null, null, null],
-    [null, null, null, null, ni, null, null, null, null],
-    [null, null, null, null, ni, null, null, null, null],
-  ]);
-
-// Infinity Shovel
-mods.extendedcrafting.TableCrafting.addShaped(0,
-  <avaritia:infinity_shovel>,
-  [
-    [null, null, null, null, null, null, ii, ii, ii],
-    [null, null, null, null, null, ii, ii, <ore:blockInfinity>, ii],
-    [null, null, null, null, null, null, <draconicevolution:draconic_shovel>.anyDamage(), ii, ii],
-    [null, null, null, null, null, ni, null, ii, null],
-    [null, null, null, null, ni, null, null, null, null],
-    [null, null, null, ni, null, null, null, null, null],
-    [null, null, ni, null, null, null, null, null, null],
-    [null, ni, null, null, null, null, null, null, null],
-    [ni, null, null, null, null, null, null, null, null],
-  ]);
-
-// Infinity Axe
-mods.extendedcrafting.TableCrafting.addShaped(0,
-  <avaritia:infinity_axe>,
-  [
-    [null, null, null, ii, null, null, null, null, null],
-    [null, null, ii, ii, ii, ii, ii, null, null],
-    [null, null, null, ii, ii, <draconicevolution:draconic_axe>.anyDamage(), ii, null, null],
-    [null, null, null, null, null, ii, ni, null, null],
-    [null, null, null, null, null, null, ni, null, null],
-    [null, null, null, null, null, null, ni, null, null],
-    [null, null, null, null, null, null, ni, null, null],
-    [null, null, null, null, null, null, ni, null, null],
-    [null, null, null, null, null, null, ni, null, null],
-  ]);
-
-// Infinity Hoe
-mods.extendedcrafting.TableCrafting.addShaped(0,
-  <avaritia:infinity_hoe>,
-  [
-    [null, null, null, null, null, ni, null, null, null],
-    [null, ii, ii, ii, ii, ii, ii, null, null],
-    [ii, ii, ii, ii, ii, <draconicevolution:draconic_hoe>.anyDamage(), ii, null, null],
-    [ii, null, null, null, null, ii, ii, null, null],
-    [null, null, null, null, null, ni, null, null, null],
-    [null, null, null, null, null, ni, null, null, null],
-    [null, null, null, null, null, ni, null, null, null],
-    [null, null, null, null, null, ni, null, null, null],
-    [null, null, null, null, null, ni, null, null, null],
-  ]);
+craft.remake(<avaritia:infinity_sword>, ['pretty',
+  '              - -',
+  '            - R -',
+  '          - R -  ',
+  '        - R -    ',
+  '  *   - R -      ',
+  '    * Σ -        ',
+  '    ▬ *          ',
+  '  ▬     *        ',
+  'I                '], gearIngrs
+);
+craft.remake(<avaritia:infinity_bow>, ['pretty',
+  '      R R',
+  '    -   ■',
+  '  -     ■',
+  '-       ■',
+  '⌀       ■',
+  '-       ■',
+  '  -     ■',
+  '    -   ■',
+  '      R R'], gearIngrs
+);
+craft.remake(<avaritia:infinity_pickaxe>.withTag({ench: [{lvl: 10 as short, id: 35 as short}]}), ['pretty',
+  '  - - - - - - -  ',
+  '- - R R * R R - -',
+  '- -     ♀     - -',
+  '        ▬        ',
+  '        ▬        ',
+  '        ▬        ',
+  '        ▬        ',
+  '        ▬        ',
+  '        ▬        '], gearIngrs
+);
+craft.remake(<avaritia:infinity_axe>, ['pretty',
+  '      -      ',
+  '    - - - R R',
+  '      - - ☻ R',
+  '          R ▬',
+  '            ▬',
+  '            ▬',
+  '            ▬',
+  '            ▬',
+  '            ▬'], gearIngrs
+);
+craft.remake(<avaritia:infinity_shovel>, ['pretty',
+  '            - R -',
+  '          - R ▄ R',
+  '            ○ R -',
+  '          ▬   -  ',
+  '        ▬        ',
+  '      ▬          ',
+  '    ▬            ',
+  '  ▬              ',
+  '▬                '], gearIngrs
+);
+craft.remake(<avaritia:infinity_hoe>, ['pretty',
+  '          ▬  ',
+  '  - - - - R -',
+  '- - - - R ● R',
+  '-         R -',
+  '          ▬  ',
+  '          ▬  ',
+  '          ▬  ',
+  '          ▬  ',
+  '          ▬  '], gearIngrs
+);
 
 recipes.remove(<avaritia:extreme_crafting_table>);
 mods.extendedcrafting.CombinationCrafting.addRecipe(<avaritia:extreme_crafting_table>,

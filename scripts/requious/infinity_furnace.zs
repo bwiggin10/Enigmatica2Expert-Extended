@@ -169,6 +169,7 @@ minecraft:sponge:1
 minecraft:stonebrick
 mysticalagriculture:soulstone:1
 nuclearcraft:ingot:15
+qmd:dust:15
 rats:marbled_cheese_brick
 rustic:dust_tiny_iron
 tcomplement:scorched_block:3
@@ -177,6 +178,7 @@ tcomplement:scorched_stairs_brick
 tconstruct:brownstone:3
 tconstruct:seared:3
 thermalfoundation:material:864
+trinity:barium
 `.trim().split('\n'))
 
 const commandString = (id, meta, nbt, amount) => {
@@ -232,9 +234,9 @@ ${filtered.join('\n')}`
 
 } */
 
-// Total Furnace recipes registered: 946
-// Blacklisted by JEI or manually: 77
-// Filtered by oredict: 156
+// Total Furnace recipes registered: 948
+// Blacklisted by JEI or manually: 79
+// Filtered by oredict: 157
 infinFurnace(<actuallyadditions:block_misc:3>, <actuallyadditions:item_misc:5>);
 blacklist(<actuallyadditions:item_dust:3>);
 blacklist(<actuallyadditions:item_dust:7>);
@@ -1005,6 +1007,7 @@ blacklist(<qmd:dust:11>);
 blacklist(<qmd:dust:12>);
 blacklist(<qmd:dust:13>);
 blacklist(<qmd:dust:14>);
+blacklist(<qmd:dust:15>);
 blacklist(<qmd:dust>);
 blacklist(<qmd:dust2:1>);
 blacklist(<qmd:dust2>);
@@ -1094,7 +1097,7 @@ infinFurnace(<rats:rat_nugget_ore:105>.withTag({OreItem: {id: "endreborn:block_w
 infinFurnace(<rats:rat_nugget_ore:106>.withTag({OreItem: {id: "immersiveengineering:ore", Count: 1, Damage: 5 as short}, IngotItem: {id: "immersiveengineering:metal", Count: 1, Damage: 5 as short}}), <immersiveengineering:metal:5>);
 infinFurnace(<rats:rat_nugget_ore>.withTag({OreItem: {id: "thermalfoundation:ore", Count: 1, Damage: 4 as short}, IngotItem: {id: "thermalfoundation:material", Count: 1, Damage: 132 as short}}), <thermalfoundation:material:132>);
 infinFurnace(<rats:raw_rat:*>, <rats:cooked_rat>);
-infinFurnace(<rustic:dust_gold>, <minecraft:gold_ingot>);
+blacklist(<rustic:dust_gold>);
 blacklist(<rustic:dust_tiny_iron>);
 infinFurnace(<rustic:honeycomb>, <rustic:beeswax>);
 // SKIP: <rustic:log:1>
@@ -1173,6 +1176,7 @@ infinFurnace(<thermalfoundation:ore:7>, <thermalfoundation:material:135>);
 infinFurnace(<thermalfoundation:ore:8>, <thermalfoundation:material:136>);
 infinFurnace(<thermalfoundation:ore>, <thermalfoundation:material:128>);
 infinFurnace(<threng:material:2>, <threng:material>);
+blacklist(<trinity:barium>);
 blacklist(<trinity:dust_au_198:*>);
 infinFurnace(<twilightforest:armor_shard_cluster:*>, <twilightforest:knightmetal_ingot>);
 infinFurnace(<twilightforest:ironwood_raw:*>, <twilightforest:ironwood_ingot> * 2);

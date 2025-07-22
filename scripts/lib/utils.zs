@@ -482,5 +482,20 @@ zenClass Utils {
     ) as SoundEvent;
     world.native.playSound(null, pos, soundRes, SoundCategory.AMBIENT, volume, pitch);
   }
+
+  // Taken from modpack IsolatedCrystal3
+  function toUpperCamelCase(arg as string) as string {
+    if (arg.contains("_")) {
+      var splitResult = arg.split("_");
+      var temp = "";
+      for i, j in splitResult {
+        if (j.length <= 0) continue;
+        temp ~= (temp == '' ? '' : ' ') ~ j[0].toUpperCase() ~ j.substring(1);
+      }
+      return temp;
+    } else if (arg[0].toUpperCase() != arg[0]) {
+      return arg[0].toUpperCase() ~ arg.substring(1);
+    } else return arg;
+  }
 }
 global utils as Utils = Utils();

@@ -183,44 +183,86 @@ function getSingularityUpdateFunc(
     // Singularity already charged
     if (stack.damage <= 0) return;
 
-    if (!(owner instanceof IPlayer)) {
-      // TODO: simple iteration in fake player's inventories
-      // Problem - non-player inventories doesnt have `getInventoryStack()` function
-      return;
-    }
-
+    if !(owner instanceof IPlayer) return;
     val player as IPlayer = owner;
 
-    val xy = slotToCoord(slot);
-    val x = xy[0];
-    val y = xy[1];
+    val result = player.fake
+      ? consumeFromFake(slot, stack, player, allIngredients, recipeFunction)
+      : consumeFromPlayer(slot, stack, player, allIngredients, recipeFunction);
 
-    var consumed = 0;
-    var result = stack as IItemStack;
-    for i in 0 .. slotSurroundings.length / 2 {
-      val u = x + slotSurroundings[i * 2];
-      val v = y + slotSurroundings[i * 2 + 1];
-      if (0 > u || u > 8 || 0 > v || v > 3) continue;
-
-      val nextSlot = coordToSlot(u, v);
-
-      val item = player.getInventoryStack(nextSlot);
-
-      // Check if valid fuel for singularity
-      if (isNull(item) || !(allIngredients has item)) continue;
-
-      // Consume item
-      // player.replaceItemInInventory(nextSlot, null);
-      item.mutable().shrink(1);
-
-      result = recipeFunction({ '0': result, '1': item }, false);
-      consumed += 1;
-      if (result.damage <= 0 || consumed >= 4) break;
+    if (!isNull(result)) {
+      val mutable = stack.mutable().withDamage(result.damage);
+      if (result.hasTag) mutable.withTag(result.tag);
+      else mutable.withTag(null);
     }
-
-    // Set item result
-    if (consumed > 0) player.replaceItemInInventory(slot, result);
   };
+}
+
+function consumeFromFake(
+  tickingSlot as int,
+  stack as IItemStack,
+  player as IPlayer,
+  allIngredients as IIngredient,
+  recipeFunction as function(IItemStack[string],bool)IItemStack
+) as IItemStack {
+  var result = stack;
+  var consumed = 0;
+  for i in 0 .. player.inventorySize {
+    if (i == tickingSlot) continue;
+    val item = consumeSingle(i, result, player, allIngredients, recipeFunction);
+    if (isNull(item)) continue;
+    result = item;
+    consumed += 1;
+  }
+
+  return consumed > 0 ? result : null;
+}
+
+function consumeFromPlayer(
+  tickingSlot as int,
+  stack as IItemStack,
+  player as IPlayer,
+  allIngredients as IIngredient,
+  recipeFunction as function(IItemStack[string],bool)IItemStack
+) as IItemStack {
+  val xy = slotToCoord(tickingSlot);
+  val x = xy[0];
+  val y = xy[1];
+
+  var consumed = 0;
+  var result = stack;
+  for i in 0 .. slotSurroundings.length / 2 {
+    val u = x + slotSurroundings[i * 2];
+    val v = y + slotSurroundings[i * 2 + 1];
+    if (0 > u || u > 8 || 0 > v || v > 3) continue;
+
+    val nextSlot = coordToSlot(u, v);
+
+    val item = consumeSingle(nextSlot, result, player, allIngredients, recipeFunction);
+    if (isNull(item)) continue;
+    result = item;
+
+    consumed += 1;
+    if (result.damage <= 0 || consumed >= 4) break;
+  }
+
+  // Set item result
+  return consumed > 0 ? result : null;
+}
+
+function consumeSingle(
+  slot as int,
+  stack as IItemStack,
+  player as IPlayer,
+  allIngredients as IIngredient,
+  recipeFunction as function(IItemStack[string],bool)IItemStack
+) as IItemStack {
+  val item = player.getInventoryStack(slot);
+
+  if (isNull(item) || !(allIngredients has item)) return null;
+  item.mutable().shrink(1);
+
+  return recipeFunction({ '0': stack, '1': item }, false);
 }
 
 val singularIDs = scripts.lib.crossscript.getList('singularIDs');

@@ -4,4 +4,5 @@ java.lang.RuntimeException: java.lang.invoke.LambdaConversionException: Type mis
 	at net.minecraftforge.fml.common.eventhandler.EventListenerFactory.createListenerFactory(EventListenerFactory.java:58) ~[EventListenerFactory.class:?]
 	at net.minecraftforge.fml.common.eventhandler.EventListenerFactory.createRawListener(EventListenerFactory.java:21) ~[EventListenerFactory.class:?]
 	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler.<init>(ASMEventHandler.java:52) ~[ASMEventHandler.class:?]
-  [...]
+  [...]
+[Client thread/WARN] [forestry]: Failed to find item for (floralchemy:crystalthorn_diamond) in the Forge registry.

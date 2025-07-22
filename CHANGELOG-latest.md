@@ -1,55 +1,64 @@
 
 ## 🐛 Fixes
 
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/d01d6a8ae7c34a8b6df2fbe41bcb991aea8d70f0)⛏️fix ![](https://github.com/Krutoy242/mc-icons/raw/master/i/thermalfoundation/ore__0.png "Copper Ore") too hard to break
-  > Last time when i was refactoring mining level, all Thermal ores got same hardness (break time). This happens because on backend all those blocks have one ID and some configurations like hardness are the same.
+* <img src="https://i.imgur.com/Xb2ttv9.png" align=right> [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/99311904a93f34814d7dc8ae95f4d21192571cb6)✏️add missed ![](https://github.com/Krutoy242/mc-icons/raw/master/i/tconstruct/large_plate__0__e46f643e.png "Enderium Large Plate") recipe
   > 
-  > Also this change slightly tweak some other blocks (see commit for details)
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/eb6f6522789e9aad31f0c082baae07c5ab21fd7b)👑Fix `Omnipotence` lowering mining speed with a tool
+  > Now you can mine even faster if you have better tool
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/ae655712d09808c9c9855f038ad1abca51c2dd99)👑Fix flight affect non-`omnipotent` players
+  > > Contributed by [MordWincer](https://github.com/mordwincer)
+  >
+  > - Also fix omnipotence vertical flight boost slow down players when have AS perks
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/7fbdf4c4b997e3ea8dea2035b4b4fc419936a788)📖TF Castle change task to "Touch" bricks rather than mine
+  > Since they are Mining Level 10, its hard to speedrun quest before `Conflux III`
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/468535078cc97262375020c92c5e7d5389f65404)🔌Pevent IC2 to load default world scanning values
+  > This will remove some "hidden" replicable items like Wooden Doors by the cost of Singularities.
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/95b926769ac23030b1530a9350a3f899e74696b0)🧻Add tip about ![](https://github.com/Krutoy242/mc-icons/raw/master/i/mysticalagriculture/crafting__3.png "Superium Essence") drop from Sprite boss
   > 
-  > Related e6ec1891739b8a7d8413a19f3a8c3eb3dd48b75a
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/e2b39a8697307512de99fcbfca4131e26b21db53)🏃‍♀️fix `player moved too quickly` on servers
+* <img src="https://i.imgur.com/gtu56yt.png" align=right> [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/26b6dd03fedbd1789f0eaa73734e290a7790cde8)🧾Add color for OTG world creation note
   > 
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/4c2543b3e8aff8201f604a7fa69516273527263a)🔨Return `Moon Voice` trait to Endorium
-  > 
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/e604b5929dc5e2331fda04df8cf0d9132ad8c4f4)🧙‍♂️disable all Cyclic's minecarts
-  > Their movement was glitchy and usage questionable.
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/136b6eee8a5028c9221628fc06e8a9496169d702)🧩Revert [Bottle of Wildberry Wine]
-  > Seems like RLTweaker cant buff Wine of updated Rustic mod.
-  > 
-  > Revert c4f9c16550c31c17e1fc2be507df94a769f9f1ad
+* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/423c8e02e671e845858ac365584742d7dfbc4b8e)🧾Cleanup Patchouli E2EE book
+  > - Remove entries that duplicate QuestBook pages
+  > - Remove Grinding entry
+  > - Merge all categories in one
 
-#### Gear
+#### Balance
 
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/05dfecc20c4d54113a5f49d3bc9a7ccc7a7c7ee1)🔨Trait `Spectre` make effect longer (4s => 9s) to prevent blincking
-  > 
-
-#### Recipes
-
-* <img src="https://i.imgur.com/H5UrEUo.png" align=right> [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/2d77b3d76e36f11cceee27fdb64dd01f08746e64)✏️add missed QMD recipes for new items
-  > 
-
-#### Skyblock
-
-* [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/7ad338a92627c6534ad98b488f013690a95c4afd)🌌Fix skyblock players could visit nether
-  > Error was accidentally introduced in `v1.60.2`.
-  > Here 5ec47e7328f5a86135a65dc7898fece56238e4bd
-
+* <img src="https://i.imgur.com/qbIitlR.png" align=right> [🖇](https://github.com/Krutoy242/Enigmatica2Expert-Extended/commit/65c628766d6ecd216d7288728d94416aa02e849b)✏️More output to ![](https://github.com/Krutoy242/mc-icons/raw/master/i/thaumcraft/arcane_workbench__0.png "Arcane Workbench") MA recipes
+  > Now essence like ![](https://github.com/Krutoy242/mc-icons/raw/master/i/mysticalagriculture/wood_essence__0__22e93aaa.png "Wood Essence") or ![](https://github.com/Krutoy242/mc-icons/raw/master/i/mysticalagriculture/cow_essence__0.png "Cow Essence") ouput x4 times more resources.
 ## Mods changes
+### 🟢 Added Mods
+
+Icon | Summary | Reason
+----:|:--------|:-------
+<img src="https://media.forgecdn.net/avatars/thumbnails/1267/57/30/30/638824726446246849.png"            > |   [**Actually Additions V2 Coffee Edition**](https://www.curseforge.com/minecraft/mc-mods/actually-additions-v2-coffee-edition)<sup><sub>ActuallyAdditions-1.12.2-r163-V2.jar             </sub></sup><br>Refresh Actually Additions to give the mod a new look | Better textures
+-----------
+
 
 ### 🔴 Removed Mods
 
 Icon | Summary | Reason
 ----:|:--------|:-------
-<img src="https://media.forgecdn.net/avatars/thumbnails/297/106/30/30/637343255955991159.png"            > |            [**Mixin 0.7-0.8 Compatibility**](https://www.curseforge.com/minecraft/mc-mods/mixin-0-7-0-8-compatibility)  <sup><sub>[___MixinCompat-1.1-1.12.2___].jar               </sub></sup><br>Allows mods that use 0.7 or 0.8 mixin to be compatible with each other | I didnt realize but came out that this mod was doing nothing. If I just remove this mod - nothing changes and modpack run as it should be. Discovered [here](https://github.com/Krutoy242/Enigmatica2Expert-Extended/issues/500#issuecomment-2998352079).
+<img src="https://media.forgecdn.net/avatars/thumbnails/1014/514/30/30/638539820174809228.png"           > |                     [**Actually Additions**](https://www.curseforge.com/minecraft/mc-mods/actually-additions)           <sup><sub>ActuallyAdditions-1.12.2-r152.jar                </sub></sup><br>Fan-favorite magitech mod full of fun and useful gadgets | Replaced with a fork
 -----------
 
 ### 🟡 Updated Mods
 
 Icon | Summary | Old / New
 ----:|:--------|:---------
-<img src="https://media.forgecdn.net/avatars/thumbnails/874/755/30/30/638296262646953159.png"            > |                [**Alfheim Lighting Engine**](https://www.curseforge.com/minecraft/mc-mods/alfheim-lighting-engine)     | <nobr>Alfheim-1.5</nobr><br><nobr>Alfheim-1.6</nobr>
-<img src="https://media.forgecdn.net/avatars/thumbnails/1304/81/30/30/638847932766552243.png"            > |                                  [**Fugue**](https://www.curseforge.com/minecraft/mc-mods/fugue)                       | <nobr>+Fugue-0.19.0</nobr><br><nobr>+Fugue-0.19.5</nobr>
-<img src="https://media.forgecdn.net/avatars/thumbnails/1223/434/30/30/638801642158504721.png"           > |                       [**Tinkers' Antique**](https://www.curseforge.com/minecraft/mc-mods/tinkers-antique)             | <nobr>TinkersAntique-1.12.2-2.13.0.200</nobr><br><nobr>TinkersAntique-1.12.2-2.13.0.201</nobr>
+<img src="https://media.forgecdn.net/avatars/thumbnails/92/854/30/30/636258666554688823.png"             > |                        [**Xaero's Minimap**](https://www.curseforge.com/minecraft/mc-mods/xaeros-minimap)              | <nobr>Xaeros_Minimap_25.2.6_Forge_1.12</nobr><br><nobr>Xaeros_Minimap_25.2.10_Forge_1.12</nobr>
+<img src="https://media.forgecdn.net/avatars/thumbnails/402/539/30/30/637610420057870216.png"            > |           [**Open Terrain Generator (OTG)**](https://www.curseforge.com/minecraft/mc-mods/open-terrain-generator)      | <nobr>OpenTerrainGenerator-1.12.2-v9.5-R2</nobr><br><nobr>OpenTerrainGenerator-1.12.2-v9.6</nobr>
+<img src="https://media.forgecdn.net/avatars/thumbnails/1362/814/30/30/638885115958149175.png"           > |                           [**PackagedAuto**](https://www.curseforge.com/minecraft/mc-mods/packagedauto)                | <nobr>PackagedAuto-1.12.2-1.0.18.64</nobr><br><nobr>PackagedAuto-1.12.2-1.0.19.65</nobr>
+<img src="https://media.forgecdn.net/avatars/thumbnails/196/654/30/30/636886857118683130.png"            > |                      [**Xaero's World Map**](https://www.curseforge.com/minecraft/mc-mods/xaeros-world-map)            | <nobr>XaerosWorldMap_1.39.9_Forge_1.12</nobr><br><nobr>XaerosWorldMap_1.39.12_Forge_1.12</nobr>
+<img src="https://media.forgecdn.net/avatars/thumbnails/204/573/30/30/636941032067206129.png"            > |                                [**LibNine**](https://www.curseforge.com/minecraft/mc-mods/libnine)                     | <nobr>libnine-1.12.2-1.2.1</nobr><br><nobr>libnine-1.12.2-1.2.2</nobr>
+<img src="https://media.forgecdn.net/avatars/thumbnails/1362/816/30/30/638885116793099467.png"           > |                     [**PackagedExCrafting**](https://www.curseforge.com/minecraft/mc-mods/packagedexcrafting)          | <nobr>PackagedExCrafting-1.12.2-1.0.2.30</nobr><br><nobr>PackagedExCrafting-1.12.2-1.0.2.31</nobr>
+<img src="https://media.forgecdn.net/avatars/thumbnails/273/618/30/30/637255642042590715.png"            > |                     [**Tinkers' Evolution**](https://www.curseforge.com/minecraft/mc-mods/tinkers-evolution)           | <nobr>tconevo-1.12.2-1.0.49</nobr><br><nobr>tconevo-1.12.2-1.1.0</nobr>
+<img src="https://media.forgecdn.net/avatars/thumbnails/292/428/30/30/637325593905195388.png"            > |                              [**Zen Utils**](https://www.curseforge.com/minecraft/mc-mods/zenutil)                     | <nobr>zenutils-1.24.0</nobr><br><nobr>zenutils-1.25.3</nobr>
+<img src="https://media.forgecdn.net/avatars/thumbnails/1363/536/30/30/638885540715738013.png"           > |                         [**PackagedAstral**](https://www.curseforge.com/minecraft/mc-mods/packagedastral)              | <nobr>PackagedAstral-1.12.2-1.0.3.20</nobr><br><nobr>PackagedAstral-1.12.2-1.0.3.21</nobr>
+<img src="https://media.forgecdn.net/avatars/thumbnails/1363/379/30/30/638885462388978264.png"           > |                       [**PackagedDraconic**](https://www.curseforge.com/minecraft/mc-mods/packageddraconic)            | <nobr>PackagedDraconic-1.12.2-1.0.3.22</nobr><br><nobr>PackagedDraconic-1.12.2-1.0.3.23</nobr>
+<img src="https://media.forgecdn.net/avatars/thumbnails/1304/81/30/30/638847932766552243.png"            > |                                  [**Fugue**](https://www.curseforge.com/minecraft/mc-mods/fugue)                       | <nobr>+Fugue-0.19.5</nobr><br><nobr>+Fugue-0.19.8</nobr>
+<img src="https://media.forgecdn.net/avatars/thumbnails/1128/28/30/30/638686145366913611.jpg"            > |                            [**Curvy Pipes**](https://www.curseforge.com/minecraft/mc-mods/curvy-pipes)                 | <nobr>curvy_pipes-1.12.2-1.11.2</nobr><br><nobr>curvy_pipes-1.12.2-1.11.5</nobr>
+<img src="https://media.forgecdn.net/avatars/thumbnails/1176/204/30/30/638748608591942674.png"           > |                       [**RandomComplement**](https://www.curseforge.com/minecraft/mc-mods/random-complement)           | <nobr>random_complement-1.5.1</nobr><br><nobr>random_complement-1.5.3</nobr>
 -----------
 
 

@@ -17,24 +17,24 @@ pipe_types:
     diameter: 0.1
     # Items per tick (can be smaller than 1)
     variant: {Item: {rate: 0.1}}
-  - {key: curvy.item.small, meta: 1, name: Small Item Pipe, texture: curvy_pipes:blocks/item_pipe, diameter: 0.2, variant: {Item: {rate: 1.}}}
-  - {key: curvy.item.medium, meta: 2, name: Medium Item Pipe, texture: curvy_pipes:blocks/item_pipe, diameter: 0.4, variant: {Item: {rate: 10.}}}
-  - {key: curvy.item.large, meta: 3, name: Large Item Pipe, texture: curvy_pipes:blocks/item_pipe, diameter: 0.8, variant: {Item: {rate: 100.}}}
-  - {key: curvy.item.huge, meta: 4, name: Huge Item Pipe, texture: curvy_pipes:blocks/item_pipe, diameter: 1.6, variant: {Item: {rate: 1E3}}}
+  - {key: curvy.item.small, meta: 1, name: Small Item Pipe, texture: curvy_pipes:blocks/item_pipe, diameter: 0.2, variant: {Item: {rate: 1.0}}}
+  - {key: curvy.item.medium, meta: 2, name: Medium Item Pipe, texture: curvy_pipes:blocks/item_pipe, diameter: 0.4, variant: {Item: {rate: 100.0}}}
+  - {key: curvy.item.large, meta: 3, name: Large Item Pipe, texture: curvy_pipes:blocks/item_pipe, diameter: 0.8, variant: {Item: {rate: 10000.0}}}
+  - {key: curvy.item.huge, meta: 4, name: Huge Item Pipe, texture: curvy_pipes:blocks/item_pipe, diameter: 1.6, variant: {Item: {rate: 1E6}}}
 
   # Fluid transfer rate is mB per tick.
-  - {key: curvy.fluid.tiny, meta: 5, name: Tiny Fluid Pipe, texture: curvy_pipes:blocks/fluid_pipe, diameter: 0.1, variant: {Fluid: {rate: 10.}}}
-  - {key: curvy.fluid.small, meta: 6, name: Small Fluid Pipe, texture: curvy_pipes:blocks/fluid_pipe, diameter: 0.2, variant: {Fluid: {rate: 100.}}}
-  - {key: curvy.fluid.medium, meta: 7, name: Medium Fluid Pipe, texture: curvy_pipes:blocks/fluid_pipe, diameter: 0.4, variant: {Fluid: {rate: 1E3}}}
-  - {key: curvy.fluid.large, meta: 8, name: Large Fluid Pipe, texture: curvy_pipes:blocks/fluid_pipe, diameter: 0.8, variant: {Fluid: {rate: 10E3}}}
-  - {key: curvy.fluid.huge, meta: 9, name: Huge Fluid Pipe, texture: curvy_pipes:blocks/fluid_pipe, diameter: 1.6, variant: {Fluid: {rate: 100E3}}}
+  - {key: curvy.fluid.tiny, meta: 5, name: Tiny Fluid Pipe, texture: curvy_pipes:blocks/fluid_pipe, diameter: 0.1, variant: {Fluid: {rate: 100.0}}}
+  - {key: curvy.fluid.small, meta: 6, name: Small Fluid Pipe, texture: curvy_pipes:blocks/fluid_pipe, diameter: 0.2, variant: {Fluid: {rate: 1E5}}}
+  - {key: curvy.fluid.medium, meta: 7, name: Medium Fluid Pipe, texture: curvy_pipes:blocks/fluid_pipe, diameter: 0.4, variant: {Fluid: {rate: 1E7}}}
+  - {key: curvy.fluid.large, meta: 8, name: Large Fluid Pipe, texture: curvy_pipes:blocks/fluid_pipe, diameter: 0.8, variant: {Fluid: {rate: 1E9}}}
+  - {key: curvy.fluid.huge, meta: 9, name: Huge Fluid Pipe, texture: curvy_pipes:blocks/fluid_pipe, diameter: 1.6, variant: {Fluid: {rate: 1E12}}}
 
   # Energy transfer rate is FE per tick.
   - {key: curvy.energy.tiny, meta: 10, name: Tiny Energy Pipe, texture: curvy_pipes:blocks/energy_pipe, diameter: 0.1, variant: {Energy: {rate: 1E3}}}
-  - {key: curvy.energy.small, meta: 11, name: Small Energy Pipe, texture: curvy_pipes:blocks/energy_pipe, diameter: 0.2, variant: {Energy: {rate: 10E3}}}
-  - {key: curvy.energy.medium, meta: 12, name: Medium Energy Pipe, texture: curvy_pipes:blocks/energy_pipe, diameter: 0.4, variant: {Energy: {rate: 100E3}}}
-  - {key: curvy.energy.large, meta: 13, name: Large Energy Pipe, texture: curvy_pipes:blocks/energy_pipe, diameter: 0.8, variant: {Energy: {rate: 1E6}}}
-  - {key: curvy.energy.huge, meta: 14, name: Huge Energy Pipe, texture: curvy_pipes:blocks/energy_pipe, diameter: 1.6, variant: {Energy: {rate: 10E12}}}
+  - {key: curvy.energy.small, meta: 11, name: Small Energy Pipe, texture: curvy_pipes:blocks/energy_pipe, diameter: 0.2, variant: {Energy: {rate: 1E6}}}
+  - {key: curvy.energy.medium, meta: 12, name: Medium Energy Pipe, texture: curvy_pipes:blocks/energy_pipe, diameter: 0.4, variant: {Energy: {rate: 1E9}}}
+  - {key: curvy.energy.large, meta: 13, name: Large Energy Pipe, texture: curvy_pipes:blocks/energy_pipe, diameter: 0.8, variant: {Energy: {rate: 1E12}}}
+  - {key: curvy.energy.huge, meta: 14, name: Huge Energy Pipe, texture: curvy_pipes:blocks/energy_pipe, diameter: 1.6, variant: {Energy: {rate: 1E15}}}
 
 # Applied Energistics 2 integration (izgnored if AE2 is not installed)
 ae2:

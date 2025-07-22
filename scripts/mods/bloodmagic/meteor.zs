@@ -65,8 +65,6 @@ function trySpawnMeteor(world as IWorld, x as int, z as int) as void {
   ) return;
 
   spawnMeteor(world, rndPos, meteorCatalyst);
-
-  // server.commandManager.executeCommandSilent(server, '/say §8spawned:['~rndPos.x~':'~rndPos.y~':'~rndPos.z~']');
 }
 
 function spawnMeteor(world as IWorld, pos as IBlockPos, stack as IItemStack) as void {

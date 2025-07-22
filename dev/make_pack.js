@@ -1,3 +1,4 @@
+/* eslint-disable antfu/no-top-level-await */
 /**
  * @file Make necessary preparations to turn dev version of pack
  * into distributable one.
@@ -91,8 +92,8 @@ const zipBaseName = `E2E-Extended-${nextVersion}`
 const serverSetupConfig = 'server/server-setup-config.yaml'
 
 await pressEnterOrEsc(
-    `Clear your working tree, rebase, and press ENTER. Press ESC to skip.`,
-    async () => (await git.status()).isClean()
+  `Clear your working tree, rebase, and press ENTER. Press ESC to skip.`,
+  async () => (await git.status()).isClean()
 )
 
 if (await pressEnterOrEsc(`Generate Changelog? ENTER / ESC.`)) {
@@ -162,7 +163,7 @@ const zipPath_server = `${zipPath_base}-server.zip`
 const isZipsExist = !argv.dryRun && [zipPath_EN, zipPath_server].some(f => existsSync(f))
 
 let rewriteOldZipFiles = false
-if (isZipsExist && (await pressEnterOrEsc(`Rewrite old .zip files? ENTER / ESC`))) {
+if (isZipsExist && await pressEnterOrEsc(`Rewrite old .zip files? ENTER / ESC`)) {
   rewriteOldZipFiles = true
   doTask(
     '🪓 Removing old zip files ... ',
@@ -228,11 +229,11 @@ function withZip(zipPath) {
   const zipHandler = (params, command = 'a') => {
     if (argv.dryRun) {
       return write(
-          `\n${command === 'd' ? '➖' : '➕'} ${
-            `${chalk.bgRgb(10, 10, 10).rgb(30, 30, 30)(zipPath)
-            } ${
+        `\n${command === 'd' ? '➖' : '➕'} ${
+          `${chalk.bgRgb(10, 10, 10).rgb(30, 30, 30)(zipPath)
+          } ${
             chalk.gray(params)}`
-          }`
+        }`
       )
     }
 
@@ -276,7 +277,7 @@ if (await pressEnterOrEsc(`Push tag? ENTER / ESC`))
   execSyncInherit('git push --follow-tags')
 
 const inputTitle = await enterString(
-    `Enter release title and press ENTER. Press ESC to skip release: `
+  `Enter release title and press ENTER. Press ESC to skip release: `
 )
 
 if (inputTitle !== undefined) {
@@ -284,7 +285,7 @@ if (inputTitle !== undefined) {
     execSyncInherit(
       'gh release create'
       + ` ${nextVersion}`
-      + ` --title="${(`${nextVersion} ${inputTitle.replace(/"/g, '\'')}`).trim()}"`
+      + ` --title="${`${nextVersion} ${inputTitle.replace(/"/g, '\'')}`.trim()}"`
       + ' --repo=Krutoy242/Enigmatica2Expert-Extended'
       + ' --notes-file=CHANGELOG-latest.md'
       + ` "${zipPath_EN}"`

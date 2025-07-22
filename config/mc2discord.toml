@@ -42,13 +42,13 @@ lang = "en_us"
 	# Global variables only
 	stop = "```fix\nServer Stopped!\n```"
 	# Global variables and Player variables
-	join = "🔵 `${player_display_name}` *joined*"
+	join = "-# 🔵 `${player_display_name}` *joined*"
 	# Global variables and Player variables
-	leave = "🟠 `${player_display_name}` *left*"
+	leave = "-# 🟠 `${player_display_name}` *left*"
 	# Global variables, Player variables and Death variables
-	death = "💀 *${death_message}*"
+	death = "-# 💀 *${death_message}*"
 	# Global variables, Player variables and Advancement variables
-	advancement = "> `${player_display_name}` has made the advancement **${advancement_title}**\n> *${advancement_description}*"
+	advancement = "> -# `${player_display_name}` has made the advancement **${advancement_title}**\n> -# *${advancement_description}*"
 
 [Commands]
 	# Prefix used before each command. Minecraft default one is '/' (eg : /help)
