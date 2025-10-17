@@ -386,23 +386,23 @@ val upgrIngrs = {
 
 // [Energy Upgrade] from [Ardite Ore Dust][+3]
 craft.remake(<mekanism:energyupgrade>, ['pretty',
-  'A □ A',
-  '▲ ♣ ▲',
-  'A □ A'], upgrIngrs
+  'A ♣ A',
+  '▲ □ ▲',
+  'A ♣ A'], upgrIngrs
 );
 
 // [Speed Upgrade] from [Cobalt Ore Dust][+3]
 craft.remake(<mekanism:speedupgrade>, ['pretty',
-  'A □ A',
-  '▲ ♠ ▲',
-  'A □ A'], upgrIngrs
+  'A ♠ A',
+  '▲ □ ▲',
+  'A ♠ A'], upgrIngrs
 );
 
 // [Gas Upgrade] from [Pulverized Silver][+3]
 craft.remake(<mekanism:gasupgrade>, ['pretty',
-  'A □ A',
-  '▲ s ▲',
-  'A □ A'], upgrIngrs
+  'A s A',
+  '▲ □ ▲',
+  'A s A'], upgrIngrs
 );
 
 // Atomic disassembler
@@ -711,8 +711,7 @@ craft.remake(<mekanism:basicblock2:5>, ['pretty',
 
 // Fix squeezers have no recipe
 val OD = <mekanism:dust:2>;
-scripts.processWork.work(['Squeezer'],            null, [<ore:oreOsmium>], null, [OD  , OD], null, null, [0.75]);
-scripts.processWork.work(['MechanicalSqueezer'],  null, [<ore:oreOsmium>], null, [OD * 2, OD], null, null, [0.5]);
+scripts.processWork.work(['Squeezer'], null, [<ore:oreOsmium>], null, [OD  , OD], null, null, [0.75]);
 
 // Oredicting cheaper recipe
 // [Formulaic Assemblicator] from [Slag][+3]

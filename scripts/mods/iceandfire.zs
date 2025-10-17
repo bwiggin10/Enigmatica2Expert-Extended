@@ -24,10 +24,6 @@ Purge(<iceandfire:armor_silver_metal_boots>);
 <iceandfire:podium:4>.removeAspects(<aspect:desiderium>);
 <iceandfire:podium:5>.removeAspects(<aspect:desiderium>);
 
-// Myrmex Resin
-recipes.addShapeless(<iceandfire:myrmex_desert_resin>, [<iceandfire:myrmex_jungle_resin>]);
-recipes.addShapeless(<iceandfire:myrmex_jungle_resin>, [<iceandfire:myrmex_desert_resin>]);
-
 // Disk Platter / Iron Chain Link
 craft.remake(<iceandfire:chain_link> * 2, ['AAA', 'A A', 'AAA'], {
   A: <ore:nuggetIron>,
@@ -260,7 +256,13 @@ mods.iceandfire.recipes.addIceDragonForgeRecipe(
   <scalinghealth:heartcontainer>);
 
 // Alt for non-dragon players
-scripts.processUtils.avdRockXmlRecipeEx('Crystallizer', [<cyclicmagic:heart_toxic>], [<fluid:lifeessence> * 1000], [<scalinghealth:heartcontainer>], null, { power: 100000, timeRequired: 20 });
+mods.advancedrocketry.RecipeTweaker.forMachine('Crystallizer').builder()
+  .input(<cyclicmagic:heart_toxic>)
+  .inputLiquid(<fluid:lifeessence> * 1000)
+  .outputItem(<scalinghealth:heartcontainer>)
+  .power(100000)
+  .timeRequired(20)
+  .build();
 
 // [Fire Dragonsteel Ingot] from [Fire Dragon Blood][+1]
 scripts.process.alloy([

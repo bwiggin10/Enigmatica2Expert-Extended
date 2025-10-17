@@ -2,50 +2,42 @@
 
 🚧✅❌⚠️♻️ List of priorities:
 
-- [ ] 🟠 Downgrade Flare to Spark https://github.com/CleanroomMC/Flare/issues/18
-- [ ] 📀 Fix names of TCon mining levels
-- [ ] 📀 Fix `OpenComputers` JEI plugin is still loaded
-- [ ] 📀 Dont let IC2 miner dig any mining level
-- [ ] 🔨 `Double Compressed Hammer` cant break double compressed charcoal
-- [ ] 🔨 Add HV wire invincibility TCon trait
-- [ ] 🐦 enable Enchanting speed up for rats
-- [ ] 📖 Add emojis 🍎 to chapter finishing messages
-- [ ] 📖 Add quest explaining that Battery and Solar can be replaced in TCon tools
-- [ ] Blacklist TW multiblocks for `carryon`
-- [ ] Diamond shouldn't be meltable in smeltery
-- [ ] Omnipotence silk touch cant break tile entities
-- [ ] Omnipotence fix BiomesOPlenty grass breaks without haste
-- [ ] ♻️ Use `.sort()` from ZenUtils instead of ctintegration
-- [ ] Skyblock: oredict leaves task
-- [ ] Completely get rid of `Patchouli_js()` code in .zs files
+- [ ] 🌎 Regen world-gen `KELT-6a`
+- [ ] 🔴 Remove `Rocky Tweaks` when fixed https://github.com/roidrole/Roids-Tweaker/issues/9
+- [ ] ✏️ `Redstone Cable` harder recipe
+- [ ] ✏️ `Inworld Smelting` better documenting
+- [ ] 🤖 Nanomachines give next levels of potions
+- [ ] ✏️ Add `Upgrade Singularity`
+- [ ] ✏️ Return Tungsten Blocks for High-pressure turbines
+- [ ] 🧱 Automatically interactive-rebase
+- [ ] 👑 Upgrading Draconic tools give Omnopotence
+- [ ] 🐛 Custom beacons not working on server
+- [ ] 🟢 Migrate from `UniDict` to `OnlyOneItem`
+
+### "Endgame" expansion
+
+- [ ] 🐛 Fix Harvest Levels not working for non-"stone" material
+- [ ] 🖼️ Use `Legendary Tooltips` to mark harvest levels
+- [ ] 🧶 Feat: make some ores / materials only harvestable with `Gluon Gun`
+- [ ] ✏️ `Draconic Evolution` add recipes that use trillions RF
+- [ ] ✨ Make Draconic Armor adopt upgrades of prev tier
+
+### "Dimension building" rework
+- [ ] ✏️ `Anglesite` and `Benitoite` ore make in form of RFTools dimlets
+- [ ] ✏️ RFTools `Dimension building` rework - make cheaper by balancing possible dimlets
+- [ ] 💜 Make `[constant] difficulty` dimension for replicator discount. Probably RFTools ones
 
 <!-- 
-Command to generate single file from all files in directory:
-› find ./dir/ -type f -exec sh -c 'for f; do ext="${f##*.}"; [[ "$ext" == "$f" ]] && ext=""; printf "\`%s\`:\n\`\`\`%s\n" "${f#./}" "$ext"; cat "$f"; echo -e "\`\`\`\n"; done' _ {} + > merged_output.md
+Command to concat all files in directory:
+› find scripts/do -name '*.zs' -print0 | xargs -0 -I {} sh -c 'echo "--- {} ---"; cat "{}"'
 
 Command to show all commits that changing same files:
 › git log --oneline abc123..HEAD -- $(git diff-tree --no-commit-id --name-only -r abc123)
 
-Recursively find all `.bo3` files and remove empty lines and lines starting with '#' from them.
-› find . -type f -name "*.bo3" -exec sed -i '/^$/d;/^#/d' {} +
+Command to optimize all the .png files:
+› ./pngquant.exe 128 resources/**/*.png --skip-if-larger --ext .png --strip --verbose --force
+› ./oxipng.exe resources/**/*.png --alpha --strip all
 -->
-
-### "Endgame" expansion
-
-- [ ] ✏️ Add `Creative Computer Case` recipe from Osgloglas and RTG (?)
-- [ ] 🐛 Fix Harvest Levels not working for non-"stone" material
-- [ ] 🌈 Add `Rainbow Generator` shine when player get omnipotence
-- [ ] 🖼️ Use `Legendary Tooltips` to mark harvest levels
-- [ ] 🧶 Feat: make some ores / materials only harvestable with `Gluon Gun`
-- [ ] 📀 Add `Uncrafting Table` automation block
-- [ ] ✏️ `Draconic Evolution` add recipes that use trillions RF
-- [ ] ✏️ RFTools `Dimension building` rework - make cheaper by balancing possible dimlets
-- [ ] 🌟 Vitrified Sand make drop items that can be combined with UU-Matter items to get any craftable item in game
-- [ ] 💜 Make `[constant] difficulty` dimension for replicator discount. Probably RFTools ones
-- [ ] 🌍 Gen Highly Radioactive stuff on `Asteroid Belt`, unbearable radiation
-- [ ] 🌍 `Asteroid Belt` Maybe spawn working Rainbow Generators?
-- [ ] ☢️ Make `Highly Radioactive` blocks glowing
-- [ ] ☢️ Space planets have constant radiation
 
 ---
 
@@ -56,6 +48,11 @@ Recursively find all `.bo3` files and remove empty lines and lines starting with
 Planned non-urgent changes, or just good ideas:
 
 ### "Performance ⚡"
+
+- [ ] ⚡ never use a fluid storage interface for IE's multiblock tanks
+- [ ] ⚡ Remove `Fluid Conduit` recipe since lower FPS
+- [ ] ⚡ add Warning about things that lower FPS: `placed item, drawers, Auto Sieve (promote ugly plating)`
+- [ ] ⚡ Fix `OpenComputers` JEI plugin is still loaded (see benchmark)
 - [ ] ⚡ Cleanup JER data (and ores on other planets for clear JER tab)
 - [ ] ⚡ Fix projectiles accumulated on chunk borders, such as Scythe or Beam Laser. Use `ForceUpdateEntityClasses` StellarCore's config
 - [ ] ⚡ Remove Openblock's `Vacuum Hoppers` since they cause lags
@@ -74,6 +71,7 @@ Planned non-urgent changes, or just good ideas:
 - Vanilla Chests
 
 ### Quests and Docs expansion
+- [ ] 📖 Add `Armor Gauntlets` to ⬜🟦 loot boxes
 - [ ] 📖 `Interdiction Pulsar` add to some quest reward and describe how to use
 - [ ] 📖 Add PSI spells into quest rewards or loot boxes
 - [ ] 📖 Add Skyblock quest about Terraformer
@@ -99,6 +97,7 @@ Planned non-urgent changes, or just good ideas:
 - [ ] ✏️ `Compressed` mobs should be bigger
 
 ### "Flora & Fauna" expansion
+- [ ] 📖 `Cocoon of Caprice` add JEI entry
 - [ ] ✨ Idea: Flower that regenerate ore in `bedrockore`
 - [ ] 💡 Feature idea: animal totem that work when you place mobs on each other in right sequence (cow-sheep-chicken for example)
 - [ ] 🌱 Add NC and QMD radioactive items mutating IC2 crops to increase / descrease their stats
@@ -137,10 +136,12 @@ Planned non-urgent changes, or just good ideas:
 - [ ] 🪐 NC have its own "Wasteland" dim - make Use Of it
 - [ ] ✏️ QMD atmosphere collector for other dims
 - [ ] ✏️ Add usage of `Perfect Fuel` in NCO (with `flux goo` as sub-product)
+- [ ] 🌍 Gen Highly Radioactive stuff on `Asteroid Belt`, unbearable radiation
+- [ ] ☢️ Space planets have constant radiation
 
 ### "Multiplayer" expansion
-- [ ] Reward with 1 DankNull panel in several quests to promote sharing
-- [ ] Think if i could make a script to keep 100% modpack completion after new quests are added
+- [ ] 🎁 Reward with 1 DankNull panel in several quests to promote sharing
+- [ ] 💻 Think if i could make a script to keep 100% modpack completion after new quests are added
 - [ ] 💬 Chat names should have special unicode symbols to show Conflux level and "accomplishments" (including Discord support)
 - [ ] 💬 `Accomplishments` ⚜✳✴❇ mechanic:
   * Add messages "Player killex xxx mobs! WOW" based on spectacular stats.
@@ -152,28 +153,36 @@ Planned non-urgent changes, or just good ideas:
 
 ### Skyblock expansion
 
-- [ ] Skyblock: Make `Porouse Stone` and `AA Ore Laser` unavoidable in skyblock
+- [ ] 🧱 Skyblock: Make `Porouse Stone` and `AA Ore Laser` mandatory in skyblock
 
 ### Mods
-- [ ] 🔴 Remove **XTones** and **Environmental Materials** since they are depricated by LittleTiles and Cathedral
+- [ ] 🔴 Remove **Simple Trophies** and replace them with LittleTiles or 3dPrint structures
 - [ ] 🟠 Do not update **Advanced Rocketry - Reworked** until fixed https://github.com/dercodeKoenig/AdvancedRocketry/issues/50
-- [ ] 🟠 Do not update **ae2-uel-v0.56.6** since its breaking plus + button craftings
-- [ ] 🟠 Do not update **JAOPCA** - uncompatible with JAOPCACustom
+- [ ] 🟠 Do not update **JAOPCA** - uncompatible with `JAOPCACustom`
+- [ ] 🟠 Do not update **籁/Sound Physics Remixin** `1.1.17` or above - uncompatible with `Java 8`
+- [ ] 🟠 Do not update **LootTweaker** `0.3.3` or above - its removing deprecated functions used since E2E
+- [ ] 🟠 Do not update **Deep Mob Evolution** `1.2.3` - power usage changes makes Dragon model unable to work
+- [ ] 🟠 Do not update **RLTweaker** `0.6.1` or above - later versions only compatible with `I&F ROTN`
+- [ ] 🟠 Do not update **RLMixins** `1.4.0` or above - mod specially rewritten for `RLCraft`
 - [ ] 🟢 Add **everlastingabilities** when someone integrate it
-- [ ] 🟢 Add **Fancier Particles** (note gitignore) when fixed: https://github.com/Red-Studio-Ragnarok/Fancier-Block-Particles/issues/12
 - [ ] 🟢 Add **Heat And Climate** when someone integrate it
-- [ ] 🟢 Add **OpenGlasses2** - could help to find turnable blocks from coal
 - [ ] 🟢 Add **quality-tools** when someone integrate it
 - [ ] 🟢 Add **Steve Carts** when someone integrate it
+- [ ] 🟢 Add **OpenGlasses2** - could help to find turnable blocks from coal
 - [ ] 🟢 Add **Nothirium** when fixed https://github.com/Meldexun/Nothirium/issues/9
-- [ ] 🟢 Return **Custom Loading Screen** when fixed https://github.com/AlexIIL/CustomLoadingScreen/issues/74
 - [ ] 🟢 Return **Village Names** when fixed https://legacy.curseforge.com/minecraft/mc-mods/village-names/issues/18
 
 ### Other
 
+- [ ] 💎 Diamond shouldn't be meltable in smeltery
+- [ ] 📖 Add emojis 🍎 to chapter finishing messages
+- [ ] 🐦 enable Enchanting speed up for rats
+- [ ] 📀 Add HV wire invincibility TCon trait
+- [ ] 📀 Dont let IC2 miner dig any mining level
+- [ ] 📀 Add `Uncrafting Table` automation block - probably GUI-less tile entities working like hopper
 - [ ] 🔚 Make EIO capacitors actually usabe: right now, tweaked machine power usage make machine speed always 1 tick, neglibe capacitor usefulness
 - [ ] ♻️ Refactor: replace all `itemUtils.getItem` to `<${}:${}>`
-- [ ] Enable and integrate EIO capacitors for IF machines `config/ometweaks/ometweaks.cfg:261`
+- [ ] ⚙️ Enable and integrate EIO capacitors for IF machines `config/ometweaks/ometweaks.cfg:261`
 - [ ] 🔨 `Spectre` trait - remove annoying flashing
 - [ ] ✏️ `Thermal Logistics` cheaper, use widely
 - [ ] 💜 add `0 difficulty` dimension (replicator cant work here). Maybe Spectre. ☝ Problem: Allowing getting +1🎁 whole game.
@@ -183,19 +192,18 @@ Planned non-urgent changes, or just good ideas:
 - [ ] 🌌 Add `Helmet/Chest/Leggins/Boots Singularity`
 - [ ] 🌌 Add `Pickaxe/Shovel/Hoe/Axe/Sword Singularity`
 - [ ] ✏️ `Creative Impetus` add recipe. Doubdt - its block kinda ugly, no effects, more like technical.
-- [ ] Integrate new TCon Fluids: `Blazin' Blood + Bone, Venom + Bone`
+- [ ] 🧪 Integrate new TCon Fluids: `Blazin' Blood + Bone, Venom + Bone`
 - [ ] 🌍 Bio planet bog should have Peat under the ground
 - [ ] ✨ Idea: Difficulty cant grow if you didnt died
 - [ ] 🌍 Teleport player to AlienJungle with Blood Magic TP ritual
 - [ ] 🌍 AlienJungle add JER data
 - [ ] 𝓩𝒮 `/perf` improvments: Group chunks by dimension, Split big reports to pages, Add command mention in quest book
 - [ ] 📀 change of `Trick: Ebony and Ivory` spell from "The End dimension" to "The End biome"
-- [ ] Add `Sulfur Dioxide/Trioxide` in fluid dictionary
+- [ ] 🧪 Add `Sulfur Dioxide/Trioxide` in fluid dictionary
 - [ ] 🌍 Idea: fountains from Chemical Spreader projectiles that spread functionable fluid, transforming landscape around. Its also can be acid rain.
 - [ ] 🟡 Integrate `My Precious`: add to Dungeon loot, add in Loot Boxes
 - [ ] 💡 Idea: items doesnt have borders if already acquired
 - [ ] 💡 Idea: Chain commands with `& /`
-- [ ] 🔵 integrate **Legendary Tooltips** (probably some kind of special item category tooltips)
 - [ ] 🔨 Little Tiles remove limits (but how? Its already have big limits)
 - [ ] 🔵 Integrate more textures with `Lumenized` (contributor's help welcomed here)
 - [ ] ✏️ Fix `Magma Crucible` cant melt Rotten Flesh
@@ -207,7 +215,6 @@ Planned non-urgent changes, or just good ideas:
 - [ ] 🖼️ Add via mixins: https://legacy.curseforge.com/minecraft/texture-packs/ic2-seedbag-display
 - [ ] ⚒️ Rebalance TCon `Refining`: Remove x1.75 multiplication but add Fortune accounting
 - [ ] 🐀 Rat Ore Doubling can dupe IC2 "Iridium Ore". Removing oreIridium from it wont help.
-- [ ] 📖 Register item subtypes by NBT to JEI for `Gendustry` (there was CT handler for that but i cant find it)
 - [ ] 𝓩𝒮 Fix `Refining` not working on BoP ores
 - [ ] ✏️ Add feature to clear drawer `Item: 0` when unlocking it https://github.com/jaquadro/StorageDrawers/commit/da9875158ad0fadc190aae437ea2d9e89d616cca
 - [ ] 📖 Unmerge Furnace inputs in HEI (reported to HEI dev)
@@ -227,7 +234,6 @@ Planned non-urgent changes, or just good ideas:
 - [ ] ✏️ `Red Mechanic` move trades to other villager `config/vtt/trade_tables/red_mechanic.json`
 - [ ] ❓ Fixeroo doesnt combine XP Shower clumps https://github.com/CaliforniaDemise/Fixeroo/issues/3
 - [ ] ✏️ Fix Generic Entity spawn spawning with wrong looking direction
-- [ ] Install https://www.curseforge.com/minecraft/mc-mods/rather-enough-immersive-multiblocks
 - [ ] ✏️ Use `mods.jei.JEI.addItemNBTSubtype` to subtime `Genetic Templates` and `syringe` (when updated RandomTweaker after fix crash https://github.com/Project-RT/RandomTweaker/issues/82)
 - [ ] ⚡ (ARR) Remove XU2 jei removed categories https://spark.lucko.me/MRBZYLxzrN?hl=325666
 - [ ] 📀 Fix crops drop 1000 of berries on high stats
@@ -288,7 +294,6 @@ Planned non-urgent changes, or just good ideas:
 - [ ] ✏️ Cant make Bauble => advanced rings. Recipe functions prevent this from happen
 - [ ] 📖 `AnyMeatraw` should cycle in JEI. This usually possible with ore.firstItem, but not working for some reason.
 - [ ] 🔨 Add trait that auto-consume Sharpening Kits to repair TCon Tools
-- [ ] 🔨 Rework Grinding trait
 - [ ] ✏️ Add AS Grindstone recipe that rely on doubling chance mechanic
 - [ ] 📖 Add AS ritual to quest book
 - [ ] 💻 Add info about OC changes like https://www.reddit.com/r/feedthebeast/comments/98phxv/filtering_by_nbt_tag/
@@ -334,7 +339,7 @@ List of features and changes for `E2EE v2.0`, that breaking worlds and require f
 
 - 🌍 Remove OTG `Origin` biome since unnatural
 - 🌍 Remove OTG completely?
-- Remove `Libnine` and `Fluid Drawers` because lag https://github.com/phantamanta44/fluid-drawers/issues/19
+- ⚡ Remove `Libnine` and `Fluid Drawers` because lag https://github.com/phantamanta44/fluid-drawers/issues/19
 
 ---
 
@@ -403,6 +408,8 @@ Items that should have more uses:
 - No GUIs
   > Turn E2EE into opposite of GregTech, where 50% of your game you staring into GUI screens
   > Possible reward - whenever picking up item for the first time - get second copy of this item
+- No generated Ores
+  > Player started with limited amounts of Ores. He cant get more.
 
 <!-- 
 ## Miscellaneous

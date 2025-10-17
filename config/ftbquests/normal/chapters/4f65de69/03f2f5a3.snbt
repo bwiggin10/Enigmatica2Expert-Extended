@@ -1,4 +1,10 @@
 {
+	icon: {
+		tag: {
+			type: "uncommon"
+		},
+		id: "ftbquests:lootcrate"
+	},
 	x: 8.125d,
 	y: 6.04d,
 	text: [

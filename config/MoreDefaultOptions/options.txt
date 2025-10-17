@@ -15,7 +15,6 @@ ao:2
 renderClouds:true
 resourcePacks:["Better Gendustry v1.0.zip","Sonomagy TC6 v1.6.zip","Dark Mode-2.4.2.zip"]
 incompatibleResourcePacks:[]
-lastServer:51.210.223.149:25566
 lang:en_us
 chatVisibility:0
 chatColors:true
@@ -182,6 +181,8 @@ key_key.gridfixy:79
 key_key.gridhere:35
 key_key.gridspawns:0
 key_key.groovyscript.reload:19:CONTROL
+key_key.hei.crafting:46:SHIFT
+key_key.hei.toggleBookmarkOverlay:0
 key_key.hotbar.1:2
 key_key.hotbar.2:3
 key_key.hotbar.3:4
@@ -210,7 +211,7 @@ key_key.jei.showRecipe:19
 key_key.jei.showUses:22
 key_key.jei.toggleBookmarkOverlay:0
 key_key.jei.toggleCheatMode:0
-key_key.jei.toggleEditMode:35
+key_key.jei.toggleEditMode:0
 key_key.jei.toggleOverlay:24:CONTROL
 key_key.jeiutilities.displayRecipe:29
 key_key.jeiutilities.pickBookmark:-98
@@ -242,6 +243,7 @@ key_key.open_danknull.desc:0
 key_key.open_menu:19
 key_key.open_wireless_crafting_terminal.desc:18:CONTROL
 key_key.open_wireless_fluid_terminal.desc:33:SHIFT
+key_key.open_wireless_interface_terminal.desc:23:SHIFT
 key_key.open_wireless_pattern_terminal.desc:19:SHIFT
 key_key.open_wireless_terminal.desc:20:SHIFT
 key_key.otghud.desc:24
@@ -426,6 +428,9 @@ key_key.hitindication.toggle_hit_indication:72
 key_key.open_basic_extended_wireless_crafting_terminal:0
 key_key.open_elite_extended_wireless_crafting_terminal:0
 key_key.open_ultimate_extended_wireless_crafting_terminal:0
+key_key.retrieve_item.desc:-98:CONTROL
+key_key.start_craft.desc:-98:ALT
 key_key.toggleVisible:0
 key_keybind.endermodpacktweaks.toggle:0
-key_of.key.zoom:-97
+key_of.key.zoom:-97
+key_Open Key Wizard:65

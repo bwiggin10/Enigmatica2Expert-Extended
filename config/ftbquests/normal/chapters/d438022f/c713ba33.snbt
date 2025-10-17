@@ -1,5 +1,20 @@
 {
-<<<<<<<< HEAD:config/ftbquests/normal/chapters/d438022f/c713ba33.snbt
+<<<<<<<< HEAD:config/ftbquests/normal/chapters/6c29cdf5/4a96a8bb.snbt
+	title: "{q.botania.rod_of_the_shaded_mesa.name}",
+	x: 11.818454535324515d,
+	y: 1.8708632963199134d,
+	text: [
+		"{q.botania.rod_of_the_shaded_mesa.desc}"
+	],
+	dependencies: [
+		"2af28ccb"
+	],
+	tasks: [{
+		uid: "da6fda62",
+		type: "item",
+		items: [{
+			item: "botania:gravityrod"
+========
 	x: -3.1d,
 	y: 21.3d,
 	text: [
@@ -13,32 +28,17 @@
 		type: "item",
 		items: [{
 			item: "villagercontracts:contract"
-========
-	title: "{q.botania.rod_of_the_bifrost.name}",
-	x: 10.927050983124841d,
-	y: 1.1468304511145395d,
-	text: [
-		"{q.botania.rod_of_the_bifrost.desc}"
-	],
-	dependencies: [
-		"2af28ccb"
-	],
-	tasks: [{
-		uid: "39237ca0",
-		type: "item",
-		items: [{
-			item: "botania:rainbowrod"
->>>>>>>> upstream/master:config/ftbquests/normal/chapters/6c29cdf5/58e87f08.snbt
+>>>>>>>> upstream/master:config/ftbquests/normal/chapters/d438022f/c713ba33.snbt
 		}],
 		ignore_damage: 1b,
 		ignore_nbt: 1b
 	}],
 	rewards: [{
-<<<<<<<< HEAD:config/ftbquests/normal/chapters/d438022f/c713ba33.snbt
-		uid: "7f1a6eb5",
+<<<<<<<< HEAD:config/ftbquests/normal/chapters/6c29cdf5/4a96a8bb.snbt
+		uid: "b255911c",
 ========
-		uid: "0bd4c100",
->>>>>>>> upstream/master:config/ftbquests/normal/chapters/6c29cdf5/58e87f08.snbt
+		uid: "7f1a6eb5",
+>>>>>>>> upstream/master:config/ftbquests/normal/chapters/d438022f/c713ba33.snbt
 		type: "custom",
 		title: "{e2ee.quest.common}",
 		icon: {

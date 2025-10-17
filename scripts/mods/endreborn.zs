@@ -5,11 +5,8 @@ import crafttweaker.item.IItemStack;
 // Add missed furnace recipe
 furnace.addRecipe(<endreborn:item_ingot_wolframium>, <qmd:dust>, 4.0);
 
-// Chronologist
-<entity:endreborn:chronologist>.addPlayerOnlyDrop(<deepmoblearning:living_matter_extraterrestrial>, 1, 2);
-
 // Mage-Barclay
-<entity:endreborn:endlord>.addPlayerOnlyDrop(<storagedrawers:upgrade_storage:4>, 1, 2);
+scripts.lib.loot.tweak('endreborn:lord', 'main', null, null, [<storagedrawers:upgrade_storage:4>], [1, 2], true);
 
 // Remove hammer recipes
 for recipeName in [
@@ -50,7 +47,7 @@ recipes.remove(<endreborn:block_decorative_lormyte>);
 val LS = <endreborn:item_lormyte_crystal>;
 recipes.addShapeless(LS * 9, [<endreborn:block_decorative_lormyte>]);
 recipes.addShapeless(<endreborn:block_decorative_lormyte>, [LS, LS, LS, LS, LS, LS, LS, LS, LS]);
-scripts.lib.dropt.addDrop(<endreborn:block_lormyte_crystal>, <endreborn:item_lormyte_crystal>);
+scripts.lib.dropt.addDrop(<endreborn:block_lormyte_crystal>, [<endreborn:item_lormyte_crystal>]);
 
 // Fix automatic recipe
 mods.actuallyadditions.Crusher.removeRecipe(<endreborn:death_essence>);
