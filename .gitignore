@@ -120,3 +120,4 @@ config/waila/theme/vanilla.json
 config/waila/waila.cfg
 config/wailaharvestability.cfg
 config/wawla.cfg
+scripts/mods/environmentalmaterials.zs

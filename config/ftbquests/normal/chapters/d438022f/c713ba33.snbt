@@ -1,19 +1,18 @@
 {
-<<<<<<<< HEAD:config/ftbquests/normal/chapters/6c29cdf5/4a96a8bb.snbt
-	title: "{q.botania.rod_of_the_shaded_mesa.name}",
-	x: 11.818454535324515d,
-	y: 1.8708632963199134d,
+<<<<<<<< HEAD:config/ftbquests/normal/chapters/15b10d69/8de18ab3.snbt
+	x: 8.0d,
+	y: -0.1d,
 	text: [
-		"{q.botania.rod_of_the_shaded_mesa.desc}"
+		"{q.industrial_foregoing.meat_feeder.desc}"
 	],
 	dependencies: [
-		"2af28ccb"
+		"74175c1c"
 	],
 	tasks: [{
-		uid: "da6fda62",
+		uid: "c4edbcd7",
 		type: "item",
 		items: [{
-			item: "botania:gravityrod"
+			item: "industrialforegoing:meat_feeder"
 ========
 	x: -3.1d,
 	y: 21.3d,
@@ -34,8 +33,8 @@
 		ignore_nbt: 1b
 	}],
 	rewards: [{
-<<<<<<<< HEAD:config/ftbquests/normal/chapters/6c29cdf5/4a96a8bb.snbt
-		uid: "b255911c",
+<<<<<<<< HEAD:config/ftbquests/normal/chapters/15b10d69/8de18ab3.snbt
+		uid: "60ac83d0",
 ========
 		uid: "7f1a6eb5",
 >>>>>>>> upstream/master:config/ftbquests/normal/chapters/d438022f/c713ba33.snbt
