@@ -113,3 +113,10 @@ config/triumph/script/triumph/vanilla
 # Other
 resources/mekatweaker/blockstates/fluids.json
 resources/mekatweaker/lang/en_us.lang
+config/neat.cfg
+config/jade.cfg
+config/waila/theme/dark.json
+config/waila/theme/vanilla.json
+config/waila/waila.cfg
+config/wailaharvestability.cfg
+config/wawla.cfg
