@@ -1,19 +1,4 @@
 {
-<<<<<<<< HEAD:config/ftbquests/normal/chapters/15b10d69/8de18ab3.snbt
-	x: 8.0d,
-	y: -0.1d,
-	text: [
-		"{q.industrial_foregoing.meat_feeder.desc}"
-	],
-	dependencies: [
-		"74175c1c"
-	],
-	tasks: [{
-		uid: "c4edbcd7",
-		type: "item",
-		items: [{
-			item: "industrialforegoing:meat_feeder"
-========
 	x: -3.1d,
 	y: 21.3d,
 	text: [
@@ -27,17 +12,12 @@
 		type: "item",
 		items: [{
 			item: "villagercontracts:contract"
->>>>>>>> upstream/master:config/ftbquests/normal/chapters/d438022f/c713ba33.snbt
 		}],
 		ignore_damage: 1b,
 		ignore_nbt: 1b
 	}],
 	rewards: [{
-<<<<<<<< HEAD:config/ftbquests/normal/chapters/15b10d69/8de18ab3.snbt
-		uid: "60ac83d0",
-========
 		uid: "7f1a6eb5",
->>>>>>>> upstream/master:config/ftbquests/normal/chapters/d438022f/c713ba33.snbt
 		type: "custom",
 		title: "{e2ee.quest.common}",
 		icon: {
