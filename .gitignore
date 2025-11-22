@@ -121,10 +121,8 @@ config/waila/waila.cfg
 config/wailaharvestability.cfg
 config/wawla.cfg
 scripts/mods/environmentalmaterials.zs
-config/jade.cfg
-config/neat.cfg
-config/waila/theme/dark.json
-config/waila/theme/vanilla.json
-config/waila/waila.cfg
-config/wailaharvestability.cfg
-config/wawla.cfg
+config/topaddons_client.cfg
+config/theoneprobe.cfg
+config/probezs.cfg
+/server
+/dev
