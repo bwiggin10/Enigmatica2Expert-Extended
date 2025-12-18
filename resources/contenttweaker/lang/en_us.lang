@@ -31,6 +31,25 @@ fluid.mithrillium=Molten Mithrillium
 fluid.adaminite=Molten Adaminite
 fluid.mithminite=Molten Mithminite
 
+#Enchanted Steam
+item.contenttweaker.naquadah_resevoir_grade_1.name=Astral Catalyst Resevoir
+item.contenttweaker.naquadah_resevoir_grade_2.name=Botanic Catalyst Resevoir
+item.contenttweaker.naquadah_resevoir_grade_3.name=Alchemic Catalyst Reservoir
+item.contenttweaker.naquadah_resevoir_grade_4.name=Thaumic Catalyst Resevoir
+item.contenttweaker.naquadah_resevoir_grade_5.name=Ultimate Catalyst Resevoir
+
+item.contenttweaker.naquadah_catalyst_grade_1.name=Astral Steam Catalyst
+item.contenttweaker.naquadah_catalyst_grade_2.name=Botanic Steam Catalyst
+item.contenttweaker.naquadah_catalyst_grade_3.name=Alchemic Steam Catalyst
+item.contenttweaker.naquadah_catalyst_grade_4.name=Thaumic Steam Catalyst
+item.contenttweaker.naquadah_catalyst_grade_5.name=Ultimate Steam Catalyst
+
+fluid.magic_steam_grade_1=Astral Dense Steam
+fluid.magic_steam_grade_2=Botanic Dense Steam
+fluid.magic_steam_grade_3=Alchemic Dense Steam
+fluid.magic_steam_grade_4=Thaumic Dense Steam
+fluid.magic_steam_grade_5=Ultimate Dense Steam
+
 base.material.heavy_metal=Heavy Metal
 base.material.cheese=Cheese
 
@@ -237,7 +256,7 @@ e2ee.tconstruct.material.darkness.description=§oJoin the dark side...\n§rYour 
 e2ee.tconstruct.material.dire.name=Dire-Hit
 e2ee.tconstruct.material.dire.description=§oIt's super effective!\n§rYour tool will always land critical hits so long as you are at full health!
 e2ee.tconstruct.material.lifecycle.name=Cycle of Life
-e2ee.tconstruct.material.lifecycle.description=§oFrom one to another.\n§rWhen your tool is damaged, you are healed for the damaged amount.
+e2ee.tconstruct.material.lifecycle.description=§oFrom one to another.\n§rWhen your tool is damaged, you are healed for the damaged amount x10.
 e2ee.tconstruct.material.antimagic.name=Anti-Magic
 e2ee.tconstruct.material.antimagic.description=§oNihilistic!\n§rYour armor doesn't believe in potions, and refuses to be affected by any potion effects; good or bad.
 e2ee.tconstruct.material.darkside.name=The Dark Side
@@ -286,6 +305,10 @@ e2ee.tconstruct.material.robust.name=Robust
 e2ee.tconstruct.material.robust.description=Increase health
 e2ee.tconstruct.material.challenger.name=Challenger
 e2ee.tconstruct.material.challenger.description=§oChallenger\n§rHigher difficulty increases mining speed, damage, and defense/toughness.
+e2ee.tconstruct.trait.faraday.name=Faraday
+e2ee.tconstruct.trait.faraday.description=Prevents damage from wire shock.
+e2ee.tconstruct.trait.vaporizer.name=Vaporizer
+e2ee.tconstruct.trait.vaporizer.description=Instantly evaporates liquids in a large radius around the point of impact.
 
 warp.sword.warning=§o§5 You are too sane to use that power!
 
@@ -407,6 +430,16 @@ e2ee.written_book.Zombie=Zombie
 # Misc
 stat.replications=Spent UU Matter buckets
 e2ee.recipe.over_void=The player must be positioned over the void
+e2ee.quest.common=§fCommon§r Loot Crate
+e2ee.quest.uncommon=§bUncommon§r Loot Crate
+e2ee.quest.rare=§6Rare§r Loot Crate
+e2ee.quest.legendary=§5Legendary§r Loot Crate
+e2ee.quest.mythic=§dMythic§r Loot Crate
+e2ee.quest.decor=§7Decor§r Loot Crate
+e2ee.quest.food=§eFood§r Loot Crate
+e2ee.quest.generators=§0Generators§r Loot Crate
+e2ee.quest.materials=§4Materials§r Loot Crate
+e2ee.quest.storage=§8Storage§r Loot Crate
 e2ee.quest.loot.additional=§8You get an §ladditional loot crate§8 since your Difficulty §e✪§8 is \u003C 1
 e2ee.acquire.header=§6╔═§e✪§6═
 e2ee.acquire.footer=§6╚═§e✪§6═

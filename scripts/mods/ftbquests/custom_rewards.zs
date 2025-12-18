@@ -217,7 +217,7 @@ events.onCustomReward(function (e as mods.zenutils.ftbq.CustomRewardEvent) {
   */
   if (e.reward.tags has 'loot') {
     val amount = e.reward.icon.amount;
-    val diff = scripts.lib.mod.scalinghealth.getPlayerDimDifficulty(e.player.getUUID(), e.player.world.dimension);
+    val diff = e.player.difficulty;
     e.player.give(e.reward.icon * (
       diff < 1.0 ? amount + 1 // Mostly zero difficulty +1 chest
         : diff > 1000 ? max(1, amount - 1) // max difficulty -1 chest
@@ -230,6 +230,36 @@ events.onCustomReward(function (e as mods.zenutils.ftbq.CustomRewardEvent) {
     }
   }
 });
+
+/*Inject_js{
+globSync('config/ftbquests/normal/chapters/*'+'/*.snbt')
+    .forEach((f) => {
+      const text = loadText(f)
+      const replaced = text.replace(
+        /rewards: \[\{\n\s+uid: "(?<uid>\w+)",\s+type: "item",(?<auto>\n\s+auto: "[^"]+",)?\s+item: \{\s+id: "ftbquests:lootcrate",(?:\n\s+Count: (?<count>\d+),)?\s+tag: \{\s+type: "(?<type>\w+)"(?:\s+\},?){2}\n\s+\}(?<tail>\])?/gi,
+  (m, ...args) => {
+  const {uid, auto, type, count, tail} = args.pop()
+  return `rewards: [{
+		uid: "${uid}",
+		type: "custom",
+		title: "{e2ee.quest.${type}}",
+		icon: {
+			id: "ftbquests:lootcrate",${count ? `\n\t\t\tCount: ${count},` : ''}
+			tag: {
+				type: "${type}"
+			}
+		},
+		tags: [
+			"loot"
+		]
+	}${tail || ''}`
+})
+  if (text !== replaced) saveText(replaced, f)
+})
+return "// Done!"
+}*/
+// Done!
+/**/
 
 events.onCustomTask(function (e as mods.zenutils.ftbq.CustomTaskEvent) {
   if (e.task.hasTag('skyblock')) {

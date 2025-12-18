@@ -73,7 +73,7 @@ life.color = 0xFF2010;
 life.localizedName = game.localize('e2ee.tconstruct.material.lifecycle.name');
 life.localizedDescription = game.localize('e2ee.tconstruct.material.lifecycle.description');
 life.onToolDamage = function (trait, tool, unmodifiedAmount, newAmount, holder) {
-  holder.heal(newAmount);
+  holder.heal(newAmount * 10);
   return newAmount;
 };
 life.register();
@@ -82,7 +82,7 @@ life.register();
 // antimagic
 //
 val antimagic = ArmorTraitBuilder.create('antimagic');
-antimagic.color = 0x000000;
+antimagic.color = 0x060606;
 antimagic.localizedName = game.localize('e2ee.tconstruct.material.antimagic.name');
 antimagic.localizedDescription = game.localize('e2ee.tconstruct.material.antimagic.description');
 antimagic.onHurt = function (trait, armor, player, source, damage, newDamage, evt) {
@@ -92,7 +92,7 @@ antimagic.onHurt = function (trait, armor, player, source, damage, newDamage, ev
   return newDamage;
 };
 antimagic.onArmorTick = function (trait, armor, world, player) {
-  if (world.getWorldTime() % 10 == 0) player.clearActivePotions();
+  if (world.getWorldTime() % 10 == 8) player.clearActivePotions();
 };
 antimagic.register();
 

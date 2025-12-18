@@ -31,6 +31,25 @@ fluid.mithrillium=熔融秘银
 fluid.adaminite=熔融精金
 fluid.mithminite=熔融秘金
 
+#Enchanted Steam
+item.contenttweaker.naquadah_resevoir_grade_1.name=星體催化劑庫
+item.contenttweaker.naquadah_resevoir_grade_2.name=植物催化劑庫
+item.contenttweaker.naquadah_resevoir_grade_3.name=煉金催化劑儲層
+item.contenttweaker.naquadah_resevoir_grade_4.name=奇異族催化劑儲庫
+item.contenttweaker.naquadah_resevoir_grade_5.name=最終催化劑儲庫
+
+item.contenttweaker.naquadah_catalyst_grade_1.name=星體蒸汽催化劑
+item.contenttweaker.naquadah_catalyst_grade_2.name=植物蒸氣催化劑
+item.contenttweaker.naquadah_catalyst_grade_3.name=煉金蒸汽催化劑
+item.contenttweaker.naquadah_catalyst_grade_4.name=奇美蒸氣催化劑
+item.contenttweaker.naquadah_catalyst_grade_5.name=終極蒸汽催化劑
+
+fluid.magic_steam_grade_1=星體濃蒸汽
+fluid.magic_steam_grade_2=植物濃蒸汽
+fluid.magic_steam_grade_3=煉金術濃蒸汽
+fluid.magic_steam_grade_4=奇美濃蒸汽
+fluid.magic_steam_grade_5=終極濃蒸汽
+
 base.material.heavy_metal=沉重金属
 base.material.cheese=奶酪
 
@@ -237,7 +256,7 @@ e2ee.tconstruct.material.darkness.description=§o加入黑暗面……\n§r你�
 e2ee.tconstruct.material.dire.name=强力绝击
 e2ee.tconstruct.material.dire.description=§o立竿见影！\n§r满生命值时，你的工具将无条件施展暴击
 e2ee.tconstruct.material.lifecycle.name=生命轮回
-e2ee.tconstruct.material.lifecycle.description=§o不止不息。\n§r工具受损时，恢复与损耗耐久度相等的生命值
+e2ee.tconstruct.material.lifecycle.description=§o不止不息。\n§r工具受损时，恢复与损耗耐久度相等的生命值 x10
 e2ee.tconstruct.material.antimagic.name=反魔法
 e2ee.tconstruct.material.antimagic.description=§o虚无主义！\n§r你的盔甲不承认药水的存在并拒绝受其影响，无论好坏
 e2ee.tconstruct.material.darkside.name=黑暗面
@@ -286,6 +305,10 @@ e2ee.tconstruct.material.robust.name=健壮
 e2ee.tconstruct.material.robust.description=增加生命
 e2ee.tconstruct.material.challenger.name=挑战者
 e2ee.tconstruct.material.challenger.description=§o挑战者\n§r难度越高，挖掘速度、伤害和防御/韧性越高。
+e2ee.tconstruct.trait.faraday.name=法拉第
+e2ee.tconstruct.trait.faraday.description=防止因沉浸工程线缆造成的电击伤害。
+e2ee.tconstruct.trait.vaporizer.name=汽化器
+e2ee.tconstruct.trait.vaporizer.description=瞬间蒸发掉冲击点周围大范围内的液体。
 
 warp.sword.warning=§o§5 你太过理智，根本无法驾驭那股力量！
 
@@ -407,6 +430,16 @@ e2ee.written_book.Zombie=僵尸
 # Misc 杂项
 stat.replications=消耗的UU物质桶
 e2ee.recipe.over_void=玩家必须位于虚空之上
+e2ee.quest.common=§f普通§r 战利品箱
+e2ee.quest.uncommon=§b不常见§r 战利品箱
+e2ee.quest.rare=§6稀有§r 战利品箱
+e2ee.quest.legendary=§5传奇§r 战利品箱
+e2ee.quest.mythic=§d神话§r 战利品箱
+e2ee.quest.decor=§7装饰§r 战利品箱
+e2ee.quest.food=§e食物§r 战利品箱
+e2ee.quest.generators=§0发电机§r 战利品箱
+e2ee.quest.materials=§4材料§r 战利品箱
+e2ee.quest.storage=§8储物§r 战利品箱
 e2ee.quest.loot.additional=§8你获得了一个 §l额外的战利品箱§8，因你的难度§e✪§8小于 1
 e2ee.acquire.header=§6╔═§e✪§6═
 e2ee.acquire.footer=§6╚═§e✪§6═

@@ -19,7 +19,7 @@ import crafttweaker.world.IWorld;
 import scripts.do.portal_spread.config.Config;
 import scripts.do.portal_spread.data.updatePortal;
 import scripts.do.portal_spread.message.notifyPlayers;
-import scripts.do.portal_spread.utils.radiusToIndex;
+import scripts.do.portal_spread.sphere.radiusToIndex;
 
 /////////////////////////////////////////////////////////////////////////////
 
@@ -124,14 +124,15 @@ function getTrueLookup(modifiers as int[]) as double {
   return value;
 }
 
-// "Index" is term used in portal_spread.utils functions
+// "Index" is term used in portal_spread.sphere functions
 function getMaxSpreadIndex(modifiers as int[]) as int {
+  val maxRadius = scripts.do.portal_spread.sphere.maxRadius;
   val value = Config.defaultRadius
-    + (Config.maxRadius - Config.defaultRadius) * pow(extractModif(modifiers, 'large'), 2) / 16
+    + (maxRadius - Config.defaultRadius) * pow(extractModif(modifiers, 'large'), 2) / 16
     - Config.defaultRadius * extractModif(modifiers, 'small') / 4;
 
   if (value < Config.defaultRadius / 4) return 0;
-  if (value >= Config.maxRadius) return 2147483647;
+  if (value >= maxRadius) return 2147483647;
 
   return radiusToIndex(value);
 }
