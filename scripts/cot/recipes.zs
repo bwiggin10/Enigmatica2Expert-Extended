@@ -102,6 +102,10 @@ craft.make(<contenttweaker:conglomerate_of_coal>, ['pretty',
   'L': <rats:little_black_squash_balls>, // Little Black Squash Balls
 });
 
+// Special crafting case for Garbage Singularity
+mods.extendedcrafting.CompressionCrafting.addRecipe(<contenttweaker:garbage_singularity>.withTag({ completed: 1 as byte }),
+  <rats:garbage_pile>, 10000, <rats:idol_of_ratlantis>, 2000000, 100000);
+
 // Molten Electronics casts
 mods.tconstruct.Casting.addTableRecipe(<opencomputers:material:7>, <tconstruct:cast>.withTag({ PartType: 'tconstruct:shard' }), <liquid:electronics>, 8);
 mods.tconstruct.Casting.addTableRecipe(<opencomputers:material:6>, <tconstruct:cast_custom:1>, <liquid:electronics>, 16);
@@ -247,7 +251,7 @@ val transformedAbsorber = <contenttweaker:knowledge_absorber>.anyDamage().transf
   for ench in item.enchantments {
     if(ench.definition != <enchantment:minecraft:unbreaking>) continue;
     return (
-      (player.world.time + absorber_crafts_count[player.world] as long) % ((ench.level + 1) as long) != 0
+      (player.world.worldInfo.worldTotalTime + absorber_crafts_count[player.world] as long) % ((ench.level + 1) as long) != 0
     ) ? item : damaged;
   }
   return damaged;

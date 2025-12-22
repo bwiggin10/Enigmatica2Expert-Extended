@@ -198,7 +198,7 @@ function getSingularityUpdateFunc(
 ) as function(MutableItemStack,World,IEntity,int,bool)void {
   return function (stack as MutableItemStack, world as World, owner as IEntity, slot as int, isSelected as bool) as void {
     // skip each second frame to prevent item duping
-    if (world.provider.worldTime % 2 == 0) return;
+    if (world.remote || world.worldInfo.worldTotalTime % 2 == 0) return;
 
     // Singularity already charged
     if (stack.damage <= 0) return;
@@ -339,10 +339,6 @@ for i, id in singularIDs {
   val cotItem = native.youyihj.zenutils.api.cotx.brackets.BracketHandlerCoTItem.getItemRepresentation(fullId);
   cotItem.onItemUpdate = getSingularityUpdateFunc(ore, recipeFunction);
 }
-
-// Special crafting case for Garbage Singularity
-mods.extendedcrafting.CompressionCrafting.addRecipe(<contenttweaker:garbage_singularity>.withTag({ completed: 1 as byte }),
-  <rats:garbage_pile>, 10000, <rats:idol_of_ratlantis>, 2000000, 100000);
 
 // ------------------------------------------
 function createBedrockOre(world as World, contentId as string, contentProp as string, amount as int, pos as BlockPos) as void {

@@ -21,6 +21,9 @@ import crafttweaker.util.Math.sin;
 import crafttweaker.util.Math.sqrt;
 import native.net.minecraft.util.EnumParticleTypes;
 import native.net.minecraft.world.WorldServer;
+import native.thaumcraft.common.lib.enchantment.EnumInfusionEnchantment;
+import native.net.minecraft.item.ItemStack;
+import native.net.minecraftforge.oredict.OreDictionary;
 
 function entityEyeHeight(entity as IEntity) as double {
   return entity.y + entity.eyeHeight;
@@ -336,7 +339,7 @@ function checkIfOtherSwordAlreadySpeaks(player as IEntity) as bool {
     return false;
   }
 
-  return player.world.time == player.nbt.ForgeData.warpSpeakCooldown;
+  return player.world.worldInfo.worldTotalTime == player.nbt.ForgeData.warpSpeakCooldown;
 }
 
 static dialogLocation as string = 'warp.sword.speak.';
@@ -370,7 +373,7 @@ function speakRandom(player as IPlayer, world as IWorld) as void {
 
 possessed_Trait.onUpdate = function (trait, tool, world, owner, itemSlot, isSelected) {
   if (world.remote
-    || world.time % 6000 != 0
+    || world.worldInfo.worldTotalTime % 6000 != 0
     || !checkIfWeapon(tool)
     || !owner instanceof IPlayer
     || checkIfOtherSwordAlreadySpeaks(owner)) {
@@ -382,7 +385,7 @@ possessed_Trait.onUpdate = function (trait, tool, world, owner, itemSlot, isSele
   if (warp >= 100) {
     if (world.random.nextInt(2) > 0) {
       player.warpTemporary = min(500, 5 + player.warpTemporary);
-      player.setNBT({ warpSpeakCooldown: world.time });
+      player.setNBT({ warpSpeakCooldown: world.worldInfo.worldTotalTime });
       speakRandom(player, world);
     }
   }
@@ -527,7 +530,7 @@ function gazeMechanic(world as IWorld, player as IPlayer) as void {
 
 gaze_trait.onUpdate = function (trait, tool, world, owner, itemSlot, isSelected) {
   if (!isSelected) return;
-  if (world.getWorldTime() % gazeUpdateTime != 0) return;
+  if (world.worldInfo.worldTotalTime % gazeUpdateTime != 0) return;
   if (!owner instanceof IPlayer) return;
   val player as IPlayer = owner;
   gazeMechanic(world, player);
@@ -718,14 +721,14 @@ researcherTrait.onUpdate = function (trait, tool, world, owner, itemSlot, isSele
     tool.mutable().updateTag({ flux: 0 });
     return;
   }
-  if (world.time % 1000 == 0) {
+  if (world.worldInfo.worldTotalTime % 1000 == 0) {
     if (player.thaumcraftKnowledge.isResearchComplete('ORE_PURIFIER') && isNull(tool.tag.orePurifier)) tool.mutable().updateTag({ orePurifier: 1 });
     if (player.thaumcraftKnowledge.isResearchComplete('LOOT_STEALER') && isNull(tool.tag.lootStealer)) tool.mutable().updateTag({ lootStealer: 1 });
     if (player.thaumcraftKnowledge.isResearchComplete('FLUX_STRIKE') && isNull(tool.tag.fluxStrikeResearch)) tool.mutable().updateTag({ fluxStrikeResearch: 1 });
     if (player.thaumcraftKnowledge.isResearchComplete('GOD_WRAITH') && isNull(tool.tag.godWraith)) tool.mutable().updateTag({ godWraith: 1 });
     if (player.thaumcraftKnowledge.isResearchComplete('PURE_SMITE') && isNull(tool.tag.pureSmite)) tool.mutable().updateTag({ pureSmite: 1 });
   }
-  if (world.time % 10 != 0 || tool.tag.flux >= 50) return;
+  if (world.worldInfo.worldTotalTime % 10 != 0 || tool.tag.flux >= 50) return;
   if (world.getFlux(player.position) <= 1.0f) return;
   world.drainFlux(player.position, 1.0f);
   tool.mutable().updateTag({ flux: tool.tag.flux + 1 });
@@ -755,41 +758,89 @@ function checkTool(tool as IItemStack) as bool {
 }
 
 researcherTrait.onBlockHarvestDrops = function (trait, tool, event) {
-  // DROP BONUS crystalized chunks
-  if (event.player.world.remote) return; // world is remote
+  if (event.world.remote) return;
 
   if (!checkTool(tool)) return;
 
-  var newDrops = [] as WeightedItemStack[];
-  var dropChanged = false;
-  for weightedItem in event.drops {
-    if (isNull(weightedItem)) continue;
+  val level = EnumInfusionEnchantment.getInfusionEnchantmentLevel(tool, EnumInfusionEnchantment.REFINING);
+  val chance_percent = 40 + 20 * (level - 1) + 10 * event.fortuneLevel;
 
-    var oreName = '';
-    var found = false;
-
-    for ore in weightedItem.stack.ores { // checking if it's wanted ore
-      if (ore.name.startsWith('cluster')) {
-        oreName = ore.name.substring(7);
-      }
-
-      if (!(oreDict has (`crystalShard${oreName}`))) continue;
-      found = true;
-      break;
-    }
-
-    if (!found) { // not found ore, adding item as it is
-      newDrops += weightedItem;
-      continue;
-    }
-
-    dropChanged = true;
-
-    newDrops += oreDict[`crystalShard${oreName}`].firstItem * weightedItem.stack.amount % weightedItem.percent;
+  val lucky_number = event.world.random.nextInt(100);
+  if (lucky_number >= chance_percent) {
+    return;
   }
 
-  if (!dropChanged) return;
-  event.drops = newDrops;
+  var dropAmount = chance_percent / 100;
+  if (lucky_number < chance_percent % 100) {
+    dropAmount += 1;
+  }
+
+  var outputMultiplier = 1;
+  val block = event.block;
+  val blockStack = ItemStack(block, 1, block.meta);
+  if (!blockStack.isEmpty()) {
+    for oreID in OreDictionary.getOreIDs(blockStack) {
+      val oreName = OreDictionary.getOreName(oreID);
+      if (isNull(oreName)) continue;
+      if (oreName.startsWith('oreNether') || oreName.startsWith('oreEnd')) {
+        outputMultiplier = 2;
+        break;
+      }
+    }
+  }
+
+  var nonRefinableDrops = [] as [IItemStack];
+  var clustersFound = {} as IItemStack[string];
+  var hasRefinedSomething = false;
+
+  for originalDrop in event.drops {
+    if (isNull(originalDrop)) continue;
+
+    var cluster as IItemStack = null;
+    for oreID in originalDrop.stack.ores {
+      val oreName = oreID.name;
+      if (isNull(oreName)) continue;
+
+      var subLen = 0;
+      if      (oreName.startsWith('oreNether')) subLen = 9;
+      else if (oreName.startsWith('oreEnd'))    subLen = 6;
+      else if (oreName.startsWith('dust'))      subLen = 4;
+      else if (oreName.startsWith('ore'))       subLen = 3;
+      else if (oreName.startsWith('gem'))       subLen = 3;
+      else continue;
+
+      val clusterOreName = 'crystalShard' ~ oreName.substring(subLen);
+      val ores = OreDictionary.getOres(clusterOreName);
+      if (!ores.isEmpty() && !isNull(ores[0])) {
+        cluster = ores[0];
+        break;
+      }
+    }
+
+    if (!isNull(cluster)) {
+      hasRefinedSomething = true;
+      val clusterKey = toString(cluster);
+      if (isNull(clustersFound[clusterKey])) {
+        clustersFound[clusterKey] = cluster;
+      }
+    } else {
+      nonRefinableDrops += originalDrop;
+    }
+  }
+
+  if (!hasRefinedSomething) return;
+
+  var newDrops = nonRefinableDrops;
+  val finalAmount = dropAmount * outputMultiplier;
+  for key, clusterItem in clustersFound {
+    newDrops += clusterItem;
+  }
+
+  event.drops = [];
+  for is in newDrops {
+    event.addItem((is as IItemStack * finalAmount).weight(1.0));
+  }
+  if(event.isPlayer) event.player.sendPlaySoundPacket('minecraft:entity.experience_orb.pickup', 'player', event.position.asPosition3f(), 0.2f, 0.7f + event.world.random.nextFloat() * 0.2f);
 };
 
 researcherTrait.extraInfo = function (thisTrait, item, tag) {
