@@ -495,14 +495,14 @@ q.industrialcraft.extractor.desc=提取机最主要的用途就是 3 倍产橡�
 q.industrialcraft.geothermal_generator.desc=这个发电机消耗熔岩产生EU。
 q.industrialcraft.compressor.desc=压缩机用来制造压缩物品，通常是致密板。
 q.industrialcraft.electric_furnace.desc=电炉比原版熔炉快，而且使用 EU。
-q.industrialcraft.steam_turbine.name=Steam Turbine
-q.industrialcraft.steam_turbine.desc=§4Warning§r: this Steam Turbine is picky and will consume only IC2 Steam or IC2 Superheated Steam (SH Steam), so it's best to use it with IC2 Fluid Reactors.\n\nThe Steam Turbine (block) requires the Steam Turbine (item) and a Kinetic Generator to function.\n\nWhen working with SH steam, place two Steam Turbines side-by-side and pump SH Steam into one of them. That turbine will process SH Steam and output regular Steam into adjacent Steam Turbine to process.\n\nWhen the Steam Turbine runs on regular Steam it'll output Distilled water and IC2 'Exhaust' Steam. IC2 'Exhaust' Steam has almost no uses, so it's okay to ignore it. Distilled water has to be pumped out from the Turbine.\n\nWhen Turbine has no place to output Steam or 'Exhaust' Steam it'll generate explosion particles and sounds. To maintain one's sanity it's suggested disabling explosion SFX in Settings.
+q.industrialcraft.steam_turbine.name=蒸汽涡轮机
+q.industrialcraft.steam_turbine.desc=蒸汽涡轮机只消耗 §l仅§r §7IC2 蒸汽§r 或 §8IC2 过热蒸汽（SH 蒸汽）§r，并产生动能；它的用途是与 IC2 流体反应堆配套使用。\n\n§8[§6搭建§8]§r\n蒸汽涡轮机（方块）需要蒸汽涡轮机（物品）以及一个动能发电机才能运作。\n\n§8[§8过热蒸汽§8]§r\n在使用 §8SH 蒸汽§r 时，将两台蒸汽涡轮机并排放置，并将 §8SH 蒸汽§r 泵入其中一台。该涡轮机会处理 §8SH 蒸汽§r，并将普通 §7蒸汽§r 输出到相邻的蒸汽涡轮机中供其继续处理。\n\n§8[§7蒸汽§8]§r\n当蒸汽涡轮机使用普通 §7蒸汽§r 运转时，会输出 §9蒸馏水§r 和 §7IC2 “废气”蒸汽§r。§7IC2 “废气”蒸汽§r 几乎没有用途，因此可以忽略。§9蒸馏水§r 必须从涡轮机中抽出。\n\n§8[§c爆炸§8]§r\n当涡轮机没有地方输出 §7蒸汽§r 或 §7“废气”蒸汽§r 时，会产生爆炸粒子与音效。为了保持心情舒畅，建议在设置中禁用爆炸音效。
 q.industrialcraft.cf_sprayer.desc=建筑泡沫喷枪用于喷涂建筑泡沫。建筑泡沫可以涂在导线上形成覆盖伪装。
 q.industrialcraft.ore_washing_plant.desc=洗矿机能让矿石增产不止双倍。
-q.industrialcraft.overclockers.name=Overclockers
-q.industrialcraft.overclockers.desc=IC2 machines are slow. It may be not noticeable, but it's been tested - definitely slow.\nAnd Overclockers can help speed them up! \n\nAround 8 Overclockers per machine is a sweet spot between speed and energy consumption.
-q.industrialcraft.wind_turbine.name=Wind Turbine
-q.industrialcraft.wind_turbine.desc=§oNot to be confused with Wind Mill.§r\n\nWind Turbine is one of the most poweful methods of EU generation in IC2.\nIt must be placed at a high Y level (best at Y=160) and requires a rotor and a Kinetic Generator to function.\n\nThere are multiple rotors to choose from, but it's recommended to go straight to Carbon one - it's the most effective and slightly cheaper than Steel rotor.\n\nAll rotors have durability and will be worn out with time, but the time period is extremely long - one rotor should last for several real days of continuous use.\n\nCarbon rotor produces 300-400 EU/t depending on the weather.\n\n§bTip§r: you can use HV transformers to 'step-up' voltage to 2048 EU/t and transfer energy with lesser losses from Wind Turbine to your base! Don't forget to step it down, though.
+q.industrialcraft.overclockers.name=超频升级模块
+q.industrialcraft.overclockers.desc=IC2 机器速度很慢。你可能不太会注意到，但已经测试过——确实很慢。\n而超频升级模块可以帮助它们提速！\n\n每台机器安装大约 8 个超频升级模块，是速度与能耗之间的理想平衡点。
+q.industrialcraft.wind_turbine.name=风力涡轮机
+q.industrialcraft.wind_turbine.desc=§o不要与风车混淆。§r\n风力涡轮机是 IC2 中最强大的 EU 发电方式之一。\n\n§8[§6搭建§8]§r\n风力涡轮机必须放置在较高的 Y 高度（最佳为 §7Y=160§r），并且需要一个转子和一个动能发电机才能运作。\n\n§8[§6转子§8]§r\n可选择的转子有多种，但建议直接使用 §8碳§r 转子——它效率最高，而且比钢转子略便宜。\n\n所有转子都有耐久度，会随着时间推移而磨损，但周期非常长——一个转子在持续使用的情况下应当能撑好几天现实时间。\n\n碳转子的产出会因天气而异，为 300-400 EU/t。\n\n§8[§6高效能量传输§8]§r\n你可以使用 HV 变压器将电压升至 2048 EU/t，并以更低损耗将风力涡轮机的能量传输到基地！不过别忘了再把电压降下来。
 q.industrialcraft.advanced_alloy.desc=一种合成材料。
 q.industrialcraft.plutonium.name=钚
 q.industrialcraft.plutonium.desc=用热能离心机处理枯竭铀燃料棒或枯竭 MOX 燃料棒可以得到小撮钚。
@@ -510,11 +510,11 @@ q.industrialcraft.mining_laser.desc=采矿镭射枪是一个采矿工具。它�
 q.industrialcraft.rtg_fuel.name=RTG 燃料
 q.industrialcraft.rtg_fuel.desc=RTG 燃料用于在同位素温差发电机中被动地产能。\n\n游戏末期一些物品的合成也会用得到。
 q.industrialcraft.thermal_centrifuge.desc=这台机器处理耗尽的燃料棒和其他材料。
-q.industrialcraft.carbon_plate.desc=One of the main crafting ingredients of Nano Armor and Advanced Machine Casing
+q.industrialcraft.carbon_plate.desc=纳米装甲和高级机器外壳的主要合成材料之一。
 q.industrialcraft.nano_armor.name=纳米套装
 q.industrialcraft.nano_armor.desc=在完成该任务后，怪物生成时偶尔会穿着该套装。
-q.industrialcraft.fluid_reactor.name=Fluid Reactor
-q.industrialcraft.fluid_reactor.desc=Fluid Reactor is a continuation of regular Nuclear Reactor with some advantages and disadvantages.\n\nTo form a Fluid Reactor, encase the Nuclear Reactor (6 Reactor Chambers) within a Reactor Pressure Vessel in a 5×5×5 box.\n\nAdd two Reactor Fluid Ports, one Reactor Redstone Port and Reactor Access Hatch. As Reactor is inside this structure, it can't be accessed directly anymore and all interactions with it are done via these special blocks.\n\nUnlike Nuclear Reactor that outputs directly EU, Fluid Reactor generates §cHeat§r and uses this Heat to make §cHot Coolant§r which is the main output of this reactor.\n\nThis Hot Coolant has to be cooled in some machine and put back into Reactor to maintain the cycle.\n\nTo cool Hot Coolant it's recommended to use Heat Exchanger from Immersive Engineering. By cooling the Hot Coolant it outputs §8Superheated Steam§r which can be pumped into IC2 Steam Turbine. Prepare a fast water source, for example, 2 Infinite Water Source from Nuclear Craft.\n\nOther heat exchangers are possible, but they'll require much more resources to build to the point it isn't worth it. For example, it'll require 135 Liquid Heat Exchangers from IC2 or 9 Heat Exchangers from Advanced Generators.\n\n§4Warning§r: as this modpack increases output of Nuclear Reactor by 10 times, it influenced Fluid Reactor's math calculations and recommended component setups you may find in the internet §4may produce excessive heat§r.\n\nIt's recommended to use classical 7 quad Uranium rods setup from regular Nuclear Reactor, it produces almost as much Heat and is stable. This setup produces around §680k Rf/t§r, which is 5 times more than regular Nuclear Reactor with the same setup.\n\n§bNote§r: the quest expects 20 Fluid Cells filled with IC2 Coolant.\n\nMore info can be found at https://wiki.industrial-craft.net/index.php?title=Fluid_reactor
+q.industrialcraft.fluid_reactor.name=流体反应堆
+q.industrialcraft.fluid_reactor.desc=Fluid 反应堆是普通核反应堆的延伸，具有一些优点与缺点。\n\n§8[§6搭建§8]§r\n要建造流体反应堆，请将核反应堆（6 个反应堆舱室）用反应堆压力容器包覆起来，形成一个 5×5×5 的箱体。\n\n添加两个反应堆流体端口、一个反应堆红石端口和反应堆检修舱口。由于反应堆位于该结构内部，它将无法再被直接访问，所有与其的交互都需要通过这些特殊方块完成。\n\n§8[§6工作原理§8]§r\n不同于直接输出 EU 的核反应堆，流体反应堆会产生 §c热量§r，并利用这些 §c热量§r 生成 §c热冷却液§r，而这就是该反应堆的主要产出。\n\n这些 §c热冷却液§r 必须在某台机器中被冷却，然后再送回反应堆以维持循环。\n\n§8[§6热交换器§8]§r\n要冷却 §c热冷却液§r，建议使用沉浸工程（Immersive Engineering）的热交换器。冷却 §c热冷却液§r 后，它会输出供反应堆使用的 §9冷却液§r，以及 §8过热蒸汽§r；后者可以被泵入 IC2 蒸汽涡轮机。请准备一个快速供水来源，例如来自 Nuclear Craft 的 2 个无限水源。\n\n也可以使用其他热交换器，但它们需要投入更多资源才能建造到可用程度，以至于不值得。例如，这将需要 135 个来自 IC2 的液体热交换器，或 9 个来自 Advanced Generators 的热交换器。\n\n§8[§6推荐配置§8]§r\n建议使用普通核反应堆的经典 7 组四联铀燃料棒配置，它产生的热量几乎相同且稳定。该配置可产生约 §680k Rf/t§r，是相同配置下普通核反应堆的 5 倍。\n\n§8[§4警告§8]§r\n由于该整合包将核反应堆的输出提高了 10 倍，这影响了流体反应堆的数学计算；你在互联网上可能找到的推荐组件配置§4可能会产生过量热量§r。\n\n§8[§7杂项§8]§r\n- 该任务需要 20 个装满 IC2 冷却液的流体单元。\n- 更多信息请参见 https://wiki.industrial-craft.net/index.php?title=Fluid_reactor
 q.industrialcraft.advanced_machine_c.desc=这是制作更高级工业机器的合成材料，也是§4工业先锋§r 机械外壳的主要材料。
 q.industrialcraft.matter_fabricator.desc=该机器用于生成 UU 物质。1mb UU 物质需要 §61000,000 EU§r，使用废料需要 §6166,666 EU§r。
 q.industrialcraft.terraformer.desc=根据地形转换模板改造周围的地形。\n\n能耗降低 x20（约 300 EU/t）。
@@ -525,7 +525,6 @@ q.industrialcraft.crystal_memory.name=模式存储水晶
 q.industrialcraft.crystal_memory.desc=模式存储水晶显示已保存物品的§d基础成本§r。\n可以复制的物品在提示框中以紫色数字显示其§d基础成本§r，例如“§d100 mB UU§r”。\n\n实际复制成本随你的§6难度§e✪§r等级变化。\n\n手持带有记录物品的模式存储水晶并§n左键复制机§r。\n\n§8你将看到最多 20 种可以用作催化剂的物品，具体数量取决于所有者的复制成本。这是完成任务所必需的。
 q.industrialcraft._replicator_.name=复制机
 q.industrialcraft._replicator_.desc=注意：对于使用 CFPA 汉化资源包（Minecraft-Mod-Language-Package）的用户，名称会错误的显示为§n物质重组机§r\n\n这台机器可以复制物品。要使其运行，你需要：\n\n§4⚡ §8[§4能量§8]§r\n需要 20,000 RF/t 才能运行。\n\n§3❂ §8[§3模式存储水晶§8]§r\n记忆中必须有有效的扫描物品数据。\n\n§6⭑ §8[§6催化剂§8]§r\n催化剂是具有更高 UU 成本的物品，将会被消耗。\n§6催化剂§r的§d基础成本§r必须高于物品的§5当前成本§r。\n§7在下一个任务中查看更多关于 UU 成本的计算方法。§r\n\n§d⬬ §8[§dUU 物质§8]§r\n消耗§6催化剂§r的 UU 成本。\n复制会轻微提升§6难度§e✪§r。\n\n§2☾☽§r §8[§2维度§8]§r\n复制成本会根据所在维度的难度修正值发生变化。\n\n§8复制机界面：\n§8- §n两个数字§8：所需和当前的 UU 分数（1 mB=100），仅为显示用。\n§8- §n✪成本§8：基于拥有者的当前倍率。
-q.industrialcraft.overclocker_upgrade.desc=复制机也支持安装 §3☖ 超频升级模块§r。\n\n每个升级可将复制速度提升 §630%%§r，同时增加 §660%%§r 的能量消耗。
 q.industrialcraft._catalysts_.name=§6⭑§r 催化剂 §6⭑§r
 q.industrialcraft._catalysts_.desc=§n§l如何选择催化剂§6⭑§r?\n\n催化剂的§8[§d基础成本§8]§r必须高于正在复制的物品的§8[§7实际成本§8]§r。\n\n§8[§d基础成本§8]§r - 未经修正的初始成本。\n§8[§7实际成本§8]§r - 受玩家难度修正后的复制成本。\n\n鼠标悬停在物品上可以看到“§8§7（实际）§r §d§o基础 mB UU§r”§r成本。\n物品的 UU 成本列表在 Patchouli 手册“Enigmatica”中。\n\n\n§n§l难度§e✪§r§n§l如何影响成本§r?\n\n每§2100§r点难度会使成本增加§2100%%§r。\n如果你的难度低于 100，复制成本更低，但不会低于原始成本的§2 0.1%%§r。\n\n§8每次你的复制机消耗物质时，你都会获得“已消耗 UU 物质桶”统计点数。获得 1 个或更多点数即可完成此任务。
 q.industrialcraft.reaching_max_diffi.name=达到最大难度
@@ -1035,7 +1034,7 @@ q.thaumcraft.puriflower.desc=§6Puriflower§r is upgraded version of §6Totem of
 q.thaumcraft.flux_capacitor.desc=§6Flux Distiller§r need to be installed on top of §6Flux Capacitor§r.\n\nIt clears chunk from §5flux§r and turn it into §5Vitium essence.§r
 q.thaumcraft.primordial_pearl.desc=当用塌陷器关闭裂缝时，掉落的几率很低。更大的裂缝有更好的掉落机会。
 q.thaumcraft.void_seed.desc=§5Void seeds§r drop from closed §0rift§r. It is crafting material that allow to delve into §5Eldritch Knowledge§r.
-q.thaumcraft.recharge_charm.desc=§6Rechage Charm§r works the same as §6Amulet of Vis§r but §6charm§r slot.
+q.thaumcraft.recharge_charm.desc=§6Recharge Charm§r works the same as §6Amulet of Vis§r but §6charm§r slot.
 q.thaumcraft.striding_belt.desc=§6Striding Belt§r is upgraded version of §6Belt of the Traveller§r.
 q.thaumcraft._void_beacon_.name=虚空信标
 q.thaumcraft.void_beacon.desc=在消耗20单位§dAuram§r并从§3裂隙§r吸收能量后，虚空信标将在附近区块中生成Vis。\n\n§7虚空信标运行需要满足以下条件：§r\n\n§2•§r 信标必须被§3启用§r（默认启用）。\n§2•§r 信标上方必须无遮挡于§3天空§r之间；除了基岩外，上方不得有不透明方块。\n§2•§r 附近必须存在§3裂隙§r，并且之间不能有阻挡物。裂隙越大，吸收的能量越多，生成速度越快。\n§2•§r 必须通过管道将§dAuram§r输送至虚空信标。\n\n此外，可以使用§5虚空金属块§r构建信标金字塔，以提升§5虚空信标§r的范围和强度。靠近§5虚空信标§r时，还会获得抗畸变效果。
