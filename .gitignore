@@ -125,3 +125,5 @@ config/theoneprobe.cfg
 config/probezs.cfg
 /server
 /dev
+/dev
+/scripts/debug
